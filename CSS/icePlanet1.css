@@ -126,7 +126,7 @@ body {
     width: 1800px;
     height: 800px;
     background-color: #288FEF;
-    opacity: 95%;
+    opacity: 100%;
     position: absolute;
     top: 600px;
     left: -220px;
@@ -147,6 +147,7 @@ body {
     position: absolute;
     top: 175px;
     left: 900px;
+    z-index: 0;
 }
 
 #sign {
@@ -156,6 +157,620 @@ body {
     top: 400px;
     left: 700px;
 }
+
+#snowflake1 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow1 normal 11s infinite;
+}
+
+#snowflake2 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 100px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow2 normal 8s infinite;
+    animation-delay: 7s;
+}
+
+#snowflake3 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 200px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow3 normal 10s infinite;
+}
+
+#snowflake4 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow4 normal 10s infinite;
+    animation-delay: 5s;
+}
+
+#snowflake5 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow5 normal 12s infinite;
+}
+
+#snowflake6 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow6 normal 10s infinite;
+    animation-delay: 2.5s;
+}
+
+#snowflake7 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow7 normal 8s infinite;
+}
+
+#snowflake8 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow8 normal 11s infinite;
+    animation-delay: 1s;
+}
+
+#snowflake9 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow9 normal 7s infinite;
+}
+
+#snowflake10 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow10 normal 8s infinite;
+    animation-delay: 2s;
+}
+
+#snowflake11 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow11 normal 10s infinite;
+}
+
+#snowflake12 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow12 normal 10s infinite;
+}
+
+#snowflake13 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow13 normal 10s infinite;
+}
+
+#snowflake14 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow14 normal 10s infinite;
+}
+
+#snowflake15 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow15 normal 10s infinite;
+}
+
+#snowflake16 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    opacity: 50%;
+    z-index: 1;
+    animation: fallingsnow16 normal 10s infinite;
+}
+
+@keyframes fallingsnow1 {
+    0% {
+        top: -50px;
+        left: 700px
+    }
+
+    25% {
+        top: 50px;
+        left: 750;
+    }
+
+    50% {
+        top: 300px;
+        left: 650px;
+    }
+
+    75% {
+        top: 600px;
+        left: 700px;
+    }
+
+    100% {
+        top: 900px;
+        left: 756px;
+    }
+}
+
+@keyframes fallingsnow2 {
+    0% {
+        top: -50px;
+        left: 100px
+    }
+
+    25% {
+        top: 50px;
+        left: 150;
+    }
+
+    50% {
+        top: 300px;
+        left: 50px;
+    }
+
+    75% {
+        top: 600px;
+        left: 100px;
+    }
+
+    100% {
+        top: 900px;
+        left: 156px;
+    }
+}
+
+@keyframes fallingsnow3 {
+    0% {
+        top: -50px;
+        left: 200px
+    }
+
+    25% {
+        top: 50px;
+        left: 250;
+    }
+
+    50% {
+        top: 300px;
+        left: 150px;
+    }
+
+    75% {
+        top: 600px;
+        left: 200px;
+    }
+
+    100% {
+        top: 900px;
+        left: 256px;
+    }
+}
+
+@keyframes fallingsnow4 {
+    0% {
+        top: -50px;
+        left: 300px
+    }
+
+    25% {
+        top: 50px;
+        left: 350;
+    }
+
+    50% {
+        top: 300px;
+        left: 250px;
+    }
+
+    75% {
+        top: 600px;
+        left: 300px;
+    }
+
+    100% {
+        top: 900px;
+        left: 356px;
+    }
+}
+
+@keyframes fallingsnow5 {
+    0% {
+        top: -50px;
+        left: 400px
+    }
+
+    25% {
+        top: 50px;
+        left: 450;
+    }
+
+    50% {
+        top: 300px;
+        left: 350px;
+    }
+
+    75% {
+        top: 600px;
+        left: 400px;
+    }
+
+    100% {
+        top: 900px;
+        left: 456px;
+    }
+}
+
+@keyframes fallingsnow6 {
+    0% {
+        top: -50px;
+        left: 500px
+    }
+
+    25% {
+        top: 50px;
+        left: 550;
+    }
+
+    50% {
+        top: 300px;
+        left: 450px;
+    }
+
+    75% {
+        top: 600px;
+        left: 500px;
+    }
+
+    100% {
+        top: 900px;
+        left: 556px;
+    }
+}
+
+@keyframes fallingsnow7 {
+    0% {
+        top: -50px;
+        left: 600px
+    }
+
+    25% {
+        top: 50px;
+        left: 650;
+    }
+
+    50% {
+        top: 300px;
+        left: 550px;
+    }
+
+    75% {
+        top: 600px;
+        left: 600px;
+    }
+
+    100% {
+        top: 900px;
+        left: 656px;
+    }
+}
+
+@keyframes fallingsnow8 {
+    0% {
+        top: -50px;
+        left: 800px
+    }
+
+    25% {
+        top: 50px;
+        left: 850;
+    }
+
+    50% {
+        top: 300px;
+        left: 750px;
+    }
+
+    75% {
+        top: 600px;
+        left: 800px;
+    }
+
+    100% {
+        top: 900px;
+        left: 856px;
+    }
+}
+
+@keyframes fallingsnow9 {
+    0% {
+        top: -50px;
+        left: 900px
+    }
+
+    25% {
+        top: 50px;
+        left: 950;
+    }
+
+    50% {
+        top: 300px;
+        left: 850px;
+    }
+
+    75% {
+        top: 600px;
+        left: 900px;
+    }
+
+    100% {
+        top: 900px;
+        left: 956px;
+    }
+}
+
+@keyframes fallingsnow10 {
+    0% {
+        top: -50px;
+        left: 1000px
+    }
+
+    25% {
+        top: 50px;
+        left: 1050;
+    }
+
+    50% {
+        top: 300px;
+        left: 950px;
+    }
+
+    75% {
+        top: 600px;
+        left: 1000px;
+    }
+
+    100% {
+        top: 900px;
+        left: 1056px;
+    }
+}
+
+@keyframes fallingsnow11 {
+    0% {
+        top: -50px;
+        left: 700px
+    }
+
+    25% {
+        top: 50px;
+        left: 750;
+    }
+
+    50% {
+        top: 300px;
+        left: 650px;
+    }
+
+    75% {
+        top: 600px;
+        left: 700px;
+    }
+
+    100% {
+        top: 900px;
+        left: 756px;
+    }
+}
+
+@keyframes fallingsnow12 {
+    0% {
+        top: -50px;
+        left: 700px
+    }
+
+    25% {
+        top: 50px;
+        left: 750;
+    }
+
+    50% {
+        top: 300px;
+        left: 650px;
+    }
+
+    75% {
+        top: 600px;
+        left: 700px;
+    }
+
+    100% {
+        top: 900px;
+        left: 756px;
+    }
+}
+
+@keyframes fallingsnow13 {
+    0% {
+        top: -50px;
+        left: 700px
+    }
+
+    25% {
+        top: 50px;
+        left: 750;
+    }
+
+    50% {
+        top: 300px;
+        left: 650px;
+    }
+
+    75% {
+        top: 600px;
+        left: 700px;
+    }
+
+    100% {
+        top: 900px;
+        left: 756px;
+    }
+}
+
+@keyframes fallingsnow14 {
+    0% {
+        top: -50px;
+        left: 700px
+    }
+
+    25% {
+        top: 50px;
+        left: 750;
+    }
+
+    50% {
+        top: 300px;
+        left: 650px;
+    }
+
+    75% {
+        top: 600px;
+        left: 700px;
+    }
+
+    100% {
+        top: 900px;
+        left: 756px;
+    }
+}
+
+@keyframes fallingsnow15 {
+    0% {
+        top: -50px;
+        left: 700px
+    }
+
+    25% {
+        top: 50px;
+        left: 750;
+    }
+
+    50% {
+        top: 300px;
+        left: 650px;
+    }
+
+    75% {
+        top: 600px;
+        left: 700px;
+    }
+
+    100% {
+        top: 900px;
+        left: 756px;
+    }
+}
+
+@keyframes fallingsnow16 {
+    0% {
+        top: -50px;
+        left: 700px
+    }
+
+    25% {
+        top: 50px;
+        left: 750;
+    }
+
+    50% {
+        top: 300px;
+        left: 650px;
+    }
+
+    75% {
+        top: 600px;
+        left: 700px;
+    }
+
+    100% {
+        top: 900px;
+        left: 756px;
+    }
+}
+
 
 @keyframes glowfishmovement {
     0% {
