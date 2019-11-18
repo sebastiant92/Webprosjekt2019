@@ -45,8 +45,8 @@ body {
     margin-left: -36px;
     opacity: 0.6;
     z-index: 4;
-    -webkit-animation-name: wave-move;
-    -webkit-animation-delay: 3s;
+    animation-name: wave-move;
+    animation-delay: 3s;
 }
 
 #wave-2 {
@@ -54,8 +54,8 @@ body {
     margin-left: -26px;
     opacity: 0.2;
     z-index: 5;
-    -webkit-animation-name: wave-move;
-    -webkit-animation-delay: 1.5s;
+    animation-name: wave-move;
+    animation-delay: 1.5s;
 }
 
 .waves {
@@ -63,18 +63,18 @@ body {
     height: 300px;
     position: absolute;
     overflow: hidden;
-    -webkit-animation-name: wave-move ;
-    -webkit-animation-duration: 4s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite; 
-    -webkit-animation-direction: alternate-reverse;
+    animation-name: wave-move ;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate-reverse;
 }
 
 /* Animation Waves */
 @keyframes wave-move {
-    0% {-webkit-transform: translateX(0) translateY(0) scaleY(1;)}
-    0% {-webkit-transform: translateX(-10%) translateY(0) scaleY(.5);}
-    0% {-webkit-transform: translateX(10) translateY(0) scaleY(1);}
+    0% {transform: translateX(0) translateY(0) scaleY(1;)}
+    0% {transform: translateX(-10%) translateY(0) scaleY(.5);}
+    0% {transform: translateX(10) translateY(0) scaleY(1);}
 }
 
 /* Beach Elements */
@@ -87,6 +87,7 @@ body {
     z-index: 4;
 }
 
+/* Shell related */
 #shell {
     width: 100px;
     height: 100px;
@@ -101,29 +102,107 @@ body {
    opacity: 0;
 }
 
+#shell-text {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 625px;
+    margin-left: 1050px;
+    opacity: 0.5;
+    z-index: 4; 
+}
+
+/* Fish related*/
 #fish {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     position: absolute;
     margin-top: 680px;
     margin-left: 700px;
-    z-index: 3;
-    -webkit-animation-name: fish-swim;
-    -webkit-animation-duration: 8s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
+    opacity: 0.6;
+    z-index: 6;
+}
+
+#text-bubble {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 605px;
+    opacity: 0;
+    z-index: 5;
+}
+
+#fish:active ~#text-bubble {
+    opacity: 1;
+}
+
+.animation-swim {
+    animation-name: fish-swim;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 /* Fish Animation */
 @keyframes fish-swim {
-    0% {-webkit-transform: translateX(-100%) translateY(20%);}
-    25% {-webkit-transform: translateX(-90%) translateY(5%);}
-    50% {-webkit-transform: translateX(-60%) translateY(20%);}
-    75% {-webkit-transform: translateX(-30%) translateY(5%);}
-    100% {-webkit-transform: translateX(-10%) translateY(20%);}
+    0% {transform: translateX(-100%) translateY(20%);}
+    25% {transform: translateX(-90%) translateY(5%);}
+    50% {transform: translateX(-60%) translateY(20%);}
+    75% {transform: translateX(-30%) translateY(5%);}
+    100% {transform: translateX(-10%) translateY(20%);}
 }
 
 @keyframes fish-text {
     
 }
+
+/* Sea decorations*/
+
+/* Sea plants */
+.sea-plants {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    z-index: 3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+#sea-plant {
+    margin-left: -25px;
+    margin-top: 670px;
+    animation-name: seaplant-move;
+}
+
+#sea-plant2 {
+    margin-left: 10px;
+    margin-top: 680px;
+    animation-name: seaplant-move2;
+}
+
+#sea-plant3 {
+    margin-left: 40px;
+    margin-top: 665px;
+    animation-name: seaplant-move;
+}
+
+#sea-plant4 {
+    margin-left: 75px;
+    margin-top: 685px;
+    margin-top: 685px;
+    animation-name: seaplant-move2;
+}
+
+/* Seaplant Animation */
+@keyframes seaplant-move {
+    0%, 100% {transform: rotate(9deg);}
+    50% {transform: rotate(-9deg);}
+}
+
+@keyframes seaplant-move2 {
+    0%, 100% {transform: rotate(-6deg);}
+    50% {transform: rotate(6deg);}
+}
+
