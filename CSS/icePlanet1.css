@@ -36,6 +36,75 @@ body {
     transform: scaleX(-1);
 }
 
+#bigfish {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 650px;
+    left: 200px;
+    opacity: 80%;
+    z-index: 2;
+}
+
+#mediumfish {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 650px;
+    left: 150px;
+    opacity: 80%;
+    z-index: 2;
+}
+
+#smallfish {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 650px;
+    left: 150px;
+    opacity: 80%;
+    z-index: 2;
+}
+
+#yellowfish {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 650px;
+    left: 180px;
+    opacity: 80%;
+    z-index: 2;
+}
+
+#kenbeth1 {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 350px;
+    left: 150px;
+    z-index: 2;
+}
+
+#cowboyplanet {
+    height: 100px;
+    width: 100px;
+}
+
+#slimeplanet {
+    height: 100px;
+    width: 100px;
+}
+
+#cityplanet {
+    height: 100px;
+    width: 100px;
+}
+
+#vaykayplanet {
+    height: 100px;
+    width: 100px;
+}
+
 #water {
     width: 1800px;
     height: 800px;
@@ -46,9 +115,6 @@ body {
     left: -220px;
     border-radius: 50%;
     z-index: 2;
-
-
-
 }
 
 #ice {
