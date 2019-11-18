@@ -46,7 +46,7 @@ body {
     
 
 }
-
+/* animation for the satelite's rotation and trajectory through the screen */
 @keyframes satelite {
     
     0% {
