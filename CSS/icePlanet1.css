@@ -85,24 +85,36 @@ body {
     z-index: 2;
 }
 
+#cityplanet {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+#vaykayplanet {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 50px;
+    left: 375px;
+}
+
 #cowboyplanet {
     height: 100px;
     width: 100px;
+    position: absolute;
+    top: 200px;
+    left: 700px;
 }
 
 #slimeplanet {
     height: 100px;
     width: 100px;
-}
-
-#cityplanet {
-    height: 100px;
-    width: 100px;
-}
-
-#vaykayplanet {
-    height: 100px;
-    width: 100px;
+    position: absolute;
+    top: 100px;
+    left: 1000px;
 }
 
 #water {
