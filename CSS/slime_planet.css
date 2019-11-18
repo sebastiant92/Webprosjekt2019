@@ -12,7 +12,7 @@ body {
 }
 
 /* Main Container */
-#container {
+.container {
     width: 1278px;
     height: 800px;
     top: 50px;
@@ -49,9 +49,9 @@ body {
 
 #slime-bubble-1 {
     width: 120px;
-    height: 40px;
-    transform: rotate(-15deg);
-    bottom: 100px;
+    height: 45px;
+    transform: rotate(-18deg);
+    bottom: 95px;
     left: 30px;
 }
 
@@ -115,8 +115,8 @@ body {
 
 #kenbeth-flying {
     width: 400px;
-    top: 200px;
-    left: 350px;
+    top: 120px;
+    left: 330px;
     z-index: 5;
     animation: kenbeth-flying 1.5s linear;
     -webkit-animation: kenbeth-flying 1.5s linear;
@@ -124,46 +124,16 @@ body {
 }
 
 /* Villagers */
-#baby-villager-1 {
-    width: 60px;
-    bottom: 100px;
-    right: 50px;
-    transform: rotate(16deg);
-}
-
-#baby-villager-2 {
-    width: 60px;
-    bottom: 100px;
-    right: 120px;
-    transform: rotate(16deg);
-}
 
 #slime-villager-1 {
     width: 100px;
-    bottom: 255px;
-    right: 440px;
+    bottom: 170px;
+    right: 380px;
+    opacity: 0;
     transform: rotate(5deg);
-}
-
-#slime-villager-2 {
-    width: 160px;
-    bottom: 100px;
-    right: 190px;
-    transform: rotate(12deg);
-}
-
-#slime-villager-3 {
-    width: 130px;
-    bottom: 80px;
-    left: 500px;
-    transform: rotate(-4deg) scaleX(-1);
-}
-
-#slime-villager-4 {
-    width: 100px;
-    bottom: 100px;
-    right: 500px;
-    transform: rotate(16deg);
+    transition-duration: 1.5s;
+    -webkit-transition-duration: 1.5s;
+    transition-delay: 2s;
 }
 
 #slime-monster-angry {
@@ -178,9 +148,9 @@ body {
 /* gifs */
 #slime-monster-gif {
     position: absolute;
-    width: 200px;
-    bottom: 80px;
-    transform: rotate(-20deg);
+    width: 120px;
+    bottom: 140px;
+    transform: rotate(-22deg);
 }
 
 /* Background elements */
@@ -190,113 +160,68 @@ body {
 
 .background-slime {
     position: absolute;
+    width: 10px;
+    height: 50px;
+    border-radius: 40%;
+    border: 1px solid #ddf45b;
+    background-color: #32bc35;
     z-index: 2;
 }
 
 #background-slime-1 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-1 5s infinite both;
     -webkit-animation: bubble-1 5s infinite both;
 }
 
 #background-slime-2 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-2 5s infinite both;
     -webkit-animation: bubble-2 5s infinite both;
     animation-delay: 7s;
 }
 
 #background-slime-3 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-3 5s infinite both;
     -webkit-animation: bubble-3 5s infinite both;
     animation-delay: 5s;
 }
 
 #background-slime-4 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-4 5s infinite both;
     -webkit-animation: bubble-4 5s infinite both;
     animation-delay: 3s;
 }
 
 #background-slime-5 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-5 5s infinite both;
     -webkit-animation: bubble-5 5s infinite both;
     animation-delay: 6s;
 }
 
 #background-slime-6 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-6 5s infinite both;
     -webkit-animation: bubble-6 5s infinite both;
     animation-delay: 0.5s;
 }
 
 #background-slime-7 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-7 5s infinite both;
     -webkit-animation: bubble-7 5s infinite both;
     animation-delay: 2.7s;
 }
 
 #background-slime-8 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-8 5s infinite both;
     -webkit-animation: bubble-8 5s infinite both;
     animation-delay: 4s;
 }
 
 #background-slime-9 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-9 5s infinite both;
     -webkit-animation: bubble-9 5s infinite both;
     animation-delay: 7.5s;
 }
 
 #background-slime-10 {
-    width: 10px;
-    height: 50px;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    border-radius: 40%;
     animation: bubble-10 5s infinite both;
     -webkit-animation: bubble-10 5s infinite both;
     animation-delay: 1.5s;
@@ -460,11 +385,82 @@ body {
         transform: rotate(0deg);
         left: -400px;
     }
-    50% {
+    25% {
         transform: rotate(-44deg);
     }
-    100% {
+    50% {
         transform: rotate(0deg);
         left: 350px;
+        delay: 5s;
     }
+    75% {
+        top: 230px;
+    }
+    100% {
+        top: 120px;
+    }
+}
+
+/* Triggers */
+.container:hover #slime-villager-1 {
+    width: 100px;
+    bottom: 255px;
+    right: 440px;
+    opacity: 100%;
+}
+
+#slime-bubble-1:hover {
+    width: 140px;
+    height: 50px;
+    bottom: 95px;
+    left: 23px;
+}
+
+#slime-bubble-2:hover {
+    width: 170px;
+    height: 40px;
+    bottom: 195px;
+    left: 170px;
+}
+
+#slime-bubble-3:hover {
+    width: 240px;
+    height: 100px;
+    bottom: 45px;
+    left: 193px;
+}
+
+#slime-bubble-4:hover {
+    width: 140px;
+    height: 60px;
+    bottom: 145px;
+    left: 443px;
+}
+
+#slime-bubble-5:hover {
+    width: 200px;
+    height: 40px;
+    bottom: 245px;
+    left: 443px;
+}
+
+#slime-bubble-6:hover {
+    width: 280px;
+    height: 160px;
+    bottom: -85px;
+    left: 690px;
+}
+
+#slime-bubble-7:hover {
+    width: 420px;
+    height: 90px;
+    bottom: 165px;
+    left: 690px;
+}
+
+#slime-bubble-7:hover #slime-villager-1 {
+    width: 420px;
+    height: 90px;
+    bottom: 165px;
+    left: 690px;
 }
