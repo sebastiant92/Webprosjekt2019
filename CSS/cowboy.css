@@ -46,6 +46,13 @@ body {
     width: 900px;
 }
 
+.planet {
+    transition: transform 2s;
+    -webkit-transition: transform 2s;
+    animation: planet-tilt 3s linear infinite both;
+    -webkit-animation: planet-tilt 3s linear infinite both;
+}
+
 /* Ground & Textures */
 #cowboy-ground {
     position: absolute;
@@ -113,12 +120,12 @@ body {
 
 #kenbeth {
     position: absolute;
-    display: none;
+    /*display: none;*/
     width: 300px;
     height: auto;
-    top: 250px;
-    left: 300px;
-    transform: rotate(-10deg);
+    top: 400px;
+    left: 450px;
+    z-index: 1;
 }
 
 /* Flying spacecows */
@@ -178,13 +185,6 @@ body {
     padding: 10px;
     top: 500px;
     left: 100px;
-}
-
-.planet {
-    transition: transform 2s;
-    -webkit-transition: transform 2s;
-    animation: planet-tilt 3s linear infinite both;
-    -webkit-animation: planet-tilt 3s linear infinite both;
 }
 
 /* Rockets */
