@@ -1,25 +1,25 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #container {
-  width: 1278px;
-  height: 800px;
-  top: 50px;
-  position: relative;
-  margin: auto;
-  background-color: #0c0920;
-  background-size: 100% 100%;
-  overflow: hidden;
+    width: 1278px;
+    height: 800px;
+    top: 50px;
+    position: relative;
+    margin: auto;
+    background-color: #0c0920;
+    background-size: 100% 100%;
+    overflow: hidden;
 }
 
 body {
-  background-color: black;
+    background-color: black;
 }
 
-#main-box{
+#main-box {
     width: 1278px;
     height: 900px;
     top: 500px;
@@ -28,7 +28,7 @@ body {
     background-color: #415a77;
 }
 
-#box2{
+#box2 {
     width: 200px;
     height: 50px;
     bottom: 150px;
@@ -36,10 +36,9 @@ body {
     border-radius: 50%;
     position: absolute;
     background-color: darkgray;
-    
 }
 
-#box3{
+#box3 {
     width: 200px;
     height: 50px;
     bottom: 100px;
@@ -49,7 +48,7 @@ body {
     background-color: darkgray;
 }
 
-#box4{
+#box4 {
     width: 200px;
     height: 60px;
     bottom: 140px;
@@ -59,7 +58,7 @@ body {
     background-color: darkgray;
 }
 
-#box5{
+#box5 {
     width: 200px;
     height: 60px;
     bottom: 30px;
@@ -69,7 +68,7 @@ body {
     background-color: darkgray;
 }
 
-#box6{
+#box6 {
     width: 150px;
     height: 30px;
     bottom: 250px;
@@ -79,7 +78,7 @@ body {
     background-color: darkgray;
 }
 
-#box7{
+#box7 {
     width: 150px;
     height: 30px;
     bottom: 160px;
@@ -89,7 +88,7 @@ body {
     background-color: darkgray;
 }
 
-#box8{
+#box8 {
     width: 150px;
     height: 30px;
     bottom: 70px;
@@ -99,7 +98,7 @@ body {
     background-color: darkgray;
 }
 
-#ice{
+#ice {
     height: 650px;
     width: 650px;
     position: absolute;
@@ -108,7 +107,7 @@ body {
     z-index: 1;
 }
 
-#vacay{
+#vacay {
     height: 300px;
     width: 300px;
     position: absolute;
@@ -116,7 +115,7 @@ body {
     left: 350px;
 }
 
-#slime{
+#slime {
     height: 300px;
     width: 300px;
     position: absolute;
@@ -124,7 +123,7 @@ body {
     left: 650px;
 }
 
-#cowboy{
+#cowboy {
     height: 400px;
     width: 400px;
     position: absolute;
@@ -132,7 +131,7 @@ body {
     left: 930px;
 }
 
-#kenbeth-landing{
+#kenbeth-landing {
     height: 450px;
     width: 450px;
     position: absolute;
