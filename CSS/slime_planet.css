@@ -147,8 +147,7 @@ body {
     width: 130px;
     bottom: 80px;
     left: 500px;
-    transform: rotate(-4deg);
-    transform: scaleX(-1);
+    transform: rotate(-4deg) scaleX(-1);
 }
 
 #slime-villager-5 {
