@@ -1,3 +1,4 @@
+/* Default style */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,204 @@
 #container {
     width: 1278px;
     height: 800px;
-    border: 2px solid black;
     position: relative;
     margin: auto;
+    top: 50px;
+    /*background-image: url(../images/bg_cowboy.jpg);
+    background-size: 100%;*/
+    background-color: #0c0920;
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+/* Planets */
+#planet-antarktis {
+    position: absolute;
+    right: 350px;
+    width: 300px;
+}
+
+#planet-vacay {
+    position: absolute;
+    right: -100px;
+    width: 380px;
+    top: 300px;
+}
+
+#planet-city {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    width: 300px;
+}
+
+#planet-slime {
+    position: absolute;
+    left: -200px;
+    width: 900px;
+}
+
+/* Ground & Textures */
+#cowboy-ground {
+    position: absolute;
+    background: linear-gradient(to bottom, #faff81 0%, #ffc53a 100%);
+    border-radius: 34%;
+    border: 2px solid black;
+    width: 1500px;
+    height: 500px;
+    top: 500px;
+}
+
+#ground-texture-1 {
+    position: absolute;
+    bottom: 150px;
+    left: 600px;
+    border-radius: 50%;
+    width: 100px;
+    height: 50px;
+    background-color: #ffc43a46;
+}
+
+#ground-texture-2 {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    border-radius: 70%;
+    width: 100px;
+    height: 30px;
+    background-color: #ebb33146;
+    transform: skew(5deg, 5deg);
+}
+
+#ground-texture-3 {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    border-radius: 50%;
+    width: 100px;
+    height: 30px;
+    background-color: #ffc43a46;
+    transform: rotate(-10deg);
+}
+
+#ground-texture-4 {
+    position: absolute;
+    bottom: 40px;
+    left: 300px;
+    border-radius: 50%;
+    width: 100px;
+    height: 50px;
+    background-color: #ffc43a46;
+}
+
+#ground-texture-5 {
+    position: absolute;
+    bottom: 170px;
+    left: 100px;
+    border-radius: 50%;
+    width: 200px;
+    height: 70px;
+    background-color: white;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
+#kenbeth {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 250px;
+    left: 300px;
+    transform: rotate(-10deg);
+}
+
+#cow {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    width: 200px;
+    transform: scaleX(-1);
+}
+
+.planet {
+    transition: transform 2s;
+    -webkit-transition: transform 2s;
+    animation: planet-tilt 3s linear infinite both;
+    -webkit-animation: planet-tilt 3s linear infinite both;
+}
+
+/* Rockets */
+#rocket-hk {
+    position: absolute;
+    bottom: 30px;
+    left: 240px;
+    width: 250px;
+    transform: rotate(-2deg);
+}
+
+#rocket-hk:hover {
+    position: absolute;
+    bottom: 30px;
+    left: 240px;
+    width: 250px;
+    transform: rotate(-2deg);
+    animation: rocket-hk 0.5s ease-in-out infinite alternate;
+}
+
+#rocket-bi {
+    position: absolute;
+    bottom: 80px;
+    right: 140px;
+    width: 300px;
+    transform: rotate(2deg);
+}
+
+#rocket-bi:hover {
+    position: absolute;
+    bottom: 80px;
+    right: 140px;
+    width: 300px;
+    transform: rotate(2deg);
+    animation: rocket-bi 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes rocket-hk {
+    0% {
+        transform: scale(1);
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes rocket-bi {
+    0% {
+        transform: scale(1);
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes planet-tilt {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
