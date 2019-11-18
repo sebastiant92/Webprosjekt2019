@@ -126,9 +126,10 @@ body {
     width: 1800px;
     height: 800px;
     background-color: #288FEF;
+    border: solid 100px #FFFFFF;
     opacity: 100%;
     position: absolute;
-    top: 600px;
+    top: 500px;
     left: -220px;
     border-radius: 50%;
     z-index: 2;
@@ -165,7 +166,7 @@ body {
     top: -50px;
     left: 700px;
     opacity: 50%;
-    z-index: 1;
+    z-index: 2;
     animation: fallingsnow1 normal 11s infinite;
 }
 
@@ -176,7 +177,7 @@ body {
     top: -50px;
     left: 100px;
     opacity: 50%;
-    z-index: 1;
+    z-index: 2;
     animation: fallingsnow2 normal 8s infinite;
     animation-delay: 7s;
 }
@@ -188,7 +189,7 @@ body {
     top: -50px;
     left: 200px;
     opacity: 50%;
-    z-index: 1;
+    z-index: 2;
     animation: fallingsnow3 normal 10s infinite;
 }
 
@@ -199,7 +200,7 @@ body {
     top: -50px;
     left: 700px;
     opacity: 50%;
-    z-index: 1;
+    z-index: 2;
     animation: fallingsnow4 normal 10s infinite;
     animation-delay: 5s;
 }
@@ -211,7 +212,7 @@ body {
     top: -50px;
     left: 700px;
     opacity: 50%;
-    z-index: 1;
+    z-index: 2;
     animation: fallingsnow5 normal 12s infinite;
 }
 
@@ -222,7 +223,7 @@ body {
     top: -50px;
     left: 700px;
     opacity: 50%;
-    z-index: 1;
+    z-index: 2;
     animation: fallingsnow6 normal 10s infinite;
     animation-delay: 2.5s;
 }
@@ -268,7 +269,7 @@ body {
     top: -50px;
     left: 700px;
     opacity: 50%;
-    z-index: 1;
+    z-index: 2;
     animation: fallingsnow10 normal 8s infinite;
     animation-delay: 2s;
 }
@@ -281,62 +282,20 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow11 normal 10s infinite;
+    animation: fallingsnow11 normal 7s infinite;
+    animation-delay: 2s;
 }
 
-#snowflake12 {
+#snowflake11 {
     height: 50px;
     width: 50px;
     position: absolute;
     top: -50px;
     left: 700px;
     opacity: 50%;
-    z-index: 1;
-    animation: fallingsnow12 normal 10s infinite;
-}
+    z-index: 2;
+    animation: fallingsnow11 normal 7s infinite;
 
-#snowflake13 {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: -50px;
-    left: 700px;
-    opacity: 50%;
-    z-index: 1;
-    animation: fallingsnow13 normal 10s infinite;
-}
-
-#snowflake14 {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: -50px;
-    left: 700px;
-    opacity: 50%;
-    z-index: 1;
-    animation: fallingsnow14 normal 10s infinite;
-}
-
-#snowflake15 {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: -50px;
-    left: 700px;
-    opacity: 50%;
-    z-index: 1;
-    animation: fallingsnow15 normal 10s infinite;
-}
-
-#snowflake16 {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: -50px;
-    left: 700px;
-    opacity: 50%;
-    z-index: 1;
-    animation: fallingsnow16 normal 10s infinite;
 }
 
 @keyframes fallingsnow1 {
@@ -363,6 +322,7 @@ body {
     100% {
         top: 900px;
         left: 756px;
+        opacity: 0;
     }
 }
 
@@ -390,6 +350,7 @@ body {
     100% {
         top: 900px;
         left: 156px;
+        opacity: 0;
     }
 }
 
@@ -417,6 +378,7 @@ body {
     100% {
         top: 900px;
         left: 256px;
+        opacity: 0;
     }
 }
 
@@ -444,6 +406,7 @@ body {
     100% {
         top: 900px;
         left: 356px;
+        opacity: 0;
     }
 }
 
@@ -471,6 +434,7 @@ body {
     100% {
         top: 900px;
         left: 456px;
+        opacity: 0;
     }
 }
 
@@ -498,6 +462,7 @@ body {
     100% {
         top: 900px;
         left: 556px;
+        opacity: 0;
     }
 }
 
@@ -525,6 +490,7 @@ body {
     100% {
         top: 900px;
         left: 656px;
+        opacity: 0;
     }
 }
 
@@ -552,6 +518,7 @@ body {
     100% {
         top: 900px;
         left: 856px;
+        opacity: 0;
     }
 }
 
@@ -579,6 +546,7 @@ body {
     100% {
         top: 900px;
         left: 956px;
+        opacity: 0;
     }
 }
 
@@ -606,171 +574,65 @@ body {
     100% {
         top: 900px;
         left: 1056px;
+        opacity: 0;
     }
 }
 
 @keyframes fallingsnow11 {
     0% {
         top: -50px;
-        left: 700px
+        left: 1100px
     }
 
     25% {
         top: 50px;
-        left: 750;
+        left: 1150;
     }
 
     50% {
         top: 300px;
-        left: 650px;
+        left: 1150px;
     }
 
     75% {
         top: 600px;
-        left: 700px;
+        left: 1200px;
     }
 
     100% {
         top: 900px;
-        left: 756px;
+        left: 1256px;
+        opacity: 0;
     }
 }
 
 @keyframes fallingsnow12 {
     0% {
         top: -50px;
-        left: 700px
+        left: 1100px
     }
 
     25% {
         top: 50px;
-        left: 750;
+        left: 1150;
     }
 
     50% {
         top: 300px;
-        left: 650px;
+        left: 1050px;
     }
 
     75% {
         top: 600px;
-        left: 700px;
+        left: 1100px;
     }
 
     100% {
         top: 900px;
-        left: 756px;
+        left: 1156px;
+        opacity: 0;
     }
 }
-
-@keyframes fallingsnow13 {
-    0% {
-        top: -50px;
-        left: 700px
-    }
-
-    25% {
-        top: 50px;
-        left: 750;
-    }
-
-    50% {
-        top: 300px;
-        left: 650px;
-    }
-
-    75% {
-        top: 600px;
-        left: 700px;
-    }
-
-    100% {
-        top: 900px;
-        left: 756px;
-    }
-}
-
-@keyframes fallingsnow14 {
-    0% {
-        top: -50px;
-        left: 700px
-    }
-
-    25% {
-        top: 50px;
-        left: 750;
-    }
-
-    50% {
-        top: 300px;
-        left: 650px;
-    }
-
-    75% {
-        top: 600px;
-        left: 700px;
-    }
-
-    100% {
-        top: 900px;
-        left: 756px;
-    }
-}
-
-@keyframes fallingsnow15 {
-    0% {
-        top: -50px;
-        left: 700px
-    }
-
-    25% {
-        top: 50px;
-        left: 750;
-    }
-
-    50% {
-        top: 300px;
-        left: 650px;
-    }
-
-    75% {
-        top: 600px;
-        left: 700px;
-    }
-
-    100% {
-        top: 900px;
-        left: 756px;
-    }
-}
-
-@keyframes fallingsnow16 {
-    0% {
-        top: -50px;
-        left: 700px
-    }
-
-    25% {
-        top: 50px;
-        left: 750;
-    }
-
-    50% {
-        top: 300px;
-        left: 650px;
-    }
-
-    75% {
-        top: 600px;
-        left: 700px;
-    }
-
-    100% {
-        top: 900px;
-        left: 756px;
-    }
-}
-
 
 @keyframes glowfishmovement {
     0% {
