@@ -165,9 +165,9 @@ body {
 
 #cow {
     position: absolute;
-    bottom: 50px;
-    left: 100px;
-    width: 200px;
+    bottom: -50px;
+    left: 300px;
+    width: 300px;
     transform: scaleX(-1);
 }
 
@@ -178,18 +178,21 @@ body {
 
 #text-info {
     position: absolute;
-    width: 250px;
+    width: 200px;
     font-size: 30px;
     color: white;
-    background-color: #ffc43a46;
     padding: 10px;
     top: 500px;
-    left: 100px;
+    left: 120px;
+    transform: skew(4deg);
+    opacity: 1;
+    animation: sign-blink 2s linear infinite both;
 }
 
 /* Rockets */
 #rocket-hk {
     position: absolute;
+    display: none;
     bottom: 30px;
     left: 250px;
     width: 250px;
@@ -197,6 +200,7 @@ body {
 }
 
 #rocket-hk:hover {
+    display: none;
     position: absolute;
     bottom: 30px;
     left: 250px;
@@ -221,6 +225,13 @@ body {
     width: 300px;
     transform: rotate(2deg);
     animation: rocket-bi 0.5s ease-in-out infinite alternate;
+}
+
+#sign {
+    position: absolute;
+    top: 400px;
+    width: 400px;
+    transform: scaleX(-1);
 }
 
 @keyframes rocket-hk {
@@ -297,5 +308,23 @@ body {
     100% {
         transform: scale(2);
         transform: scaleX(-1);
+    }
+}
+
+@keyframes sign-blink {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opactiy: 1;
     }
 }
