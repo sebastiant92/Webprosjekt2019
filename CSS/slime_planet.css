@@ -1,0 +1,210 @@
+/* General Rules: Z-index: background: 1, Ground: 2, Details: 3
+   NPC: 4, Main character: 5. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/* Main Container */
+#container {
+    width: 1278px;
+    height: 800px;
+    top: 50px;
+    position: relative;
+    margin: auto;
+    background-color: #0c0920;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Ground */
+#slime-ground {
+    width: 1500px;
+    height: 600px;
+    position: absolute;
+    margin: auto;
+    overflow: hidden;
+    background-color: #76f91f;
+    border: 5px solid #ddf45b;
+    border-radius: 50%;
+    bottom: -300px;
+    left: -100px;
+    z-index: 2;
+}
+
+/* Ground Details */
+.slime-bubbles {
+    position: absolute;
+    border: 2px solid #ddf45b;
+    background-color: #32bc35;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+#slime-bubble-1 {
+    width: 120px;
+    height: 40px;
+    transform: rotate(-15deg);
+    bottom: 100px;
+    left: 30px;
+}
+
+#slime-bubble-2 {
+    width: 150px;
+    height: 30px;
+    transform: rotate(-14deg);
+    bottom: 200px;
+    left: 180px;
+}
+
+#slime-bubble-3 {
+    width: 220px;
+    height: 90px;
+    transform: rotate(-10deg);
+    bottom: 50px;
+    left: 200px;
+}
+
+#slime-bubble-4 {
+    width: 120px;
+    height: 50px;
+    transform: rotate(-5deg);
+    border-radius: 50%;
+    bottom: 150px;
+    left: 450px;
+}
+
+#slime-bubble-5 {
+    width: 180px;
+    height: 30px;
+    transform: rotate(-4deg);
+    border-radius: 50%;
+    bottom: 250px;
+    left: 450px;
+}
+
+#slime-bubble-6 {
+    width: 260px;
+    height: 150px;
+    transform: rotate(4deg);
+    border-radius: 50%;
+    bottom: -80px;
+    left: 700px;
+}
+
+#slime-bubble-7 {
+    width: 400px;
+    height: 80px;
+    transform: rotate(6deg);
+    border-radius: 50%;
+    bottom: 170px;
+    left: 700px;
+}
+
+/* Character & Npc elements */
+.slime-villager {
+    position: absolute;
+    z-index: 4;
+}
+
+#kenbeth-flying {
+    position: absolute;
+    width: 400px;
+    top: 200px;
+    left: 100px;
+    z-index: 5;
+}
+
+/* Villagers */
+#slime-villager-1 {
+    width: 100px;
+    bottom: 100px;
+    right: 100px;
+    transform: rotate(16deg);
+}
+
+#slime-villager-2 {
+    width: 100px;
+    bottom: 255px;
+    right: 440px;
+    transform: rotate(5deg);
+}
+
+#slime-villager-3 {
+    width: 160px;
+    bottom: 100px;
+    right: 190px;
+    transform: rotate(12deg);
+}
+
+#slime-villager-4 {
+    width: 130px;
+    bottom: 80px;
+    left: 500px;
+    transform: rotate(-4deg);
+    transform: scaleX(-1);
+}
+
+#slime-villager-5 {
+    width: 100px;
+    bottom: 100px;
+    right: 100px;
+    transform: rotate(16deg);
+}
+
+#slime-villager-6 {
+    width: 100px;
+    bottom: 100px;
+    right: 100px;
+    transform: rotate(16deg);
+}
+
+#slime-monster-angry {
+    position: absolute;
+    width: 80px;
+    right: 300px;
+    bottom: 250px;
+    z-index: 4;
+    transform: rotate(18deg);
+}
+
+/* gifs */
+#slime-monster-gif {
+    position: absolute;
+    width: 200px;
+    bottom: 80px;
+    z-index: 4;
+    transform: rotate(-20deg);
+}
+
+/* Background elements */
+.planet-imgs {
+    position: absolute;
+}
+
+#black-hole {
+    width: 600px;
+    top: 100px;
+    left: 400px;
+    z-index: 1;
+    animation: black-hole-tilt 30s linear infinite both;
+    -webkit-animation: black-hole-tilt 30s linear infinite both;
+}
+
+/* Keyframes */
+@keyframes black-hole-tilt {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
