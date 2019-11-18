@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/* Main Container */
+#container {
+    width: 1278px;
+    height: 800px;
+    top: 50px;
+    position: relative;
+    margin: auto;
+    background-color: #0c0920;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Ground */
+#slime-ground {
+    width: 1500px;
+    height: 600px;
+    position: absolute;
+    margin: auto;
+    overflow: hidden;
+    background-color: #c6f91f;
+    border: 5px solid #ddf45b;
+    border-radius: 50%;
+    bottom: -300px;
+    left: -100px;
+    z-index: 1;
+}
+
+/* Ground Details */
+.slime-bubbles {
+    position: absolute;
+    border: 2px solid #ddf45b;
+    background-color: #32bc35;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#slime-bubble-1 {
+    width: 120px;
+    height: 40px;
+    transform: rotate(-15deg);
+    bottom: 100px;
+    left: 30px;
+}
+
+#slime-bubble-2 {
+    width: 150px;
+    height: 30px;
+    transform: rotate(-14deg);
+    bottom: 200px;
+    left: 180px;
+}
+
+#slime-bubble-3 {
+    width: 220px;
+    height: 90px;
+    transform: rotate(-10deg);
+    bottom: 50px;
+    left: 200px;
+}
+
+#slime-bubble-4 {
+    width: 120px;
+    height: 50px;
+    transform: rotate(-5deg);
+    border-radius: 50%;
+    bottom: 150px;
+    left: 450px;
+}
+
+#slime-bubble-5 {
+    width: 180px;
+    height: 30px;
+    transform: rotate(-4deg);
+    border-radius: 50%;
+    bottom: 250px;
+    left: 450px;
+}
+
+#slime-bubble-6 {
+    width: 260px;
+    height: 150px;
+    transform: rotate(4deg);
+    border-radius: 50%;
+    bottom: -80px;
+    left: 700px;
+}
+
+#slime-bubble-7 {
+    width: 400px;
+    height: 80px;
+    transform: rotate(6deg);
+    border-radius: 50%;
+    bottom: 170px;
+    left: 700px;
+}
+
+/* Character & Npc elements */
+#kenbeth-flying {
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    z-index: 3;
+}
+
+/* Background elements */
+.planet-imgs {
+    position: absolute;
+}
+
+#black-hole {
+    width: 600px;
+    left: 400px;
+    z-index: 1;
+}
