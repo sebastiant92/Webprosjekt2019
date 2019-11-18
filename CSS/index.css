@@ -191,7 +191,7 @@ body {
     background-image: linear-gradient(to left, #00c5cc, #3285d3);
     top: 350px;
     left: 250px;
-    animation: rotatepotet 3s linear infinite;
+    animation: rotatepotet 3s ease infinite;
 
 }
 
@@ -232,9 +232,12 @@ body {
             background-image: linear-gradient(to left, #00c5cc, #3285d3);
     }
     
-    100%{
+    50%{
             background-image: linear-gradient(to right, #00c5cc, #3285d3);
     }  
+    100%{
+        background-image: linear-gradient(to left, #00c5cc, #3285d3);
+    }
 }
 
 
