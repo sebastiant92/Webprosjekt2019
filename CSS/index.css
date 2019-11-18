@@ -188,10 +188,12 @@ body {
 #planet-ice{
     width: 150px;
     height: 150px;
-    background-image: linear-gradient(to left, #00c5cc, #3285d3);
     top: 350px;
     left: 250px;
-    animation: rotatepotet 3s ease infinite;
+    background: linear-gradient(270deg, #00c5cc, #3285d3);
+    background-size: 400% 400%;
+
+-webkit-animation: rotatepotet 5s ease infinite;
 
 }
 
@@ -227,18 +229,13 @@ body {
     left: 1000px;
 }
 
-@keyframes rotatepotet{
-    0%{
-            background-image: linear-gradient(to left, #00c5cc, #3285d3);
-    }
-    
-    50%{
-            background-image: linear-gradient(to right, #00c5cc, #3285d3);
-    }  
-    100%{
-        background-image: linear-gradient(to left, #00c5cc, #3285d3);
-    }
+
+@-webkit-keyframes rotatepotet {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
+
 
 
 
