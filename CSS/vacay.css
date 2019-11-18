@@ -119,7 +119,7 @@ body {
     position: absolute;
     margin-top: 680px;
     margin-left: 700px;
-    opacity: 0.6;
+    opacity: 0.5;
     z-index: 6;
 }
 
@@ -133,6 +133,7 @@ body {
     z-index: 5;
 }
 
+/* Active on fish for text(Hint) */
 #fish:active ~#text-bubble {
     opacity: 1;
 }
@@ -154,10 +155,6 @@ body {
     100% {transform: translateX(-10%) translateY(20%);}
 }
 
-@keyframes fish-text {
-    
-}
-
 /* Sea decorations*/
 
 /* Sea plants */
@@ -171,27 +168,26 @@ body {
 }
 
 #sea-plant {
-    margin-left: -25px;
     margin-top: 670px;
+    margin-left: -25px;
     animation-name: seaplant-move;
 }
 
 #sea-plant2 {
-    margin-left: 10px;
     margin-top: 680px;
+    margin-left: 10px;
     animation-name: seaplant-move2;
 }
 
 #sea-plant3 {
-    margin-left: 40px;
     margin-top: 665px;
+    margin-left: 40px;
     animation-name: seaplant-move;
 }
 
 #sea-plant4 {
+    margin-top: 685px;
     margin-left: 75px;
-    margin-top: 685px;
-    margin-top: 685px;
     animation-name: seaplant-move2;
 }
 
@@ -206,3 +202,58 @@ body {
     50% {transform: rotate(6deg);}
 }
 
+/* Palm tree */
+#palm-root {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 100px;
+    z-index: 0;
+}
+
+#palm-leaf {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 100px;
+    z-index: 0;
+    animation-name: palm-move;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+/* Palm tree animation */
+@keyframes palm-move {
+    0%, 100% {transform: rotate(7deg);}
+    50% {transform: rotate(0deg);}
+}
+
+/* Main Character */
+#main-character {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-top: 175px;
+    margin-left: 500px;
+    z-index: 5;
+    animation-name: main-dance;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Dance Animation */
+@keyframes main-dance {
+    0% {transform: translate(1px, 1px) rotate(0deg);}
+  10% {transform: translate(-1px, -2px) rotate(-1deg);}
+  20% {transform: translate(-3px, 0px) rotate(1deg);}
+  30% {transform: translate(3px, 2px) rotate(0deg);}
+  40% {transform: translate(1px, -1px) rotate(1deg);}
+  50% {transform: translate(-1px, 2px) rotate(-1deg);}
+  60% {transform: translate(-3px, 1px) rotate(0deg);}
+  70% {transform: translate(3px, 1px) rotate(-1deg);}
+  80% {transform: translate(-1px, -1px) rotate(1deg);}
+  90% {transform: translate(1px, 2px) rotate(0deg);}
+  100% {transform: translate(1px, -2px) rotate(-1deg);}
+}
