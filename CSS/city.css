@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 1278px;
+  height: 800px;
+  top: 50px;
+  position: relative;
+  margin: auto;
+  background-color: #0c0920;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+}
+
+#main-box{
+    width: 1278px;
+    height: 900px;
+    top: 500px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #415a77;
+}
+
+#box2{
+    width: 200px;
+    height: 50px;
+    bottom: 150px;
+    left: 300px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: darkgray;
+    
+}
+
+#box3{
+    width: 200px;
+    height: 50px;
+    bottom: 100px;
+    left: 900px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: darkgray;
+}
+
+#box4{
+    width: 200px;
+    height: 60px;
+    bottom: 140px;
+    left: 125px;
+    border-radius: 50%;
+    position: relative;
+    background-color: darkgray;
+}
+
+#box5{
+    width: 200px;
+    height: 60px;
+    bottom: 30px;
+    left: 600px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: darkgray;
+}
+
+#box6{
+    width: 150px;
+    height: 30px;
+    bottom: 250px;
+    left: 600px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: darkgray;
+}
+
+#box7{
+    width: 150px;
+    height: 30px;
+    bottom: 160px;
+    left: 700px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: darkgray;
+}
+
+#box8{
+    width: 150px;
+    height: 30px;
+    bottom: 70px;
+    left: 400px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: darkgray;
+}
+
+#ice{
+    height: 650px;
+    width: 650px;
+    position: absolute;
+    bottom: 200px;
+    left: -100px;
+    z-index: 1;
+}
+
+#vacay{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    bottom: 500px;
+    left: 350px;
+}
+
+#slime{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    bottom: 400px;
+    left: 650px;
+}
+
+#cowboy{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    bottom: 250px;
+    left: 930px;
+}
+
+#kenbeth-landing{
+    height: 450px;
+    width: 450px;
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    z-index: 2;
+}

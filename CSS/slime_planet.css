@@ -1,3 +1,6 @@
+/* General Rules: Z-index: background: 1, Ground: 2, Details: 3
+   NPC: 4, Main character: 5. */
+
 * {
     margin: 0;
     padding: 0;
@@ -27,12 +30,12 @@ body {
     position: absolute;
     margin: auto;
     overflow: hidden;
-    background-color: #c6f91f;
+    background-color: #76f91f;
     border: 5px solid #ddf45b;
     border-radius: 50%;
     bottom: -300px;
     left: -100px;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Ground Details */
@@ -41,7 +44,7 @@ body {
     border: 2px solid #ddf45b;
     background-color: #32bc35;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 3;
 }
 
 #slime-bubble-1 {
@@ -105,12 +108,79 @@ body {
 }
 
 /* Character & Npc elements */
-#kenbeth-flying {
-    width: 400px;
+.slime-villager {
     position: absolute;
+    z-index: 4;
+}
+
+#kenbeth-flying {
+    position: absolute;
+    width: 400px;
     top: 200px;
     left: 100px;
-    z-index: 3;
+    z-index: 5;
+}
+
+/* Villagers */
+#slime-villager-1 {
+    width: 100px;
+    bottom: 100px;
+    right: 100px;
+    transform: rotate(16deg);
+}
+
+#slime-villager-2 {
+    width: 100px;
+    bottom: 255px;
+    right: 440px;
+    transform: rotate(5deg);
+}
+
+#slime-villager-3 {
+    width: 160px;
+    bottom: 100px;
+    right: 190px;
+    transform: rotate(12deg);
+}
+
+#slime-villager-4 {
+    width: 130px;
+    bottom: 80px;
+    left: 500px;
+    transform: rotate(-4deg);
+    transform: scaleX(-1);
+}
+
+#slime-villager-5 {
+    width: 100px;
+    bottom: 100px;
+    right: 100px;
+    transform: rotate(16deg);
+}
+
+#slime-villager-6 {
+    width: 100px;
+    bottom: 100px;
+    right: 100px;
+    transform: rotate(16deg);
+}
+
+#slime-monster-angry {
+    position: absolute;
+    width: 80px;
+    right: 300px;
+    bottom: 250px;
+    z-index: 4;
+    transform: rotate(18deg);
+}
+
+/* gifs */
+#slime-monster-gif {
+    position: absolute;
+    width: 200px;
+    bottom: 80px;
+    z-index: 4;
+    transform: rotate(-20deg);
 }
 
 /* Background elements */
@@ -120,6 +190,21 @@ body {
 
 #black-hole {
     width: 600px;
+    top: 100px;
     left: 400px;
     z-index: 1;
+    animation: black-hole-tilt 30s linear infinite both;
+    -webkit-animation: black-hole-tilt 30s linear infinite both;
+}
+
+/* Keyframes */
+@keyframes black-hole-tilt {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
 }
