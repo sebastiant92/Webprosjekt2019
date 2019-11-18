@@ -87,6 +87,7 @@ body {
     z-index: 4;
 }
 
+/* Shell related */
 #shell {
     width: 100px;
     height: 100px;
@@ -101,6 +102,17 @@ body {
    opacity: 0;
 }
 
+#shell-text {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 625px;
+    margin-left: 1050px;
+    opacity: 0.5;
+    z-index: 4; 
+}
+
+/* Fish related*/
 #fish {
     width: 100px;
     height: 100px;
@@ -113,6 +125,16 @@ body {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#text-bubble {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin-top: 680px;
+    margin-left: 450px;
+    /* opacity: 0; */
+    z-index: 5;
 }
 
 /* Fish Animation */
@@ -128,18 +150,9 @@ body {
     
 }
 
-#shell-text {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    margin-top: 625px;
-    margin-left: 1050px;
-    opacity: 0.5;
-    z-index: 4; 
-}
+/* Sea decorations*/
 
 /* Sea plants */
-
 .sea-plants {
     width: 100px;
     height: 200px;
@@ -175,7 +188,6 @@ body {
 }
 
 /* Seaplant Animation */
-
 @keyframes seaplant-move {
     0%, 100% {transform: rotate(9deg);}
     50% {transform: rotate(-9deg);}
