@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    top: 50px;
+    width: 1278px;
+    height: 800px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+#black-hole{
+    width: 1278px;
+    height: 800px;
+    position: absolute;
+    background-position: 0%;
+    z-index: 1;
+}
+
+body {
+    background-color: black;
+}
+
+#kenbeth{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    transform: scalex(-1);
+    margin-left: 900px;
+    margin-top: 500px;
+    z-index: 10;
+}
+
+
+#satelite {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-left: 1400px;
+    animation: satelite 5s linear;
+    z-index: 11;  
+    
+
+}
+
+@keyframes satelite {
+    
+    0% {
+        margin-left: 1400px;
+        transform: rotate(0deg);
+    }
+    25% {
+        margin-left: 1050px;
+        transform: rotate(90deg);
+    }
+    50% {
+        margin-left: 700px;
+        transform: rotate(180deg);
+    }
+    75% {
+        margin-left: 350px;
+        transform: rotate(270deg);
+    }
+    100% {
+        margin-left:0;
+        margin-top: 800px;
+        transform: rotate(365deg);
+    }
+}
