@@ -21,12 +21,12 @@ body {
 
 /* Sand */
 #main-land {
-    width: 1350px;
+    width: 1450px;
     height: 800px;
     position: absolute;
     border-radius: 100%;
     margin-top: 450px;
-    margin-left: -36px;
+    margin-left: -86px;
     background-color: #FCA1AF;
     overflow: hidden;
     z-index: 1;
@@ -44,7 +44,7 @@ body {
     margin-top: 605px;
     margin-left: -36px;
     opacity: 0.6;
-    z-index: 3;
+    z-index: 4;
     -webkit-animation-name: wave-move;
     -webkit-animation-delay: 3s;
 }
@@ -53,7 +53,7 @@ body {
     margin-top: 630px;
     margin-left: -26px;
     opacity: 0.2;
-    z-index: 4;
+    z-index: 5;
     -webkit-animation-name: wave-move;
     -webkit-animation-delay: 1.5s;
 }
@@ -72,22 +72,58 @@ body {
 
 /* Animation Waves */
 @keyframes wave-move {
-    0% {transform: translateX(0) translateY(0) scaleY(1;)}
-    0% {transform: translateX(-10%) translateY(0) scaleY(.5);}
-    0% {transform: translateX(10) translateY(0) scaleY(1);}
+    0% {-webkit-transform: translateX(0) translateY(0) scaleY(1;)}
+    0% {-webkit-transform: translateX(-10%) translateY(0) scaleY(.5);}
+    0% {-webkit-transform: translateX(10) translateY(0) scaleY(1);}
 }
 
 /* Beach Elements */
 #beach-ball {
     width: 100px;
     height: 100px;
+    position: absolute;
     margin-top: 500px;
     margin-left: 200px;
     z-index: 4;
 }
 
 #shell {
-    width: 70px;
-    height: 70px;
-    z-index: 4;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 625px;
+    margin-left: 1050px;
+    z-index: 5;
+}
+
+/* Shell Hover, disapears*/
+#shell:hover{
+   opacity: 0;
+}
+
+#fish {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    margin-top: 680px;
+    margin-left: 700px;
+    z-index: 3;
+    -webkit-animation-name: fish-swim;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+}
+
+/* Fish Animation */
+@keyframes fish-swim {
+    0% {-webkit-transform: translateX(-100%) translateY(20%);}
+    25% {-webkit-transform: translateX(-90%) translateY(5%);}
+    50% {-webkit-transform: translateX(-60%) translateY(20%);}
+    75% {-webkit-transform: translateX(-30%) translateY(5%);}
+    100% {-webkit-transform: translateX(-10%) translateY(20%);}
+}
+
+@keyframes fish-text {
+    
 }
