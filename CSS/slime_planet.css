@@ -122,46 +122,45 @@ body {
 }
 
 /* Villagers */
-#slime-villager-1 {
-    width: 100px;
+#baby-villager-1 {
+    width: 60px;
     bottom: 100px;
-    right: 100px;
+    right: 50px;
     transform: rotate(16deg);
 }
 
-#slime-villager-2 {
+#baby-villager-2 {
+    width: 60px;
+    bottom: 100px;
+    right: 120px;
+    transform: rotate(16deg);
+}
+
+#slime-villager-1 {
     width: 100px;
     bottom: 255px;
     right: 440px;
     transform: rotate(5deg);
 }
 
-#slime-villager-3 {
+#slime-villager-2 {
     width: 160px;
     bottom: 100px;
     right: 190px;
     transform: rotate(12deg);
 }
 
-#slime-villager-4 {
+#slime-villager-3 {
     width: 130px;
     bottom: 80px;
     left: 500px;
-    transform: rotate(-4deg);
-    transform: scaleX(-1);
+    transform: rotate(-4deg) scaleX(-1);
 }
 
-#slime-villager-5 {
+#slime-villager-4 {
     width: 100px;
     bottom: 100px;
-    right: 100px;
-    transform: rotate(16deg);
-}
-
-#slime-villager-6 {
-    width: 100px;
-    bottom: 100px;
-    right: 100px;
+    right: 500px;
     transform: rotate(16deg);
 }
 

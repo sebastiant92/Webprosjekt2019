@@ -26,7 +26,7 @@ body {
     z-index: 2;
 }
 
-#glowFish {
+#glow-fish {
     width: 145px;
     height: 170px;
     position: absolute;
@@ -38,7 +38,7 @@ body {
     animation: glowfishmovement alternate ease-in-out 5s infinite;
 }
 
-#bigfish {
+#big-fish {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -48,7 +48,7 @@ body {
     z-index: 2;
 }
 
-#mediumfish {
+#medium-fish {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -58,7 +58,7 @@ body {
     z-index: 2;
 }
 
-#smallfish {
+#small-fish {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -68,7 +68,7 @@ body {
     z-index: 2;
 }
 
-#yellowfish {
+#yellow-fish {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -88,7 +88,7 @@ body {
 }
 
 /*Planets size and position*/
-#cityplanet {
+#city-planet {
     height: 200px;
     width: 200px;
     position: absolute;
@@ -96,7 +96,7 @@ body {
     left: 100px;
 }
 
-#vaykayplanet {
+#vaykay-planet {
     height: 150px;
     width: 150px;
     position: absolute;
@@ -104,7 +104,7 @@ body {
     left: 375px;
 }
 
-#cowboyplanet {
+#cowboy-planet {
     height: 100px;
     width: 100px;
     position: absolute;
@@ -112,7 +112,7 @@ body {
     left: 700px;
 }
 
-#slimeplanet {
+#slime-planet {
     height: 100px;
     width: 100px;
     position: absolute;
