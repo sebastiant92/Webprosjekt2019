@@ -119,22 +119,30 @@ body {
     position: absolute;
     margin-top: 680px;
     margin-left: 700px;
-    z-index: 3;
+    opacity: 0.6;
+    z-index: 6;
+}
+
+#text-bubble {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 605px;
+    opacity: 0;
+    z-index: 5;
+}
+
+#fish:active ~#text-bubble {
+    opacity: 1;
+}
+
+.animation-swim {
     animation-name: fish-swim;
     animation-duration: 8s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-#text-bubble {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    margin-top: 680px;
-    margin-left: 450px;
-    /* opacity: 0; */
-    z-index: 5;
 }
 
 /* Fish Animation */
