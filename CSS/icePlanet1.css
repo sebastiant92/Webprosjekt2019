@@ -16,6 +16,7 @@ body {
     overflow: hidden;
 }
 
+/*Characters size and position*/
 #pingu {
     width: 185px;
     height: 200px;
@@ -34,6 +35,7 @@ body {
     opacity: 90%;
     z-index: 2;
     transform: scaleX(-1);
+    animation: glowfishmovement alternate ease-in-out 5s infinite;
 }
 
 #bigfish {
@@ -85,6 +87,7 @@ body {
     z-index: 2;
 }
 
+/*Planets size and position*/
 #cityplanet {
     height: 200px;
     width: 200px;
@@ -117,6 +120,7 @@ body {
     left: 1000px;
 }
 
+/*Ice planet layout*/
 #water {
     width: 1800px;
     height: 800px;
@@ -151,3 +155,32 @@ body {
     top: 400px;
     left: 700px;
 }
+
+@keyframes glowfishmovement {
+    0% {
+        top: 650px;
+        left: 900px;
+    }
+
+    50% {
+        top: 645px;
+        left: 895px
+    }
+
+    100% {
+        top: 655px;
+        left: 905px
+    }
+
+    /*
+    75% {
+        top: px;
+        left: px
+    }
+
+    100% {
+        top: px;
+        left: px
+    }
+}
+*/
