@@ -19,70 +19,82 @@ body {
   background-color: black;
 }
 
+/* Divs */
 #main-box{
-    width: 1278px;
+    width: 2000px;
     height: 900px;
     top: 500px;
+    left: -300px;
     border-radius: 50%;
     position: relative;
     background-color: #415a77;
+    border: 4px solid gray;
 }
 
-#box2{
-    width: 200px;
-    height: 50px;
+#ground-texture1{
+    width: 250px;
+    height: 60px;
     bottom: 150px;
-    left: 300px;    
+    left: 300px;
 }
 
-#box3{
+#ground-texture2{
     width: 200px;
-    height: 50px;
+    height: 60px;
     bottom: 100px;
     left: 900px;
 }
 
-#box4{
+#ground-texture3{
     width: 200px;
-    height: 60px;
+    height: 70px;
     bottom: 40px;
     left: 125px;
 }
 
-#box5{
-    width: 200px;
-    height: 60px;
+#ground-texture4{
+    width: 240px;
+    height: 80px;
     bottom: 30px;
     left: 600px;
 }
 
-#box6{
-    width: 150px;
+#ground-texture5{
+    width: 200px;
     height: 30px;
     bottom: 250px;
     left: 600px;
 }
 
-#box7{
+#ground-texture6{
     width: 150px;
-    height: 30px;
+    height: 40px;
     bottom: 160px;
     left: 700px;
 }
 
-#box8{
+#ground-texture7{
     width: 150px;
-    height: 30px;
-    bottom: 70px;
+    height: 70px;
+    bottom: -20px;
     left: 400px;
+}
+
+#ground-texture8{
+    width: 200px;
+    height: 100px;
+    bottom: -10px;
+    left: 1000px;
 }
 
 .texture{
     border-radius: 50%;
     position: absolute;
     background-color: darkgray;
+    border: 4px solid gray;
 }
 
+/* planets */
 #ice{
     height: 650px;
     width: 650px;
@@ -116,6 +128,7 @@ body {
     left: 930px;
 }
 
+/* Characters */
 #kenbeth-landing{
     height: 450px;
     width: 450px;
@@ -124,3 +137,5 @@ body {
     left: 20px;
     z-index: 2;
 }
+
+/* Animation */
