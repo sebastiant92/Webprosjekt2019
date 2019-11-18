@@ -172,7 +172,7 @@ body {
 }
 
 /* Skal ha animasjon på slimeplanet når denne er active (ikke ferdig) */
-#cow:active {
+#cow:active ~ #slime-planet {
     animation: planet-next 2s;
 }
 
@@ -196,7 +196,7 @@ body {
     transform: rotate(-2deg);
 }
 
-#rocket-hk:hover #planet-slime {
+#rocket-hk:hover {
     position: absolute;
     bottom: 30px;
     left: 250px;
