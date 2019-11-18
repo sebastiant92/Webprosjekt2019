@@ -1,13 +1,17 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: ;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-main {
+body {
+    background-color: #0c0920;
+}
+
+#container {
     width: 1278px;
     height: 800px;
-    background-color: cadetblue;
+    background-color: #6698a5;
     position: relative;
     overflow: hidden;
 }
@@ -19,20 +23,30 @@ main {
     top: 420px;
     left: 900px;
     z-index: 2;
+}
 
-
+#glowFish {
+    width: 145px;
+    height: 170px;
+    position: absolute;
+    top: 650px;
+    left: 900px;
+    opacity: 90%;
+    z-index: 2;
+    transform: scaleX(-1);
 }
 
 #water {
     width: 1800px;
     height: 800px;
-    background-color: blue;
-    opacity: 90%;
+    background-color: #288FEF;
+    opacity: 95%;
     position: absolute;
     top: 600px;
     left: -220px;
     border-radius: 50%;
     z-index: 2;
+
 
 
 }
