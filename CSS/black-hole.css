@@ -33,6 +33,7 @@ body {
     margin-left: 900px;
     margin-top: 500px;
     z-index: 10;
+    animation: kenbeth 6s timing-function delay iteration-count linear;
 }
 
 
@@ -46,7 +47,7 @@ body {
     
 
 }
-
+/* animation for the satelite's rotation and trajectory through the screen */
 @keyframes satelite {
     
     0% {
@@ -67,6 +68,32 @@ body {
     }
     100% {
         margin-left:0;
+        margin-top: 800px;
+        transform: rotate(365deg);
+    }
+}
+
+@keyframes kenbeth {
+    
+    0% {
+        margin-left: 900px;
+        margin-top: 500px;
+        transform: rotate(15deg);
+    }
+    25% {
+        margin-left: 450px;
+        transform: rotate(90deg);
+    }
+    50% {
+        margin-left: 200px;
+        
+    }
+    75% {
+        margin-left: 450px;
+        transform: rotate(270deg);
+    }
+    100% {
+        margin-left:800;
         margin-top: 800px;
         transform: rotate(365deg);
     }
