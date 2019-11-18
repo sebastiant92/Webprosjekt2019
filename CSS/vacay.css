@@ -27,7 +27,50 @@ body {
     margin-left: -36px;
     background-color: #FCA1AF;
     overflow: hidden;
-    
-    
+    z-index: 1;
+   
+}
 
+#wave0 {
+    margin-top: 590px;
+    margin-left: -36px;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+#wave {
+    margin-top: 605px;
+    margin-left: -36px;
+    opacity: 0.6;
+    z-index: 3;
+    -webkit-animation-name: wave-move;
+    -webkit-animation-delay: 3s;
+}
+
+#wave2 {
+    margin-top: 630px;
+    margin-left: -26px;
+    opacity: 0.2;
+    z-index: 4;
+    -webkit-animation-name: wave-move;
+    -webkit-animation-delay: 1.5s;
+}
+
+.waves {
+    width: 1500px;
+    height: 300px;
+    position: absolute;
+    overflow: hidden;
+    -webkit-animation-name: wave-move ;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite; 
+    -webkit-animation-direction: alternate-reverse;
+}
+
+@keyframes wave-move {
+    
+    0% {transform: translateX(0) translateY(0) scaleY(1;)}
+    0% {transform: translateX(-10%) translateY(0) scaleY(.5);}
+    0% {transform: translateX(10) translateY(0) scaleY(1);}
 }
