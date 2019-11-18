@@ -283,10 +283,9 @@ body {
     opacity: 50%;
     z-index: 1;
     animation: fallingsnow11 normal 7s infinite;
-    animation-delay: 2s;
 }
 
-#snowflake11 {
+#snowflake12 {
     height: 50px;
     width: 50px;
     position: absolute;
@@ -294,8 +293,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow11 normal 7s infinite;
-
+    animation: fallingsnow12 normal 7s infinite;
+    animation-delay: 2s;
 }
 
 @keyframes fallingsnow1 {
