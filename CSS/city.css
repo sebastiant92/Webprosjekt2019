@@ -32,11 +32,7 @@ body {
     width: 200px;
     height: 50px;
     bottom: 150px;
-    left: 300px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: darkgray;
-    
+    left: 300px;    
 }
 
 #box3{
@@ -44,19 +40,13 @@ body {
     height: 50px;
     bottom: 100px;
     left: 900px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: darkgray;
 }
 
 #box4{
     width: 200px;
     height: 60px;
-    bottom: 140px;
+    bottom: 40px;
     left: 125px;
-    border-radius: 50%;
-    position: relative;
-    background-color: darkgray;
 }
 
 #box5{
@@ -64,9 +54,6 @@ body {
     height: 60px;
     bottom: 30px;
     left: 600px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: darkgray;
 }
 
 #box6{
@@ -74,9 +61,6 @@ body {
     height: 30px;
     bottom: 250px;
     left: 600px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: darkgray;
 }
 
 #box7{
@@ -84,9 +68,6 @@ body {
     height: 30px;
     bottom: 160px;
     left: 700px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: darkgray;
 }
 
 #box8{
@@ -94,6 +75,9 @@ body {
     height: 30px;
     bottom: 70px;
     left: 400px;
+}
+
+.texture{
     border-radius: 50%;
     position: absolute;
     background-color: darkgray;
