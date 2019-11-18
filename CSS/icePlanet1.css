@@ -1,0 +1,61 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: ;
+}
+
+main {
+    width: 1278px;
+    height: 800px;
+    background-color: cadetblue;
+    position: relative;
+    overflow: hidden;
+}
+
+#pingu {
+    width: 185px;
+    height: 200px;
+    position: absolute;
+    top: 420px;
+    left: 900px;
+    z-index: 2;
+
+
+}
+
+#water {
+    width: 1800px;
+    height: 800px;
+    background-color: blue;
+    opacity: 90%;
+    position: absolute;
+    top: 600px;
+    left: -220px;
+    border-radius: 50%;
+    z-index: 2;
+
+
+}
+
+#ice {
+    width: 1800px;
+    height: 800px;
+    position: absolute;
+    top: 550px;
+    left: -225px;
+    z-index: 1;
+}
+
+#mountain {
+    position: absolute;
+    top: 175px;
+    left: 900px;
+}
+
+#sign {
+    width: 150px;
+    height: 175px;
+    position: absolute;
+    top: 400px;
+    left: 700px;
+}
