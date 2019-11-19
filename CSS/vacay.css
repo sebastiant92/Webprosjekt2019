@@ -480,7 +480,7 @@ body {
     50% {transform: translate(-600px, -50px) rotate(-10deg);}
     75% {transform: translate(-800px, -80px) rotate(20deg);}
     85% {transform: translate(-1000px, -50px) rotate(-30deg);}
-    100%{transform: translate(-1450px, -100px) rotate(40deg);}
+    100%{transform: translate(-1450px, -80px) rotate(40deg);}
 }
 
 /* Stars */
