@@ -22,21 +22,19 @@ body {
     animation: zoomStarContainer 5s ease-out forwards;
     position: absolute;
     top: 0px;
-
 }
-
 
 .stars{
     position: absolute;
     width: 1px;
     height: 1px;
     border-radius: 100%;
-    background-color: #ffffff;
     box-shadow:
         0 0 5px 1px #ffffff, 
         0 0 5px 1px #ffffff, 
         0 0 3px 1px #ffffff; 
-    -webkit-animation: zoomStars 5s ease-in forwards;
+    
+    -webkit-animation: zoom-stars 5s ease-in forwards;
 }
 
 
@@ -190,10 +188,14 @@ body {
     left: 700px;
 }
 
+/* Planets */
+
 .planet{
     position: absolute;
     border-radius: 100%; 
 }
+
+/* Planet Ice */
 
 #planet-ice{
     width: 150px;
@@ -201,18 +203,29 @@ body {
     top: 350px;
     left: 250px;
     background: linear-gradient(270deg, #00c5cc, #3285d3);
-    animation: zoomPlanetIce 5s ease-out forwards;
     overflow: hidden;
+    
+    animation: zoom-planet-ice 5s ease-out forwards;
+}
 
+@keyframes zoom-planet-ice{
+    100%{
+        width: 500px;
+        height: 500px;
+        top: 600px;
+        left: -150px;
+    }
 }
 
 #planet-ice-structure{
-    width: 600px;
-    height: 120px;
+    width: 1000px;
+    height: 250px;
     position: absolute;
     top: 0px;
     opacity: 0.6;
 }
+    
+/* Planet city */
 
 #planet-city{
     width: 100px;
@@ -220,13 +233,22 @@ body {
     background-image: linear-gradient(to right, #415a77, #415a77);
     top: 230px;
     left: 450px;
-    animation: zoomPlanetCity 5s ease-out forwards;
     overflow: hidden;
-
+    
+    animation: zoom-planet-city 5s ease-out forwards;
+}
+    
+@keyframes zoom-planet-city{
+    100%{
+        width: 200px;
+        height: 200px;
+        top: 450px;
+        left: 300px;
+    }
 }
 
 #planet-city-structure{
-    width: 250px;
+    width: 400px;
     height: 100px;
     position: absolute;
     top: 110px;
@@ -319,13 +341,7 @@ body {
 
 
 
-@keyframes zoomPlanetIce{
-    100%{
-        width: 500px;
-        height: 500px;
-        top: 600px;
-        left: -150px;
-    }
+
 }
 
 @keyframes zoomPlanetCity{
