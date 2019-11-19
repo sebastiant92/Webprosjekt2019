@@ -39,7 +39,7 @@ body {
     opacity: 90%;
     z-index: 2;
     transform: scaleX(-1);
-    animation: glowfish-movement alternate ease-in-out 5s infinite;
+    -webkit-animation: glowfish-movement alternate ease-in-out 5s infinite;
 }
 
 #big-fish {
@@ -50,7 +50,7 @@ body {
     left: 200px;
     opacity: 80%;
     z-index: 2;
-    animation: big-fish-movement 8s infinite;
+    -webkit-animation: big-fish-movement 8s infinite;
 }
 
 #medium-fish {
@@ -61,7 +61,7 @@ body {
     left: 150px;
     opacity: 80%;
     z-index: 2;
-    animation: medium-fish-movement 10s infinite;
+    -webkit-animation: medium-fish-movement 10s infinite;
 }
 
 #small-fish {
@@ -72,7 +72,7 @@ body {
     left: 150px;
     opacity: 80%;
     z-index: 2;
-    animation: small-fish-movement 7s infinite;
+    -webkit-animation: small-fish-movement 7s infinite;
 }
 
 
@@ -84,7 +84,7 @@ body {
     left: 180px;
     opacity: 80%;
     z-index: 2;
-    animation: yellow-fish-movement 10s infinite;
+    -webkit-animation: yellow-fish-movement 10s infinite;
 }
 
 #kenbeth1 {
@@ -94,7 +94,7 @@ body {
     top: 350px;
     left: 150px;
     z-index: 2;
-    animation: kenbeth-flying 1.5s linear;
+    -webkit-animation: kenbeth-flying 1.5s linear;
     -webkit-animation: kenbeth-flying 1.5s linear ease-out;
 }
 
@@ -103,15 +103,30 @@ body {
 #speech-pingu {
     width: 200px;
     height: 150px;
+    position: absolute;
     top: 300px;
-    left: 150;
+    left: 800px;
+    z-index: 2;
+    opacity: 0;
 }
 
 #speech-kenbeth {
     width: 200px;
     height: 150px;
-    top: 300px;
-    left: 150;
+    position: absolute;
+    top: 280px;
+    left: 400px;
+    opacity: 0;
+}
+
+#pingu:active ~ #speech-kenbeth {
+    opacity: 1;
+}
+
+#pingu:active ~ #speech-pingu {
+    opacity: 1;
+    -webkit-transition-delay: 1s;
+
 }
 
 /*Planets size and position*/
@@ -235,7 +250,7 @@ body {
 
 }
 
-#sign:hover {
+#sign:active {
     opacity: 0;
 }
 
@@ -249,7 +264,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow1 normal 11s infinite;
+    -webkit-animation: fallingsnow1 normal 11s infinite;
 }
 
 #snowflake2 {
@@ -260,8 +275,8 @@ body {
     left: 100px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow2 normal 8s infinite;
-    animation-delay: 7s;
+    -webkit-animation: fallingsnow2 normal 8s infinite;
+    -webkit-animation-delay: 7s;
 }
 
 #snowflake3 {
@@ -272,7 +287,7 @@ body {
     left: 200px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow3 normal 10s infinite;
+    -webkit-animation: fallingsnow3 normal 10s infinite;
 }
 
 #snowflake4 {
@@ -283,8 +298,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow4 normal 10s infinite;
-    animation-delay: 5s;
+    -webkit-animation: fallingsnow4 normal 10s infinite;
+    -webkit-animation-delay: 5s;
 }
 
 #snowflake5 {
@@ -295,7 +310,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow5 normal 12s infinite;
+    -webkit-animation: fallingsnow5 normal 12s infinite;
 }
 
 #snowflake6 {
@@ -306,8 +321,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow6 normal 10s infinite;
-    animation-delay: 2.5s;
+    -webkit-animation: fallingsnow6 normal 10s infinite;
+    -webkit-animation-delay: 2.5s;
 }
 
 #snowflake7 {
@@ -318,7 +333,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow7 normal 8s infinite;
+    -webkit-animation: fallingsnow7 normal 8s infinite;
 }
 
 #snowflake8 {
@@ -329,8 +344,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow8 normal 11s infinite;
-    animation-delay: 1s;
+    -webkit- animation: fallingsnow8 normal 11s infinite;
+    -webkit-animation-delay: 1s;
 }
 
 #snowflake9 {
@@ -341,7 +356,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow9 normal 7s infinite;
+    -webkit-animation: fallingsnow9 normal 7s infinite;
 }
 
 #snowflake10 {
@@ -352,8 +367,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow10 normal 8s infinite;
-    animation-delay: 2s;
+    -webkit-animation: fallingsnow10 normal 8s infinite;
+    -webkit-animation-delay: 2s;
 }
 
 #snowflake11 {
@@ -364,7 +379,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow11 normal 7s infinite;
+    -webkit-animation: fallingsnow11 normal 7s infinite;
 }
 
 #snowflake12 {
@@ -375,13 +390,13 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow12 normal 7s infinite;
-    animation-delay: 2s;
+    -webkit-animation: fallingsnow12 normal 7s infinite;
+    -webkit-animation-delay: 2s;
 }
 
 /*Falling snow keyframe 1-12*/
 
-@keyframes fallingsnow1 {
+@-webkit-keyframes fallingsnow1 {
     0% {
         top: -50px;
         left: 700px
@@ -409,7 +424,7 @@ body {
     }
 }
 
-@keyframes fallingsnow2 {
+@-webkit-keyframes fallingsnow2 {
     0% {
         top: -50px;
         left: 100px
@@ -437,7 +452,7 @@ body {
     }
 }
 
-@keyframes fallingsnow3 {
+@-webkit-keyframes fallingsnow3 {
     0% {
         top: -50px;
         left: 200px
@@ -465,7 +480,7 @@ body {
     }
 }
 
-@keyframes fallingsnow4 {
+@-webkit-keyframes fallingsnow4 {
     0% {
         top: -50px;
         left: 300px
@@ -493,7 +508,7 @@ body {
     }
 }
 
-@keyframes fallingsnow5 {
+@-webkit-keyframes fallingsnow5 {
     0% {
         top: -50px;
         left: 400px
@@ -521,7 +536,7 @@ body {
     }
 }
 
-@keyframes fallingsnow6 {
+@-webkit-keyframes fallingsnow6 {
     0% {
         top: -50px;
         left: 500px
@@ -549,7 +564,7 @@ body {
     }
 }
 
-@keyframes fallingsnow7 {
+@-webkit-keyframes fallingsnow7 {
     0% {
         top: -50px;
         left: 600px
@@ -577,7 +592,7 @@ body {
     }
 }
 
-@keyframes fallingsnow8 {
+@-webkit-keyframes fallingsnow8 {
     0% {
         top: -50px;
         left: 800px
@@ -605,7 +620,7 @@ body {
     }
 }
 
-@keyframes fallingsnow9 {
+@-webkit-keyframes fallingsnow9 {
     0% {
         top: -50px;
         left: 900px
@@ -633,7 +648,7 @@ body {
     }
 }
 
-@keyframes fallingsnow10 {
+@-webkit-keyframes fallingsnow10 {
     0% {
         top: -50px;
         left: 1000px
@@ -661,7 +676,7 @@ body {
     }
 }
 
-@keyframes fallingsnow11 {
+@-webkit-keyframes fallingsnow11 {
     0% {
         top: -50px;
         left: 1100px
@@ -689,7 +704,7 @@ body {
     }
 }
 
-@keyframes fallingsnow12 {
+@-webkit-keyframes fallingsnow12 {
     0% {
         top: -50px;
         left: 1100px
@@ -718,7 +733,7 @@ body {
 }
 
 /*Fish movement*/
-@keyframes glowfish-movement {
+@-webkit-keyframes glowfish-movement {
     0% {
         top: 650px;
         left: 900px;
@@ -735,7 +750,7 @@ body {
     }
 }
 
-@keyframes big-fish-movement {
+@-webkit-keyframes big-fish-movement {
     0% {
         left: 200px;
         transform: scaleX(1);
@@ -764,7 +779,7 @@ body {
 
 }
 
-@keyframes medium-fish-movement {
+@-webkit-keyframes medium-fish-movement {
     0% {
         left: 150px;
         transform: scaleX(1);
@@ -791,7 +806,7 @@ body {
     }
 }
 
-@keyframes small-fish-movement {
+@-webkit-keyframes small-fish-movement {
     0% {
         left: 150px;
         transform: scaleX(1);
@@ -819,7 +834,7 @@ body {
 }
 
 
-@keyframes yellow-fish-movement {
+@-webkit-keyframes yellow-fish-movement {
     0% {
         top: 650px;
         transform: scaleX(1);
@@ -848,7 +863,7 @@ body {
 
 /*Kenbeth movement*/
 
-@keyframes kenbeth-flying {
+@-webkit-keyframes kenbeth-flying {
     0% {
         transform: rotate(0deg);
         left: -400px;
