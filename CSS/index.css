@@ -13,7 +13,7 @@ body {
     height: 800px;
     position: relative;
     margin: auto;
-    background-image: radial-gradient(#1f2041, #0c0920);
+    background-image: radial-gradient(#0F0A28, #0c0920 80%);
     overflow: hidden;
     margin-top: 50px;
 }
@@ -28,8 +28,8 @@ body {
 
 .stars{
     position: absolute;
-    width: 2px;
-    height: 2px;
+    width: 1px;
+    height: 1px;
     border-radius: 100%;
     background-color: #ffffff;
     box-shadow:
@@ -202,17 +202,38 @@ body {
     left: 250px;
     background: linear-gradient(270deg, #00c5cc, #3285d3);
     animation: zoomPlanetIce 5s ease-out forwards;
+    overflow: hidden;
 
+}
+
+#planet-ice-structure{
+    width: 600px;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+    opacity: 0.6;
 }
 
 #planet-city{
     width: 100px;
     height: 100px;
-    background-image: radial-gradient(#415a77, #415a77);
+    background-image: linear-gradient(to right, #415a77, #415a77);
     top: 230px;
     left: 450px;
     animation: zoomPlanetCity 5s ease-out forwards;
+    overflow: hidden;
+
 }
+
+#planet-city-structure{
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 110px;
+
+}
+
+
 
 #planet-vacay{
     width: 70px;
@@ -221,6 +242,14 @@ body {
     top: 170px;
     left: 600px;
     animation: zoomPlanetVacay 5s ease-out forwards;
+    overflow: hidden;
+}
+
+#planet-vacay-waves{
+    width: 150px;
+    height: 120px;
+    position: absolute;
+    opacity: 0.6;
 }
 
 #planet-cowboy{
@@ -230,6 +259,15 @@ body {
     top: 100px;
     left: 800px;
     animation: zoomPlanetCowboy 5s ease-out forwards;
+    overflow: hidden;
+}
+
+#planet-cowboy-structure{
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+
 }
 
 #planet-slime{
@@ -239,6 +277,17 @@ body {
     top: 150px;
     left: 950px;
     animation: zoomPlanetSlime 5s ease-out forwards;
+    overflow: hidden;
+}
+
+#planet-slime-structure{
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+    opacity: 0.8;
+
 }
 
 
@@ -247,35 +296,35 @@ body {
     100%{background: linear-gradient(to right, #3285d3, #00c5cc);}
 }
 
-/*
+
 
 @keyframes zoomStars{
     0%{
-    width: 2px;
-    height: 2px;
+    width: 1px;
+    height: 1px;
     box-shadow:
         0 0 5px 1px #ffffff, 
         0 0 5px 1px #9067c6, 
         0 0 3px 1px #ffffff; 
     }
     100%{
-    width: 10px;
-    height: 10px;
+    width: 2px;
+    height: 2px;
     box-shadow:
         0 0 5px 1px #ffffff, 
-        0 0 5px 1px #9067c6, 
+        0 0 5px 1px #ffffff, 
         0 0 3px 1px #ffffff; 
     }
 }
 
-*/
+
 
 @keyframes zoomPlanetIce{
     100%{
         width: 500px;
         height: 500px;
         top: 600px;
-        left: -130px;
+        left: -150px;
     }
 }
 
