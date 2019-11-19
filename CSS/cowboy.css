@@ -19,6 +19,12 @@ body {
     overflow: hidden;
 }
 
+/* Installer / Legger til font */
+@font-face {
+    font-family: SpaceFont;
+    src: url("../fonts/SPACEBAR.ttf");
+}
+
 /* Planets */
 #planet-ice {
     position: absolute;
@@ -221,27 +227,49 @@ body {
 
 #cow {
     position: absolute;
-    bottom: -80px;
+    bottom: 2px;
     left: 600px;
-    width: 300px;
+    width: 210px;
     transform: scaleX(-1);
     animation: cow-move 3s linear infinite;
     z-index: 2;
+    visibility: visible;
+}
+
+#cow-slime {
+    position: absolute;
+    bottom: 2px;
+    left: 600px;
+    width: 210px;
+    transform: scaleX(-1);
+    animation: cow-move 3s linear infinite;
+    z-index: 1;
+    visibility: visible;
+}
+
+#cow:active {
+    visibility: hidden;
 }
 
 #text-info {
     position: absolute;
-    width: 200px;
-    font-size: 30px;
+    font-family: SpaceFont;
+    width: 209px;
+    font-size: 20px;
     color: white;
     padding: 10px;
-    top: 500px;
+    top: 505px;
     left: 100px;
     transform: skew(4deg);
     opacity: 1;
     text-align: center;
     animation: sign-blink 2s linear infinite both;
     z-index: 2;
+}
+
+#text-info:hover {
+    color: #15b12a;
+    animation-play-state: paused;
 }
 
 /* Rockets */
