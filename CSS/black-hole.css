@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
+/*  ID's */
 #container {
     top: 50px;
     width: 1278px;
@@ -13,15 +18,11 @@
     overflow: hidden;
     background: linear-gradient(269deg,#00db4c, #d42ad5, #e49d25, #293a94, #eaf000, #2acc86);
     background-size: 1000% 1000%;
-    -webkit-animation: spacedistortion 10s ease infinite;
-    animation: spacedistortion 10s ease infinite;
+    -webkit-animation: spacedistortion 3s ease infinite;
+    animation: spacedistortion 3s ease infinite;
     z-index: 1;
 }
 
-
-body {
-    background-color: black;
-}
 
 #slime-planet{
     position: absolute;
@@ -29,8 +30,85 @@ body {
     height: 200px;
     top: 60px;
     left: 539px;
-    z-index: 3;
+    z-index: 4;
 
+}
+
+#kenbeth {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    transform: scalex(-1);
+    margin-left: 900px;
+    margin-top: 500px;
+    z-index: 7;
+    animation: kenbeth 7s 6s linear;
+    -webkit-animation: kenbeth 7s 6s linear;
+}
+
+
+#satelite {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-left: 1400px;
+    animation: satelite 7s 10s linear;
+    -webkit-animation: satelite 7s 10s linear;
+    z-index: 5;  
+    
+}
+
+#rocket{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+    top: 150px;
+    transform: rotate(-90deg);
+    z-index: 6;
+}
+
+#background-slime-1 {
+    animation: bubble-1 5s 1s ease-in ;
+    -webkit-animation: bubble-1 5s 1s ease-in;
+    
+}
+
+#background-slime-2 {
+    animation: bubble-2 5s 4s ease-in ;
+    -webkit-animation: bubble-2 5s 4s ;
+    
+}
+
+#background-slime-3 {
+    animation: bubble-3 5s 6s ease-in ;
+    -webkit-animation: bubble-3 5s 6s ;
+   
+}
+
+#background-slime-4 {
+    animation: bubble-4 5s 6s ease-in ;
+    -webkit-animation: bubble-4 5s 6s ;
+    
+}
+
+#background-slime-5 {
+    animation: bubble-5 5s 8s ease-in ;
+    -webkit-animation: bubble-5 5s 8s ;
+    
+}
+
+/* Classes */
+.background-slime {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    left: 650px;
+    top: 150px;
+    border-radius: 40%;
+    border: 1px solid #ddf45b;
+    background-color: #32bc35;
+    z-index: 3;
 }
 
 .box1{
@@ -44,67 +122,6 @@ body {
     border-radius: 75%;
 }
 
-#kenbeth {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    transform: scalex(-1);
-    margin-left: 900px;
-    margin-top: 500px;
-    z-index: 10;
-    animation: kenbeth 5s 6s linear;
-}
-
-
-#satelite {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    margin-left: 1400px;
-    animation: satelite 5s linear;
-    z-index: 5;  
-    
-
-}
-
-.background-slime {
-    position: absolute;
-    width: 10px;
-    height: 50px;
-    border-radius: 40%;
-    border: 1px solid #ddf45b;
-    background-color: #32bc35;
-    z-index: 4;
-}
-
-#background-slime-1 {
-    animation: bubble-1 5s ease-in infinite both;
-    -webkit-animation: bubble-1 5s ease-in infinite both;
-}
-
-#background-slime-2 {
-    animation: bubble-2 5s infinite both;
-    -webkit-animation: bubble-2 5s infinite both;
-    animation-delay: 7s;
-}
-
-#background-slime-3 {
-    animation: bubble-3 5s infinite both;
-    -webkit-animation: bubble-3 5s infinite both;
-    animation-delay: 5s;
-}
-
-#background-slime-4 {
-    animation: bubble-4 5s infinite both;
-    -webkit-animation: bubble-4 5s infinite both;
-    animation-delay: 3s;
-}
-
-#background-slime-5 {
-    animation: bubble-5 5s infinite both;
-    -webkit-animation: bubble-5 5s infinite both;
-    animation-delay: 6s;
-}
 
 /* animation for the satelite's rotation and trajectory through the screen, må endres */
 @keyframes satelite {
@@ -133,6 +150,7 @@ body {
     }
 }
 
+/* Animation for Kenbeth(the man flying on a cow) */
 @keyframes kenbeth {
     
     0% {
@@ -163,6 +181,7 @@ body {
     }
 }
 
+/*  Backgroundanimation with all the distorted colors */
 @-webkit-keyframes spacedistortion {
     0%{background-position:0% 52%}
     50%{background-position:100% 49%}
@@ -174,11 +193,12 @@ body {
     100%{background-position:0% 52%}
 }
 
+/* Animation for the slimes trajectory */
 @keyframes bubble-1 {
     0% {
         transform: scale(0) rotate(0deg);
-        left: 600px;
-        top: 150px;
+        left: 650px;
+        top: 140px;
     }
     100% {
         transform: scale(1) rotate(0deg);
@@ -190,52 +210,69 @@ body {
 @keyframes bubble-2 {
     0% {
         transform: scale(0) rotate(0deg);
-        left: 340px;
-        bottom: 150px;
+        left: 650px;
+        top: 140px;
     }
     100% {
         transform: scale(1) rotate(30deg);
         left: 340px;
-        bottom: 0px;
+        top: 800px;
     }
 }
 
 @keyframes bubble-3 {
     0% {
         transform: scale(0) rotate(0deg);
-        left: 500px;
-        bottom: 150px;
+        left: 650px;
+        top: 140px;
     }
     100% {
-        transform: scale(1) rotate(23deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(1) rotate(0deg);
+        left: 997px;
+        top: 800px;
     }
 }
 
 @keyframes bubble-4 {
     0% {
         transform: scale(0) rotate(0deg);
-        left: 700px;
-        bottom: 150px;
+        left: 650px;
+        top: 150px;
     }
     100% {
-        transform: scale(1) rotate(1deg);
+        transform: scale(1) rotate(0deg);
         left: 697px;
-        bottom: 500px;
+        top: 800px;
     }
 }
 
 @keyframes bubble-5 {
     0% {
         transform: scale(0) rotate(0deg);
-        left: 800px;
-        bottom: 150px;
+        left: 650px;
+        top: 150px;
     }
     100% {
-        transform: scale(1) rotate(-12deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(1) rotate(0deg);
+        left: 800px;
+        top: 800px;
+    }
+}
+
+@keyframes rocket{
+   0%{
+     transform: scale(-4);
+     left:650px;
+     top:150px;
+    }
+    {
+
+    }
+    {
+
+    }
+    {
+
     }
 }
 
