@@ -54,7 +54,7 @@ body {
     height: 200px;
     top: 90px;
     left: 500px;
-    animation: kenbeth-script-1 4.5s 1.5s linear, text-hovering-kenbeth 2s linear infinite;
+    -webkit-animation: kenbeth-script-1 4.5s 1.5s linear, text-hovering-kenbeth 2s linear infinite;
 }
 
 #kenbeth-script-2 {
@@ -62,7 +62,7 @@ body {
     height: 200px;
     top: 90px;
     left: 500px;
-    animation: kenbeth-script-1 4.5s 6.5s linear forwards, text-hovering-kenbeth 2s linear infinite;
+    -webkit-animation: kenbeth-script-1 4.5s 6.5s linear forwards, text-hovering-kenbeth 2s linear infinite;
 }
 
 /* Images */
@@ -72,12 +72,7 @@ body {
     top: 510px;
     right: 280px;
     z-index: 6;
-    animation: exclamation-mark 1.2s linear;
-    -webkit-animation: exclamation-mark 1.2s linear;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out;
-    animation-delay: 2s;
-    -webkit-animation-delay: exclamation-mark 2s;
+    -webkit-animation: exclamation-mark 1.2s 2s linear ease-out;
 }
 
 /* Ground */
@@ -212,62 +207,43 @@ body {
 }
 
 #background-slime-1 {
-    animation: bubble-1 5s infinite both;
     -webkit-animation: bubble-1 5s infinite both;
 }
 
 #background-slime-2 {
-    animation: bubble-2 5s infinite both;
-    -webkit-animation: bubble-2 5s infinite both;
-    animation-delay: 7s;
+    -webkit-animation: bubble-2 5s 7s infinite both;
 }
 
 #background-slime-3 {
-    animation: bubble-3 5s infinite both;
-    -webkit-animation: bubble-3 5s infinite both;
-    animation-delay: 5s;
+    -webkit-animation: bubble-3 5s 5s infinite both;
 }
 
 #background-slime-4 {
-    animation: bubble-4 5s infinite both;
-    -webkit-animation: bubble-4 5s infinite both;
-    animation-delay: 3s;
+    -webkit-animation: bubble-4 5s 3s infinite both;
 }
 
 #background-slime-5 {
-    animation: bubble-5 5s infinite both;
-    -webkit-animation: bubble-5 5s infinite both;
-    animation-delay: 6s;
+    -webkit-animation: bubble-5 5s 6s infinite both;
 }
 
 #background-slime-6 {
-    animation: bubble-6 5s infinite both;
-    -webkit-animation: bubble-6 5s infinite both;
-    animation-delay: 0.5s;
+    -webkit-animation: bubble-6 5s 0.5s infinite both;
 }
 
 #background-slime-7 {
-    animation: bubble-7 5s infinite both;
-    -webkit-animation: bubble-7 5s infinite both;
-    animation-delay: 2.7s;
+    -webkit-animation: bubble-7 5s 2.7s infinite both;
 }
 
 #background-slime-8 {
-    animation: bubble-8 5s infinite both;
-    -webkit-animation: bubble-8 5s infinite both;
-    animation-delay: 4s;
+    -webkit-animation: bubble-8 5s 4s infinite both;
 }
 
 #background-slime-9 {
-    animation: bubble-9 5s infinite both;
-    -webkit-animation: bubble-9 5s infinite both;
-    animation-delay: 7.5s;
+    -webkit-animation: bubble-9 5s 7.5s infinite both;
 }
 
 #background-slime-10 {
-    animation: bubble-10 5s infinite both;
-    -webkit-animation: bubble-10 5s infinite both;
-    animation-delay: 1.5s;
+    -webkit-animation: bubble-10 5s 1.5s infinite both;
 }
 
 #black-hole {
@@ -275,164 +251,161 @@ body {
     top: 20px;
     left: 400px;
     z-index: 1;
-    animation: black-hole-tilt 30s linear infinite both;
     -webkit-animation: black-hole-tilt 30s linear infinite both;
 }
 
 /* Keyframes */
-@keyframes black-hole-tilt {
+@-webkit-keyframes black-hole-tilt {
     0% {
-        transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
     }
 }
 
 /* Background Bubbles */
-@keyframes bubble-1 {
+@-webkit-keyframes bubble-1 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 200px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(50deg);
+        -webkit-transform: scale(0) rotate(50deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-2 {
+@-webkit-keyframes bubble-2 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 340px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(30deg);
+        -webkit-transform: scale(0) rotate(30deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-3 {
+@-webkit-keyframes bubble-3 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 500px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(23deg);
+        -webkit-transform: scale(0) rotate(23deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-4 {
+@-webkit-keyframes bubble-4 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 700px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(1deg);
+        -webkit-transform: scale(0) rotate(1deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-5 {
+@-webkit-keyframes bubble-5 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 800px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-12deg);
+        -webkit-transform: scale(0) rotate(-12deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-6 {
+@-webkit-keyframes bubble-6 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 900px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-22deg);
+        -webkit-transform: scale(0) rotate(-22deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-7 {
+@-webkit-keyframes bubble-7 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 1100px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-32deg);
+        -webkit-transform: scale(0) rotate(-32deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-8 {
+@-webkit-keyframes bubble-8 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 900px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-28deg);
+        -webkit-transform: scale(0) rotate(-28deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-9 {
+@-webkit-keyframes bubble-9 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 1300px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-50deg);
+        -webkit-transform: scale(0) rotate(-50deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-10 {
+@-webkit-keyframes bubble-10 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 1020px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-44deg);
+        -webkit-transform: scale(0) rotate(-44deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
 /* Kenbeth flying */
-@keyframes kenbeth-flying {
+@-webkit-keyframes kenbeth-flying {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
         left: -400px;
     }
     25% {
-        transform: rotate(-44deg);
+        -webkit-transform: rotate(-44deg);
     }
     50% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
         left: 350px;
     }
     75% {
@@ -443,7 +416,7 @@ body {
     }
 }
 
-@keyframes kenbeth-hovering {
+@-webkit-keyframes kenbeth-hovering {
     0% {
         top: 120px;
     }
@@ -456,31 +429,31 @@ body {
 }
 
 /* Monster animation */
-@keyframes gif-monster-walk {
+@-webkit-keyframes gif-monster-walk {
     0% {
-        transform: rotate(-40deg);
+        -webkit-transform: rotate(-40deg);
         left: -120px;
         bottom: 80px;
     }
     100% {
-        transform: rotate(-8deg);
+        -webkit-transform: rotate(-8deg);
     }
 }
 
-@keyframes gif-monster-gravity {
+@-webkit-keyframes gif-monster-gravity {
     0% {
-        transform: rotate(-8deg) scale(1);
+        -webkit-transform: rotate(-8deg) scale(1);
         bottom: 230px;
         left: 300px;
     }
     100% {
-        transform: rotate(1700deg) scale(0);
+        -webkit-transform: rotate(1700deg) scale(0);
         bottom: 450px;
         left: 660px;
     }
 }
 
-@keyframes slime-monster-scale {
+@-webkit-keyframes slime-monster-scale {
     0% {
         width: 20px;
         right: 300px;
@@ -493,22 +466,22 @@ body {
     }
 }
 
-@keyframes slime-monster-gravity {
+@-webkit-keyframes slime-monster-gravity {
     0% {
-        transform: rotate(-8deg);
+        -webkit-transform: rotate(-8deg);
         right: 390px;
         bottom: 257px;
         width: 150px;
     }
     100% {
-        transform: rotate(1700deg);
+        -webkit-transform: rotate(1700deg);
         right: 590px;
         bottom: 490px;
         width: 0px;
     }
 }
 
-@keyframes exclamation-mark {
+@-webkit-keyframes exclamation-mark {
     0% {
         width: 0px;
         top: 510px;
@@ -527,7 +500,7 @@ body {
 }
 
 /* Chat bubbles */
-@keyframes kenbeth-script-1 {
+@-webkit-keyframes kenbeth-script-1 {
     /* First talk bubble appear */
     0% {
         opacity: 1;
@@ -537,7 +510,7 @@ body {
     }
 }
 
-@keyframes chat-bubble-hovering {
+@-webkit-keyframes chat-bubble-hovering {
     0% {
         top: 0px;
     }
@@ -549,7 +522,7 @@ body {
     }
 }
 
-@keyframes chat-bubble-kenbeth {
+@-webkit-keyframes chat-bubble-kenbeth {
     0% {
         opacity: 0;
     }
@@ -558,7 +531,7 @@ body {
     }
 }
 
-@keyframes text-hovering-kenbeth {
+@-webkit-keyframes text-hovering-kenbeth {
     0% {
         top: 90px;
     }
@@ -575,8 +548,7 @@ body {
     left: 500px;
     width: 350px;
     height: 250px;
-    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s linear infinite;
-    animation-fill-mode: forwards;
+    -webkit-animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s linear infinite;
 }
 
 /* Triggers */
