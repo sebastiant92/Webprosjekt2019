@@ -31,6 +31,7 @@ body {
     text-align: center;
     font-family: monospace;
     font-size: 15px;
+    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s 1s infinite;
 }
 
 .chat-bubbles {
@@ -44,7 +45,6 @@ body {
     left: 550px;
     width: 350px;
     height: 250px;
-    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s 1s infinite;
     animation-fill-mode: forwards;
 }
 
@@ -54,7 +54,7 @@ body {
     height: 200px;
     top: 90px;
     left: 500px;
-    animation: kenbeth-script-1 4.5s 2s linear;
+    animation: kenbeth-script-1 4.5s 1.5s linear, text-hovering-kenbeth 2s linear infinite;
 }
 
 #kenbeth-script-2 {
@@ -62,9 +62,7 @@ body {
     height: 200px;
     top: 90px;
     left: 500px;
-    animation: kenbeth-script-1 6.5s linear;
-    animation-delay: 6.5s;
-    animation-fill-mode: forwards;
+    animation: kenbeth-script-1 4.5s 6.5s linear forwards, text-hovering-kenbeth 2s linear infinite;
 }
 
 /* Images */
@@ -73,6 +71,7 @@ body {
     width: 0px;
     top: 510px;
     right: 280px;
+    z-index: 6;
     animation: exclamation-mark 1.2s linear;
     -webkit-animation: exclamation-mark 1.2s linear;
     animation-timing-function: ease-out;
@@ -87,7 +86,6 @@ body {
     height: 600px;
     position: absolute;
     margin: auto;
-    overflow: hidden;
     background: linear-gradient(#76f91f, #ddf45b);
     border: 5px solid #ddf45b;
     border-radius: 50%;
@@ -175,7 +173,7 @@ body {
     width: 400px;
     top: 120px;
     left: 330px;
-    z-index: 5;
+    z-index: 6;
     -webkit-animation: kenbeth-flying 1.5s linear forwards, kenbeth-hovering 2s 2s linear infinite;
 }
 
@@ -186,17 +184,16 @@ body {
     bottom: 265px;
     z-index: 4;
     transform: rotate(18deg);
+    -webkit-animation: slime-monster-scale 10s 3.5s ease-in-out, slime-monster-gravity 8s 11s linear forwards;
 }
 
 /* gifs */
 #slime-monster-gif {
     width: 120px;
-    bottom: 150px;
-    left: 0px;
-    transform: rotate(-23deg);
-    animation: slime-monster-gif 5s linear;
-    -webkit-animation: slime-monster-gif 5s linear;
-    animation-timing-function: ease-out;
+    bottom: 230px;
+    left: 300px;
+    transform: rotate(-8deg);
+    -webkit-animation: gif-monster-walk 10s linear, gif-monster-gravity 4s 10s linear forwards;
 }
 
 /* Background elements */
@@ -437,7 +434,6 @@ body {
     50% {
         transform: rotate(0deg);
         left: 350px;
-        delay: 2s;
     }
     75% {
         top: 170px;
@@ -459,14 +455,56 @@ body {
     }
 }
 
-@keyframes slime-monster-gif {
+/* Monster animation */
+@keyframes gif-monster-walk {
     0% {
         transform: rotate(-40deg);
         left: -120px;
         bottom: 80px;
     }
     100% {
-        transform: rotate(-23deg);
+        transform: rotate(-8deg);
+    }
+}
+
+@keyframes gif-monster-gravity {
+    0% {
+        transform: rotate(-8deg) scale(1);
+        bottom: 230px;
+        left: 300px;
+    }
+    100% {
+        transform: rotate(1700deg) scale(0);
+        bottom: 450px;
+        left: 660px;
+    }
+}
+
+@keyframes slime-monster-scale {
+    0% {
+        width: 20px;
+        right: 300px;
+        bottom: 265px;
+    }
+    100% {
+        width: 150px;
+        right: 390px;
+        bottom: 257px;
+    }
+}
+
+@keyframes slime-monster-gravity {
+    0% {
+        transform: rotate(-8deg);
+        right: 390px;
+        bottom: 257px;
+        width: 150px;
+    }
+    100% {
+        transform: rotate(1700deg);
+        right: 590px;
+        bottom: 490px;
+        width: 0px;
     }
 }
 
@@ -520,6 +558,18 @@ body {
     }
 }
 
+@keyframes text-hovering-kenbeth {
+    0% {
+        top: 90px;
+    }
+    50% {
+        top: 110px;
+    }
+    100% {
+        top: 90px;
+    }
+}
+
 #chat-bubble-kenbeth {
     top: 0px;
     left: 500px;
@@ -530,12 +580,6 @@ body {
 }
 
 /* Triggers */
-#kenbeth-flying:hover {
-    width: 420px;
-    top: 113px;
-    left: 320px;
-}
-
 #slime-bubble-1:hover {
     width: 140px;
     height: 50px;
