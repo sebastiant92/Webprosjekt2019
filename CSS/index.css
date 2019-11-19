@@ -18,12 +18,22 @@ body {
     margin-top: 50px;
 }
 
-#stars-container{
-    animation: zoomStarContainer 5s ease-out forwards;
-    position: absolute;
-    top: 0px;
 
+
+/* Stars */
+
+#stars-container{
+    animation: zoom-star-container 5s 3s ease-out forwards;
+    position: absolute;
+    top: -90px;
 }
+
+@keyframes zoom-star-container{
+    100%{
+        top: 0px;
+    }
+}
+
 
 
 .stars{
@@ -31,33 +41,21 @@ body {
     width: 1px;
     height: 1px;
     border-radius: 100%;
-    background-color: #ffffff;
+    background: #ffffff;
     box-shadow:
-        0 0 5px 1px #ffffff, 
-        0 0 5px 1px #ffffff, 
-        0 0 3px 1px #ffffff; 
-    -webkit-animation: zoomStars 5s ease-in forwards;
-}
-
-
-.star-group-1{
+        0 0 1.5px 1px #ffffff, 
+        0 0 2.5px 1.5px #ffffff, 
+        0 0 3.5px 2.5px #ffffff; 
     
+    -webkit-animation: zoom-stars 5s 3s ease-in forwards;
 }
 
-.star-group-2{
 
-}
-
-.star-group-3{
-
-}
-
-.star-group-4{
-
-}
-
-.star-group-5{
-
+@keyframes zoom-stars{
+    100%{
+    width: 2px;
+    height: 2px;
+    }
 }
 
 #star-1{
@@ -78,6 +76,7 @@ body {
 #star-4{
     top: 180px;
     left: 380px;
+    animation: star-blinking 10s 4s ease-in infinite;
 }
 
 #star-5{
@@ -103,6 +102,7 @@ body {
 #star-9{
     top: 50px;
     left: 1100px;
+    animation: star-blinking 10s 7s ease-in infinite;
 }
 
 #star-10{
@@ -118,6 +118,7 @@ body {
 #star-12{
     top: 300px;
     left: 220px;
+    animation: star-blinking 10s 12s ease-in infinite;
 }
 
 #star-13{
@@ -133,6 +134,7 @@ body {
 #star-15{
     top: 350px;
     left: 850px;
+    animation: star-blinking 10s 10s ease-in infinite;
 }
 
 #star-16{
@@ -158,6 +160,7 @@ body {
 #star-20{
     top: 625px;
     left: 500px;
+    animation: star-blinking 10s 6s ease-in infinite;
 }
 
 #star-21{
@@ -173,6 +176,7 @@ body {
 #star-23{
     top: 570px;
     left: 1100px;
+    animation: star-blinking 10s 13s ease-in infinite;
 }
 
 #star-24{
@@ -190,10 +194,38 @@ body {
     left: 700px;
 }
 
+@keyframes star-blinking{
+    2.5%{
+        box-shadow:
+        0 0 4.5px 3px #ffffff, 
+        0 0 15px 3px #ffffff, 
+        0 0 30px 3px #ffffff; 
+    }
+    5%{    
+        width: 2px;
+        height: 2px;
+        box-shadow:
+        0 0 1.5px 1px #ffffff, 
+        0 0 2.5px 1.5px #ffffff, 
+        0 0 3.5px 2.5px #ffffff;  
+    }
+}
+
+
+
+
+/* Planets */
+
 .planet{
     position: absolute;
     border-radius: 100%; 
+    animation: planet-rotate 7s 
 }
+
+
+/* Planet Ice */
+
+
 
 #planet-ice{
     width: 150px;
@@ -201,125 +233,12 @@ body {
     top: 350px;
     left: 250px;
     background: linear-gradient(270deg, #00c5cc, #3285d3);
-    animation: zoomPlanetIce 5s ease-out forwards;
     overflow: hidden;
-
+    
+    animation: zoom-planet-ice 5s 3s ease-out forwards;
 }
 
-#planet-ice-structure{
-    width: 600px;
-    height: 120px;
-    position: absolute;
-    top: 0px;
-    opacity: 0.6;
-}
-
-#planet-city{
-    width: 100px;
-    height: 100px;
-    background-image: linear-gradient(to right, #415a77, #415a77);
-    top: 230px;
-    left: 450px;
-    animation: zoomPlanetCity 5s ease-out forwards;
-    overflow: hidden;
-
-}
-
-#planet-city-structure{
-    width: 250px;
-    height: 100px;
-    position: absolute;
-    top: 110px;
-
-}
-
-
-
-#planet-vacay{
-    width: 70px;
-    height: 70px;
-    background-image: radial-gradient(#f6d2da, #fcc9d1);
-    top: 170px;
-    left: 600px;
-    animation: zoomPlanetVacay 5s ease-out forwards;
-    overflow: hidden;
-}
-
-#planet-vacay-waves{
-    width: 150px;
-    height: 120px;
-    position: absolute;
-    opacity: 0.6;
-}
-
-#planet-cowboy{
-    width: 50px;
-    height: 50px;
-    background-image: radial-gradient(#faff81, #ffc53a);
-    top: 100px;
-    left: 800px;
-    animation: zoomPlanetCowboy 5s ease-out forwards;
-    overflow: hidden;
-}
-
-#planet-cowboy-structure{
-    width: 150px;
-    height: 70px;
-    position: absolute;
-    bottom: 0px;
-
-}
-
-#planet-slime{
-    width: 80px;
-    height: 80px;
-    background-image: radial-gradient(#ddf45b, #32bc35);
-    top: 150px;
-    left: 950px;
-    animation: zoomPlanetSlime 5s ease-out forwards;
-    overflow: hidden;
-}
-
-#planet-slime-structure{
-    width: 100px;
-    height: 200px;
-    position: absolute;
-    bottom: -50px;
-    right: 0px;
-    opacity: 0.8;
-
-}
-
-
-@-webkit-keyframes rotatepotet {
-    0%{background: linear-gradient(to right, #00c5cc, #3285d3);}
-    100%{background: linear-gradient(to right, #3285d3, #00c5cc);}
-}
-
-
-
-@keyframes zoomStars{
-    0%{
-    width: 1px;
-    height: 1px;
-    box-shadow:
-        0 0 5px 1px #ffffff, 
-        0 0 5px 1px #9067c6, 
-        0 0 3px 1px #ffffff; 
-    }
-    100%{
-    width: 2px;
-    height: 2px;
-    box-shadow:
-        0 0 5px 1px #ffffff, 
-        0 0 5px 1px #ffffff, 
-        0 0 3px 1px #ffffff; 
-    }
-}
-
-
-
-@keyframes zoomPlanetIce{
+@keyframes zoom-planet-ice{
     100%{
         width: 500px;
         height: 500px;
@@ -328,7 +247,31 @@ body {
     }
 }
 
-@keyframes zoomPlanetCity{
+#planet-ice-structure{
+    width: 1000px;
+    height: 250px;
+    position: absolute;
+    opacity: 0.6;
+    top: 0px;
+}
+    
+
+
+
+/* Planet city */
+
+#planet-city{
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to right, #415a77, #415a77);
+    top: 230px;
+    left: 450px;
+    overflow: hidden;
+    
+    animation: zoom-planet-city 5s 3s ease-out forwards;
+}
+    
+@keyframes zoom-planet-city{
     100%{
         width: 200px;
         height: 200px;
@@ -337,7 +280,31 @@ body {
     }
 }
 
-@keyframes zoomPlanetVacay{
+#planet-city-structure{
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+
+
+
+/* Planet Vacay */
+
+#planet-vacay{
+    width: 70px;
+    height: 70px;
+    background-image: radial-gradient(#f6d2da, #fcc9d1);
+    top: 170px;
+    left: 600px;
+    overflow: hidden;
+    
+    animation: zoom-planet-vacay 5s 3s ease-out forwards;
+}
+
+@keyframes zoom-planet-vacay{
     100%{
         width: 130px;
         height: 130px;
@@ -346,7 +313,32 @@ body {
     }
 }
 
-@keyframes zoomPlanetCowboy{
+#planet-vacay-structure{
+    width: 130px;
+    height: 80px;
+    position: absolute;
+    opacity: 0.6;
+    right: 0px;
+    top: 50px;
+}
+
+
+
+
+/* Planet cowboy */
+
+#planet-cowboy{
+    width: 50px;
+    height: 50px;
+    background-image: radial-gradient(#faff81, #ffc53a);
+    top: 100px;
+    left: 800px;
+    overflow: hidden;
+    
+    animation: zoom-planet-cowboy 5s 3s ease-out forwards;
+}
+
+@keyframes zoom-planet-cowboy{
     100%{
         width: 90px;
         height: 90px;
@@ -355,7 +347,31 @@ body {
     }
 }
 
-@keyframes zoomPlanetSlime{
+#planet-cowboy-structure{
+    width: 180px;
+    height: 60px;
+    position: absolute;
+    opacity: 0.8;
+    bottom: 20px;
+}
+
+
+
+
+/* Planet Slime */
+
+#planet-slime{
+    width: 80px;
+    height: 80px;
+    background-image: radial-gradient(#ddf45b, #32bc35);
+    top: 150px;
+    left: 950px;
+    overflow: hidden;
+    
+    animation: zoom-planet-slime 5s ease-out forwards;
+}
+
+@keyframes zoom-planet-slime{
     100%{
         width: 150px;
         height: 150px;
@@ -364,14 +380,20 @@ body {
     }
 }
 
-@keyframes zoomStarContainer{
-    0%{
-        top: -70px;
-    }
-    100%{
-        top: 0px;
-    }
+#planet-slime-structure{
+    width: 300px;
+    height: 75px;
+    position: absolute;
+    opacity: 0.8;
+    right: 0px;
+    bottom: 30px;
+
 }
+
+
+
+
+
 
 
 

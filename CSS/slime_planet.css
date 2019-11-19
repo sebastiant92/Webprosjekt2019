@@ -23,56 +23,48 @@ body {
     z-index: 0;
 }
 
-/* Chat bubbles */
-.chat-bubbles {
-    position: absolute;
-    border: 5px solid #32bc35;
-    border-radius: 50%;
-    background-color: #ddf45b;
-}
-
-#chat-bubble-kenbeth {
-    top: 70px;
-    left: 600px;
-    width: 200px;
-    height: 130px;
-    opacity: 0%;
-    z-index: 5;
-    transition-property: opacity;
-    transition-delay: 1s;
-    transition-timing-function: ease-out;
-    transition-duration: 0.5s;
-}
-
-#chat-pointer-kenbeth {
-    top: 180px;
-    left: 600px;
-    width: 100px;
-    height: 10px;
-    transform: rotate(-20deg);
-    opacity: 0;
-    z-index: 4;
-    transition-property: opacity;
-    transition-delay: 1s;
-    transition-timing-function: ease-out;
-    transition-duration: 0.5s;
-}
-
-/* Text */
+/* Chat bubbles & Text*/
 .text {
-    color: #000000;
     position: absolute;
     z-index: 6;
     opacity: 0;
-    transition-property: opacity;
-    transition-delay: 1s;
-    transition-timing-function: ease-out; /* HUSK -webkit- */
-    transition-duration: 0.5s;
+    text-align: center;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.chat-bubbles {
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+
+#chat-bubble-kenbeth {
+    top: 0px;
+    left: 550px;
+    width: 350px;
+    height: 250px;
+    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s 1s infinite;
+    animation-fill-mode: forwards;
 }
 
 #kenbeth-script-1 {
-    top: 110px;
-    right: 500px;
+    /* First talk bubble */
+    width: 300px;
+    height: 200px;
+    top: 90px;
+    left: 500px;
+    animation: kenbeth-script-1 4.5s 2s linear;
+}
+
+#kenbeth-script-2 {
+    width: 300px;
+    height: 200px;
+    top: 90px;
+    left: 500px;
+    animation: kenbeth-script-1 6.5s linear;
+    animation-delay: 6.5s;
+    animation-fill-mode: forwards;
 }
 
 /* Images */
@@ -184,9 +176,7 @@ body {
     top: 120px;
     left: 330px;
     z-index: 5;
-    animation: kenbeth-flying 1.5s linear;
-    -webkit-animation: kenbeth-flying 1.5s linear;
-    animation-timing-function: ease-out;
+    -webkit-animation: kenbeth-flying 1.5s linear forwards, kenbeth-hovering 2s 2s linear infinite;
 }
 
 /* Monsters */
@@ -447,10 +437,22 @@ body {
     50% {
         transform: rotate(0deg);
         left: 350px;
-        delay: 5s;
+        delay: 2s;
     }
     75% {
-        top: 230px;
+        top: 170px;
+    }
+    100% {
+        top: 120px;
+    }
+}
+
+@keyframes kenbeth-hovering {
+    0% {
+        top: 120px;
+    }
+    50% {
+        top: 140px;
     }
     100% {
         top: 120px;
@@ -484,6 +486,47 @@ body {
         top: 510px;
         right: 305px;
     }
+}
+
+/* Chat bubbles */
+@keyframes kenbeth-script-1 {
+    /* First talk bubble appear */
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes chat-bubble-hovering {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: 20px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes chat-bubble-kenbeth {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#chat-bubble-kenbeth {
+    top: 0px;
+    left: 500px;
+    width: 350px;
+    height: 250px;
+    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s linear infinite;
+    animation-fill-mode: forwards;
 }
 
 /* Triggers */
@@ -540,23 +583,4 @@ body {
     height: 90px;
     bottom: 165px;
     left: 690px;
-}
-
-#slime-bubble-7:hover {
-    width: 420px;
-    height: 90px;
-    bottom: 165px;
-    left: 690px;
-}
-
-.container:hover #chat-bubble-kenbeth {
-    opacity: 100%;
-}
-
-.container:hover #chat-pointer-kenbeth {
-    opacity: 100%;
-}
-
-.container:hover #kenbeth-script-1 {
-    opacity: 100%;
 }
