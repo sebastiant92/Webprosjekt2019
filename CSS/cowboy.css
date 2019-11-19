@@ -319,16 +319,16 @@ body {
 
 #cactus {
     position: absolute;
-    width: 150px;
+    width: 250px;
     right: 50px;
     bottom: 50px;
 }
 
 #cowboy-hat {
     position: absolute;
-    width: 120px;
-    right: 70px;
-    bottom: 130px;
+    width: 160px;
+    right: 100px;
+    bottom: 200px;
     transform: rotate(-10deg);
     animation: cowboy-hat-move 5s infinite ease-in-out;
 }
