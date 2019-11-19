@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: #000000;
 }
 
 /* Main container */
@@ -98,6 +98,41 @@ body {
     border: 4px solid gray;
     z-index: 2;
     transform: scale(1);
+}
+
+/* Buildings */
+#Citybuilding{
+    width: 400px;
+    height: 500px;
+    left: 850px;
+    bottom: 30px;
+    position: absolute;
+    background-color: #7c7c7c;
+    z-index: 2;
+}
+/* windows */
+.window{
+    width: 50px;
+    height: 54.5px;
+    position: relative;
+    margin: 1.8px;
+    display: inline-block;
+    z-index: 3;
+}
+/* colors windows */
+.purple{
+    background-color: #444444;
+}
+.purple:hover{
+    background-color:  #9d69a3;
+    cursor: default;
+}
+.green{
+    background-color: #40f99b;
+}
+.green:hover{
+    background-color: #444444;
+    cursor: default;
 }
 
 /* planets */
@@ -201,7 +236,7 @@ body {
 
 @keyframes towelie-pop{
     from{transform: translateY(1000px)}
-    to{transform: translateY(1000px)}
+    to{transform: translateY(100px)}
 }
 
 
