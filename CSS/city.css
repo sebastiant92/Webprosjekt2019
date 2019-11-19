@@ -148,7 +148,7 @@ body {
     position: absolute;
     bottom: 200px;
     left: 500px;
-    z-index: 2;
+    z-index: 3;
 }
 
 #jetsons{
@@ -160,4 +160,62 @@ body {
 }
 
 /* Animation */
+#ground-texture1:hover{
+    width: 300px;
+    height: 110px;
+    bottom: 150px;
+    left: 300px;
+}
 
+#ground-texture2:hover{
+    width: 250px;
+    height: 110px;
+    bottom: 100px;
+    left: 900px;
+}
+
+#ground-texture3:hover{
+    width: 250px;
+    height: 120px;
+    bottom: 40px;
+    left: 125;
+}
+
+#ground-texture4:hover{
+    width: 290px;
+    height: 130px;
+    bottom: 30px;
+    left: 600px;
+}
+
+#ground-texture5:hover{
+    width: 250px;
+    height: 80px;
+    bottom: 250px;
+    left: 600px;
+}
+
+#ground-texture6:hover{
+    width: 200px;
+    height: 90px;
+    bottom: 160px;
+    left: 700px;
+}
+
+#ground-texture7:hover{
+    width: 200px;
+    height: 120px;
+    bottom: -20px;
+    left: 400px;
+}
+
+#ground-texture:hover{
+    width: 250px;
+    height: 100px;
+    bottom: -10px;
+    left: 1000px;
+}
+
+.texture:hover{
+    transform: scale(1.5);
+}
