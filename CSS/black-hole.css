@@ -11,18 +11,37 @@
     position: relative;
     margin: auto;
     overflow: hidden;
-}
-
-#black-hole{
-    width: 1278px;
-    height: 800px;
-    position: absolute;
-    background-position: 0%;
+    background: linear-gradient(269deg,#00db4c, #d42ad5, #e49d25, #293a94, #eaf000, #2acc86);
+    background-size: 1000% 1000%;
+    -webkit-animation: spacedistortion 10s ease infinite;
+    animation: spacedistortion 10s ease infinite;
     z-index: 1;
 }
 
+
 body {
     background-color: black;
+}
+
+#slime-planet{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 60px;
+    left: 539px;
+    z-index: 3;
+
+}
+
+.box1{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 40px;
+    left: 514px;
+    background-color: black;
+    z-index: 2;
+    border-radius: 75%;
 }
 
 #kenbeth {
@@ -33,7 +52,7 @@ body {
     margin-left: 900px;
     margin-top: 500px;
     z-index: 10;
-    animation: kenbeth 6s timing-function delay iteration-count linear;
+    animation: kenbeth 5s 6s linear;
 }
 
 
@@ -43,11 +62,51 @@ body {
     position: absolute;
     margin-left: 1400px;
     animation: satelite 5s linear;
-    z-index: 11;  
+    z-index: 5;  
     
 
 }
-/* animation for the satelite's rotation and trajectory through the screen */
+
+.background-slime {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    border-radius: 40%;
+    border: 1px solid #ddf45b;
+    background-color: #32bc35;
+    z-index: 4;
+}
+
+#background-slime-1 {
+    animation: bubble-1 5s ease-in infinite both;
+    -webkit-animation: bubble-1 5s ease-in infinite both;
+}
+
+#background-slime-2 {
+    animation: bubble-2 5s infinite both;
+    -webkit-animation: bubble-2 5s infinite both;
+    animation-delay: 7s;
+}
+
+#background-slime-3 {
+    animation: bubble-3 5s infinite both;
+    -webkit-animation: bubble-3 5s infinite both;
+    animation-delay: 5s;
+}
+
+#background-slime-4 {
+    animation: bubble-4 5s infinite both;
+    -webkit-animation: bubble-4 5s infinite both;
+    animation-delay: 3s;
+}
+
+#background-slime-5 {
+    animation: bubble-5 5s infinite both;
+    -webkit-animation: bubble-5 5s infinite both;
+    animation-delay: 6s;
+}
+
+/* animation for the satelite's rotation and trajectory through the screen, må endres */
 @keyframes satelite {
     
     0% {
@@ -70,6 +129,7 @@ body {
         margin-left:0;
         margin-top: 800px;
         transform: rotate(365deg);
+
     }
 }
 
@@ -78,12 +138,13 @@ body {
     0% {
         margin-left: 900px;
         margin-top: 500px;
-        transform: rotate(15deg);
+        transform: rotate(15deg) scaleX(-1);
+        
     }
     25% {
         margin-left: 450px;
         margin-top: 400px;
-        
+        transform: scaleX(-1);
     }
     50% {
         margin-left: 200px;
@@ -101,3 +162,80 @@ body {
         transform: rotate(-15deg);
     }
 }
+
+@-webkit-keyframes spacedistortion {
+    0%{background-position:0% 52%}
+    50%{background-position:100% 49%}
+    100%{background-position:0% 52%}
+}
+@keyframes spacedistortion {
+    0%{background-position:0% 52%}
+    50%{background-position:100% 49%}
+    100%{background-position:0% 52%}
+}
+
+@keyframes bubble-1 {
+    0% {
+        transform: scale(0) rotate(0deg);
+        left: 600px;
+        top: 150px;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        left: 600px;
+        top: 800px;
+    }
+}
+
+@keyframes bubble-2 {
+    0% {
+        transform: scale(0) rotate(0deg);
+        left: 340px;
+        bottom: 150px;
+    }
+    100% {
+        transform: scale(1) rotate(30deg);
+        left: 340px;
+        bottom: 0px;
+    }
+}
+
+@keyframes bubble-3 {
+    0% {
+        transform: scale(0) rotate(0deg);
+        left: 500px;
+        bottom: 150px;
+    }
+    100% {
+        transform: scale(1) rotate(23deg);
+        left: 697px;
+        bottom: 500px;
+    }
+}
+
+@keyframes bubble-4 {
+    0% {
+        transform: scale(0) rotate(0deg);
+        left: 700px;
+        bottom: 150px;
+    }
+    100% {
+        transform: scale(1) rotate(1deg);
+        left: 697px;
+        bottom: 500px;
+    }
+}
+
+@keyframes bubble-5 {
+    0% {
+        transform: scale(0) rotate(0deg);
+        left: 800px;
+        bottom: 150px;
+    }
+    100% {
+        transform: scale(1) rotate(-12deg);
+        left: 697px;
+        bottom: 500px;
+    }
+}
+
