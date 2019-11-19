@@ -19,7 +19,7 @@ body {
     position: relative;
     margin: auto;
     background-color: #0c0920;
-    overflow: hidden;
+    overflow: hidden; /* HUSK HIDDEN! */
     z-index: 0;
 }
 
@@ -66,27 +66,13 @@ body {
     opacity: 0;
     transition-property: opacity;
     transition-delay: 1s;
-    transition-timing-function: ease-out; /* HUSK -webkit- */
+    transition-timing-function: ease-out;
     transition-duration: 0.5s;
 }
 
 #kenbeth-script-1 {
     top: 110px;
     right: 500px;
-}
-
-/* Images */
-#exclamation-mark {
-    position: absolute;
-    width: 0px;
-    top: 510px;
-    right: 280px;
-    animation: exclamation-mark 1.2s linear;
-    -webkit-animation: exclamation-mark 1.2s linear;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out;
-    animation-delay: 2s;
-    -webkit-animation-delay: exclamation-mark 2s;
 }
 
 /* Ground */
@@ -96,7 +82,7 @@ body {
     position: absolute;
     margin: auto;
     overflow: hidden;
-    background: linear-gradient(#76f91f, #ddf45b);
+    background-color: #76f91f;
     border: 5px solid #ddf45b;
     border-radius: 50%;
     bottom: -300px;
@@ -189,24 +175,34 @@ body {
     animation-timing-function: ease-out;
 }
 
-/* Monsters */
+/* Villagers */
+
+#slime-villager-1 {
+    width: 100px;
+    bottom: 170px;
+    right: 380px;
+    opacity: 0;
+    transform: rotate(5deg);
+    transition-duration: 1.5s;
+    -webkit-transition-duration: 1.5s;
+    transition-delay: 2s;
+}
+
 #slime-monster-angry {
-    width: 20px;
+    position: absolute;
+    width: 80px;
     right: 300px;
-    bottom: 265px;
+    bottom: 250px;
     z-index: 4;
     transform: rotate(18deg);
 }
 
 /* gifs */
 #slime-monster-gif {
+    position: absolute;
     width: 120px;
-    bottom: 150px;
-    left: 0px;
-    transform: rotate(-23deg);
-    animation: slime-monster-gif 5s linear;
-    -webkit-animation: slime-monster-gif 5s linear;
-    animation-timing-function: ease-out;
+    bottom: 140px;
+    transform: rotate(-22deg);
 }
 
 /* Background elements */
@@ -457,58 +453,14 @@ body {
     }
 }
 
-@keyframes slime-monster-gif {
-    0% {
-        transform: rotate(-40deg);
-        left: -120px;
-        bottom: 80px;
-    }
-    100% {
-        transform: rotate(-23deg);
-    }
-}
-
-@keyframes exclamation-mark {
-    0% {
-        width: 0px;
-        top: 510px;
-        right: 305px;
-    }
-    50% {
-        width: 20px;
-        top: 480px;
-        right: 280px;
-    }
-    100% {
-        width: 0px;
-        top: 510px;
-        right: 305px;
-    }
-}
-
-/*
-#exclamation-mark {
-    position: absolute;
-    width: 20px;
-    top: 470px;
-    right: 280px;
-    animation: exclamation-mark 1.5s linear;
-    -webkit-animation: exclamation-mark 1.5s linear;
-    animation-timing-function: ease-in;
-}*/
-
-/*
-#slime-monster-gif {
-    width: 120px;
-    bottom: 80px;
-    left: 0px;
-    transform: rotate(-40deg);
-    animation: slime-monster-gif 5s linear;
-    -webkit-animation: slime-monster-gif 5s linear;
-    animation-timing-function: ease-out;
-}*/
-
 /* Triggers */
+.container:hover #slime-villager-1 {
+    width: 100px;
+    bottom: 255px;
+    right: 440px;
+    opacity: 100%;
+}
+
 #kenbeth-flying:hover {
     width: 420px;
     top: 113px;

@@ -82,11 +82,36 @@ body {
     width: 100px;
     height: 100px;
     position: absolute;
-    margin-top: 500px;
-    margin-left: 200px;
-    z-index: 4;
+    margin-top: 530px;
+    margin-left: 20px;
+    z-index: 3;
+    animation-name: ball-rolling;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
 }
 
+/* Beach ball hover(Start animation, rolls off)*/
+#beach-ball:hover {
+    animation-play-state: running;
+}
+
+@keyframes ball-rolling {
+     0% {transform: translate(0px, 0px) rotate(0deg);}
+    10% {transform: translate(-10px, 10px) rotate(-30deg);}
+    20% {transform: translate(-20px, 30px) rotate(-60deg);}
+    30% {transform: translate(-30px, 50px) rotate(-90deg);}
+    40% {transform: translate(-40px, 70px) rotate(-120deg);}
+    50% {transform: translate(-50px, 90px) rotate(-150deg);}
+    60% {transform: translate(-60px, 110px) rotate(-180deg);}
+    70% {transform: translate(-70px, 130px) rotate(-210deg);}
+    80% {transform: translate(-80px, 150px) rotate(-240deg);}
+    90% {transform: translate(-90px, 170px) rotate(-270deg);}
+    100% {transform: translate(-100px, 190px) rotate(-300deg);}
+}   
+
+/* Shell related */
 #shell {
     width: 100px;
     height: 100px;
@@ -101,13 +126,43 @@ body {
    opacity: 0;
 }
 
+#shell-text {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 625px;
+    margin-left: 1050px;
+    opacity: 0.5;
+    z-index: 4; 
+}
+
+/* Fish related*/
 #fish {
     width: 100px;
     height: 100px;
     position: absolute;
     margin-top: 680px;
     margin-left: 700px;
-    z-index: 3;
+    opacity: 0.5;
+    z-index: 6;
+}
+
+#text-bubble {
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 605px;
+    opacity: 0;
+    z-index: 5;
+}
+
+/* Active on fish for text(Hint) */
+#fish:active ~#text-bubble {
+    opacity: 1;
+}
+
+.animation-swim {
     animation-name: fish-swim;
     animation-duration: 8s;
     animation-timing-function: ease-in-out;
@@ -124,22 +179,9 @@ body {
     100% {transform: translateX(-10%) translateY(20%);}
 }
 
-@keyframes fish-text {
-    
-}
-
-#shell-text {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    margin-top: 625px;
-    margin-left: 1050px;
-    opacity: 0.5;
-    z-index: 4; 
-}
+/* Sea decorations*/
 
 /* Sea plants */
-
 .sea-plants {
     width: 100px;
     height: 200px;
@@ -150,32 +192,30 @@ body {
 }
 
 #sea-plant {
-    margin-left: -25px;
     margin-top: 670px;
+    margin-left: -25px;
     animation-name: seaplant-move;
 }
 
 #sea-plant2 {
-    margin-left: 10px;
     margin-top: 680px;
+    margin-left: 10px;
     animation-name: seaplant-move2;
 }
 
 #sea-plant3 {
-    margin-left: 40px;
     margin-top: 665px;
+    margin-left: 40px;
     animation-name: seaplant-move;
 }
 
 #sea-plant4 {
+    margin-top: 685px;
     margin-left: 75px;
-    margin-top: 685px;
-    margin-top: 685px;
     animation-name: seaplant-move2;
 }
 
 /* Seaplant Animation */
-
 @keyframes seaplant-move {
     0%, 100% {transform: rotate(9deg);}
     50% {transform: rotate(-9deg);}
@@ -185,4 +225,103 @@ body {
     0%, 100% {transform: rotate(-6deg);}
     50% {transform: rotate(6deg);}
 }
+
+/* Palm tree */
+#palm-root {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 60px;
+    z-index: 0;
+}
+
+#palm-leaf {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 60px;
+    z-index: 0;
+    animation-name: palm-move;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+/* Palm tree animation */
+@keyframes palm-move {
+    0%, 100% {transform: rotate(3deg);}
+    50% {transform: rotate(0deg);}
+}
+
+/* Main Character */
+#main-character {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 500px;
+    z-index: 5;
+    animation-name: main-dance;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Dance Animation */
+@keyframes main-dance {
+    0% {transform: translate(1px, 1px) rotate(0deg);}
+  10% {transform: translate(-1px, -2px) rotate(-1deg);}
+  20% {transform: translate(-3px, 0px) rotate(1deg);}
+  30% {transform: translate(3px, 2px) rotate(0deg);}
+  40% {transform: translate(1px, -1px) rotate(1deg);}
+  50% {transform: translate(-1px, 2px) rotate(-1deg);}
+  60% {transform: translate(-3px, 1px) rotate(0deg);}
+  70% {transform: translate(3px, 1px) rotate(-1deg);}
+  80% {transform: translate(-1px, -1px) rotate(1deg);}
+  90% {transform: translate(1px, 2px) rotate(0deg);}
+  100% {transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+#thinking-bubble {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 660px;
+    opacity: 0;
+    z-index: 5;
+    animation-name: bubble-appear;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubble-appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#start-text {
+    width: 100px;
+    margin-top: 230px;
+    margin-left: 735px;
+    text-align: center;
+    font-size: 20px;
+    color: #2c2c2c;
+    position: absolute;
+    opacity: 0;
+    z-index: 6;
+    animation-name: text-animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes text-animation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
 
