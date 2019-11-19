@@ -13,8 +13,8 @@ body {
     height: 800px;
     position: relative;
     margin: auto;
-    background-image: radial-gradient(#0F0A28, #0c0920 80%);
     overflow: hidden;
+    background-image: radial-gradient(#0F0A28, #0c0920 80%);
     margin-top: 50px;
 }
 
@@ -211,7 +211,26 @@ body {
     }
 }
 
+/* Rocket */
 
+#rocket{
+    width: 70px;
+    height: 70px;
+    top: 450px;
+    left: -70px;
+    position: absolute;
+    transform: rotate(15deg);
+    
+    animation: rocket-flying 30s 8s ease-in-out infinite;
+}
+
+@keyframes rocket-flying{
+    100%{
+        top: -70px;
+        left: 1100px;
+        
+    }
+}
 
 
 /* Planets */
@@ -233,7 +252,7 @@ body {
     background: linear-gradient(270deg, #00c5cc, #3285d3);
     overflow: hidden;
     
-    animation: zoom-planet-ice 8s ease-out forwards;
+    animation: zoom-planet-ice 8s ease-in forwards;
 }
 
 @keyframes zoom-planet-ice{
@@ -269,7 +288,7 @@ body {
     left: 450px;
     overflow: hidden;
     
-    animation: zoom-planet-city 8s ease-out forwards;
+    animation: zoom-planet-city 8s ease-in forwards;
 }
     
 @keyframes zoom-planet-city{
@@ -289,7 +308,7 @@ body {
     left: -160px;
     transform: rotate(15deg);
     
-    animation: planet-rotate 13s 3s linear infinite;
+    animation: planet-rotate 13s 0.5s linear infinite;
 }
 
 
@@ -305,7 +324,7 @@ body {
     left: 600px;
     overflow: hidden;
     
-    animation: zoom-planet-vacay 8s ease-out forwards;
+    animation: zoom-planet-vacay 8s ease-in forwards;
 }
 
 @keyframes zoom-planet-vacay{
@@ -321,7 +340,7 @@ body {
     width: 300px;
     height: 80px;
     position: absolute;
-    opacity: 0.6;
+    opacity: 0.7;
     left: -200px;
     top: 20px;
     transform: rotate(-40deg);
@@ -341,7 +360,7 @@ body {
     left: 800px;
     overflow: hidden;
     
-    animation: zoom-planet-cowboy 8s ease-out forwards;
+    animation: zoom-planet-cowboy 8s ease-in forwards;
 }
 
 @keyframes zoom-planet-cowboy{
@@ -357,7 +376,7 @@ body {
     width: 280px;
     height: 40px;
     position: absolute;
-    opacity: 0.7;
+    opacity: 0.8;
     bottom: 0px;
     left: -280px;
     transform: rotate(-15deg);
@@ -378,7 +397,7 @@ body {
     left: 950px;
     overflow: hidden;
     
-    animation: zoom-planet-slime 8s ease-out forwards;
+    animation: zoom-planet-slime 8s ease-in forwards;
 }
 
 @keyframes zoom-planet-slime{
@@ -411,6 +430,52 @@ body {
         transform: translateX(350px);
     }
     
+}
+
+#slime-image{
+    top: 350px;
+    left: 110px;
+    position: absolute;
+}
+
+#planet-slime:hover{
+    transform: scale(1.5);
+
+}
+
+#hk{
+    width: 125px;
+    height: 200px;
+    position: absolute;
+    top: 1000px;
+    right: -125px;
+    
+    animation: hk-coming 8s ease-out forwards,
+               hk-hovering 3.5s 8s linear infinite;
+}
+
+
+
+@keyframes hk-coming{
+    100%{
+        top: 400px;
+        right: 360px;
+        transform: scale(2);
+    }
+}
+
+
+@keyframes hk-hovering{                                 
+    0%{
+        top: 400px;   
+    }
+    40%{
+        top: 450px;
+    }
+    100%{
+        top: 400px;
+
+    }
 }
 
 
