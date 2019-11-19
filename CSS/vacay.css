@@ -136,6 +136,23 @@ body {
     z-index: 4; 
 }
 
+/* Crab */
+#crab {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    margin-top: 850px;
+    margin-left: 270px;
+    opacity: 0.7;
+    z-index: 4;
+    animation: crab-move 6s ease-in-out alternate infinite;
+}
+
+@keyframes crab-move {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-170px);}
+}
+
 /* Fish related*/
 #fish {
     width: 100px;
@@ -244,7 +261,7 @@ body {
     margin-left: -5px;
     z-index: 1;
     -webkit-animation-name: palm-move;
-    -webkit-animation-duration: 6s;
+    -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
 }
 
@@ -483,6 +500,22 @@ body {
     100%{transform: translate(-1450px, -80px) rotate(40deg);}
 }
 
+#shooting-star {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 1300px;
+    opacity: 0.7;
+    z-index: 0;
+    animation: shootingstar-move 4s ease-in-out infinite;
+}
+
+@keyframes shootingstar-move {
+    0% {transform: translate(0, 0) rotate(-15deg);}
+    100% {transform: translate(-1100px, 700px) rotate(-15deg);}
+}
+
 /* Stars */
 #stars-container{
     animation: zoomStarContainer 5s ease-out forwards;
@@ -504,29 +537,31 @@ body {
     -webkit-animation: zoomStars 5s ease-in forwards;
 }
 
-.star-group-1{
-    
+@keyframes zoom-stars{
+    100%{width: 2px; height: 2px;}
 }
 
-.star-group-2{
-
-}
-
-.star-group-3{
-
-}
-
-.star-group-4{
-
-}
-
-.star-group-5{
-
+@keyframes star-blinking{
+    2.5%{
+        box-shadow:
+        0 0 4.5px 3px #ffffff, 
+        0 0 15px 3px #ffffff, 
+        0 0 30px 3px #ffffff; 
+    }
+    5%{    
+        width: 2px;
+        height: 2px;
+        box-shadow:
+        0 0 1.5px 1px #ffffff, 
+        0 0 2.5px 1.5px #ffffff, 
+        0 0 3.5px 2.5px #ffffff;  
+    }
 }
 
 #star-1{
     top: 50px;
     left: 50px;
+    animation: star-blinking 10s 10s ease-in infinite;
 }
 
 #star-2{
@@ -547,6 +582,7 @@ body {
 #star-5{
     top: 40px;
     left: 510px;
+     animation: star-blinking 10s 10s ease-in infinite;
 }
 
 #star-6{
@@ -567,6 +603,7 @@ body {
 #star-9{
     top: 50px;
     left: 1100px;
+     animation: star-blinking 10s 10s ease-in infinite;
 }
 
 #star-10{
@@ -582,6 +619,7 @@ body {
 #star-12{
     top: 300px;
     left: 220px;
+     animation: star-blinking 10s 10s ease-in infinite;
 }
 
 #star-13{
@@ -607,6 +645,7 @@ body {
 #star-17{
     top: 450px;
     left: 1200px;
+     animation: star-blinking 10s 10s ease-in infinite;
 }
 
 #star-18{
@@ -637,6 +676,7 @@ body {
 #star-23{
     top: 570px;
     left: 1100px;
+     animation: star-blinking 10s 10s ease-in infinite;
 }
 
 #star-24{
