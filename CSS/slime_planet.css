@@ -486,28 +486,6 @@ body {
     }
 }
 
-/*
-#exclamation-mark {
-    position: absolute;
-    width: 20px;
-    top: 470px;
-    right: 280px;
-    animation: exclamation-mark 1.5s linear;
-    -webkit-animation: exclamation-mark 1.5s linear;
-    animation-timing-function: ease-in;
-}*/
-
-/*
-#slime-monster-gif {
-    width: 120px;
-    bottom: 80px;
-    left: 0px;
-    transform: rotate(-40deg);
-    animation: slime-monster-gif 5s linear;
-    -webkit-animation: slime-monster-gif 5s linear;
-    animation-timing-function: ease-out;
-}*/
-
 /* Triggers */
 #kenbeth-flying:hover {
     width: 420px;
