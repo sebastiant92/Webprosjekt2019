@@ -38,57 +38,57 @@ body {
 #ground-texture1{
     width: 250px;
     height: 60px;
-    bottom: 150px;
-    left: 300px;
+    bottom: 650px;
+    left: 200px;
 }
 
 #ground-texture2{
     width: 200px;
     height: 60px;
-    bottom: 100px;
-    left: 900px;
+    bottom: 750px;
+    left: 600px;
 }
 
 #ground-texture3{
     width: 200px;
-    height: 70px;
-    bottom: 40px;
-    left: 125px;
+    height: 40px;
+    bottom: 800px;
+    left: 1200px;
 }
 
 #ground-texture4{
     width: 240px;
     height: 80px;
-    bottom: 30px;
+    bottom: 590px;
     left: 600px;
 }
 
 #ground-texture5{
     width: 200px;
     height: 30px;
-    bottom: 250px;
-    left: 600px;
+    bottom: 850px;
+    left: 900px;
 }
 
 #ground-texture6{
     width: 150px;
-    height: 40px;
-    bottom: 160px;
-    left: 700px;
+    height: 50px;
+    bottom: 700px;
+    left: 1400px;
 }
 
 #ground-texture7{
-    width: 150px;
-    height: 70px;
-    bottom: -20px;
-    left: 400px;
+    width: 200px;
+    height: 50px;
+    bottom: 750px;
+    left: 960px;
 }
 
 #ground-texture8{
     width: 200px;
-    height: 100px;
-    bottom: -10px;
-    left: 1000px;
+    height: 150px;
+    bottom: 500px;
+    left: 1100px;
 }
 
 .texture{
@@ -97,6 +97,7 @@ body {
     background-color: darkgray;
     border: 4px solid gray;
     z-index: 2;
+    transform: scale(1);
 }
 
 /* planets */
@@ -137,7 +138,7 @@ body {
     height: 450px;
     width: 450px;
     position: absolute;
-    bottom: -10px;
+    bottom: 10px;
     left: 30px;
     z-index: 2;
 }
@@ -160,62 +161,11 @@ body {
 }
 
 /* Animation */
-#ground-texture1:hover{
-    width: 300px;
-    height: 110px;
-    bottom: 150px;
-    left: 300px;
-}
-
-#ground-texture2:hover{
-    width: 250px;
-    height: 110px;
-    bottom: 100px;
-    left: 900px;
-}
-
-#ground-texture3:hover{
-    width: 250px;
-    height: 120px;
-    bottom: 40px;
-    left: 125;
-}
-
 #ground-texture4:hover{
-    width: 290px;
-    height: 130px;
-    bottom: 30px;
-    left: 600px;
+    transform: scale(1.3);
 }
 
-#ground-texture5:hover{
-    width: 250px;
-    height: 80px;
-    bottom: 250px;
-    left: 600px;
+#ground-texture8:hover{
+    transform: scale(1.3);
 }
 
-#ground-texture6:hover{
-    width: 200px;
-    height: 90px;
-    bottom: 160px;
-    left: 700px;
-}
-
-#ground-texture7:hover{
-    width: 200px;
-    height: 120px;
-    bottom: -20px;
-    left: 400px;
-}
-
-#ground-texture:hover{
-    width: 250px;
-    height: 100px;
-    bottom: -10px;
-    left: 1000px;
-}
-
-.texture:hover{
-    transform: scale(1.5);
-}
