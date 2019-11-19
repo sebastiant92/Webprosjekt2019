@@ -6,12 +6,16 @@
 
 body {
     background-color: #0c0920;
+    z-index: -1;
 }
 
 #container {
-    width: 1278px;
+    top: 50px;
+    margin: auto;
     height: 800px;
+    width: 1278px;
     background-color: #6698a5;
+    background-image: linear-gradient(top);
     position: relative;
     overflow: hidden;
 }
@@ -35,7 +39,7 @@ body {
     opacity: 90%;
     z-index: 2;
     transform: scaleX(-1);
-    animation: glowfishmovement alternate ease-in-out 5s infinite;
+    animation: glowfish-movement alternate ease-in-out 5s infinite;
 }
 
 #big-fish {
@@ -46,6 +50,7 @@ body {
     left: 200px;
     opacity: 80%;
     z-index: 2;
+    animation: big-fish-movement 8s infinite;
 }
 
 #medium-fish {
@@ -56,6 +61,7 @@ body {
     left: 150px;
     opacity: 80%;
     z-index: 2;
+    animation: medium-fish-movement 10s infinite;
 }
 
 #small-fish {
@@ -66,7 +72,9 @@ body {
     left: 150px;
     opacity: 80%;
     z-index: 2;
+    animation: small-fish-movement 7s infinite;
 }
+
 
 #yellow-fish {
     width: 200px;
@@ -76,6 +84,7 @@ body {
     left: 180px;
     opacity: 80%;
     z-index: 2;
+    animation: yellow-fish-movement 10s infinite;
 }
 
 #kenbeth1 {
@@ -85,6 +94,9 @@ body {
     top: 350px;
     left: 150px;
     z-index: 2;
+    animation: kenbeth-flying 1.5s linear;
+    -webkit-animation: kenbeth-flying 1.5s linear;
+    animation-timing-function: ease-out;
 }
 
 /*Planets size and position*/
@@ -118,7 +130,7 @@ body {
     position: absolute;
     top: 100px;
     left: 1000px;
-    animation: planetmovement alternate 5s infinite;
+    animation: planet-movement alternate 5s infinite;
 }
 
 /*Ice planet layout*/
@@ -135,15 +147,6 @@ body {
     z-index: 2;
 }
 
-#ice {
-    width: 1800px;
-    height: 800px;
-    position: absolute;
-    top: 550px;
-    left: -225px;
-    z-index: 1;
-}
-
 #mountain {
     position: absolute;
     top: 175px;
@@ -157,8 +160,25 @@ body {
     position: absolute;
     top: 400px;
     left: 700px;
+    z-index: 1;
 }
 
+#sign2 {
+    width: 150px;
+    height: 175px;
+    position: absolute;
+    top: 400px;
+    left: 700px;
+    z-index: 0;
+
+}
+
+#sign:hover {
+    opacity: 0;
+}
+
+
+/*Falling snow 1-12*/
 #snowflake1 {
     height: 50px;
     width: 50px;
@@ -296,6 +316,8 @@ body {
     animation: fallingsnow12 normal 7s infinite;
     animation-delay: 2s;
 }
+
+/*Falling snow keyframe 1-12*/
 
 @keyframes fallingsnow1 {
     0% {
@@ -633,7 +655,8 @@ body {
     }
 }
 
-@keyframes glowfishmovement {
+/*Fish movement*/
+@keyframes glowfish-movement {
     0% {
         top: 650px;
         left: 900px;
@@ -648,8 +671,150 @@ body {
         top: 655px;
         left: 905px
     }
+}
 
-    @keyframes planetmovement {
+@keyframes big-fish-movement {
+    0% {
+        left: 200px;
+        transform: scaleX(1);
+    }
+
+    25% {
+        left: 300px;
+        transform: scaleX(1);
+    }
+
+    50% {
+        left: 400px;
+        transform: scaleX(1);
+
+    }
+
+    75% {
+        left: 350px;
+        transform: scaleX(-1);
+    }
+
+    100% {
+        left: 200px;
+        transform: scaleX(1);
+    }
+
+}
+
+@keyframes medium-fish-movement {
+    0% {
+        left: 150px;
+        transform: scaleX(1);
+    }
+
+    25% {
+        left: 100px;
+        transform: scaleX(-1)
+    }
+
+    50% {
+        left: 50px;
+        transform: scaleX(-1)
+    }
+
+    75% {
+        left: 100px;
+        transform: scaleX(1)
+    }
+
+    100% {
+        left: 150px;
+        transform: scaleX(1)
+    }
+}
+
+@keyframes small-fish-movement {
+    0% {
+        left: 150px;
+        transform: scaleX(1);
+    }
+
+    25% {
+        left: 100px;
+        transform: scaleX(-1)
+    }
+
+    50% {
+        left: 50px;
+        transform: scaleX(-1)
+    }
+
+    75% {
+        left: 100px;
+        transform: scaleX(1)
+    }
+
+    100% {
+        left: 150px;
+        transform: scaleX(1)
+    }
+}
+
+
+@keyframes yellow-fish-movement {
+    0% {
+        top: 650px;
+        transform: scaleX(1);
+    }
+
+    25% {
+        top: 750px;
+        transform: scaleX(-1)
+    }
+
+    50% {
+        top: 650px;
+        transform: scaleX(-1)
+    }
+
+    75% {
+        top: 750px;
+        transform: scaleX(1)
+    }
+
+    100% {
+        top: 650px;
+        transform: scaleX(1)
+    }
+}
+
+/*Kenbeth movement*/
+
+@keyframes kenbeth-flying {
+    0% {
+        transform: rotate(0deg);
+        left: -400px;
+    }
+
+    25% {
+        transform: rotate(-44deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+        left: 150px;
+        delay: 5s;
+    }
+
+    75% {
+        top: 230px;
+    }
+
+    100% {
+        top: 120px;
+    }
+}
+
+
+/*
+    Planet movement-not working
+    @keyframes planet-movement {
         0% {
             transform: rotate(0deg);
         }
@@ -669,4 +834,4 @@ body {
         100% {
             transform: rotate(0deg);
         }
-    }
+    }*/
