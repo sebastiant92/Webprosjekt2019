@@ -13,6 +13,7 @@
   background-color: #0c0920;
   background-size: 100% 100%;
   overflow: hidden;
+  z-index: -1;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     position: relative;
     background-color: #415a77;
     border: 4px solid gray;
+    z-index: 1;
 }
 
 #ground-texture1{
@@ -92,40 +94,40 @@ body {
     position: absolute;
     background-color: darkgray;
     border: 4px solid gray;
+    z-index: 2;
 }
 
 /* planets */
 #ice{
-    height: 650px;
-    width: 650px;
+    height: 800px;
+    width: 800px;
     position: absolute;
-    bottom: 200px;
-    left: -100px;
-    z-index: 1;
+    bottom: 0px;
+    left: 700px;
 }
 
 #vacay{
-    height: 300px;
-    width: 300px;
+    height: 500px;
+    width: 500px;
     position: absolute;
-    bottom: 500px;
-    left: 350px;
+    bottom: 200px;
+    left: 10px;
 }
 
 #slime{
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     position: absolute;
-    bottom: 400px;
-    left: 650px;
+    bottom: 600px;
+    left: 600px;
 }
 
 #cowboy{
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     position: absolute;
-    bottom: 250px;
-    left: 930px;
+    bottom: 450px;
+    left: 350px;
 }
 
 /* Characters */
@@ -133,9 +135,10 @@ body {
     height: 450px;
     width: 450px;
     position: absolute;
-    bottom: 60px;
-    left: 20px;
+    bottom: -10px;
+    left: 30px;
     z-index: 2;
 }
 
 /* Animation */
+
