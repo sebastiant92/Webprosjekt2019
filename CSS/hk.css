@@ -543,17 +543,7 @@ body {
                 principal-moving 1s 11s linear forwards;
 }
 
-@keyframes principal-coming{
-    10%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 1;
-        top: 470px;
-        left: 310px;
-        transform: scale(1.3);
-    }
-}
+
 
 @keyframes principal-moving{
     100%{
@@ -569,6 +559,18 @@ body {
     left: 290px;
     opacity: 0;
     
-    animation: principal-coming 3s 14s linear forwards,
+    animation: principal-coming 3s 14s linear forwards;
         
+}
+
+@keyframes principal-coming{
+    10%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        top: 470px;
+        left: 310px;
+        transform: scale(1.3);
+    }
 }
