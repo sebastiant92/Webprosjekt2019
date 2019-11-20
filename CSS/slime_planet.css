@@ -42,10 +42,10 @@ body {
 
 #chat-bubble-kenbeth {
     top: 0px;
-    left: 550px;
+    left: 500px;
     width: 350px;
     height: 250px;
-    animation-fill-mode: forwards;
+    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s linear infinite;
 }
 
 #kenbeth-script-1 {
@@ -707,14 +707,6 @@ body {
     100% {
         top: 90px;
     }
-}
-
-#chat-bubble-kenbeth {
-    top: 0px;
-    left: 500px;
-    width: 350px;
-    height: 250px;
-    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s linear infinite;
 }
 
 /* Triggers */
