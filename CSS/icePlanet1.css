@@ -15,7 +15,7 @@ body {
     height: 800px;
     width: 1278px;
     /* background-color: #6698a5;*/
-    background-image: linear-gradient (to bottom, #6698a5, #0c0920);
+    background-image: linear-gradient(#0c0920, #6698a5);
     position: relative;
     overflow: hidden;
 }
@@ -94,15 +94,15 @@ body {
     top: 350px;
     left: 150px;
     z-index: 2;
-    animation: kenbeth-flying 1.5s linear;
-    animation: kenbeth-flying 1.5s linear ease-out;
+    animation: kenbeth-flying 2.5s linear;
+
 }
 
 /*Speachbubles*/
 
 #speech-pingu {
     width: 200px;
-    height: 150px;
+    height: 175px;
     position: absolute;
     top: 300px;
     left: 800px;
@@ -116,11 +116,12 @@ body {
 
 #speech-kenbeth {
     width: 200px;
-    height: 150px;
+    height: 175px;
     position: absolute;
     top: 280px;
     left: 400px;
     opacity: 0;
+    z-index: 1;
 }
 
 #pingu:active ~ #speech-pingu {
@@ -128,6 +129,79 @@ body {
     transition-delay: 1s;
 
 }
+
+.stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #ffffff;
+    box-shadow:
+        0 0 1.5px 1px #ffffff,
+        0 0 2.5px 1.5px #ffffff,
+        0 0 3.5px 2.5px #ffffff;
+
+
+}
+
+#star-1 {
+    top: 50px;
+    left: 50px;
+}
+
+#star-3 {
+    top: 70px;
+    left: 250px;
+}
+
+#star-4 {
+    top: 180px;
+    left: 380px;
+    animation: star-blinking 10s 4s ease-in infinite;
+}
+
+#star-5 {
+    top: 40px;
+    left: 510px;
+}
+
+#star-6 {
+    top: 130px;
+    left: 630px;
+}
+
+#star-7 {
+    top: 20px;
+    left: 790px;
+}
+
+#star-8 {
+    top: 160px;
+    left: 930px;
+}
+
+#star-9 {
+    top: 50px;
+    left: 1100px;
+    animation: star-blinking 10s 7s ease-in infinite;
+}
+
+#star-10 {
+    top: 200px;
+    left: 1200px;
+}
+
+#star-11 {
+    top: 420px;
+    left: 80px;
+}
+
+#star-12 {
+    top: 300px;
+    left: 220px;
+    animation: star-blinking 10s 12s ease-in infinite;
+}
+
 
 /*Planets size and position*/
 
@@ -138,8 +212,8 @@ body {
 }
 
 #city-planet {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     background-image: linear-gradient(to right, #415a77, #415a77);
     top: 70px;
     left: 100px;
@@ -153,15 +227,19 @@ body {
     position: absolute;
     top: 50px;
     left: 30px;
+
+    animation: planet-rotate 11s linear infinite;
 }
 
 #vaykay-planet {
-    width: 70px;
-    height: 70px;
+    width: 170px;
+    height: 170px;
     background-image: radial-gradient(#f6d2da, #fcc9d1);
     top: 170px;
     left: 400px;
     overflow: hidden;
+    z-index: 0;
+
 }
 
 #planet-vacay-structure {
@@ -171,12 +249,15 @@ body {
     opacity: 0.6;
     right: 0px;
     top: 50px;
+    z-index: 0;
+
+    animation: planet-rotate 10s linear infinite;
 }
 
 
 #cowboy-planet {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     background-image: radial-gradient(#faff81, #ffc53a);
     top: 100px;
     left: 670px;
@@ -189,11 +270,13 @@ body {
     position: absolute;
     opacity: 0.8;
     bottom: 20px;
+
+    animation: planet-rotate 9s linear infinite;
 }
 
 #slime-planet {
-    width: 80px;
-    height: 80px;
+    width: 180px;
+    height: 180px;
     background-image: radial-gradient(#ddf45b, #32bc35);
     top: 150px;
     left: 950px;
@@ -207,6 +290,8 @@ body {
     opacity: 0.8;
     right: 0px;
     bottom: 30px;
+
+    animation: planet-rotate 12s linear infinite;
 }
 
 
@@ -224,11 +309,30 @@ body {
     z-index: 2;
 }
 
+#snowball {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 75px;
+    left: 1300px;
+    animation: snowball-rolling 1s linear 1 forwards paused;
+}
+
+#mountain:active ~ #snowball {
+    animation-play-state: running;
+}
+
 #mountain {
     position: absolute;
     top: 175px;
     left: 900px;
     z-index: 0;
+}
+
+#mountain:hover {
+    transform: scale(1.1);
 }
 
 #sign {
@@ -264,7 +368,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    -webkit-animation: fallingsnow1 normal 11s infinite;
+    animation: fallingsnow1 normal 11s infinite;
 }
 
 #snowflake2 {
@@ -275,8 +379,8 @@ body {
     left: 100px;
     opacity: 50%;
     z-index: 2;
-    -webkit-animation: fallingsnow2 normal 8s infinite;
-    -webkit-animation-delay: 7s;
+    animation: fallingsnow2 normal 8s infinite;
+    animation-delay: 7s;
 }
 
 #snowflake3 {
@@ -287,7 +391,7 @@ body {
     left: 200px;
     opacity: 50%;
     z-index: 2;
-    -webkit-animation: fallingsnow3 normal 10s infinite;
+    animation: fallingsnow3 normal 10s infinite;
 }
 
 #snowflake4 {
@@ -298,8 +402,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    -webkit-animation: fallingsnow4 normal 10s infinite;
-    -webkit-animation-delay: 5s;
+    animation: fallingsnow4 normal 10s infinite;
+    animation-delay: 5s;
 }
 
 #snowflake5 {
@@ -310,7 +414,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    -webkit-animation: fallingsnow5 normal 12s infinite;
+    animation: fallingsnow5 normal 12s infinite;
 }
 
 #snowflake6 {
@@ -321,8 +425,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    -webkit-animation: fallingsnow6 normal 10s infinite;
-    -webkit-animation-delay: 2.5s;
+    animation: fallingsnow6 normal 10s infinite;
+    animation-delay: 2.5s;
 }
 
 #snowflake7 {
@@ -333,7 +437,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    -webkit-animation: fallingsnow7 normal 8s infinite;
+    animation: fallingsnow7 normal 8s infinite;
 }
 
 #snowflake8 {
@@ -344,8 +448,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    -webkit- animation: fallingsnow8 normal 11s infinite;
-    -webkit-animation-delay: 1s;
+    animation: fallingsnow8 normal 11s infinite;
+    animation-delay: 1s;
 }
 
 #snowflake9 {
@@ -356,7 +460,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    -webkit-animation: fallingsnow9 normal 7s infinite;
+    animation: fallingsnow9 normal 7s infinite;
 }
 
 #snowflake10 {
@@ -367,8 +471,8 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    -webkit-animation: fallingsnow10 normal 8s infinite;
-    -webkit-animation-delay: 2s;
+    animation: fallingsnow10 normal 8s infinite;
+    animation-delay: 2s;
 }
 
 #snowflake11 {
@@ -379,7 +483,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    -webkit-animation: fallingsnow11 normal 7s infinite;
+    animation: fallingsnow11 normal 7s infinite;
 }
 
 #snowflake12 {
@@ -390,8 +494,15 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    -webkit-animation: fallingsnow12 normal 7s infinite;
-    -webkit-animation-delay: 2s;
+    animation: fallingsnow12 normal 7s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes planet-rotate {
+    100% {
+        transform: translateX(350px);
+    }
+
 }
 
 /*Falling snow keyframe 1-12*/
@@ -732,6 +843,25 @@ body {
     }
 }
 
+/*Star-blinking*/
+@keyframes star-blinking {
+    2.5% {
+        box-shadow:
+            0 0 4.5px 3px #ffffff,
+            0 0 15px 3px #ffffff,
+            0 0 30px 3px #ffffff;
+    }
+
+    5% {
+        width: 2px;
+        height: 2px;
+        box-shadow:
+            0 0 1.5px 1px #ffffff,
+            0 0 2.5px 1.5px #ffffff,
+            0 0 3.5px 2.5px #ffffff;
+    }
+}
+
 /*Fish movement*/
 @keyframes glowfish-movement {
     0% {
@@ -879,10 +1009,20 @@ body {
     }
 
     75% {
-        top: 230px;
+        top: 200px;
     }
 
     100% {
-        top: 120px;
+        top: 350px;
+    }
+}
+
+@keyframes snowball-rolling {
+    0% {
+        transform: translate(75px, 1300px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(900px, 800px) rotate(-300deg);
     }
 }
