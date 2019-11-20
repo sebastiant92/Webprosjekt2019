@@ -452,18 +452,18 @@ body {
     left: 1020px;
     z-index: 2;
     animation-name: squanchy-travel;
-    animation-duration: 10s;
+    animation-duration: 14s;
 }
 
 #rocket{
     height: 100px;
     width: 100px;
     position: absolute;
-    bottom: 0px;
-    left: 100px;
-    z-index: 3;
-    animation-name: rocket-fly;
-    animation-duration: 2s;
+    top: 400px;
+    left: -100px;
+    z-index: 1;
+    animation: rocket-fly 3s 10s ease-in-out;
+    overflow: hidden;
 }
 
 #antenna{
@@ -482,6 +482,15 @@ body {
     bottom: 256px;
     left: 1000px;
     z-index: 3;
+}
+
+#speech-buble{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 100px;
+    left: 280px;
+    z-index: 4;
 }
 
 /* Link */
@@ -503,6 +512,9 @@ body {
     content: ;
 }
 
+#towelie:active{
+    
+}
 @keyframes planet-rotate{
     100%{
         transform: translateX(350px);
@@ -528,6 +540,13 @@ body {
     from{transform: translateX(-700px)}
     to{transform: translateX(200px;)} 
 }
+@keyframes rocket-fly{
+    100%{
+        top: -100px;
+        right: 1100px;
+        left: 1200px;
+    }
+}
 
 @keyframes astrodog-dance{
     0% {transform: translate(1px, 1px) rotate(0deg);}
@@ -541,20 +560,4 @@ body {
   80% {transform: translate(-1px, -1px) rotate(1deg);}
   90% {transform: translate(1px, 2px) rotate(0deg);}
   100% {transform: translate(1px, -2px) rotate(-1deg);}
-}
-
-@keyframes rocket-fly{
-   /* 0%{left: 700px; bottom: 300px;}
-    10%{left: 550px; bottom: 500px;}
-    20%{left: 500px; bottom: 600px;}
-    30%{left: 450px; bottom: 650px;}
-    40%{left: 400px; bottom: 700px;}
-    50%{left: 350px; bottom: 750px;}
-    60%{left: 300px; bottom: 800px;}
-    70%{left: 250px; bottom: 850px;}
-    80%{left: 200px; bottom: 900px;}
-    90%{left: 150px; bottom: 950px;}
-    100%{left: 100px; bottom: 1000px;}*/
-    from{transform: translateY(10px);}
-    to{transform: translateY(-500px);}
 }
