@@ -37,12 +37,8 @@ body {
         0 0 5px 1px #ffffff, 
         0 0 3px 1px #ffffff; 
     z-index: 0;
-    -webkit-animation: zoomStars 5s ease-in forwards;
 }
 
-@keyframes zoom-stars{
-    100%{width: 2px; height: 2px;}
-}
 
 @keyframes star-blinking{
     2.5%{
@@ -201,8 +197,6 @@ body {
 .planet{
     position: absolute;
     border-radius: 100%;
-    -webkit-transition: transform 2s;
-    -webkit-animation: planet-tilt 3s linear both infinite;
 }
 
 #planet-cowboy{
@@ -216,10 +210,11 @@ body {
 }
 
 #planet-cowboy-structure{
-    width: 150px;
-    height: 70px;
+    width: 200px;
+    height: 100px;
     position: absolute;
     margin-bottom: 0px;
+    animation: planet-rotate 20s linear infinite;
 }
 
 #planet-slime{
@@ -239,13 +234,13 @@ body {
     margin-bottom: -50px;
     margin-right: 0px;
     opacity: 0.8;
+    animation: planet-rotate 20s linear infinite;
 }
 
-@keyframes planet-tilt {
-    0%, 50%, 100% {transform: rotate(0deg);}
-    25% {transform: rotate(4deg);}
-    75% {transform: rotate(-4deg);}
+@keyframes planet-rotate{
+    100% {transform: translateX(350px);}  
 }
+
 
 .link {
     width: 200px;
@@ -314,11 +309,11 @@ body {
     margin-top: 530px;
     margin-left: 20px;
     z-index: 3;
-    -webkit-animation: ball-rolling 2.5s ease-in-out infinite paused;
+    -webkit-animation: ball-rolling 1s linear 1 forwards paused;
 }
 
 /* Beach ball hover(Start animation, rolls off)*/
-#beach-ball:hover {
+#beach-ball:active {
     -webkit-animation-play-state: running;
 }
 
