@@ -175,17 +175,6 @@ body {
     left: 700px;
 }
 
-@keyframes star-blinking {
-    2.5% {
-        box-shadow: 0 0 4.5px 3px #ffffff, 0 0 15px 3px #ffffff, 0 0 30px 3px #ffffff;
-    }
-    5% {
-        width: 2px;
-        height: 2px;
-        box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
-    }
-}
-
 /* Ground */
 #slime-ground {
     width: 1500px;
@@ -346,6 +335,20 @@ body {
     animation: black-hole-tilt 30s linear infinite both;
 }
 
+#black-hole-click {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    top: 280px;
+    left: 690px;
+    background: linear-gradient(269deg, #00db4c, #d42ad5, #e49d25, #293a94, #eaf000, #2acc86);
+    animation: spacedistortion 4s ease infinite;
+    background-size: 1000% 1000%;
+    border-radius: 100%;
+    border: 2px solid #111111;
+}
+
 /* Keyframes */
 @keyframes black-hole-tilt {
     0% {
@@ -353,6 +356,17 @@ body {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes star-blinking {
+    2.5% {
+        box-shadow: 0 0 4.5px 3px #ffffff, 0 0 15px 3px #ffffff, 0 0 30px 3px #ffffff;
+    }
+    5% {
+        width: 2px;
+        height: 2px;
+        box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
     }
 }
 
@@ -513,6 +527,18 @@ body {
         top: 90px;
         left: 500px;
         transform: scale(0) rotate(90deg);
+    }
+}
+
+@keyframes spacedistortion {
+    0% {
+        background-position: 0% 52%;
+    }
+    50% {
+        background-position: 100% 49%;
+    }
+    100% {
+        background-position: 0% 52%;
     }
 }
 
