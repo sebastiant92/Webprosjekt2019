@@ -342,11 +342,14 @@ body {
     z-index: 2;
     top: 280px;
     left: 690px;
+    border-radius: 100%;
+    border: 2px solid #111111;
+}
+
+#black-hole-click:hover {
     background: linear-gradient(269deg, #00db4c, #d42ad5, #e49d25, #293a94, #eaf000, #2acc86);
     animation: spacedistortion 4s ease infinite;
     background-size: 1000% 1000%;
-    border-radius: 100%;
-    border: 2px solid #111111;
 }
 
 /* Keyframes */
