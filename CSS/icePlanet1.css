@@ -308,27 +308,12 @@ body {
     z-index: 2;
 }
 
-#snowball {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    position: absolute;
-    top: 75px;
-    left: 400px;
-    z-index: 1'';
-    animation: snowball-rolling 1s linear 1 forwards paused;
-}
-
-#mountain:active ~ #snowball {
-    animation-play-state: running;
-}
-
 #mountain {
     position: absolute;
     top: 175px;
     left: 900px;
     z-index: 0;
+    transition: 1s;
 }
 
 #mountain:hover {
@@ -1014,17 +999,5 @@ body {
 
     100% {
         top: 350px;
-    }
-}
-
-@keyframes snowball-rolling {
-    0% {
-        left: 1300px;
-        top: 75px;
-    }
-
-    100% {
-        left: 1000px;
-        top: 800px;
     }
 }
