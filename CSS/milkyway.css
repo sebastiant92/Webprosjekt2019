@@ -18,6 +18,7 @@ body {
     overflow: hidden;
     margin-top: 50px;
     z-index: 0;
+    cursor: url("/images/kenbeth_small3.png"), pointer;
 }
 
 #milkyway {
@@ -25,4 +26,38 @@ body {
     height: 800px;
     position: absolute;
     z-index: 1;
+}
+
+#meteor {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 50px;
+    margin-left: 800px;
+    transform: rotate(20deg);
+    animation: meteors-move 8s linear infinite;
+}
+
+.meteors:hover ~#warning{
+    position: absolute;
+    width: 1300px;
+    height: 900px;
+    margin-left: 100px;
+}
+
+#warning {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 70px;
+    z-index: 2;
+}
+
+#warning:hover {
+    position: absolute;
+    width: 1300px;
+    height: 900px;
+    margin-left: 100px;
 }
