@@ -20,6 +20,58 @@ body {
     z-index: 0;
 }
 
+/* Chat bubbles & Text*/
+.text {
+    position: absolute;
+    z-index: 6;
+    opacity: 0;
+    text-align: center;
+    font-family: Arial;
+    font-size: 15px;
+    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s 1s infinite;
+}
+
+.chat-bubbles {
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+
+#chat-bubble-kenbeth {
+    top: 260px;
+    left: 230px;
+    width: 350px;
+    height: 250px;
+    animation: chat-bubble-kenbeth 0.3s 6s linear forwards, chat-bubble-hovering 2s linear infinite;
+}
+
+#kenbeth-script-1 {
+    /* First talk bubble */
+    width: 300px;
+    height: 200px;
+    top: 90px;
+    left: 500px;
+    animation: kenbeth-script-1 4.5s 1.5s linear, text-hovering-kenbeth 2s linear infinite;
+}
+
+#kenbeth-script-2 {
+    width: 300px;
+    height: 200px;
+    top: 90px;
+    left: 500px;
+    animation: kenbeth-script-1 4.5s 6.5s linear forwards, text-hovering-kenbeth 2s linear infinite;
+}
+
+/* Images */
+#exclamation-mark {
+    position: absolute;
+    width: 0px;
+    top: 510px;
+    right: 280px;
+    z-index: 6;
+    animation: exclamation-mark 1.2s 2s linear ease-out;
+}
+
 #slime-wall {
     width: 1278px;
     height: 800px;
@@ -111,6 +163,7 @@ body {
     left: 700px;
 }
 
+/* Character & npc */
 #kenbeth-landing {
     width: 400px;
     top: -400px;
@@ -128,20 +181,20 @@ body {
     left: 920px;
     top: 350px;
     visibility: hidden;
-    z-index: 6; 
-    -webkit-animation: kenbeth-walk 3s 3s linear forwards; 
+    z-index: 6;
+    -webkit-animation: kenbeth-walk 3s 3s linear forwards;
 }
 
 #slime-clone {
     width: 200px;
     height: 200px;
     position: absolute;
-    left: 320px;
-    top: 350px;
-    z-index: 6; 
+    left: -200px;
+    bottom: 150px;
+    z-index: 6;
+    -webkit-animation: clone-walk 3s 3s ease-out forwards;
 }
 
-/* Kenbeth landing */
 @keyframes kenbeth-landing {
     0% {
         visibility: hidden;
@@ -162,16 +215,371 @@ body {
     }
 }
 
+@keyframes clone-walk {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 120px;
+    }
+}
+
+/* Stars */
+#stars-container {
+    animation: zoom-star-container 8s ease-out forwards;
+    position: absolute;
+    top: -90px;
+}
+
+.stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
+
+    animation: zoom-stars 5s 3s ease-in forwards;
+}
+
+#star-1 {
+    top: 50px;
+    left: 50px;
+}
+
+#star-2 {
+    top: 150px;
+    left: 120px;
+}
+
+#star-3 {
+    top: 70px;
+    left: 250px;
+}
+
+#star-4 {
+    top: 180px;
+    left: 380px;
+    animation: star-blinking 10s 4s ease-in infinite;
+}
+
+#star-5 {
+    top: 40px;
+    left: 510px;
+}
+
+#star-6 {
+    top: 130px;
+    left: 680px;
+}
+
+#star-7 {
+    top: 20px;
+    left: 790px;
+}
+
+#star-8 {
+    top: 160px;
+    left: 930px;
+}
+
+#star-9 {
+    top: 50px;
+    left: 1100px;
+    animation: star-blinking 10s 7s ease-in infinite;
+}
+
+#star-10 {
+    top: 200px;
+    left: 1200px;
+}
+
+#star-11 {
+    top: 420px;
+    left: 80px;
+}
+
+#star-12 {
+    top: 300px;
+    left: 220px;
+    animation: star-blinking 10s 12s ease-in infinite;
+}
+
+#star-13 {
+    top: 375px;
+    left: 450px;
+}
+
+#star-14 {
+    top: 280px;
+    left: 600px;
+}
+
+#star-15 {
+    top: 350px;
+    left: 850px;
+    animation: star-blinking 10s 10s ease-in infinite;
+}
+
+#star-16 {
+    top: 300px;
+    left: 1050px;
+}
+
+#star-17 {
+    top: 450px;
+    left: 1200px;
+}
+
+#star-18 {
+    top: 650px;
+    left: 40px;
+}
+
+#star-19 {
+    top: 500px;
+    left: 300px;
+}
+
+#star-20 {
+    top: 625px;
+    left: 500px;
+    animation: star-blinking 10s 6s ease-in infinite;
+}
+
+#star-21 {
+    top: 475px;
+    left: 700px;
+}
+
+#star-22 {
+    top: 650px;
+    left: 900px;
+}
+
+#star-23 {
+    top: 570px;
+    left: 1100px;
+    animation: star-blinking 10s 13s ease-in infinite;
+}
+
+#star-24 {
+    top: 700px;
+    left: 1250px;
+}
+
+#star-25 {
+    top: 720px;
+    left: 270px;
+}
+
+#star-26 {
+    top: 720px;
+    left: 700px;
+}
+
+@keyframes star-blinking {
+    2.5% {
+        box-shadow: 0 0 4.5px 3px #ffffff, 0 0 15px 3px #ffffff, 0 0 30px 3px #ffffff;
+    }
+    5% {
+        width: 2px;
+        height: 2px;
+        box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
+    }
+}
+
+/* Background Slime */
+.background-slime {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    border-radius: 40%;
+    border: 1px solid #ddf45b;
+    background-color: #32bc35;
+    z-index: 1;
+}
+
+#background-slime-1 {
+    animation: bubble-1 5s infinite both;
+}
+
+#background-slime-2 {
+    animation: bubble-2 5s 7s infinite both;
+}
+
+#background-slime-3 {
+    animation: bubble-3 5s 5s infinite both;
+}
+
+#background-slime-4 {
+    animation: bubble-4 5s 3s infinite both;
+}
+
+#background-slime-5 {
+    animation: bubble-5 5s 6s infinite both;
+}
+
+#background-slime-6 {
+    animation: bubble-6 5s 0.5s infinite both;
+}
+
+#background-slime-7 {
+    animation: bubble-7 5s 2.7s infinite both;
+}
+
+#background-slime-8 {
+    animation: bubble-8 5s 4s infinite both;
+}
+
+#background-slime-9 {
+    animation: bubble-9 5s 7.5s infinite both;
+}
+
+#background-slime-10 {
+    animation: bubble-10 5s 1.5s infinite both;
+}
+
+@keyframes bubble-1 {
+    0% {
+        transform: scale(1) rotate(110deg);
+        left: -100px;
+        top: 0px;
+    }
+    100% {
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-2 {
+    0% {
+        transform: scale(1) rotate(90deg);
+        left: -100px;
+        top: 150px;
+    }
+    100% {
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-3 {
+    0% {
+        transform: scale(1) rotate(78deg);
+        left: -100px;
+        top: 280px;
+    }
+    100% {
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-4 {
+    0% {
+        transform: scale(1) rotate(72deg);
+        left: -100px;
+        top: 380px;
+    }
+    100% {
+        transform: scale(0) rotate(80deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-5 {
+    0% {
+        transform: scale(1) rotate(-20deg);
+        left: 550px;
+        top: 0px;
+    }
+    100% {
+        transform: scale(0) rotate(-12deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-6 {
+    0% {
+        transform: scale(1) rotate(-8deg);
+        left: 680px;
+        top: 350px;
+    }
+    100% {
+        transform: scale(0) rotate(-18deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-7 {
+    0% {
+        transform: scale(1) rotate(55deg);
+        left: 900px;
+        top: 0px;
+    }
+    100% {
+        transform: scale(0) rotate(50deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-8 {
+    0% {
+        transform: scale(1) rotate(90deg);
+        left: 1300px;
+        top: 150px;
+    }
+    100% {
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-9 {
+    0% {
+        transform: scale(1) rotate(102deg);
+        left: 1300px;
+        top: 280px;
+    }
+    100% {
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+@keyframes bubble-10 {
+    0% {
+        transform: scale(1) rotate(110deg);
+        left: 1300px;
+        top: 380px;
+    }
+    100% {
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
+    }
+}
+
+/* Black hole */
 #black-hole {
     width: 600px;
-    margin-top: -15px;
+    margin-top: -65px;
     margin-left: 325px;
     z-index: 1;
     animation: black-hole-tilt 30s linear infinite both;
     -webkit-animation: black-hole-tilt 30s linear infinite both;
 }
 
-/* Keyframes */
 @keyframes black-hole-tilt {
     0% {
         -webkit-transform: rotate(0deg);
@@ -181,134 +589,23 @@ body {
     }
 }
 
-/* Background Bubbles */
-@keyframes bubble-1 {
+/* Chat bubbles */
+@keyframes kenbeth-script-1 {
+    /* First talk bubble appear */
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 200px;
-        bottom: 150px;
+        opacity: 1;
     }
     100% {
-        transform: scale(0) rotate(50deg);
-        left: 697px;
-        bottom: 500px;
+        opacity: 1;
     }
 }
 
-@keyframes bubble-2 {
+@keyframes chat-bubble-kenbeth {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 340px;
-        bottom: 150px;
+        opacity: 0;
     }
     100% {
-        transform: scale(0) rotate(30deg);
-        left: 697px;
-        bottom: 500px;
-    }
-}
-
-@keyframes bubble-3 {
-    0% {
-        transform: scale(1) rotate(0deg);
-        left: 500px;
-        bottom: 150px;
-    }
-    100% {
-        transform: scale(0) rotate(23deg);
-        left: 697px;
-        bottom: 500px;
-    }
-}
-
-@keyframes bubble-4 {
-    0% {
-        transform: scale(1) rotate(0deg);
-        left: 700px;
-        bottom: 150px;
-    }
-    100% {
-        transform: scale(0) rotate(1deg);
-        left: 697px;
-        bottom: 500px;
-    }
-}
-
-@keyframes bubble-5 {
-    0% {
-        transform: scale(1) rotate(0deg);
-        left: 800px;
-        bottom: 150px;
-    }
-    100% {
-        transform: scale(0) rotate(-12deg);
-        left: 697px;
-        bottom: 500px;
-    }
-}
-
-@keyframes bubble-6 {
-    0% {
-        transform: scale(1) rotate(0deg);
-        left: 900px;
-        bottom: 150px;
-    }
-    100% {
-        transform: scale(0) rotate(-22deg);
-        left: 697px;
-        bottom: 500px;
-    }
-}
-
-@keyframes bubble-7 {
-    0% {
-        transform: scale(1) rotate(0deg);
-        left: 1100px;
-        bottom: 150px;
-    }
-    100% {
-        transform: scale(0) rotate(-32deg);
-        left: 697px;
-        bottom: 500px;
-    }
-}
-
-@keyframes bubble-8 {
-    0% {
-        transform: scale(1) rotate(0deg);
-        left: 900px;
-        bottom: 150px;
-    }
-    100% {
-        transform: scale(0) rotate(-28deg);
-        left: 697px;
-        bottom: 500px;
-    }
-}
-
-@keyframes bubble-9 {
-    0% {
-        transform: scale(1) rotate(0deg);
-        left: 1300px;
-        bottom: 150px;
-    }
-    100% {
-        transform: scale(0) rotate(-50deg);
-        left: 697px;
-        bottom: 500px;
-    }
-}
-
-@keyframes bubble-10 {
-    0% {
-        transform: scale(1) rotate(0deg);
-        left: 1020px;
-        bottom: 150px;
-    }
-    100% {
-        transform: scale(0) rotate(-44deg);
-        left: 697px;
-        bottom: 500px;
+        opacity: 1;
     }
 }
 
