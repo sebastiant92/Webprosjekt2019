@@ -370,12 +370,15 @@ body {
 #window33{
     background-color: #000000;
 }
+
 #window34{
     background-color: #000000;
 }
+
 #window39{
     background-color: #000000;
 }
+
 #window40{
     background-color: #000000;
 }
@@ -418,7 +421,7 @@ body {
     bottom: 150px;
     left: 700px;
     z-index: 3;
-    animation: astrodog-dance 5s 5s infinite;
+    animation: astrodog-dance 5s 1s infinite;
 }
 
 #jetsons{
@@ -462,13 +465,13 @@ body {
     top: 400px;
     left: -100px;
     z-index: 1;
-    animation: rocket-fly 3s 15s ease-in-out;
+    animation: rocket-fly 2s 15s ease-in-out;
     overflow: hidden;
 }
 
 #antenna{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 100px;
     position: absolute;
     bottom: 560px;
     left: 860px;
@@ -488,14 +491,71 @@ body {
     z-index: 3;
 }
 
-#speech-buble{
-    height: 100px;
-    width: 100px;
+/* Chat bubble text */
+.text{
     position: absolute;
-    bottom: 100px;
-    left: 280px;
+    z-index: ;
+    opacity: 1;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    animation: ;
+}
+
+#chat-bubble1{
+    height: 400px;
+    width: 400px;
+    bottom: 300px;
+    left: 270px;
+    position: absolute;
     z-index: 4;
-    opacity: 0;
+    opacity: 1;
+}
+
+#chat-bubble2{
+    height: 300px;
+    width: 300px;
+    bottom: 300px;
+    left: 710px;
+    position: absolute;
+    z-index: 4;
+    opacity: 1;
+}
+
+#chat-bubble3{
+    height: 400px;
+    width: 400px;
+    bottom: 10px;
+    left: 380px;
+    position: absolute;
+    z-index: 4;
+    opacity: 1;
+}
+
+#ken-text{
+    height: 20px;
+    width: 200px;
+    bottom: 530px;
+    left: 340px;
+    z-index: 5;
+    animation-name: chat-bubble1
+}
+
+#dog-text{
+    height: 50px;
+    width: 200px;
+    bottom: 450px;
+    left: 730px;
+    z-index: 5;
+    
+}
+
+#towelie-text{
+    height: 50px;
+    width: 50px;
+    top: 10px;
+    left: 10px;
+    
 }
 
 /* Link */
@@ -511,10 +571,6 @@ body {
 /* Animation */
 .texture:hover{
     transform: scale(1.3);
-}
-#ground-texture6:hover ~ #speech-buble{
-    transform: scale(1.3);
-    opacity: 1;
 }
 
 #antenna:hover{
@@ -573,3 +629,15 @@ body {
   90% {transform: translate(1px, 2px) rotate(0deg);}
   100% {transform: translate(1px, -2px) rotate(-1deg);}
 }
+
+@keyframes chat-bubble1{
+    0%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes chat-bubble-ken{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
