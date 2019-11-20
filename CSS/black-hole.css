@@ -86,7 +86,7 @@ body {
     top: 50px;
     left: 0px;
     position: absolute;
-    transform: rotate(-20deg);
+    transform: rotate(-20deg) ;
 }
 
 #alien{

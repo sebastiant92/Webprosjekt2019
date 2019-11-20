@@ -53,23 +53,9 @@ body {
     position: absolute;
     width: 400px;
     height: 400px;
-    left: 600px;
-    top: -400px;
-    z-index: 7;
-    animation: kenbeth 7s 4s forwards ease-in-out;
-    
-}
-
-
-#satelite {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    margin-left: 400px;
-    top: 800px;
-    animation: satelite 7s 15s linear;
-    z-index: 5;  
-    
+    left: 700px;
+    top: 300px;
+    z-index: 7;   
 }
 
 #ufo-alien{
@@ -83,8 +69,8 @@ body {
 #ufo{
     width: 200px;
     height: 142px;
-    top: 50px;
-    left: 0px;
+    top: 160px;
+    left: 75px;
     position: absolute;
     transform: rotate(-20deg);
 }
@@ -92,7 +78,7 @@ body {
 #alien{
     width: 90px;
     height: 150px;
-    top: 0px;
+    top: 100px;
     left: 135px;
     position: absolute;
 }
@@ -104,13 +90,6 @@ body {
     left: 225px;
     position: absolute;
     transform: rotate(-30deg);
-}
-
-#ufo-alien{
-    animation: ufo-alien 5s 0s linear forwards;
-    z-index: 6;
-    position: absolute;
-
 }
 
 #background-slime-1 {
@@ -170,63 +149,6 @@ body {
 .planet{
     position: absolute;
     border-radius: 100%; 
-}
-
-
-/* animation for the satelite's rotation and trajectory through the screen */
-@keyframes satelite {
-    
-    0% {
-        transform: scale(0) rotate(60deg);
-        left:150px;
-        top:40px;
-    }
-    25% {
-        transform: scale(0.3) rotate(90deg);
-        left: 100px;
-        top: 200px;
-    }
-    
-    50% {
-        transform: scale(0.5) rotate(180deg)  ;
-        left: 100px;
-        top: 400px;
-    }
-
-    75% {
-        transform: scale(0.6) rotate(270deg)  ;
-        left: 100px;
-        top: 600px;
-    }
-
-    100% {
-        transform: scale(0.8) rotate(360deg)  ;
-        left: 100px;
-        top: 800px;
-    }
-}
-
-/* Animation for Kenbeth(the man flying on a cow) */
-@keyframes kenbeth {
-    0% {
-        transform: scale(0) scaleX(-1) rotate(180deg);
-        left: 450px;
-        top: 40px;
-    }
-
-    50% {
-        transform: scale(0.6) scaleX(-1);
-        left: 550px;
-        top: 250px;
-    }
-    
-    100% {
-        transform: scale(0.9) scaleX(-1) rotate(360deg)  ;
-        left: 700px;
-        top: 300px
-    }
-    
-    
 }
 
 /*  Backgroundanimation with all the distorted colors */
@@ -312,27 +234,6 @@ body {
     }
 }
 
-/* animation for the rocket´s trajectory into the black hole */
-@keyframes ufo-alien {
-    0%{
-        transform: scale(0) rotate(45deg);
-        left:450px;
-        top:40px;
-    }
-    
-    50%{
-        transform: scale(0.5) rotate(180deg);
-        left: 250px;
-        top: 110px;
-    }
-    
-    100%{
-        transform: scale(1) rotate(360deg);
-        left: 75px;
-        top: 160px;
-    }
-    
-}
 
 /* animation for context animation on the slimeplanet */
 @keyframes planet-rotate{
