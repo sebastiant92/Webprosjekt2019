@@ -18,7 +18,7 @@ body {
     overflow: hidden;
     margin-top: 50px;
     z-index: 0;
-    cursor: url("/images/kenbeth_small3.png"), pointer;
+/*    cursor: url("/images/kenbeth_small3.png"), pointer;*/
 }
 
 #milkyway {
@@ -28,31 +28,117 @@ body {
     z-index: 1;
 }
 
-#meteor {
-    width: 150px;
-    height: 150px;
+/* Rocket */
+#rocket{
+    width: 70px;
+    height: 70px;
+    top: 550px;
+    left: -70px;
     position: absolute;
-    z-index: 2;
-    margin-top: 50px;
-    margin-left: 800px;
-    transform: rotate(20deg);
-    animation: meteors-move 8s linear infinite;
+    transform: rotate(15deg);
+    transition: 2s ease;
+    animation: rocket-flying 25s 6s ease-in-out infinite;
 }
 
-.meteors:hover ~#warning{
+/* Don't touch, game objects */
+#bicycle{
+    width: 205px;
+    height: 125px;
+    top: 230px;
+    left: 300px;
+}
+
+#satellite {
+    width: 100px;
+    height: 150px;
+    top: 380px;
+    left: 550px;
+}
+
+#asteroid {
+    width: 200px;
+    height: 200px;
+    top: 200px;
+    left: 800px;
+}
+
+#glowfish {
+    width: 150px;
+    height: 150px;
+    top: 120px;
+    left: 60px;
+}
+
+#welcome {
+    width: 300px;
+    height: 200px;
+    top: 450px;
+    left: -100px;
+}
+
+#beach-ball {
+    width: 100px;
+    height: 100px;
+    top: 460px;
+    left: 1100px;
+}
+
+#cow {
+    width: 200px;
+    height: 200px;
+    top: 30px;
+    left: 1150px;
+}
+
+#books {
+    width: 150px;
+    height: 150px;
+    top: 600px;
+    left: 1150px;
+}
+
+#bird {
+    width: 150px;
+    height: 150px;
+    top: 530px;
+    left: 750px;
+}
+
+#spiderman {
+    width: 200px;
+    height: 200px;
+    top: 1px;
+    left: 550px;
+}
+
+#backpack {
+    width: 100px;
+    height: 100px;
+    top: 670px;
+    left: 350px;
+}
+
+.floating-stuff{
+    position: absolute;
+    z-index: 2;
+    animation: floating-tilt 10s linear infinite alternate-reverse;
+}
+
+.floating-stuff:hover ~ #warning{
     position: absolute;
     width: 1300px;
     height: 900px;
     margin-left: 100px;
 }
 
+/* Warning pop-up if you fail */
 #warning {
     width: 0px;
     height: 0px;
     position: absolute;
     margin-top: 20px;
     margin-left: 70px;
-    z-index: 2;
+    z-index: 3;
 }
 
 #warning:hover {
@@ -60,4 +146,57 @@ body {
     width: 1300px;
     height: 900px;
     margin-left: 100px;
+}
+
+#planet-vacay{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 100%;
+    background-image: radial-gradient(#f6d2da, #fcc9d1);
+    top: 280px;
+    left: 1200px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#planet-vacay-structure{
+    width: 500px;
+    height: 280px;
+    position: absolute;
+    opacity: 0.7;
+    left: -200px;
+    top: 20px;
+    transform: rotate(-40deg);
+    
+    animation: planet-rotate 15s linear infinite;
+}
+
+#link {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 4;
+}
+
+@keyframes rocket-flying{
+    100%{
+        top: -70px;
+        left: 1100px;
+        
+    }
+}
+
+@keyframes floating-tilt {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(10deg);}
+    50% {transform: rotate(0deg);}
+    100% {transform: rotate(-10deg);}
+}
+
+@keyframes planet-rotate{
+    100%{
+        transform: translateX(350px);
+    }
+    
 }
