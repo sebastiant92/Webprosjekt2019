@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+}
+
+/* Main container */
+#container {
+    width: 1278px;
+    height: 800px;
+    position: relative;
+    background-image: linear-gradient(#364A7B, #A8A8A6, #364A7B);
+    margin: auto;
+    overflow: hidden;
+    margin-top: 50px;
+    z-index: 0;
+}
+
+#milkyway {
+    width: 1278px;
+    height: 800px;
+    position: absolute;
+    z-index: 1;
+}
