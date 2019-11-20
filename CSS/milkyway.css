@@ -28,31 +28,41 @@ body {
     z-index: 1;
 }
 
-#meteor {
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    z-index: 2;
-    margin-top: 50px;
-    margin-left: 800px;
-    transform: rotate(20deg);
-    animation: meteors-move 8s linear infinite;
+#bicycle{
+    width: 125px;
+    height: 75px;
+    top: 250px;
+    left: 300px;
 }
 
-.meteors:hover ~#warning{
+#satellite {
+    width: 200px;
+    height: 200px;
+    top: 340px;
+    left: 450px;
+}
+
+.floating-stuff{
+    position: absolute;
+    z-index: 2;
+    animation: floating-tilt 10s linear infinite;
+}
+
+.floating-stuff:hover ~ #warning{
     position: absolute;
     width: 1300px;
     height: 900px;
     margin-left: 100px;
 }
 
+/* Warning pop-up if you fail */
 #warning {
     width: 0px;
     height: 0px;
     position: absolute;
     margin-top: 20px;
     margin-left: 70px;
-    z-index: 2;
+    z-index: 3;
 }
 
 #warning:hover {
@@ -60,4 +70,11 @@ body {
     width: 1300px;
     height: 900px;
     margin-left: 100px;
+}
+
+@keyframes floating-tilt {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(10deg);}
+    50% {transform: rotate(0deg);}
+    100% {transform: rotate(-10deg);}
 }
