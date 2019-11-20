@@ -19,6 +19,213 @@ body {
     margin-top: 50px;
 }
 
+/* Stars */
+#stars-container{
+    animation: zoomStarContainer 5s ease-out forwards;
+    position: absolute;
+    top: 0px;
+}
+
+.stars{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    box-shadow:
+        0 0 5px 1px #ffffff, 
+        0 0 5px 1px #ffffff, 
+        0 0 3px 1px #ffffff; 
+    z-index: 0;
+}
+
+#star-1{
+    top: 50px;
+    left: 50px;
+    animation: star-blinking 10s 5s ease-in infinite;
+}
+
+#star-2{
+    top: 150px;
+    left: 120px;
+}
+
+#star-3{
+    top: 70px;
+    left: 250px;
+}
+
+#star-4{
+    top: 180px;
+    left: 380px;
+}
+
+#star-5{
+    top: 40px;
+    left: 510px;
+     animation: star-blinking 10s 10s ease-in infinite;
+}
+
+#star-6{
+    top: 130px;
+    left: 680px;
+}
+
+#star-7{
+    top: 20px;
+    left: 790px;
+}
+
+#star-8{
+    top: 160px;
+    left: 930px;
+}
+
+#star-9{
+    top: 50px;
+    left: 1100px;
+     animation: star-blinking 10s 7s ease-in infinite;
+}
+
+#star-10{
+    top: 200px;
+    left: 1200px;
+}
+
+#star-11{
+    top: 420px;
+    left: 80px;
+}
+
+#star-12{
+    top: 300px;
+    left: 220px;
+     animation: star-blinking 10s 3s ease-in infinite;
+}
+
+#star-13{
+    top: 375px;
+    left: 450px;
+}
+
+#star-14{
+    top: 280px;
+    left: 600px;
+}
+
+#star-15{
+    top: 350px;
+    left: 850px;
+}
+
+#star-16{
+    top: 300px;
+    left: 1050px;
+}
+
+#star-17{
+    top: 450px;
+    left: 1200px;
+     animation: star-blinking 10s 1s ease-in infinite;
+}
+
+#star-18{
+    top: 650px;
+    left: 40px;
+}
+
+#star-19{
+    top: 500px;
+    left: 300px;
+}
+
+#star-20{
+    top: 625px;
+    left: 500px;
+}
+
+#star-21{
+    top: 475px;
+    left: 700px;
+}
+
+#star-22{
+    top: 650px;
+    left: 900px;
+}
+
+#star-23{
+    top: 570px;
+    left: 1100px;
+     animation: star-blinking 10s 8s ease-in infinite;
+}
+
+#star-24{
+    top: 700px;
+    left: 1250px;
+}
+
+#star-25{
+    top: 720px;
+    left: 270px;
+}
+
+#star-26{
+    top: 720px;
+    left: 700px;
+}
+
+/* Planetene */
+.planet{
+    position: absolute;
+    border-radius: 100%;
+}
+
+#planet-cowboy{
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient(#faff81, #ffc53a);
+    margin-top: 100px;
+    margin-left: 750px;
+    overflow: hidden;
+    z-index: 3;
+}
+
+#planet-cowboy-structure{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    margin-bottom: 0px;
+    animation: planet-rotate 20s linear infinite;
+}
+
+#planet-slime{
+    width: 200px;
+    height: 200px;
+    background-image: radial-gradient(#ddf45b, #32bc35);
+    margin-top: 50px;
+    margin-left: 1100px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#planet-slime-structure{
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    margin-bottom: -50px;
+    margin-right: 0px;
+    opacity: 0.8;
+    animation: planet-rotate 20s linear infinite;
+}
+
+.link {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 4;
+}
+
 /* Sand */
 #main-land {
     width: 1450px;
@@ -27,7 +234,7 @@ body {
     border-radius: 100%;
     margin-top: 450px;
     margin-left: -86px;
-    background-color: #FCA1AF;
+    background-color: #fca1af;
     overflow: hidden;
     z-index: 1;
 }
@@ -45,7 +252,6 @@ body {
     margin-left: -36px;
     opacity: 0.6;
     z-index: 4;
-    -webkit-animation-name: wave-move;
     -webkit-animation-delay: 3s;
 }
 
@@ -54,7 +260,6 @@ body {
     margin-left: -26px;
     opacity: 0.2;
     z-index: 5;
-    -webkit-animation-name: wave-move;
     -webkit-animation-delay: 1.5s;
 }
 
@@ -63,18 +268,7 @@ body {
     height: 300px;
     position: absolute;
     overflow: hidden;
-    -webkit-animation-name: wave-move ;
-    -webkit-animation-duration: 4s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite; 
-    -webkit-animation-direction: alternate-reverse;
-}
-
-/* Animation Waves */
-@keyframes wave-move {
-    0% {transform: translateX(0) translateY(0) scaleY(1;)}
-    0% {transform: translateX(-10%) translateY(0) scaleY(.5);}
-    0% {transform: translateX(10) translateY(0) scaleY(1);}
+    -webkit-animation: wave-move 4s ease-in-out infinite alternate-reverse;
 }
 
 /* Beach Elements */
@@ -85,22 +279,13 @@ body {
     margin-top: 530px;
     margin-left: 20px;
     z-index: 3;
-    -webkit-animation-name: ball-rolling;
-    -webkit-animation-duration: 2.5s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-play-state: paused;
+    -webkit-animation: ball-rolling 1s linear 1 forwards paused;
 }
 
-/* Beach ball hover(Start animation, rolls off)*/
-#beach-ball:hover {
+/* Beach ball active(Start animation, rolls off)*/
+#beach-ball:active {
     -webkit-animation-play-state: running;
 }
-
-@keyframes ball-rolling {
-     0% {transform: translate(0px, 0px) rotate(0deg);}
-    100% {transform: translate(-100px, 190px) rotate(-300deg);}
-} 
 
 #beach-tools {
     width: 140px;
@@ -136,6 +321,18 @@ body {
     z-index: 4; 
 }
 
+/* Crab */
+#crab {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    margin-top: 850px;
+    margin-left: 270px;
+    opacity: 0.7;
+    z-index: 4;
+    animation: crab-move 6s ease-in-out alternate infinite;
+}
+
 /* Fish related*/
 #fish {
     width: 100px;
@@ -163,20 +360,7 @@ body {
 }
 
 .animation-swim {
-    -webkit-animation-name: fish-swim;
-    -webkit-animation-duration: 8s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-}
-
-/* Fish Animation */
-@keyframes fish-swim {
-    0% {transform: translateX(-100%) translateY(20%);}
-    25% {transform: translateX(-90%) translateY(5%);}
-    50% {transform: translateX(-60%) translateY(20%);}
-    75% {transform: translateX(-30%) translateY(5%);}
-    100% {transform: translateX(-10%) translateY(20%);}
+    -webkit-animation: fish-swim 8s ease-in-out infinite alternate;
 }
 
 /* Sea decorations*/
@@ -215,17 +399,6 @@ body {
     -webkit-animation-name: seaplant-move2;
 }
 
-/* Seaplant Animation */
-@keyframes seaplant-move {
-    0%, 100% {transform: rotate(9deg);}
-    50% {transform: rotate(-9deg);}
-}
-
-@keyframes seaplant-move2 {
-    0%, 100% {transform: rotate(-6deg);}
-    50% {transform: rotate(6deg);}
-}
-
 /* Palm tree */
 #palm-root {
     width: 400px;
@@ -243,36 +416,21 @@ body {
     margin-top: 120px;
     margin-left: -5px;
     z-index: 1;
-    -webkit-animation-name: palm-move;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
-}
-
-/* Palm tree animation */
-@keyframes palm-move {
-    0%, 100% {transform: rotate(3deg);}
-    50% {transform: rotate(0deg);}
+    -webkit-animation: palm-move 3s infinite;
 }
 
 #coconut {
     width: 100px;
     height: 100px;
     margin-top: 250px;
-    -webkit-animation-name: coconut-fall;
-    -webkit-animation-duration: 2s;
-    animation-delay: 10.5s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation: coconut-fall 2s 10.5s ease-in-out 1;
 }
 
 #coconut-split {
     width: 80px;
     height: 80px;
     margin-top: 500px;
-    -webkit-animation-name: coconut-split;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-delay: 11.2s;
-    -webkit-animation-fill-mode: forwards;
+    -webkit-animation: coconut-split 3s 11.2s forwards;
 }
 
 .coconuts {
@@ -280,17 +438,6 @@ body {
     margin-left: 170px;
     opacity: 0;
     z-index: 6;
-}
-
-/**/
-@keyframes coconut-fall {
-    0% {opacity: 0.9; margin-top: 250px;}
-    100% {opacity: 0; margin-top: 490px;}
-}
-
-@keyframes coconut-split {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
 }
 
 /* Main Character */
@@ -301,25 +448,7 @@ body {
     margin-top: 300px;
     margin-left: 300px;
     z-index: 5;
-    -webkit-animation-name: main-dance;
-    -webkit-animation-duration: 4s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-delay: 28.5s; 
-}
-
-/* Dance Animation */
-@keyframes main-dance {
-    0% {transform: translate(1px, 1px) rotate(0deg);}
-  10% {transform: translate(-1px, -2px) rotate(-1deg);}
-  20% {transform: translate(-3px, 0px) rotate(1deg);}
-  30% {transform: translate(3px, 2px) rotate(0deg);}
-  40% {transform: translate(1px, -1px) rotate(1deg);}
-  50% {transform: translate(-1px, 2px) rotate(-1deg);}
-  60% {transform: translate(-3px, 1px) rotate(0deg);}
-  70% {transform: translate(3px, 1px) rotate(-1deg);}
-  80% {transform: translate(-1px, -1px) rotate(1deg);}
-  90% {transform: translate(1px, 2px) rotate(0deg);}
-  100% {transform: translate(1px, -2px) rotate(-1deg);}
+    -webkit-animation: main-dance 4s 28.5s infinite;
 }
 
 #thinking-bubble {
@@ -330,15 +459,7 @@ body {
     margin-left: 460px;
     opacity: 0;
     z-index: 5;
-    -webkit-animation-name: bubble-appear;
-    -webkit-animation-duration: 10s;
-    -webkit-animation-delay: 1s;
-    -webkit-animation-fill-mode: forwards;
-}
-
-@keyframes bubble-appear {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    -webkit-animation: bubble-appear 10s 1s forwards;
 }
 
 #start-text {
@@ -375,7 +496,7 @@ body {
 #slutt-text {
     margin-top: 240px;
     z-index: 11;
-    -webkit-animation-delay: 27s;
+    -webkit-animation-delay: 27s; 
     -webkit-animation-fill-mode: forwards;
 }
 
@@ -387,75 +508,8 @@ body {
     color: #2c2c2c;
     position: absolute;
     opacity: 0;
-    -webkit-animation-name: text-animation;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-iteration-count: 1;
-}
-
-@keyframes text-animation {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-/* Planetene */
-.planet{
-    position: absolute;
-    border-radius: 100%;
-    -webkit-transition: transform 2s;
-    -webkit-animation-name: planet-tilt;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: both;
-}
-
-#planet-cowboy{
-    width: 300px;
-    height: 300px;
-    background-image: radial-gradient(#faff81, #ffc53a);
-    margin-top: 100px;
-    margin-left: 750px;
-    overflow: hidden;
-    z-index: 3;
-}
-
-#planet-cowboy-structure{
-    width: 150px;
-    height: 70px;
-    position: absolute;
-    margin-bottom: 0px;
-}
-
-#planet-slime{
-    width: 200px;
-    height: 200px;
-    background-image: radial-gradient(#ddf45b, #32bc35);
-    margin-top: 50px;
-    margin-left: 1100px;
-    overflow: hidden;
-    z-index: 1;
-}
-
-#planet-slime-structure{
-    width: 100px;
-    height: 200px;
-    position: absolute;
-    margin-bottom: -50px;
-    margin-right: 0px;
-    opacity: 0.8;
-}
-
-@keyframes planet-tilt {
-    0%, 50%, 100% {transform: rotate(0deg);}
-    25% {transform: rotate(4deg);}
-    75% {transform: rotate(-4deg);}
-}
-
-.link {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    z-index: 4;
+    z-index: 6;
+    -webkit-animation: text-animation 5s 1;
 }
 
 /* Background animations */
@@ -467,10 +521,121 @@ body {
     margin-left: 1300px;
     opacity: 0.4;
     z-index: 2;
-    animation-name: spaceship-fly;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    -webkit-animation: spaceship-fly 5s 2s ease-in-out 1;
+}
+
+#shooting-star {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 1300px;
+    opacity: 0.7;
+    z-index: 0;
+    animation: shootingstar-move 7s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes star-blinking{
+    2.5%{
+        box-shadow:
+        0 0 4.5px 3px #ffffff, 
+        0 0 15px 3px #ffffff, 
+        0 0 30px 3px #ffffff; 
+    }
+    5%{    
+        width: 2px;
+        height: 2px;
+        box-shadow:
+        0 0 1.5px 1px #ffffff, 
+        0 0 2.5px 1.5px #ffffff, 
+        0 0 3.5px 2.5px #ffffff;  
+    }
+}
+
+@keyframes planet-rotate{
+    100% {transform: translateX(350px);}  
+}
+
+/* Animation Waves */
+@keyframes wave-move {
+    0% {transform: translateX(0) translateY(0) scaleY(1;)}
+    0% {transform: translateX(-10%) translateY(0) scaleY(.5);}
+    0% {transform: translateX(10) translateY(0) scaleY(1);}
+}
+
+/* Animation Ball */
+@keyframes ball-rolling {
+     0% {transform: translate(0px, 0px) rotate(0deg);}
+    100% {transform: translate(-100px, 190px) rotate(-300deg);}
+} 
+
+@keyframes crab-move {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-170px);}
+}
+
+/* Fish Animation */
+@keyframes fish-swim {
+    0% {transform: translateX(-100%) translateY(20%);}
+    25% {transform: translateX(-90%) translateY(5%);}
+    50% {transform: translateX(-60%) translateY(20%);}
+    75% {transform: translateX(-30%) translateY(5%);}
+    100% {transform: translateX(-10%) translateY(20%);}
+}
+
+/* Seaplant Animation */
+@keyframes seaplant-move {
+    0%, 100% {transform: rotate(9deg);}
+    50% {transform: rotate(-9deg);}
+}
+
+@keyframes seaplant-move2 {
+    0%, 100% {transform: rotate(-6deg);}
+    50% {transform: rotate(6deg);}
+}
+
+/* Palm tree animation */
+@keyframes palm-move {
+    0%, 100% {transform: rotate(3deg);}
+    50% {transform: rotate(0deg);}
+}
+
+/* Coconut animations */
+@keyframes coconut-fall {
+    0% {opacity: 0.9; margin-top: 250px;}
+    100% {opacity: 0; margin-top: 490px;}
+}
+
+@keyframes coconut-split {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Dance Animation */
+@keyframes main-dance {
+    0% {transform: translate(1px, 1px) rotate(0deg);}
+  10% {transform: translate(-1px, -2px) rotate(-1deg);}
+  20% {transform: translate(-3px, 0px) rotate(1deg);}
+  30% {transform: translate(3px, 2px) rotate(0deg);}
+  40% {transform: translate(1px, -1px) rotate(1deg);}
+  50% {transform: translate(-1px, 2px) rotate(-1deg);}
+  60% {transform: translate(-3px, 1px) rotate(0deg);}
+  70% {transform: translate(3px, 1px) rotate(-1deg);}
+  80% {transform: translate(-1px, -1px) rotate(1deg);}
+  90% {transform: translate(1px, 2px) rotate(0deg);}
+  100% {transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+@keyframes bubble-appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes text-animation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 @keyframes spaceship-fly {
@@ -480,176 +645,13 @@ body {
     50% {transform: translate(-600px, -50px) rotate(-10deg);}
     75% {transform: translate(-800px, -80px) rotate(20deg);}
     85% {transform: translate(-1000px, -50px) rotate(-30deg);}
-    100%{transform: translate(-1450px, -100px) rotate(40deg);}
+    100%{transform: translate(-1450px, -80px) rotate(40deg);}
 }
 
-/* Stars */
-#stars-container{
-    animation: zoomStarContainer 5s ease-out forwards;
-    position: absolute;
-    top: 0px;
-}
-
-.stars{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border-radius: 100%;
-    background-color: #ffffff;
-    box-shadow:
-        0 0 5px 1px #ffffff, 
-        0 0 5px 1px #ffffff, 
-        0 0 3px 1px #ffffff; 
-    z-index: 0;
-    -webkit-animation: zoomStars 5s ease-in forwards;
-}
-
-.star-group-1{
-    
-}
-
-.star-group-2{
-
-}
-
-.star-group-3{
-
-}
-
-.star-group-4{
-
-}
-
-.star-group-5{
-
-}
-
-#star-1{
-    top: 50px;
-    left: 50px;
-}
-
-#star-2{
-    top: 150px;
-    left: 120px;
-}
-
-#star-3{
-    top: 70px;
-    left: 250px;
-}
-
-#star-4{
-    top: 180px;
-    left: 380px;
-}
-
-#star-5{
-    top: 40px;
-    left: 510px;
-}
-
-#star-6{
-    top: 130px;
-    left: 680px;
-}
-
-#star-7{
-    top: 20px;
-    left: 790px;
-}
-
-#star-8{
-    top: 160px;
-    left: 930px;
-}
-
-#star-9{
-    top: 50px;
-    left: 1100px;
-}
-
-#star-10{
-    top: 200px;
-    left: 1200px;
-}
-
-#star-11{
-    top: 420px;
-    left: 80px;
-}
-
-#star-12{
-    top: 300px;
-    left: 220px;
-}
-
-#star-13{
-    top: 375px;
-    left: 450px;
-}
-
-#star-14{
-    top: 280px;
-    left: 600px;
-}
-
-#star-15{
-    top: 350px;
-    left: 850px;
-}
-
-#star-16{
-    top: 300px;
-    left: 1050px;
-}
-
-#star-17{
-    top: 450px;
-    left: 1200px;
-}
-
-#star-18{
-    top: 650px;
-    left: 40px;
-}
-
-#star-19{
-    top: 500px;
-    left: 300px;
-}
-
-#star-20{
-    top: 625px;
-    left: 500px;
-}
-
-#star-21{
-    top: 475px;
-    left: 700px;
-}
-
-#star-22{
-    top: 650px;
-    left: 900px;
-}
-
-#star-23{
-    top: 570px;
-    left: 1100px;
-}
-
-#star-24{
-    top: 700px;
-    left: 1250px;
-}
-
-#star-25{
-    top: 720px;
-    left: 270px;
-}
-
-#star-26{
-    top: 720px;
-    left: 700px;
+@keyframes shootingstar-move {
+    0% {transform: translate(0, 0) rotate(-15deg);}
+    30% {transform: translate(-1100px, 700px) rotate(-15deg);}
+    50% {transform: translate(-1100px, 700px) rotate(-15deg);}
+    80% {transform: translate(-1100px, 700px) rotate(-15deg);}
+    100% {transform: translate(-1100px, 700px) rotate(-15deg);}
 }

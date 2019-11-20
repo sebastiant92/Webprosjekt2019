@@ -31,6 +31,7 @@ body {
     text-align: center;
     font-family: monospace;
     font-size: 15px;
+    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s 1s infinite;
 }
 
 .chat-bubbles {
@@ -44,7 +45,6 @@ body {
     left: 550px;
     width: 350px;
     height: 250px;
-    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s 1s infinite;
     animation-fill-mode: forwards;
 }
 
@@ -54,7 +54,7 @@ body {
     height: 200px;
     top: 90px;
     left: 500px;
-    animation: kenbeth-script-1 4.5s 2s linear;
+    -webkit-animation: kenbeth-script-1 4.5s 1.5s linear, text-hovering-kenbeth 2s linear infinite;
 }
 
 #kenbeth-script-2 {
@@ -62,9 +62,7 @@ body {
     height: 200px;
     top: 90px;
     left: 500px;
-    animation: kenbeth-script-1 6.5s linear;
-    animation-delay: 6.5s;
-    animation-fill-mode: forwards;
+    -webkit-animation: kenbeth-script-1 4.5s 6.5s linear forwards, text-hovering-kenbeth 2s linear infinite;
 }
 
 /* Images */
@@ -73,12 +71,8 @@ body {
     width: 0px;
     top: 510px;
     right: 280px;
-    animation: exclamation-mark 1.2s linear;
-    -webkit-animation: exclamation-mark 1.2s linear;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out;
-    animation-delay: 2s;
-    -webkit-animation-delay: exclamation-mark 2s;
+    z-index: 6;
+    -webkit-animation: exclamation-mark 1.2s 2s linear ease-out;
 }
 
 /* Ground */
@@ -87,7 +81,6 @@ body {
     height: 600px;
     position: absolute;
     margin: auto;
-    overflow: hidden;
     background: linear-gradient(#76f91f, #ddf45b);
     border: 5px solid #ddf45b;
     border-radius: 50%;
@@ -175,7 +168,7 @@ body {
     width: 400px;
     top: 120px;
     left: 330px;
-    z-index: 5;
+    z-index: 6;
     -webkit-animation: kenbeth-flying 1.5s linear forwards, kenbeth-hovering 2s 2s linear infinite;
 }
 
@@ -186,17 +179,16 @@ body {
     bottom: 265px;
     z-index: 4;
     transform: rotate(18deg);
+    -webkit-animation: slime-monster-scale 10s 3.5s ease-in-out, slime-monster-gravity 8s 11s linear forwards;
 }
 
 /* gifs */
 #slime-monster-gif {
     width: 120px;
-    bottom: 150px;
-    left: 0px;
-    transform: rotate(-23deg);
-    animation: slime-monster-gif 5s linear;
-    -webkit-animation: slime-monster-gif 5s linear;
-    animation-timing-function: ease-out;
+    bottom: 230px;
+    left: 300px;
+    transform: rotate(-8deg);
+    -webkit-animation: gif-monster-walk 10s linear, gif-monster-gravity 4s 10s linear forwards;
 }
 
 /* Background elements */
@@ -204,6 +196,172 @@ body {
     position: absolute;
 }
 
+/* Stars */
+#stars-container {
+    animation: zoom-star-container 8s ease-out forwards;
+    position: absolute;
+    top: -90px;
+}
+
+.stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
+
+    -webkit-animation: zoom-stars 5s 3s ease-in forwards;
+}
+
+#star-1 {
+    top: 50px;
+    left: 50px;
+}
+
+#star-2 {
+    top: 150px;
+    left: 120px;
+}
+
+#star-3 {
+    top: 70px;
+    left: 250px;
+}
+
+#star-4 {
+    top: 180px;
+    left: 380px;
+    animation: star-blinking 10s 4s ease-in infinite;
+}
+
+#star-5 {
+    top: 40px;
+    left: 510px;
+}
+
+#star-6 {
+    top: 130px;
+    left: 680px;
+}
+
+#star-7 {
+    top: 20px;
+    left: 790px;
+}
+
+#star-8 {
+    top: 160px;
+    left: 930px;
+}
+
+#star-9 {
+    top: 50px;
+    left: 1100px;
+    animation: star-blinking 10s 7s ease-in infinite;
+}
+
+#star-10 {
+    top: 200px;
+    left: 1200px;
+}
+
+#star-11 {
+    top: 420px;
+    left: 80px;
+}
+
+#star-12 {
+    top: 300px;
+    left: 220px;
+    animation: star-blinking 10s 12s ease-in infinite;
+}
+
+#star-13 {
+    top: 375px;
+    left: 450px;
+}
+
+#star-14 {
+    top: 280px;
+    left: 600px;
+}
+
+#star-15 {
+    top: 350px;
+    left: 850px;
+    animation: star-blinking 10s 10s ease-in infinite;
+}
+
+#star-16 {
+    top: 300px;
+    left: 1050px;
+}
+
+#star-17 {
+    top: 450px;
+    left: 1200px;
+}
+
+#star-18 {
+    top: 650px;
+    left: 40px;
+}
+
+#star-19 {
+    top: 500px;
+    left: 300px;
+}
+
+#star-20 {
+    top: 625px;
+    left: 500px;
+    animation: star-blinking 10s 6s ease-in infinite;
+}
+
+#star-21 {
+    top: 475px;
+    left: 700px;
+}
+
+#star-22 {
+    top: 650px;
+    left: 900px;
+}
+
+#star-23 {
+    top: 570px;
+    left: 1100px;
+    animation: star-blinking 10s 13s ease-in infinite;
+}
+
+#star-24 {
+    top: 700px;
+    left: 1250px;
+}
+
+#star-25 {
+    top: 720px;
+    left: 270px;
+}
+
+#star-26 {
+    top: 720px;
+    left: 700px;
+}
+
+@-webkit-keyframes star-blinking {
+    2.5% {
+        box-shadow: 0 0 4.5px 3px #ffffff, 0 0 15px 3px #ffffff, 0 0 30px 3px #ffffff;
+    }
+    5% {
+        width: 2px;
+        height: 2px;
+        box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
+    }
+}
+
+/* Background Slime */
 .background-slime {
     position: absolute;
     width: 10px;
@@ -215,62 +373,43 @@ body {
 }
 
 #background-slime-1 {
-    animation: bubble-1 5s infinite both;
     -webkit-animation: bubble-1 5s infinite both;
 }
 
 #background-slime-2 {
-    animation: bubble-2 5s infinite both;
-    -webkit-animation: bubble-2 5s infinite both;
-    animation-delay: 7s;
+    -webkit-animation: bubble-2 5s 7s infinite both;
 }
 
 #background-slime-3 {
-    animation: bubble-3 5s infinite both;
-    -webkit-animation: bubble-3 5s infinite both;
-    animation-delay: 5s;
+    -webkit-animation: bubble-3 5s 5s infinite both;
 }
 
 #background-slime-4 {
-    animation: bubble-4 5s infinite both;
-    -webkit-animation: bubble-4 5s infinite both;
-    animation-delay: 3s;
+    -webkit-animation: bubble-4 5s 3s infinite both;
 }
 
 #background-slime-5 {
-    animation: bubble-5 5s infinite both;
-    -webkit-animation: bubble-5 5s infinite both;
-    animation-delay: 6s;
+    -webkit-animation: bubble-5 5s 6s infinite both;
 }
 
 #background-slime-6 {
-    animation: bubble-6 5s infinite both;
-    -webkit-animation: bubble-6 5s infinite both;
-    animation-delay: 0.5s;
+    -webkit-animation: bubble-6 5s 0.5s infinite both;
 }
 
 #background-slime-7 {
-    animation: bubble-7 5s infinite both;
-    -webkit-animation: bubble-7 5s infinite both;
-    animation-delay: 2.7s;
+    -webkit-animation: bubble-7 5s 2.7s infinite both;
 }
 
 #background-slime-8 {
-    animation: bubble-8 5s infinite both;
-    -webkit-animation: bubble-8 5s infinite both;
-    animation-delay: 4s;
+    -webkit-animation: bubble-8 5s 4s infinite both;
 }
 
 #background-slime-9 {
-    animation: bubble-9 5s infinite both;
-    -webkit-animation: bubble-9 5s infinite both;
-    animation-delay: 7.5s;
+    -webkit-animation: bubble-9 5s 7.5s infinite both;
 }
 
 #background-slime-10 {
-    animation: bubble-10 5s infinite both;
-    -webkit-animation: bubble-10 5s infinite both;
-    animation-delay: 1.5s;
+    -webkit-animation: bubble-10 5s 1.5s infinite both;
 }
 
 #black-hole {
@@ -278,166 +417,162 @@ body {
     top: 20px;
     left: 400px;
     z-index: 1;
-    animation: black-hole-tilt 30s linear infinite both;
     -webkit-animation: black-hole-tilt 30s linear infinite both;
 }
 
 /* Keyframes */
-@keyframes black-hole-tilt {
+@-webkit-keyframes black-hole-tilt {
     0% {
-        transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
     }
 }
 
 /* Background Bubbles */
-@keyframes bubble-1 {
+@-webkit-keyframes bubble-1 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 200px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(50deg);
+        -webkit-transform: scale(0) rotate(50deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-2 {
+@-webkit-keyframes bubble-2 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 340px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(30deg);
+        -webkit-transform: scale(0) rotate(30deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-3 {
+@-webkit-keyframes bubble-3 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 500px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(23deg);
+        -webkit-transform: scale(0) rotate(23deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-4 {
+@-webkit-keyframes bubble-4 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 700px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(1deg);
+        -webkit-transform: scale(0) rotate(1deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-5 {
+@-webkit-keyframes bubble-5 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 800px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-12deg);
+        -webkit-transform: scale(0) rotate(-12deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-6 {
+@-webkit-keyframes bubble-6 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 900px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-22deg);
+        -webkit-transform: scale(0) rotate(-22deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-7 {
+@-webkit-keyframes bubble-7 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 1100px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-32deg);
+        -webkit-transform: scale(0) rotate(-32deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-8 {
+@-webkit-keyframes bubble-8 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 900px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-28deg);
+        -webkit-transform: scale(0) rotate(-28deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-9 {
+@-webkit-keyframes bubble-9 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 1300px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-50deg);
+        -webkit-transform: scale(0) rotate(-50deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
-@keyframes bubble-10 {
+@-webkit-keyframes bubble-10 {
     0% {
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1) rotate(0deg);
         left: 1020px;
         bottom: 150px;
     }
     100% {
-        transform: scale(0) rotate(-44deg);
+        -webkit-transform: scale(0) rotate(-44deg);
         left: 697px;
         bottom: 500px;
     }
 }
 
 /* Kenbeth flying */
-@keyframes kenbeth-flying {
+@-webkit-keyframes kenbeth-flying {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
         left: -400px;
     }
     25% {
-        transform: rotate(-44deg);
+        -webkit-transform: rotate(-44deg);
     }
     50% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
         left: 350px;
-        delay: 2s;
     }
     75% {
         top: 170px;
@@ -447,7 +582,7 @@ body {
     }
 }
 
-@keyframes kenbeth-hovering {
+@-webkit-keyframes kenbeth-hovering {
     0% {
         top: 120px;
     }
@@ -459,18 +594,60 @@ body {
     }
 }
 
-@keyframes slime-monster-gif {
+/* Monster animation */
+@-webkit-keyframes gif-monster-walk {
     0% {
-        transform: rotate(-40deg);
+        -webkit-transform: rotate(-40deg);
         left: -120px;
         bottom: 80px;
     }
     100% {
-        transform: rotate(-23deg);
+        -webkit-transform: rotate(-8deg);
     }
 }
 
-@keyframes exclamation-mark {
+@-webkit-keyframes gif-monster-gravity {
+    0% {
+        -webkit-transform: rotate(-8deg) scale(1);
+        bottom: 230px;
+        left: 300px;
+    }
+    100% {
+        -webkit-transform: rotate(1700deg) scale(0);
+        bottom: 450px;
+        left: 660px;
+    }
+}
+
+@-webkit-keyframes slime-monster-scale {
+    0% {
+        width: 20px;
+        right: 300px;
+        bottom: 265px;
+    }
+    100% {
+        width: 150px;
+        right: 390px;
+        bottom: 257px;
+    }
+}
+
+@-webkit-keyframes slime-monster-gravity {
+    0% {
+        -webkit-transform: rotate(-8deg);
+        right: 390px;
+        bottom: 257px;
+        width: 150px;
+    }
+    100% {
+        -webkit-transform: rotate(1700deg);
+        right: 590px;
+        bottom: 490px;
+        width: 0px;
+    }
+}
+
+@-webkit-keyframes exclamation-mark {
     0% {
         width: 0px;
         top: 510px;
@@ -489,7 +666,7 @@ body {
 }
 
 /* Chat bubbles */
-@keyframes kenbeth-script-1 {
+@-webkit-keyframes kenbeth-script-1 {
     /* First talk bubble appear */
     0% {
         opacity: 1;
@@ -499,7 +676,7 @@ body {
     }
 }
 
-@keyframes chat-bubble-hovering {
+@-webkit-keyframes chat-bubble-hovering {
     0% {
         top: 0px;
     }
@@ -511,7 +688,7 @@ body {
     }
 }
 
-@keyframes chat-bubble-kenbeth {
+@-webkit-keyframes chat-bubble-kenbeth {
     0% {
         opacity: 0;
     }
@@ -520,22 +697,27 @@ body {
     }
 }
 
+@-webkit-keyframes text-hovering-kenbeth {
+    0% {
+        top: 90px;
+    }
+    50% {
+        top: 110px;
+    }
+    100% {
+        top: 90px;
+    }
+}
+
 #chat-bubble-kenbeth {
     top: 0px;
     left: 500px;
     width: 350px;
     height: 250px;
-    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s linear infinite;
-    animation-fill-mode: forwards;
+    -webkit-animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s linear infinite;
 }
 
 /* Triggers */
-#kenbeth-flying:hover {
-    width: 420px;
-    top: 113px;
-    left: 320px;
-}
-
 #slime-bubble-1:hover {
     width: 140px;
     height: 50px;
