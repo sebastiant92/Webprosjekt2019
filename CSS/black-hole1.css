@@ -229,7 +229,7 @@ body {
     
 }
 
-/*  Background animation with all the distorted colors */
+/*  Backgroundanimation with all the distorted colors */
 @-webkit-keyframes spacedistortion {
     0%{background-position:0% 52%}
     50%{background-position:100% 49%}
@@ -312,7 +312,7 @@ body {
     }
 }
 
-/* animation for the ufo´s trajectory from the black hole */
+/* animation for the rocket´s trajectory into the black hole */
 @keyframes ufo-alien {
     0%{
         transform: scale(0) rotate(45deg);
@@ -341,4 +341,3 @@ body {
     }
     
 }
-

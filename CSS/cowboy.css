@@ -266,9 +266,7 @@ body {
     margin-top: -60px;
     border-radius: 100%;
     transition: transform 2s;
-    -webkit-transition: transform 2s;
     animation: planet-tilt 10s linear infinite both;
-    -webkit-animation: planet-tilt 10s linear infinite both;
 }
 
 /* Ground & Textures */
@@ -368,20 +366,10 @@ body {
     left: 450px;
     z-index: 1;
     visibility: hidden;
-    animation: kenbeth-on-ground 10s;
-    animation-fill-mode: forwards;
+    animation: kenbeth-on-ground 10s 5s 1 forwards;
+    /*animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    animation-delay: 5s;
-}
-
-#chatbubble {
-    color: white;
-    font-size: 20px;
-    visibility: hidden;
-}
-
-#kenbeth:hover > #chatbubble {
-    visibility: visible;
+    animation-delay: 5s;*/
 }
 
 #kenbeth-on-cow {
@@ -392,8 +380,8 @@ body {
     left: 450px;
     z-index: 1;
     transform: scaleX(-1);
-    animation: kenbeth-flying 5s ease-in-out;
-    animation-iteration-count: 1;
+    animation: kenbeth-flying 5s 1 ease-in-out;
+    /*I animation-iteration-count: 1; I */
     visibility: hidden;
 }
 
@@ -401,41 +389,41 @@ body {
 #spacecow1 {
     position: absolute;
     width: 250px;
-    animation: spacecow 5s linear both;
-    animation-delay: 5s;
-    animation-iteration-count: 1;
+    animation: spacecow 5s 5s 1 linear both;
+    /*animation-delay: 5s;
+    animation-iteration-count: 1;*/
 }
 
 #spacecow2 {
     position: absolute;
     width: 250px;
-    animation: spacecow 5s linear both;
-    animation-delay: 7s;
-    animation-iteration-count: 1;
+    animation: spacecow 5s 7s 1 linear both;
+    /*animation-delay: 7s;
+    animation-iteration-count: 1;*/
 }
 
 #spacecow3 {
     position: absolute;
     width: 250px;
-    animation: spacecow 5s linear both;
-    animation-delay: 9s;
-    animation-iteration-count: 1;
+    animation: spacecow 5s 9s 1 linear both;
+    /*animation-delay: 9s;
+    animation-iteration-count: 1;*/
 }
 
 #spacecow4 {
     position: absolute;
     width: 250px;
-    animation: spacecow 5s linear both;
-    animation-delay: 11s;
-    animation-iteration-count: 1;
+    animation: spacecow 5s 11s 1 linear both;
+    /*animation-delay: 11s;
+    animation-iteration-count: 1;*/
 }
 
 #spacecow5 {
     position: absolute;
     width: 250px;
-    animation: spacecow 5s linear both;
-    animation-delay: 13s;
-    animation-iteration-count: 1;
+    animation: spacecow 5s 13s 1 linear both;
+    /*animation-delay: 13s;
+    animation-iteration-count: 1;*/
 }
 
 #cow {
@@ -471,7 +459,7 @@ body {
     font-size: 20px;
     color: white;
     padding: 10px;
-    top: 505px;
+    top: 517px;
     left: 100px;
     transform: skew(4deg);
     opacity: 1;
@@ -493,6 +481,7 @@ body {
     width: 300px;
     transform: rotate(2deg);
     z-index: 3;
+    cursor: pointer;
 }
 
 #rocket-bi:hover {
@@ -508,6 +497,7 @@ body {
     width: 400px;
     transform: scaleX(-1);
     z-index: 2;
+    cursor: pointer;
 }
 
 #cactus {
@@ -524,10 +514,20 @@ body {
     bottom: 200px;
     transform: rotate(-10deg);
     z-index: 3;
+    cursor: pointer;
 }
 
 #cowboy-hat:active {
     animation: cowboy-hat-move 5s infinite ease-in-out;
+}
+
+#horseshoe {
+    position: absolute;
+    width: 60px;
+    right: 150px;
+    bottom: 245px;
+    z-index: 2;
+    animation: horseshoe-rotate 2s linear infinite;
 }
 
 /* Keyframes for animations */
@@ -619,7 +619,7 @@ body {
         transform: scaleX(-1);
     }
     25% {
-        left: 420px;
+        left: 450px;
         transform: scaleX(-1);
     }
     50% {
@@ -627,7 +627,7 @@ body {
         transform: scaleX(1);
     }
     75% {
-        left: 380px;
+        left: 350px;
         transform: scaleX(1);
     }
     100% {
@@ -707,5 +707,14 @@ body {
     100% {
         bottom: 200px;
         transform: rotate(350deg);
+    }
+}
+
+@keyframes horseshoe-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
