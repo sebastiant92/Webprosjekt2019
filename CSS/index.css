@@ -220,6 +220,7 @@ body {
     left: -70px;
     position: absolute;
     transform: rotate(15deg);
+
     
     animation: rocket-flying 30s 8s ease-in-out infinite;
 }
@@ -230,6 +231,12 @@ body {
         left: 1100px;
         
     }
+}
+
+#rocket:hover{
+    animation-play-state: paused;
+    transform: rotate(360deg);
+    
 }
 
 
