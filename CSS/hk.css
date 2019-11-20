@@ -13,7 +13,7 @@ body {
     height: 800px;
     position: relative;
     margin: auto;
-
+    overflow: hidden;
     background-image: radial-gradient(#0F0A28, #0c0920 80%);
     margin-top: 50px;
 }
@@ -458,7 +458,8 @@ body {
     background: #000000;
     opacity: 0;
     
-    animation: door-open 0.75s 5s linear 1;
+    animation: door-open 0.75s 5s linear 1,
+                
 }
 
 @keyframes door-open{
@@ -537,7 +538,8 @@ body {
     left: 290px;
     opacity: 0;
     
-    animation: principal-coming 3s 5s linear forwards;
+    animation: principal-coming 3s 5s linear forwards,
+                principal-moving 1s 11s linear forwards;
 }
 
 @keyframes principal-coming{
@@ -552,10 +554,14 @@ body {
     }
 }
 
+@keyframes principal-moving{
+    100%{
+        left: 400px;
+    }
+}
 
 
 
 
 
-
-
+    animation: door-open 0.75s 5s linear 1,

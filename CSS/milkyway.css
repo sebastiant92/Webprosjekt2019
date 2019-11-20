@@ -40,6 +40,17 @@ body {
     animation: rocket-flying 25s 6s ease-in-out infinite;
 }
 
+/* Kenbeth */
+
+#kenbeth-fly {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 200px;
+    left: -190px;
+    z-index: 1;
+}
+
 /* Don't touch, game objects */
 #bicycle{
     width: 205px;
