@@ -34,7 +34,7 @@ body {
         0 0 2.5px 1.5px #ffffff, 
         0 0 3.5px 2.5px #ffffff; 
     
-    -webkit-animation: zoom-stars 5s 3s ease-in forwards;
+    animation: zoom-stars 5s 3s ease-in forwards;
 }
 
 @keyframes zoom-stars{
@@ -367,6 +367,19 @@ body {
     z-index: 3;
 }
 /* colors windows */
+#window33{
+    background-color: #000000;
+}
+#window34{
+    background-color: #000000;
+}
+#window39{
+    background-color: #000000;
+}
+#window40{
+    background-color: #000000;
+}
+
 .purple{
     background-color: #444444;
 }
@@ -381,7 +394,7 @@ body {
 }
 
 .green:hover{
-    background-color: #444444;
+    background-color: #9d69a3;
     cursor: default;
 }
 
@@ -405,7 +418,7 @@ body {
     bottom: 150px;
     left: 700px;
     z-index: 3;
-    -webkit-animation: astrodog-dance 5s 5s infinite;
+    animation: astrodog-dance 5s 5s infinite;
 }
 
 #jetsons{
@@ -439,18 +452,45 @@ body {
     left: 1020px;
     z-index: 2;
     animation-name: squanchy-travel;
-    animation-duration: 10s;
+    animation-duration: 14s;
 }
 
 #rocket{
     height: 100px;
     width: 100px;
     position: absolute;
-    bottom: 300px;;
-    left: 900px;;
+    top: 400px;
+    left: -100px;
+    z-index: 1;
+    animation: rocket-fly 3s 10s ease-in-out;
+    overflow: hidden;
+}
+
+#antenna{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 560px;
+    left: 860px;
+    z-index: 2;
+}
+
+#enter{
+    height: 50px;
+    width: 110px;
+    position: absolute;
+    bottom: 256px;
+    left: 1000px;
     z-index: 3;
-    animation-name: rocket-fly;
-    animation-duration: 2s;
+}
+
+#speech-buble{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 100px;
+    left: 280px;
+    z-index: 4;
 }
 
 /* Link */
@@ -472,6 +512,9 @@ body {
     content: ;
 }
 
+#towelie:active{
+    
+}
 @keyframes planet-rotate{
     100%{
         transform: translateX(350px);
@@ -497,6 +540,13 @@ body {
     from{transform: translateX(-700px)}
     to{transform: translateX(200px;)} 
 }
+@keyframes rocket-fly{
+    100%{
+        top: -100px;
+        right: 1100px;
+        left: 1200px;
+    }
+}
 
 @keyframes astrodog-dance{
     0% {transform: translate(1px, 1px) rotate(0deg);}
@@ -510,18 +560,4 @@ body {
   80% {transform: translate(-1px, -1px) rotate(1deg);}
   90% {transform: translate(1px, 2px) rotate(0deg);}
   100% {transform: translate(1px, -2px) rotate(-1deg);}
-}
-
-@keyframes rocket-fly{
-    0%{left: 300px; bottom: 300px;}
-    10%{left: 350px; bottom: 350px;}
-    20%{left: 400px; bottom: 400px;}
-    30%{left: 450px; bottom: 450px;}
-    40%{left: 500px; bottom: 500px;}
-    50%{left: 550px; bottom: 550px;}
-    60%{left: 600px; bottom: 600px;}
-    70%{left: 650px; bottom: 650px;}
-    80%{left: 700px; bottom: 700px;}
-    90%{left: 750px; bottom: 750px;}
-    100%{left: 800px; bottom: 800px;}
 }

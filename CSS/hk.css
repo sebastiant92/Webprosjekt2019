@@ -25,15 +25,8 @@ body {
 #stars-container{
     animation: zoom-star-container 8s ease-out forwards;
     position: absolute;
-    top: -90px;
+    top: 0px;
 }
-
-@keyframes zoom-star-container{
-    100%{
-        top: 0px;
-    }
-}
-
 
 
 .stars{
@@ -46,16 +39,6 @@ body {
         0 0 1.5px 1px #ffffff, 
         0 0 2.5px 1.5px #ffffff, 
         0 0 3.5px 2.5px #ffffff; 
-    
-    -webkit-animation: zoom-stars 5s 3s ease-in forwards;
-}
-
-
-@keyframes zoom-stars{
-    100%{
-    width: 2px;
-    height: 2px;
-    }
 }
 
 #star-1{
@@ -211,41 +194,13 @@ body {
     }
 }
 
-/* Rocket */
-
-#rocket{
-    width: 70px;
-    height: 70px;
-    top: 450px;
-    left: -70px;
-    position: absolute;
-    transform: rotate(15deg);
-    transition: 2s ease;
-
-    
-    animation: rocket-flying 25s 6s ease-in-out infinite;
-}
-
-@keyframes rocket-flying{
-    100%{
-        top: -70px;
-        left: 1100px;
-        
-    }
-}
-
-#rocket:hover{
-    animation-play-state: paused;
-    transform: rotate(-360deg);
-    
-}
-
 
 /* Planets */
 
 .planet{
     position: absolute;
-    border-radius: 100%; 
+    border-radius: 100%;
+    overflow: hidden;
 }
 
 
@@ -253,34 +208,24 @@ body {
 
 
 #planet-ice{
-    width: 150px;
-    height: 150px;
-    top: 350px;
-    left: 250px;
+    width: 700px;
+    height: 700px;
+    top: 600px;
+    left: -300px;
     background: linear-gradient(270deg, #00c5cc, #3285d3);
-    overflow: hidden;
     
     animation: zoom-planet-ice 8s ease-in forwards;
 }
 
-@keyframes zoom-planet-ice{
-    100%{
-        width: 500px;
-        height: 500px;
-        top: 600px;
-        left: -150px;
-    }
-}
-
 #planet-ice-structure{
-    width: 500px;
-    height: 200px;
+    width: 700px;
+    height: 350px;
     position: absolute;
     opacity: 0.6;
     top: 0px;
-    left: -200px;
+    left: 0px;
     
-    animation: planet-rotate 30s 8s linear infinite;
+    animation: planet-rotate 30s linear infinite;
 }
     
 
@@ -289,59 +234,35 @@ body {
 /* Planet city */
 
 #planet-city{
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     background-image: linear-gradient(to right, #415a77, #415a77);
-    top: 230px;
-    left: 450px;
+    top: 380px;
+    left: 300px;
     overflow: hidden;
     
-    animation: zoom-planet-city 8s ease-in forwards;
-}
-    
-@keyframes zoom-planet-city{
-    100%{
-        width: 200px;
-        height: 200px;
-        top: 450px;
-        left: 300px;
-    }
 }
 
 #planet-city-structure{
-    width: 160px;
+    width: 300px;
     height: 130px;
     position: absolute;
     top: 30px;
     left: -160px;
     transform: rotate(15deg);
     
-    animation: planet-rotate 13s 0.5s linear infinite;
+    animation: planet-rotate 13s linear infinite;
 }
-
-
 
 
 /* Planet Vacay */
 
 #planet-vacay{
-    width: 70px;
-    height: 70px;
+    width: 200px;
+    height: 200px;
     background-image: radial-gradient(#f6d2da, #fcc9d1);
-    top: 170px;
-    left: 600px;
-    overflow: hidden;
-    
-    animation: zoom-planet-vacay 8s ease-in forwards;
-}
-
-@keyframes zoom-planet-vacay{
-    100%{
-        width: 130px;
-        height: 130px;
-        top: 320px;
-        left: 520px;
-    }
+    top: 240px;
+    left: 620px;
 }
 
 #planet-vacay-structure{
@@ -361,23 +282,12 @@ body {
 /* Planet cowboy */
 
 #planet-cowboy{
-    width: 50px;
-    height: 50px;
+    width: 160px;
+    height: 160px;
     background-image: radial-gradient(#faff81, #ffc53a);
-    top: 100px;
-    left: 800px;
+    top: 170px;
+    left: 1050px;
     overflow: hidden;
-    
-    animation: zoom-planet-cowboy 8s ease-in forwards;
-}
-
-@keyframes zoom-planet-cowboy{
-    100%{
-        width: 90px;
-        height: 90px;
-        top: 230px;
-        left: 930px;
-    }
 }
 
 #planet-cowboy-structure{
@@ -385,53 +295,12 @@ body {
     height: 40px;
     position: absolute;
     opacity: 0.8;
-    bottom: 0px;
+    bottom: 50px;
     left: -280px;
     transform: rotate(-15deg);
     
     animation: planet-rotate 10s linear infinite;
 }
-
-
-
-
-/* Planet Slime */
-
-#planet-slime{
-    width: 80px;
-    height: 80px;
-    background-image: radial-gradient(#ddf45b, #32bc35);
-    top: 150px;
-    left: 950px;
-    overflow: hidden;
-    
-    animation: zoom-planet-slime 8s ease-in forwards;
-}
-
-@keyframes zoom-planet-slime{
-    100%{
-        width: 150px;
-        height: 150px;
-        top: 350px;
-        left: 1100px;
-    }
-}
-
-#planet-slime-structure{
-    width: 250px;
-    height: 50px;
-    position: absolute;
-    opacity: 0.8;
-    left: -200px;
-    bottom: 50px;
-    transform: rotate(40deg);
-    
-
-    animation: planet-rotate 9s linear infinite;
-}
-
-
-
 
 @keyframes planet-rotate{
     100%{
@@ -440,39 +309,26 @@ body {
     
 }
 
-
-
 #hk{
-    width: 125px;
-    height: 200px;
+    width: 625px;
+    height: 1000px;
     position: absolute;
-    top: 1000px;
-    right: -125px;
+    z-index: 1;
+    top: 0px;
+    right: 20px;
     
-    animation: hk-coming 8s ease-out forwards,
-               hk-hovering 3.5s 8s linear infinite;
+
 }
-
-
-
-@keyframes hk-coming{
-    100%{
-        top: 400px;
-        right: 360px;
-        transform: scale(2);
-    }
-}
-
 
 @keyframes hk-hovering{                                 
     0%{
-        top: 400px;   
+        top: 0px;   
     }
     40%{
-        top: 450px;
+        top: 30px;
     }
     100%{
-        top: 400px;
+        top: 0px;
 
     }
 }
@@ -502,10 +358,6 @@ body {
     position: absolute;
 }
 
-a:hover + #ufo-alien{
-    animation: ufo-alien-spying 2s ease-in backwards;
-}
-
 
 
 @keyframes ufo-alien-spying{
@@ -520,7 +372,35 @@ a:hover + #ufo-alien{
     }
 }
 
+#hk-container{
+    width: 625px;
+    height: 1000px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    animation: 
+    hk-hovering 3.5s linear infinite;
+}
 
+#hk-welcome{
+    width: 220px;
+    height: 80px;
+    position: absolute;
+    left: 185px;
+    top: 180px;
+    z-index: 2;
+}
+
+#doors{
+    width: 65px;
+    height: 127px;
+    position: absolute;
+    top: 422px;
+    left: 229px;
+    z-index: 3;
+    background: #000000;
+    opacity: 0;
+}
 
 
 
