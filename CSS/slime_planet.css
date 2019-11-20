@@ -18,7 +18,7 @@ body {
     top: 50px;
     position: relative;
     margin: auto;
-    background-color: #0c0920;
+    background: linear-gradient(#000000, #1c3a08);
     overflow: hidden;
     z-index: 0;
 }
@@ -29,7 +29,7 @@ body {
     z-index: 6;
     opacity: 0;
     text-align: center;
-    font-family: monospace;
+    font-family: Arial;
     font-size: 15px;
     animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s 1s infinite;
 }
