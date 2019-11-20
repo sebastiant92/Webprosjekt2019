@@ -196,6 +196,172 @@ body {
     position: absolute;
 }
 
+/* Stars */
+#stars-container {
+    animation: zoom-star-container 8s ease-out forwards;
+    position: absolute;
+    top: -90px;
+}
+
+.stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
+
+    -webkit-animation: zoom-stars 5s 3s ease-in forwards;
+}
+
+#star-1 {
+    top: 50px;
+    left: 50px;
+}
+
+#star-2 {
+    top: 150px;
+    left: 120px;
+}
+
+#star-3 {
+    top: 70px;
+    left: 250px;
+}
+
+#star-4 {
+    top: 180px;
+    left: 380px;
+    animation: star-blinking 10s 4s ease-in infinite;
+}
+
+#star-5 {
+    top: 40px;
+    left: 510px;
+}
+
+#star-6 {
+    top: 130px;
+    left: 680px;
+}
+
+#star-7 {
+    top: 20px;
+    left: 790px;
+}
+
+#star-8 {
+    top: 160px;
+    left: 930px;
+}
+
+#star-9 {
+    top: 50px;
+    left: 1100px;
+    animation: star-blinking 10s 7s ease-in infinite;
+}
+
+#star-10 {
+    top: 200px;
+    left: 1200px;
+}
+
+#star-11 {
+    top: 420px;
+    left: 80px;
+}
+
+#star-12 {
+    top: 300px;
+    left: 220px;
+    animation: star-blinking 10s 12s ease-in infinite;
+}
+
+#star-13 {
+    top: 375px;
+    left: 450px;
+}
+
+#star-14 {
+    top: 280px;
+    left: 600px;
+}
+
+#star-15 {
+    top: 350px;
+    left: 850px;
+    animation: star-blinking 10s 10s ease-in infinite;
+}
+
+#star-16 {
+    top: 300px;
+    left: 1050px;
+}
+
+#star-17 {
+    top: 450px;
+    left: 1200px;
+}
+
+#star-18 {
+    top: 650px;
+    left: 40px;
+}
+
+#star-19 {
+    top: 500px;
+    left: 300px;
+}
+
+#star-20 {
+    top: 625px;
+    left: 500px;
+    animation: star-blinking 10s 6s ease-in infinite;
+}
+
+#star-21 {
+    top: 475px;
+    left: 700px;
+}
+
+#star-22 {
+    top: 650px;
+    left: 900px;
+}
+
+#star-23 {
+    top: 570px;
+    left: 1100px;
+    animation: star-blinking 10s 13s ease-in infinite;
+}
+
+#star-24 {
+    top: 700px;
+    left: 1250px;
+}
+
+#star-25 {
+    top: 720px;
+    left: 270px;
+}
+
+#star-26 {
+    top: 720px;
+    left: 700px;
+}
+
+@-webkit-keyframes star-blinking {
+    2.5% {
+        box-shadow: 0 0 4.5px 3px #ffffff, 0 0 15px 3px #ffffff, 0 0 30px 3px #ffffff;
+    }
+    5% {
+        width: 2px;
+        height: 2px;
+        box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
+    }
+}
+
+/* Background Slime */
 .background-slime {
     position: absolute;
     width: 10px;
