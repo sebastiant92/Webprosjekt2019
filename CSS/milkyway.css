@@ -40,6 +40,16 @@ body {
     animation: rocket-flying 25s 6s ease-in-out infinite;
 }
 
+/* Kenbeth */
+#kenbeth-fly {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 230px;
+    left: -190px;
+    z-index: 1;
+}
+
 /* Don't touch, game objects */
 #bicycle{
     width: 205px;
@@ -72,8 +82,8 @@ body {
 #welcome {
     width: 300px;
     height: 200px;
-    top: 450px;
-    left: -100px;
+    top: 540px;
+    left: -50px;
 }
 
 #beach-ball {
@@ -168,7 +178,6 @@ body {
     left: -200px;
     top: 20px;
     transform: rotate(-40deg);
-    
     animation: planet-rotate 15s linear infinite;
 }
 
@@ -194,9 +203,8 @@ body {
     100% {transform: rotate(-10deg);}
 }
 
-@keyframes planet-rotate{
+@keyframes planet-rotate {
     100%{
         transform: translateX(350px);
     }
-    
 }
