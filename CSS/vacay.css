@@ -63,7 +63,7 @@ body {
 #star-5{
     top: 40px;
     left: 510px;
-     animation: star-blinking 10s 10s ease-in infinite;
+    animation: star-blinking 10s 10s ease-in infinite;
 }
 
 #star-6{
@@ -84,7 +84,7 @@ body {
 #star-9{
     top: 50px;
     left: 1100px;
-     animation: star-blinking 10s 7s ease-in infinite;
+    animation: star-blinking 10s 7s ease-in infinite;
 }
 
 #star-10{
@@ -100,7 +100,7 @@ body {
 #star-12{
     top: 300px;
     left: 220px;
-     animation: star-blinking 10s 3s ease-in infinite;
+    animation: star-blinking 10s 3s ease-in infinite;
 }
 
 #star-13{
@@ -126,7 +126,7 @@ body {
 #star-17{
     top: 450px;
     left: 1200px;
-     animation: star-blinking 10s 1s ease-in infinite;
+    animation: star-blinking 10s 1s ease-in infinite;
 }
 
 #star-18{
@@ -157,7 +157,7 @@ body {
 #star-23{
     top: 570px;
     left: 1100px;
-     animation: star-blinking 10s 8s ease-in infinite;
+    animation: star-blinking 10s 8s ease-in infinite;
 }
 
 #star-24{
@@ -192,8 +192,8 @@ body {
 }
 
 #planet-cowboy-structure{
-    width: 200px;
-    height: 100px;
+    width: 500px;
+    height: 200px;
     position: absolute;
     margin-bottom: 0px;
     animation: planet-rotate 20s linear infinite;
@@ -252,7 +252,7 @@ body {
     margin-left: -36px;
     opacity: 0.6;
     z-index: 4;
-    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
 }
 
 #wave-2 {
@@ -260,7 +260,7 @@ body {
     margin-left: -26px;
     opacity: 0.2;
     z-index: 5;
-    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 
 .waves {
@@ -268,7 +268,7 @@ body {
     height: 300px;
     position: absolute;
     overflow: hidden;
-    -webkit-animation: wave-move 4s ease-in-out infinite alternate-reverse;
+    animation: wave-move 4s ease-in-out infinite alternate-reverse;
 }
 
 /* Beach Elements */
@@ -279,12 +279,12 @@ body {
     margin-top: 530px;
     margin-left: 20px;
     z-index: 3;
-    -webkit-animation: ball-rolling 1s linear 1 forwards paused;
+    animation: ball-rolling 1s linear 1 forwards paused;
 }
 
 /* Beach ball active(Start animation, rolls off)*/
 #beach-ball:active {
-    -webkit-animation-play-state: running;
+    animation-play-state: running;
 }
 
 #beach-tools {
@@ -360,7 +360,7 @@ body {
 }
 
 .animation-swim {
-    -webkit-animation: fish-swim 8s ease-in-out infinite alternate;
+    animation: fish-swim 8s ease-in-out infinite alternate;
 }
 
 /* Sea decorations*/
@@ -371,32 +371,32 @@ body {
     height: 200px;
     position: absolute;
     z-index: 3;
-    -webkit-animation-duration: 6s;
-    -webkit-animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
 }
 
 #sea-plant {
     margin-top: 670px;
     margin-left: -25px;
-    -webkit-animation-name: seaplant-move;
+    animation-name: seaplant-move;
 }
 
 #sea-plant2 {
     margin-top: 680px;
     margin-left: 10px;
-    -webkit-animation-name: seaplant-move2;
+    animation-name: seaplant-move2;
 }
 
 #sea-plant3 {
     margin-top: 665px;
     margin-left: 40px;
-    -webkit-animation-name: seaplant-move;
+    animation-name: seaplant-move;
 }
 
 #sea-plant4 {
     margin-top: 685px;
     margin-left: 75px;
-    -webkit-animation-name: seaplant-move2;
+    animation-name: seaplant-move2;
 }
 
 /* Palm tree */
@@ -416,21 +416,21 @@ body {
     margin-top: 120px;
     margin-left: -5px;
     z-index: 1;
-    -webkit-animation: palm-move 3s infinite;
+    animation: palm-move 3s infinite;
 }
 
 #coconut {
     width: 100px;
     height: 100px;
     margin-top: 250px;
-    -webkit-animation: coconut-fall 2s 10.5s ease-in-out 1;
+    animation: coconut-fall 2s 10.5s ease-in-out 1;
 }
 
 #coconut-split {
     width: 80px;
     height: 80px;
     margin-top: 500px;
-    -webkit-animation: coconut-split 3s 11.2s forwards;
+    animation: coconut-split 3s 11.2s forwards;
 }
 
 .coconuts {
@@ -448,7 +448,7 @@ body {
     margin-top: 300px;
     margin-left: 300px;
     z-index: 5;
-    -webkit-animation: main-dance 4s 28.5s infinite;
+    animation: main-dance 4s 28.5s infinite;
 }
 
 #thinking-bubble {
@@ -459,45 +459,45 @@ body {
     margin-left: 460px;
     opacity: 0;
     z-index: 5;
-    -webkit-animation: bubble-appear 10s 1s forwards;
+    animation: bubble-appear 10s 1s forwards;
 }
 
 #start-text {
     margin-top: 230px;
     z-index: 6;
-    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
 }
 
 #del1-text {
     margin-top: 230px;
     z-index: 7;
-    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
 }
 
 #del2-text {
     margin-top: 250px;
     z-index: 8;
     font-size: 25px;
-    -webkit-animation-delay: 12s;
+    animation-delay: 12s;
 }
 
 #del3-text {
     margin-top: 250px;
     z-index: 9;
-    -webkit-animation-delay: 17s;
+    animation-delay: 17s;
 }
 
 #del4-text {
     margin-top: 227px;
     z-index: 10;
-    -webkit-animation-delay: 22s;
+    animation-delay: 22s;
 }
 
 #slutt-text {
     margin-top: 240px;
     z-index: 11;
-    -webkit-animation-delay: 27s; 
-    -webkit-animation-fill-mode: forwards;
+    animation-delay: 27s; 
+    animation-fill-mode: forwards;
 }
 
 .texts {
@@ -505,11 +505,12 @@ body {
     margin-left: 540px;
     text-align: center;
     font-size: 20px;
+    font-family: arial;
     color: #2c2c2c;
     position: absolute;
     opacity: 0;
     z-index: 6;
-    -webkit-animation: text-animation 5s 1;
+    animation: text-animation 5s 1;
 }
 
 /* Background animations */
@@ -521,7 +522,7 @@ body {
     margin-left: 1300px;
     opacity: 0.4;
     z-index: 2;
-    -webkit-animation: spaceship-fly 5s 2s ease-in-out 1;
+    animation: spaceship-fly 5s 2s ease-in-out 1;
 }
 
 #shooting-star {

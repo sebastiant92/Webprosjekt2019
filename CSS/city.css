@@ -34,7 +34,7 @@ body {
         0 0 2.5px 1.5px #ffffff, 
         0 0 3.5px 2.5px #ffffff; 
     
-    -webkit-animation: zoom-stars 5s 3s ease-in forwards;
+    animation: zoom-stars 5s 3s ease-in forwards;
 }
 
 @keyframes zoom-stars{
@@ -367,6 +367,19 @@ body {
     z-index: 3;
 }
 /* colors windows */
+#window33{
+    background-color: #000000;
+}
+#window34{
+    background-color: #000000;
+}
+#window39{
+    background-color: #000000;
+}
+#window40{
+    background-color: #000000;
+}
+
 .purple{
     background-color: #444444;
 }
@@ -381,7 +394,7 @@ body {
 }
 
 .green:hover{
-    background-color: #444444;
+    background-color: #9d69a3;
     cursor: default;
 }
 
@@ -405,7 +418,7 @@ body {
     bottom: 150px;
     left: 700px;
     z-index: 3;
-    -webkit-animation: astrodog-dance 5s 5s infinite;
+    animation: astrodog-dance 5s 5s infinite;
 }
 
 #jetsons{
@@ -446,11 +459,29 @@ body {
     height: 100px;
     width: 100px;
     position: absolute;
-    bottom: 300px;;
-    left: 900px;;
+    bottom: 0px;
+    left: 100px;
     z-index: 3;
     animation-name: rocket-fly;
     animation-duration: 2s;
+}
+
+#antenna{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    bottom: 560px;
+    left: 860px;
+    z-index: 2;
+}
+
+#enter{
+    height: 50px;
+    width: 110px;
+    position: absolute;
+    bottom: 256px;
+    left: 1000px;
+    z-index: 3;
 }
 
 /* Link */
@@ -513,15 +544,17 @@ body {
 }
 
 @keyframes rocket-fly{
-    0%{left: 300px; bottom: 300px;}
-    10%{left: 350px; bottom: 350px;}
-    20%{left: 400px; bottom: 400px;}
-    30%{left: 450px; bottom: 450px;}
-    40%{left: 500px; bottom: 500px;}
-    50%{left: 550px; bottom: 550px;}
-    60%{left: 600px; bottom: 600px;}
-    70%{left: 650px; bottom: 650px;}
-    80%{left: 700px; bottom: 700px;}
-    90%{left: 750px; bottom: 750px;}
-    100%{left: 800px; bottom: 800px;}
+   /* 0%{left: 700px; bottom: 300px;}
+    10%{left: 550px; bottom: 500px;}
+    20%{left: 500px; bottom: 600px;}
+    30%{left: 450px; bottom: 650px;}
+    40%{left: 400px; bottom: 700px;}
+    50%{left: 350px; bottom: 750px;}
+    60%{left: 300px; bottom: 800px;}
+    70%{left: 250px; bottom: 850px;}
+    80%{left: 200px; bottom: 900px;}
+    90%{left: 150px; bottom: 950px;}
+    100%{left: 100px; bottom: 1000px;}*/
+    from{transform: translateY(10px);}
+    to{transform: translateY(-500px);}
 }
