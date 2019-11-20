@@ -37,28 +37,6 @@ body {
         0 0 5px 1px #ffffff, 
         0 0 3px 1px #ffffff; 
     z-index: 0;
-    -webkit-animation: zoomStars 5s ease-in forwards;
-}
-
-@keyframes zoom-stars{
-    100%{width: 2px; height: 2px;}
-}
-
-@keyframes star-blinking{
-    2.5%{
-        box-shadow:
-        0 0 4.5px 3px #ffffff, 
-        0 0 15px 3px #ffffff, 
-        0 0 30px 3px #ffffff; 
-    }
-    5%{    
-        width: 2px;
-        height: 2px;
-        box-shadow:
-        0 0 1.5px 1px #ffffff, 
-        0 0 2.5px 1.5px #ffffff, 
-        0 0 3.5px 2.5px #ffffff;  
-    }
 }
 
 #star-1{
@@ -201,8 +179,6 @@ body {
 .planet{
     position: absolute;
     border-radius: 100%;
-    -webkit-transition: transform 2s;
-    -webkit-animation: planet-tilt 3s linear both infinite;
 }
 
 #planet-cowboy{
@@ -216,10 +192,11 @@ body {
 }
 
 #planet-cowboy-structure{
-    width: 150px;
-    height: 70px;
+    width: 200px;
+    height: 100px;
     position: absolute;
     margin-bottom: 0px;
+    animation: planet-rotate 20s linear infinite;
 }
 
 #planet-slime{
@@ -239,12 +216,7 @@ body {
     margin-bottom: -50px;
     margin-right: 0px;
     opacity: 0.8;
-}
-
-@keyframes planet-tilt {
-    0%, 50%, 100% {transform: rotate(0deg);}
-    25% {transform: rotate(4deg);}
-    75% {transform: rotate(-4deg);}
+    animation: planet-rotate 20s linear infinite;
 }
 
 .link {
@@ -299,13 +271,6 @@ body {
     -webkit-animation: wave-move 4s ease-in-out infinite alternate-reverse;
 }
 
-/* Animation Waves */
-@keyframes wave-move {
-    0% {transform: translateX(0) translateY(0) scaleY(1;)}
-    0% {transform: translateX(-10%) translateY(0) scaleY(.5);}
-    0% {transform: translateX(10) translateY(0) scaleY(1);}
-}
-
 /* Beach Elements */
 #beach-ball {
     width: 100px;
@@ -314,18 +279,13 @@ body {
     margin-top: 530px;
     margin-left: 20px;
     z-index: 3;
-    -webkit-animation: ball-rolling 2.5s ease-in-out infinite paused;
+    -webkit-animation: ball-rolling 1s linear 1 forwards paused;
 }
 
-/* Beach ball hover(Start animation, rolls off)*/
-#beach-ball:hover {
+/* Beach ball active(Start animation, rolls off)*/
+#beach-ball:active {
     -webkit-animation-play-state: running;
 }
-
-@keyframes ball-rolling {
-     0% {transform: translate(0px, 0px) rotate(0deg);}
-    100% {transform: translate(-100px, 190px) rotate(-300deg);}
-} 
 
 #beach-tools {
     width: 140px;
@@ -373,11 +333,6 @@ body {
     animation: crab-move 6s ease-in-out alternate infinite;
 }
 
-@keyframes crab-move {
-    0% {transform: translateY(0);}
-    100% {transform: translateY(-170px);}
-}
-
 /* Fish related*/
 #fish {
     width: 100px;
@@ -406,15 +361,6 @@ body {
 
 .animation-swim {
     -webkit-animation: fish-swim 8s ease-in-out infinite alternate;
-}
-
-/* Fish Animation */
-@keyframes fish-swim {
-    0% {transform: translateX(-100%) translateY(20%);}
-    25% {transform: translateX(-90%) translateY(5%);}
-    50% {transform: translateX(-60%) translateY(20%);}
-    75% {transform: translateX(-30%) translateY(5%);}
-    100% {transform: translateX(-10%) translateY(20%);}
 }
 
 /* Sea decorations*/
@@ -453,17 +399,6 @@ body {
     -webkit-animation-name: seaplant-move2;
 }
 
-/* Seaplant Animation */
-@keyframes seaplant-move {
-    0%, 100% {transform: rotate(9deg);}
-    50% {transform: rotate(-9deg);}
-}
-
-@keyframes seaplant-move2 {
-    0%, 100% {transform: rotate(-6deg);}
-    50% {transform: rotate(6deg);}
-}
-
 /* Palm tree */
 #palm-root {
     width: 400px;
@@ -482,12 +417,6 @@ body {
     margin-left: -5px;
     z-index: 1;
     -webkit-animation: palm-move 3s infinite;
-}
-
-/* Palm tree animation */
-@keyframes palm-move {
-    0%, 100% {transform: rotate(3deg);}
-    50% {transform: rotate(0deg);}
 }
 
 #coconut {
@@ -511,17 +440,6 @@ body {
     z-index: 6;
 }
 
-/* Coconut animations */
-@keyframes coconut-fall {
-    0% {opacity: 0.9; margin-top: 250px;}
-    100% {opacity: 0; margin-top: 490px;}
-}
-
-@keyframes coconut-split {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
 /* Main Character */
 #main-character {
     width: 300px;
@@ -533,21 +451,6 @@ body {
     -webkit-animation: main-dance 4s 28.5s infinite;
 }
 
-/* Dance Animation */
-@keyframes main-dance {
-    0% {transform: translate(1px, 1px) rotate(0deg);}
-  10% {transform: translate(-1px, -2px) rotate(-1deg);}
-  20% {transform: translate(-3px, 0px) rotate(1deg);}
-  30% {transform: translate(3px, 2px) rotate(0deg);}
-  40% {transform: translate(1px, -1px) rotate(1deg);}
-  50% {transform: translate(-1px, 2px) rotate(-1deg);}
-  60% {transform: translate(-3px, 1px) rotate(0deg);}
-  70% {transform: translate(3px, 1px) rotate(-1deg);}
-  80% {transform: translate(-1px, -1px) rotate(1deg);}
-  90% {transform: translate(1px, 2px) rotate(0deg);}
-  100% {transform: translate(1px, -2px) rotate(-1deg);}
-}
-
 #thinking-bubble {
     width: 300px;
     height: 300px;
@@ -557,11 +460,6 @@ body {
     opacity: 0;
     z-index: 5;
     -webkit-animation: bubble-appear 10s 1s forwards;
-}
-
-@keyframes bubble-appear {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
 }
 
 #start-text {
@@ -614,11 +512,6 @@ body {
     -webkit-animation: text-animation 5s 1;
 }
 
-@keyframes text-animation {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
 /* Background animations */
 #spaceship {
     width: 200px;
@@ -631,16 +524,6 @@ body {
     -webkit-animation: spaceship-fly 5s 2s ease-in-out 1;
 }
 
-@keyframes spaceship-fly {
-    0% {transform: translate(500px, -30px) rotate(0deg);}
-    25% {transform: translate(-200px, -50px) rotate(-30deg);}
-    45% {transform: translate(-400px, -30px) rotate(20deg);}
-    50% {transform: translate(-600px, -50px) rotate(-10deg);}
-    75% {transform: translate(-800px, -80px) rotate(20deg);}
-    85% {transform: translate(-1000px, -50px) rotate(-30deg);}
-    100%{transform: translate(-1450px, -80px) rotate(40deg);}
-}
-
 #shooting-star {
     width: 200px;
     height: 200px;
@@ -650,6 +533,119 @@ body {
     opacity: 0.7;
     z-index: 0;
     animation: shootingstar-move 7s ease-in-out infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes star-blinking{
+    2.5%{
+        box-shadow:
+        0 0 4.5px 3px #ffffff, 
+        0 0 15px 3px #ffffff, 
+        0 0 30px 3px #ffffff; 
+    }
+    5%{    
+        width: 2px;
+        height: 2px;
+        box-shadow:
+        0 0 1.5px 1px #ffffff, 
+        0 0 2.5px 1.5px #ffffff, 
+        0 0 3.5px 2.5px #ffffff;  
+    }
+}
+
+@keyframes planet-rotate{
+    100% {transform: translateX(350px);}  
+}
+
+/* Animation Waves */
+@keyframes wave-move {
+    0% {transform: translateX(0) translateY(0) scaleY(1;)}
+    0% {transform: translateX(-10%) translateY(0) scaleY(.5);}
+    0% {transform: translateX(10) translateY(0) scaleY(1);}
+}
+
+/* Animation Ball */
+@keyframes ball-rolling {
+     0% {transform: translate(0px, 0px) rotate(0deg);}
+    100% {transform: translate(-100px, 190px) rotate(-300deg);}
+} 
+
+@keyframes crab-move {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-170px);}
+}
+
+/* Fish Animation */
+@keyframes fish-swim {
+    0% {transform: translateX(-100%) translateY(20%);}
+    25% {transform: translateX(-90%) translateY(5%);}
+    50% {transform: translateX(-60%) translateY(20%);}
+    75% {transform: translateX(-30%) translateY(5%);}
+    100% {transform: translateX(-10%) translateY(20%);}
+}
+
+/* Seaplant Animation */
+@keyframes seaplant-move {
+    0%, 100% {transform: rotate(9deg);}
+    50% {transform: rotate(-9deg);}
+}
+
+@keyframes seaplant-move2 {
+    0%, 100% {transform: rotate(-6deg);}
+    50% {transform: rotate(6deg);}
+}
+
+/* Palm tree animation */
+@keyframes palm-move {
+    0%, 100% {transform: rotate(3deg);}
+    50% {transform: rotate(0deg);}
+}
+
+/* Coconut animations */
+@keyframes coconut-fall {
+    0% {opacity: 0.9; margin-top: 250px;}
+    100% {opacity: 0; margin-top: 490px;}
+}
+
+@keyframes coconut-split {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Dance Animation */
+@keyframes main-dance {
+    0% {transform: translate(1px, 1px) rotate(0deg);}
+  10% {transform: translate(-1px, -2px) rotate(-1deg);}
+  20% {transform: translate(-3px, 0px) rotate(1deg);}
+  30% {transform: translate(3px, 2px) rotate(0deg);}
+  40% {transform: translate(1px, -1px) rotate(1deg);}
+  50% {transform: translate(-1px, 2px) rotate(-1deg);}
+  60% {transform: translate(-3px, 1px) rotate(0deg);}
+  70% {transform: translate(3px, 1px) rotate(-1deg);}
+  80% {transform: translate(-1px, -1px) rotate(1deg);}
+  90% {transform: translate(1px, 2px) rotate(0deg);}
+  100% {transform: translate(1px, -2px) rotate(-1deg);}
+}
+
+@keyframes bubble-appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes text-animation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes spaceship-fly {
+    0% {transform: translate(500px, -30px) rotate(0deg);}
+    25% {transform: translate(-200px, -50px) rotate(-30deg);}
+    45% {transform: translate(-400px, -30px) rotate(20deg);}
+    50% {transform: translate(-600px, -50px) rotate(-10deg);}
+    75% {transform: translate(-800px, -80px) rotate(20deg);}
+    85% {transform: translate(-1000px, -50px) rotate(-30deg);}
+    100%{transform: translate(-1450px, -80px) rotate(40deg);}
 }
 
 @keyframes shootingstar-move {
