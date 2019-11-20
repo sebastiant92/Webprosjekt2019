@@ -37,29 +37,58 @@ body {
     opacity: 0;
 }
 
-#chat-bubble-kenbeth {
+#chat-bubble-slime {
     top: 260px;
     left: 230px;
-    width: 350px;
-    height: 250px;
-    animation: chat-bubble-kenbeth 0.3s 6s linear forwards, chat-bubble-hovering 2s linear infinite;
+    width: 500px;
+    height: 300px;
+    animation: chat-bubble-kenbeth 0.3s 6s linear forwards;
+}
+
+#chat-bubble-kenbeth {
+    top: 150px;
+    left: 590px;
+    width: 500px;
+    height: 300px;
+    transform: scaleX(-1);
+    animation: chat-bubble-kenbeth 0.3s 8.5s linear forwards;
+}
+
+/* Script */
+#slime-script-1 {
+    /* First talk bubble */
+    width: 360px;
+    height: 200px;
+    top: 370px;
+    left: 250px;
+    animation: kenbeth-script-1 2.5s 6.7s linear;
 }
 
 #kenbeth-script-1 {
-    /* First talk bubble */
+    /* Second talk bubble */
     width: 300px;
     height: 200px;
-    top: 90px;
-    left: 500px;
-    animation: kenbeth-script-1 4.5s 1.5s linear, text-hovering-kenbeth 2s linear infinite;
+    top: 270px;
+    left: 710px;
+    animation: kenbeth-script-1 4.5s 9.2s linear;
 }
 
-#kenbeth-script-2 {
+#slime-script-2 {
+    /* Third talk bubble */
+    width: 360px;
+    height: 200px;
+    top: 370px;
+    left: 250px;
+    animation: kenbeth-script-1 4.5s 12.5s linear;
+}
+
+#professor-script-1 {
+    /* Fourth talk bubble */
     width: 300px;
     height: 200px;
-    top: 90px;
-    left: 500px;
-    animation: kenbeth-script-1 4.5s 6.5s linear forwards, text-hovering-kenbeth 2s linear infinite;
+    top: 170px;
+    left: 480px;
+    animation: kenbeth-script-1 4.5s 17s linear forwards;
 }
 
 /* Images */
@@ -193,6 +222,42 @@ body {
     bottom: 150px;
     z-index: 6;
     -webkit-animation: clone-walk 3s 3s ease-out forwards;
+}
+
+/* Alien UFO with professor */
+#ufo-alien {
+    width: 350px;
+    height: 220px;
+    position: absolute;
+    top: 70px;
+    left: 450px;
+    z-index: 2;
+}
+
+#ufo {
+    width: 200px;
+    height: 142px;
+    top: 50px;
+    left: 0px;
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+#alien {
+    width: 90px;
+    height: 150px;
+    top: 0px;
+    left: 135px;
+    position: absolute;
+}
+
+#marge {
+    width: 87px;
+    height: 180px;
+    top: 35px;
+    left: 225px;
+    position: absolute;
+    transform: rotate(-30deg);
 }
 
 @keyframes kenbeth-landing {
