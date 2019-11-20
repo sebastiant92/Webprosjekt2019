@@ -513,9 +513,15 @@ body {
 }
 
 @keyframes rocket-fly{
-    0%{left: 300px; bottom: 900px;}
-    25%{left: 400px; bottom: 1000px;}
-    50%{left: 500px; bottom: 1100px;}
-    75%{left: 600px; bottom: 1200px;}
-    100%{left: 700px; bottom: 1300px;}
+    0%{left: 300px; bottom: 300px;}
+    10%{left: 350px; bottom: 350px;}
+    20%{left: 400px; bottom: 400px;}
+    30%{left: 450px; bottom: 450px;}
+    40%{left: 500px; bottom: 500px;}
+    50%{left: 550px; bottom: 550px;}
+    60%{left: 600px; bottom: 600px;}
+    70%{left: 650px; bottom: 650px;}
+    80%{left: 700px; bottom: 700px;}
+    90%{left: 750px; bottom: 750px;}
+    100%{left: 800px; bottom: 800px;}
 }
