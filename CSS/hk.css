@@ -437,7 +437,7 @@ body {
     top: 0px;
     right: 20px;
     animation: 
-    hk-hovering 3.5s linear infinite;
+
 }
 
 #hk-welcome{
@@ -459,6 +459,7 @@ body {
     opacity: 0;
     
     animation: door-open 0.75s 5s linear 1,
+        door-open 0.75s 14s linear 1;
                 
 }
 
@@ -560,8 +561,14 @@ body {
     }
 }
 
-
-
-
-
-    animation: door-open 0.75s 5s linear 1,
+#kenbeth{
+    width: 110px;
+    height: 150px;
+    position: absolute;
+    top: 430px;
+    left: 290px;
+    opacity: 0;
+    
+    animation: principal-coming 3s 14s linear forwards,
+        
+}
