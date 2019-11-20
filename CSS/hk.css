@@ -313,7 +313,6 @@ body {
     width: 625px;
     height: 1000px;
     position: absolute;
-    z-index: 1;
     top: 0px;
     right: 20px;
     
@@ -335,10 +334,33 @@ body {
 
 #ufo-alien{
     width: 350px;
-    height: 220px;
+    height: 420px;
     position: absolute;
     top: 0px;
     left: -351px;
+    z-index: 1;
+    
+    animation: the-kidnapping 2s 5s ease-in-out forwards,
+                ufo-alien-leaving 2s 11s ease-in forwards;
+}
+
+@keyframes the-kidnapping{
+    100%{
+        top: 160px;
+        left: 730px;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes ufo-alien-leaving{
+    0%{
+       top: 160px;
+        left: 730px; 
+    }
+    100%{
+    top: 0px;
+    left: -375px;
+    }
 }
 
 #ufo{
@@ -358,7 +380,7 @@ body {
     position: absolute;
 }
 
-#marge{
+#marge-kidnapped{
     width: 87px;
     height: 180px;
     top: 35px;
@@ -366,19 +388,45 @@ body {
     position: absolute;
     transform: rotate(-30deg);
     opacity: 0;
+    
+    animation: marge-kidnapped-visible 1s 10s linear forwards;
+}
+
+@keyframes marge-kidnapped-visible{
+        0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 
+#green-fog{
+    width: 95px;
+    height: 0px; 
+    position: absolute;
+    top: 172px;
+    left: 90px;
+    background: #76f91f;
+    opacity: 0.6;
+    transform: rotate(-10deg);
+    
+    animation: green-fog-action 3s 8s ease forwards;
+}
 
-@keyframes ufo-alien-spying{
+@keyframes green-fog-action{
     0%{
-        left: -231px;
+        height: 0px;
     }
-    80%{
-        left: 0px;
+    33%{
+        height: 250px;
+    }
+    66%{
+        height: 250px;
     }
     100%{
-        left: -231px;
+        height: 0px;
     }
 }
 
@@ -398,7 +446,7 @@ body {
     position: absolute;
     left: 185px;
     top: 180px;
-    z-index: 2;
+    z-index: 1;
 }
 
 #doors{
@@ -406,14 +454,114 @@ body {
     height: 127px;
     position: absolute;
     top: 422px;
-    left: 229px;
-    z-index: 3;
+    left: 295px;
     background: #000000;
     opacity: 0;
+    
+    animation: door-open 0.75s 5s linear 1,
+                
+}
+
+@keyframes door-open{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#marge-ufo{
+    width: 150px;
+    height: 115;
+    position: absolute;
+    top: -116px;
+    left: -151px;
+    animation: marge-flying 4s 1s ease-out forwards;
+}
+    
+    @keyframes marge-flying{
+        90%{
+            top: 500px;
+            left: 700px;
+            transform: scale(2);
+            opacity: 1;
+        }
+        100%{
+            top: 500px;
+            left: 700px;
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+#marge{
+    width: 88px;
+    height: 180px;
+    position: absolute;
+    top: 430px;
+    left: 130px;
+    opacity: 0;
+    
+    animation: marge-appearing 3s 4.5s linear forwards,
+                marge-disappearing 1s 9s ease-out forwards;
+    
+}
+
+@keyframes marge-appearing{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        top: 420px;
+        left: 200px;
+    }
+}
+
+@keyframes marge-disappearing{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+#principal{
+    width: 69px;
+    height: 110px;
+    position: absolute;
+    top: 440px;
+    left: 290px;
+    opacity: 0;
+    
+    animation: principal-coming 3s 5s linear forwards,
+                principal-moving 1s 11s linear forwards;
+}
+
+@keyframes principal-coming{
+    10%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        top: 470px;
+        left: 310px;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes principal-moving{
+    100%{
+        left: 400px;
+    }
 }
 
 
 
 
 
-
+    animation: door-open 0.75s 5s linear 1,
