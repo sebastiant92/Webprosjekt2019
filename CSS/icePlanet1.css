@@ -14,7 +14,6 @@ body {
     margin: auto;
     height: 800px;
     width: 1278px;
-    /* background-color: #6698a5;*/
     background-image: linear-gradient(#0c0920, #6698a5);
     position: relative;
     overflow: hidden;
@@ -316,7 +315,8 @@ body {
     background-color: #FFFFFF;
     position: absolute;
     top: 75px;
-    left: 1300px;
+    left: 400px;
+    z-index: 1'';
     animation: snowball-rolling 1s linear 1 forwards paused;
 }
 
@@ -1019,10 +1019,12 @@ body {
 
 @keyframes snowball-rolling {
     0% {
-        transform: translate(75px, 1300px) rotate(0deg);
+        left: 1300px;
+        top: 75px;
     }
 
     100% {
-        transform: translate(900px, 800px) rotate(-300deg);
+        left: 1000px;
+        top: 800px;
     }
 }
