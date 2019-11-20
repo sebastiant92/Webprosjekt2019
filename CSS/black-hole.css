@@ -15,11 +15,11 @@ body {
     height: 800px;
     position: relative;
     margin: auto;
-    overflow: hidden;
+    
     background: linear-gradient(269deg,#00db4c, #d42ad5, #e49d25, #293a94, #eaf000, #2acc86);
     background-size: 1000% 1000%;
-    -webkit-animation: spacedistortion 3s ease infinite;
-    animation: spacedistortion 3s ease infinite;
+    -webkit-animation: spacedistortion 4s ease infinite;
+    animation: spacedistortion 4s ease infinite;
     z-index: 1;
 }
 
@@ -51,8 +51,9 @@ body {
     width: 200px;
     height: 200px;
     position: absolute;
-    margin-left: 1400px;
-    animation: satelite 7s 10s linear;
+    margin-left: 1150px;
+
+    animation: satelite 7s 0s linear;
     -webkit-animation: satelite 7s 10s linear;
     z-index: 5;  
     
@@ -65,6 +66,8 @@ body {
     margin-left: 20px;
     top: 150px;
     transform: rotate(-90deg);
+    animation: rocket 5s 0s linear ease-in-out;
+    -webkit-animation: rocket 5s 0s linear;
     z-index: 6;
 }
 
@@ -127,25 +130,29 @@ body {
 @keyframes satelite {
     
     0% {
-        margin-left: 1400px;
-        transform: rotate(0deg);
+        transform: scale(0) rotate(45deg);
+        left:450px;
+        top:40px;
     }
     25% {
-        margin-left: 1050px;
-        transform: rotate(90deg);
+        transform: scale(1) rotate(90deg);
+        left: 550px;
+        top: 200px;
     }
     50% {
-        margin-left: 700px;
-        transform: rotate(180deg);
+        transform: scale(1) rotate(180deg)  ;
+        left: 700px;
+        top: 400px;
     }
     75% {
-        margin-left: 350px;
-        transform: rotate(270deg);
+        transform: scale(1) rotate(270deg)  ;
+        left: 900px;
+        top: 600px;
     }
     100% {
-        margin-left:0;
-        margin-top: 800px;
-        transform: rotate(365deg);
+        transform: scale(1) rotate(360deg)  ;
+        left: 900px;
+        top: 800px;
 
     }
 }
@@ -197,7 +204,7 @@ body {
 @keyframes bubble-1 {
     0% {
         transform: scale(0) rotate(0deg);
-        left: 650px;
+        left: 650px; 
         top: 140px;
     }
     100% {
@@ -260,19 +267,22 @@ body {
 }
 
 @keyframes rocket{
-   0%{
-     transform: scale(-4);
-     left:650px;
-     top:150px;
+    0%{
+        transform: scale(0) rotate(-150deg);
+        left:450px;
+        top:40px;
     }
-    {
+    50%{
+        transform: scale(1) rotate(-140);
+        left: 300px;
+        top: 100px;
+    }
+    100%{
+        transform: scale(1) rotate(-90deg)  ;
+        left: 25px;
+        top: 150px;
 
     }
-    {
-
-    }
-    {
-
-    }
+    
 }
 
