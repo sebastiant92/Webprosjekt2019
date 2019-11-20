@@ -56,7 +56,7 @@ body {
     left: 600px;
     top: -400px;
     z-index: 7;
-    animation: kenbeth 7s 2s forwards ease-in-out;
+    animation: kenbeth 7s 4s forwards ease-in-out;
     
 }
 
@@ -67,16 +67,52 @@ body {
     position: absolute;
     margin-left: 400px;
     top: 800px;
-    animation: satelite 7s 5s linear;
+    animation: satelite 7s 15s linear;
     z-index: 5;  
     
 }
+
+#ufo-alien{
+    width: 350px;
+    height: 220px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#ufo{
+    width: 200px;
+    height: 142px;
+    top: 50px;
+    left: 0px;
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+#alien{
+    width: 90px;
+    height: 150px;
+    top: 0px;
+    left: 135px;
+    position: absolute;
+}
+
+#marge{
+    width: 87px;
+    height: 180px;
+    top: 35px;
+    left: 225px;
+    position: absolute;
+    transform: rotate(-30deg);
+}
+
+
 
 #rocket{
     position: absolute;
     width: 300px;
     height: 300px;
-    margin-left: 20px;
+    left: 20px;
     top: 150px;
     transform: rotate(-90deg);
     animation: rocket 5s 0s ease-in-out forwards;
@@ -84,31 +120,31 @@ body {
 }
 
 #background-slime-1 {
-    animation: bubble-1 5s 1s ease-in ;
+    animation: bubble-1 5s 6s ease-in infinite ;
     
     
 }
 
 #background-slime-2 {
-    animation: bubble-2 5s 4s ease-in ;
+    animation: bubble-2 5s 6s ease-in infinite;
     
     
 }
 
 #background-slime-3 {
-    animation: bubble-3 5s 6s ease-in ;
+    animation: bubble-3 5s 7s ease-in infinite;
     
    
 }
 
 #background-slime-4 {
-    animation: bubble-4 5s 6s ease-in ;
+    animation: bubble-4 5s 8s ease-in infinite;
     
     
 }
 
 #background-slime-5 {
-    animation: bubble-5 5s 8s ease-in ;
+    animation: bubble-5 5s 9s ease-in infinite;
     
     
 }
