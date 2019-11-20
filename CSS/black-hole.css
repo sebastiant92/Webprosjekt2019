@@ -15,35 +15,49 @@ body {
     height: 800px;
     position: relative;
     margin: auto;
-    
     background: linear-gradient(269deg,#00db4c, #d42ad5, #e49d25, #293a94, #eaf000, #2acc86);
     background-size: 1000% 1000%;
-    -webkit-animation: spacedistortion 4s ease infinite;
     animation: spacedistortion 4s ease infinite;
+    overflow: hidden;
     z-index: 1;
 }
 
 
-#slime-planet{
+#planet-slime{
+    width: 120px;
+    height: 120px;
+    background-image: radial-gradient(#ddf45b, #32bc35);
+    margin-top: 90px;
+    margin-left: 580px;
+    overflow: hidden;
     position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 60px;
-    left: 539px;
     z-index: 4;
+    
+    
+}
 
+#planet-slime-structure{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    opacity: 0.8;
+    margin-left: -200px;
+    margin-bottom: 50px;
+    transform: rotate(40deg);
+    z-index: 5;
+    animation: planet-rotate 9s linear infinite;
+    
 }
 
 #kenbeth {
     position: absolute;
     width: 400px;
     height: 400px;
-    transform: scalex(-1);
-    margin-left: 900px;
-    margin-top: 500px;
+    left: 600px;
+    top: -400px;
     z-index: 7;
-    animation: kenbeth 7s 6s linear;
-    -webkit-animation: kenbeth 7s 6s linear;
+    animation: kenbeth 7s 2s forwards ease-in-out;
+    
 }
 
 
@@ -51,10 +65,9 @@ body {
     width: 200px;
     height: 200px;
     position: absolute;
-    margin-left: 1150px;
-
-    animation: satelite 7s 0s linear;
-    -webkit-animation: satelite 7s 10s linear;
+    margin-left: 400px;
+    top: 800px;
+    animation: satelite 7s 5s linear;
     z-index: 5;  
     
 }
@@ -66,38 +79,37 @@ body {
     margin-left: 20px;
     top: 150px;
     transform: rotate(-90deg);
-    animation: rocket 5s 0s linear ease-in-out;
-    -webkit-animation: rocket 5s 0s linear;
+    animation: rocket 5s 0s ease-in-out forwards;
     z-index: 6;
 }
 
 #background-slime-1 {
     animation: bubble-1 5s 1s ease-in ;
-    -webkit-animation: bubble-1 5s 1s ease-in;
+    
     
 }
 
 #background-slime-2 {
     animation: bubble-2 5s 4s ease-in ;
-    -webkit-animation: bubble-2 5s 4s ;
+    
     
 }
 
 #background-slime-3 {
     animation: bubble-3 5s 6s ease-in ;
-    -webkit-animation: bubble-3 5s 6s ;
+    
    
 }
 
 #background-slime-4 {
     animation: bubble-4 5s 6s ease-in ;
-    -webkit-animation: bubble-4 5s 6s ;
+    
     
 }
 
 #background-slime-5 {
     animation: bubble-5 5s 8s ease-in ;
-    -webkit-animation: bubble-5 5s 8s ;
+    
     
 }
 
@@ -125,33 +137,38 @@ body {
     border-radius: 75%;
 }
 
+.planet{
+    position: absolute;
+    border-radius: 100%; 
+}
 
-/* animation for the satelite's rotation and trajectory through the screen, må endres */
+
+/* animation for the satelite's rotation and trajectory through the screen */
 @keyframes satelite {
     
     0% {
-        transform: scale(0) rotate(45deg);
-        left:450px;
+        transform: scale(0) rotate(60deg);
+        left:150px;
         top:40px;
     }
     25% {
-        transform: scale(1) rotate(90deg);
-        left: 550px;
+        transform: scale(0.3) rotate(90deg);
+        left: 100px;
         top: 200px;
     }
     50% {
-        transform: scale(1) rotate(180deg)  ;
-        left: 700px;
+        transform: scale(0.5) rotate(180deg)  ;
+        left: 100px;
         top: 400px;
     }
     75% {
-        transform: scale(1) rotate(270deg)  ;
-        left: 900px;
+        transform: scale(0.6) rotate(270deg)  ;
+        left: 100px;
         top: 600px;
     }
     100% {
-        transform: scale(1) rotate(360deg)  ;
-        left: 900px;
+        transform: scale(0.8) rotate(360deg)  ;
+        left: 100px;
         top: 800px;
 
     }
@@ -159,33 +176,25 @@ body {
 
 /* Animation for Kenbeth(the man flying on a cow) */
 @keyframes kenbeth {
-    
     0% {
-        margin-left: 900px;
-        margin-top: 500px;
-        transform: rotate(15deg) scaleX(-1);
-        
-    }
-    25% {
-        margin-left: 450px;
-        margin-top: 400px;
-        transform: scaleX(-1);
+        transform: scale(0) scaleX(-1) rotate(180deg);
+        left: 450px;
+        top: 40px;
     }
     50% {
-        margin-left: 200px;
-        margin-top: 350px;
-        
+        transform: scale(0.6) scaleX(-1);
+        left: 550px;
+        top: 250px;
     }
-    75% {
-        margin-left: 400px;
-        margin-top: 300px
-        
-    }
+    
     100% {
-        margin-left:800;
-        margin-top: 250px;
-        transform: rotate(-15deg);
+        transform: scale(0.9) scaleX(-1) rotate(360deg)  ;
+        left: 700px;
+        top: 300px
+
     }
+    
+    
 }
 
 /*  Backgroundanimation with all the distorted colors */
@@ -266,22 +275,30 @@ body {
     }
 }
 
-@keyframes rocket{
+/* animation for the rocket´s trajectory into the black hole */
+@keyframes rocket {
     0%{
-        transform: scale(0) rotate(-150deg);
+        transform: scale(0) rotate(-130deg);
         left:450px;
         top:40px;
     }
     50%{
-        transform: scale(1) rotate(-140);
-        left: 300px;
-        top: 100px;
+        transform: scale(0.5) rotate(-140);
+        left: 250px;
+        top: 110px;
     }
     100%{
-        transform: scale(1) rotate(-90deg)  ;
-        left: 25px;
-        top: 150px;
+        transform: scale(1) rotate(-90deg);
+        left: 75px;
+        top: 160px;
+    }
+    
+}
 
+/* animation for context animation on the slimeplanet */
+@keyframes planet-rotate{
+    100%{
+        transform: translateX(350px);
     }
     
 }
