@@ -372,16 +372,6 @@ body {
     animation-delay: 5s;*/
 }
 
-#chatbubble {
-    color: white;
-    font-size: 20px;
-    visibility: hidden;
-}
-
-#kenbeth:hover > #chatbubble {
-    visibility: visible;
-}
-
 #kenbeth-on-cow {
     position: absolute;
     width: 300px;
@@ -469,7 +459,7 @@ body {
     font-size: 20px;
     color: white;
     padding: 10px;
-    top: 505px;
+    top: 517px;
     left: 100px;
     transform: skew(4deg);
     opacity: 1;
