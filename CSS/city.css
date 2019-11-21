@@ -221,7 +221,6 @@ body {
     left: -200px;
     top: 20px;
     transform: rotate(-40deg);
-    
     animation: planet-rotate 15s linear infinite;
 }
 
@@ -243,7 +242,6 @@ body {
     bottom: 0px;
     left: -280px;
     transform: rotate(-15deg);
-    
     animation: planet-rotate 10s linear infinite;
 }
 
@@ -265,7 +263,6 @@ body {
     left: -200px;
     bottom: 50px;
     transform: rotate(40deg);
-    
     animation: planet-rotate 9s linear infinite;
 }
 
@@ -341,13 +338,13 @@ body {
 .texture{
     border-radius: 50%;
     position: absolute;
-    background-color: darkgray;
-    border: 4px solid gray;
+    background-color: #a9a9a9;
+    border: 5px solid #808080;
     z-index: 2;
     transform: scale(1);
 }
 
-/* Buildings */
+/* Building */
 #Citybuilding{
     width: 300px;
     height: 400px;
@@ -389,7 +386,6 @@ body {
 
 .purple:hover{
     background-color:  #9d69a3;
-    cursor: default;
 }
 
 .green{
@@ -398,7 +394,6 @@ body {
 
 .green:hover{
     background-color: #9d69a3;
-    cursor: default;
 }
 
 /* Characters */
@@ -434,7 +429,7 @@ body {
     z-index: 1;
     animation-name: jetson-fly;
     animation-duration: 10s;
-    animation-delay: 4s;
+    animation-delay: 8s;
 }
 
 #towelie{
@@ -456,7 +451,7 @@ body {
     left: 1020px;
     z-index: 2;
     animation-name: squanchy-travel;
-    animation-duration: 18s;
+    animation-duration: 10s;
 }
 
 #rocket{
@@ -466,7 +461,7 @@ body {
     top: 400px;
     left: -100px;
     z-index: 1;
-    animation: rocket-fly 2s 15s ease-in-out;
+    animation: rocket-fly 3s 20s ease-in-out;
     overflow: hidden;
 }
 
@@ -478,9 +473,8 @@ body {
     left: 860px;
     z-index: 2;
     animation: antenna-travel 2s ease-in-out forwards;
-    animation-delay: 6s;
+    animation-delay: 10s;
     overflow: hidden;
-    
 }
 
 #enter{
@@ -495,12 +489,10 @@ body {
 /* Chat bubble text */
 .text{
     position: absolute;
-    z-index: ;
     opacity: 1;
     text-align: center;
     font-family: Arial;
     font-size: 20px;
-    animation: ;
 }
 
 #chat-bubble1{
@@ -538,13 +530,13 @@ body {
     opacity: 1;
     animation-name: towelie-text;
     animation-duration: 10s;
-    animation-delay: 10s forwards;
+    animation-delay: 20s forwards;
 }
 
 #ken-text{
     height: 20px;
     width: 200px;
-    bottom: 530px;
+    bottom: 540px;
     left: 340px;
     z-index: 5;
     animation-name: ken-text;
@@ -569,7 +561,7 @@ body {
     z-index: 5;
     animation-name: towelie-text;
     animation-duration: 10s;
-    animation-delay: 10s forwards ;
+    animation-delay: 20s forwards ;
 }
 
 /* Link */
@@ -596,9 +588,7 @@ body {
 }
 
 @keyframes planet-rotate{
-    100%{
-        transform: translateX(350px);
-    }
+    100%{transform: translateX(350px);}
 }
 @keyframes antenna-travel{
     0%{left: 800px;}
@@ -637,15 +627,13 @@ body {
 }
 
 @keyframes rocket-fly{
-    100%{
-        top: -100px;
+    100%{top: -100px;
         right: 1100px;
-        left: 1200px;
-    }
+        left: 1200px;}
 }
 
 @keyframes astrodog-dance{
-    0% {transform: translate(1px, 1px) rotate(0deg);}
+   0% {transform: translate(1px, 1px) rotate(0deg);}
   10% {transform: translate(-1px, -2px) rotate(-1deg);}
   20% {transform: translate(-3px, 0px) rotate(1deg);}
   30% {transform: translate(3px, 2px) rotate(0deg);}
@@ -657,15 +645,3 @@ body {
   90% {transform: translate(1px, 2px) rotate(0deg);}
   100% {transform: translate(1px, -2px) rotate(-1deg);}
 }
-
-@keyframes chat-bubble1{
-    0%{opacity: 1;}
-    100%{opacity: 1;}
-}
-
-@keyframes chat-bubble-ken{
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-
-
