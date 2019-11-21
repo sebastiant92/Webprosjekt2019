@@ -26,19 +26,6 @@ body {
     top: 0px;
 }
 
-.stars{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border-radius: 100%;
-    background-color: #ffffff;
-    box-shadow:
-        0 0 5px 1px #ffffff, 
-        0 0 5px 1px #ffffff, 
-        0 0 3px 1px #ffffff; 
-    z-index: 0;
-}
-
 #star-1{
     top: 50px;
     left: 50px;
@@ -173,6 +160,19 @@ body {
 #star-26{
     top: 720px;
     left: 700px;
+}
+
+.stars{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    box-shadow:
+        0 0 5px 1px #ffffff, 
+        0 0 5px 1px #ffffff, 
+        0 0 3px 1px #ffffff; 
+    z-index: 0;
 }
 
 /* Planetene */
