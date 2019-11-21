@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #111111;
 }
 
 /*  ID's */
@@ -15,15 +15,33 @@ body {
     height: 800px;
     position: relative;
     margin: auto;
-    background: linear-gradient(269deg,#00db4c, #d42ad5, #e49d25, #293a94, #eaf000, #2acc86);
+    background: linear-gradient(269deg, #00db4c, #d42ad5, #e49d25, #293a94, #eaf000, #2acc86);
     background-size: 1000% 1000%;
     animation: spacedistortion 4s ease infinite;
     overflow: hidden;
     z-index: 1;
 }
 
+/* Black hole circle */
+.box1 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 40px;
+    left: 514px;
+    background-color: #0c0920;
+    z-index: 2;
+    border-radius: 75%;
+}
 
-#planet-slime{
+/* Planet */
+
+.planet {
+    position: absolute;
+    border-radius: 100%;
+}
+
+#planet-slime {
     width: 120px;
     height: 120px;
     background-image: radial-gradient(#ddf45b, #32bc35);
@@ -32,11 +50,9 @@ body {
     overflow: hidden;
     position: absolute;
     z-index: 4;
-    
-    
 }
 
-#planet-slime-structure{
+#planet-slime-structure {
     width: 200px;
     height: 50px;
     position: absolute;
@@ -46,9 +62,62 @@ body {
     transform: rotate(40deg);
     z-index: 5;
     animation: planet-rotate 9s linear infinite;
-    
 }
 
+/* Chatbubbles */
+#chat-bubble-div-1 {
+    position: relative;
+    top: 330px;
+    left: 600px;
+    animation: chat-bubble-move 3s 11s;
+    z-index: 6;
+    transform: scale(0.8) rotate(20deg);
+    opacity: 0;
+}
+
+#chat-bubble-div-1 p {
+    position: absolute;
+    font-family: Arial;
+    font-size: 24px;
+    width: 200px;
+    left: 45px;
+    text-align: center;
+    top: 55px;
+    z-index: 2;
+}
+
+#bubble-1 {
+    position: absolute;
+    transform: scaleX(-1);
+}
+
+#chat-bubble-div-2 {
+    position: relative;
+    top: 200px;
+    left: -70px;
+    animation: chat-bubble-move-2 3s 14s forwards;
+    z-index: 6;
+    transform: scale(0.8) rotate(-20deg);
+    opacity: 0;
+}
+
+#chat-bubble-div-2 p {
+    position: absolute;
+    font-family: Arial;
+    font-size: 24px;
+    width: 200px;
+    left: 50px;
+    text-align: center;
+    top: 120px;
+    z-index: 2;
+}
+
+#bubble-2 {
+    position: absolute;
+    transform: scaleY(-1) scaleX(-1);
+}
+
+/* Characters / Objects */
 #kenbeth {
     position: absolute;
     width: 400px;
@@ -57,9 +126,7 @@ body {
     top: -400px;
     z-index: 7;
     animation: kenbeth 7s 4s forwards ease-in-out;
-    
 }
-
 
 #satelite {
     width: 200px;
@@ -68,11 +135,10 @@ body {
     margin-left: 400px;
     top: 800px;
     animation: satelite 7s 15s linear;
-    z-index: 5;  
-    
+    z-index: 5;
 }
 
-#ufo-alien{
+#ufo-alien {
     width: 350px;
     height: 220px;
     position: absolute;
@@ -80,16 +146,16 @@ body {
     left: 0px;
 }
 
-#ufo{
+#ufo {
     width: 200px;
     height: 142px;
     top: 50px;
     left: 0px;
     position: absolute;
-    transform: rotate(-20deg) ;
+    transform: rotate(-20deg);
 }
 
-#alien{
+#alien {
     width: 90px;
     height: 150px;
     top: 0px;
@@ -97,7 +163,7 @@ body {
     position: absolute;
 }
 
-#marge{
+#marge {
     width: 87px;
     height: 180px;
     top: 35px;
@@ -106,44 +172,14 @@ body {
     transform: rotate(-30deg);
 }
 
-#ufo-alien{
+#ufo-alien {
     animation: ufo-alien 5s 0s linear forwards;
     z-index: 6;
     position: absolute;
-
 }
 
-#background-slime-1 {
-    animation: bubble-1 5s 6s ease-in infinite ;
-    
-    
-}
+/* Background-elements */
 
-#background-slime-2 {
-    animation: bubble-2 5s 6s ease-in infinite;
-    
-    
-}
-
-#background-slime-3 {
-    animation: bubble-3 5s 7s ease-in infinite;
-    
-   
-}
-
-#background-slime-4 {
-    animation: bubble-4 5s 8s ease-in infinite;
-    
-    
-}
-
-#background-slime-5 {
-    animation: bubble-5 5s 9s ease-in infinite;
-    
-    
-}
-
-/* Classes */
 .background-slime {
     position: absolute;
     width: 10px;
@@ -156,51 +192,53 @@ body {
     z-index: 3;
 }
 
-.box1{
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    top: 40px;
-    left: 514px;
-    background-color: black;
-    z-index: 2;
-    border-radius: 75%;
+#background-slime-1 {
+    animation: bubble-1 5s 6s ease-in infinite;
 }
 
-.planet{
-    position: absolute;
-    border-radius: 100%; 
+#background-slime-2 {
+    animation: bubble-2 5s 6s ease-in infinite;
 }
 
+#background-slime-3 {
+    animation: bubble-3 5s 7s ease-in infinite;
+}
+
+#background-slime-4 {
+    animation: bubble-4 5s 8s ease-in infinite;
+}
+
+#background-slime-5 {
+    animation: bubble-5 5s 9s ease-in infinite;
+}
 
 /* animation for the satelite's rotation and trajectory through the screen */
 @keyframes satelite {
-    
     0% {
         transform: scale(0) rotate(60deg);
-        left:150px;
-        top:40px;
+        left: 150px;
+        top: 40px;
     }
     25% {
         transform: scale(0.3) rotate(90deg);
         left: 100px;
         top: 200px;
     }
-    
+
     50% {
-        transform: scale(0.5) rotate(180deg)  ;
+        transform: scale(0.5) rotate(180deg);
         left: 100px;
         top: 400px;
     }
 
     75% {
-        transform: scale(0.6) rotate(270deg)  ;
+        transform: scale(0.6) rotate(270deg);
         left: 100px;
         top: 600px;
     }
 
     100% {
-        transform: scale(0.8) rotate(360deg)  ;
+        transform: scale(0.8) rotate(360deg);
         left: 100px;
         top: 800px;
     }
@@ -219,33 +257,43 @@ body {
         left: 550px;
         top: 250px;
     }
-    
+
     100% {
-        transform: scale(0.9) scaleX(-1) rotate(360deg)  ;
+        transform: scale(0.9) scaleX(-1) rotate(360deg);
         left: 700px;
-        top: 300px
+        top: 300px;
     }
-    
-    
 }
 
 /*  Background animation with all the distorted colors */
 @-webkit-keyframes spacedistortion {
-    0%{background-position:0% 52%}
-    50%{background-position:100% 49%}
-    100%{background-position:0% 52%}
+    0% {
+        background-position: 0% 52%;
+    }
+    50% {
+        background-position: 100% 49%;
+    }
+    100% {
+        background-position: 0% 52%;
+    }
 }
 @keyframes spacedistortion {
-    0%{background-position:0% 52%}
-    50%{background-position:100% 49%}
-    100%{background-position:0% 52%}
+    0% {
+        background-position: 0% 52%;
+    }
+    50% {
+        background-position: 100% 49%;
+    }
+    100% {
+        background-position: 0% 52%;
+    }
 }
 
 /* Animation for the slimes trajectory */
 @keyframes bubble-1 {
     0% {
         transform: scale(0) rotate(0deg);
-        left: 650px; 
+        left: 650px;
         top: 140px;
     }
 
@@ -314,31 +362,56 @@ body {
 
 /* animation for the ufo´s trajectory from the black hole */
 @keyframes ufo-alien {
-    0%{
+    0% {
         transform: scale(0) rotate(45deg);
-        left:450px;
-        top:40px;
+        left: 450px;
+        top: 40px;
     }
-    
-    50%{
+
+    50% {
         transform: scale(0.5) rotate(180deg);
         left: 250px;
         top: 110px;
     }
-    
-    100%{
+
+    100% {
         transform: scale(1) rotate(360deg);
         left: 75px;
         top: 160px;
     }
-    
 }
 
 /* animation for context animation on the slimeplanet */
-@keyframes planet-rotate{
-    100%{
+@keyframes planet-rotate {
+    100% {
         transform: translateX(350px);
     }
-    
 }
 
+/* chat bubble movements */
+@keyframes chat-bubble-move {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes chat-bubble-move-2 {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}

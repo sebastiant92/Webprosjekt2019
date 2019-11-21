@@ -19,11 +19,26 @@ body {
     margin-top: 50px;
 }
 
-/* Stars */
-#stars-container{
-    animation: zoomStarContainer 5s ease-out forwards;
+/* Links */
+.link {
+    width: 200px;
+    height: 200px;
     position: absolute;
-    top: 0px;
+    z-index: 4;
+}
+
+/* Stars */
+.stars{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    box-shadow:
+        0 0 5px 1px #ffffff, 
+        0 0 5px 1px #ffffff, 
+        0 0 3px 1px #ffffff; 
+    z-index: 0;
 }
 
 #star-1{
@@ -162,19 +177,6 @@ body {
     left: 700px;
 }
 
-.stars{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border-radius: 100%;
-    background-color: #ffffff;
-    box-shadow:
-        0 0 5px 1px #ffffff, 
-        0 0 5px 1px #ffffff, 
-        0 0 3px 1px #ffffff; 
-    z-index: 0;
-}
-
 /* Planetene */
 .planet{
     position: absolute;
@@ -219,13 +221,6 @@ body {
     animation: planet-rotate 20s linear infinite;
 }
 
-.link {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    z-index: 4;
-}
-
 /* Sand */
 #main-land {
     width: 1450px;
@@ -240,6 +235,14 @@ body {
 }
 
 /* Waves 1-3 */
+.waves {
+    width: 1500px;
+    height: 300px;
+    position: absolute;
+    overflow: hidden;
+    animation: wave-move 4s ease-in-out infinite alternate-reverse;
+}
+
 #wave-0 {
     margin-top: 590px;
     margin-left: -36px;
@@ -263,14 +266,6 @@ body {
     animation-delay: 1.5s;
 }
 
-.waves {
-    width: 1500px;
-    height: 300px;
-    position: absolute;
-    overflow: hidden;
-    animation: wave-move 4s ease-in-out infinite alternate-reverse;
-}
-
 /* Beach Elements */
 #beach-ball {
     width: 100px;
@@ -278,7 +273,7 @@ body {
     position: absolute;
     margin-top: 530px;
     margin-left: 20px;
-    z-index: 3;
+    z-index: 7;
     animation: ball-rolling 1s linear 1 forwards paused;
 }
 
@@ -334,6 +329,10 @@ body {
 }
 
 /* Fish related*/
+.animation-swim {
+    animation: fish-swim 8s ease-in-out infinite alternate;
+}
+
 #fish {
     width: 100px;
     height: 100px;
@@ -357,10 +356,6 @@ body {
 /* Active on fish for text(Hint) */
 #fish:active ~#text-bubble {
     opacity: 1;
-}
-
-.animation-swim {
-    animation: fish-swim 8s ease-in-out infinite alternate;
 }
 
 /* Sea decorations*/
