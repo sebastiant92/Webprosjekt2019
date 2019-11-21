@@ -14,7 +14,7 @@ body {
     height: 800px;
     position: relative;
     margin: auto;
-    background-image: linear-gradient(#0c0920, #2e2857);
+    background-image: linear-gradient(#0c0920, #ffa987);
     overflow: hidden;
     margin-top: 50px;
 }
