@@ -2,8 +2,8 @@
 <html lang="eng">
   <head>
     <meta charset="UTF-8" />
-    <title>Milkyway</title>
-    <link href="CSS/milkyway.css" type="text/css" rel="stylesheet">
+    <title>Milkyway game</title>
+    <link href="CSS/milkyway-game.css" type="text/css" rel="stylesheet">
   </head>
   <body>
       <!-- Container -->
@@ -11,29 +11,13 @@
           <!-- Milkyway image -->
           <img id="milkyway" src="images/milkywaay.png" alt="Milkyway">
           
-          <!-- Kenbeth -->
+          <!-- Rocket in background -->
+          <img id="rocket" src="images/start-rocket.png">
+          
           <img id="kenbeth-fly" src="images/kenbeth_4.png" alt="Kenbeth flying">
+
+        <!-- Don't touch, game objects-->
           
-          <!-- Platform and everything on-->
-          <img id="platform" src="images/platform.png" alt="Platform">
-          
-          <img id="stop" src="images/stop.png" alt="Stop sign">
-          <a href="milkyway-game.html">
-          <img id="sign" src="images/arrow-sign.png" alt="Sign">
-          </a>
-          
-          <!-- Shooting star -->
-          <img id="shooting-star" src="images/shooting-star.png" alt="Shooting star">
-          
-          <!-- Thinking bubble + text -->
-          <img id="thinking-bubble"class ="bubbles" src="images/vacay-thinkingbubble.png" alt="Thinking bubble">
-          <img id="thinking-bubble2" class="bubbles" src="images/vacay-thinkingbubble.png" alt="Thinking bubble">
-          
-          <p id="start-text" class="texts"> Hei der! forsiktig på veien videre..</p>
-          <p id="del1-text" class="texts"> Treffer du tingene blir det konsekvenser!</p>
-          <p id="del2-text" class="texts"> Takk for tipset!</p>        
-          
-          <!-- Floating objects -->
           <img id="bicycle" class="floating-stuff" src="images/bicycle.png">
           
           <img id="satellite" class="floating-stuff" src="images/parabolic-antenna.png" alt="Satellite">
@@ -56,15 +40,14 @@
           
           <img id="backpack" class="floating-stuff" src="images/backpack.png" alt="Backpack">
           
-          <!-- planets -->
+          <!-- Warning if you fail -->
+          <img id="warning" src="images/warning-bubble.png" alt="Warning bubble">
+          
+          <!-- Goal, link to next planet -->
           <div id="planet-vacay">
+              <a id="link" href="vacay-planet.html"></a>
               <img id="planet-vacay-structure" src="images/start-planet-vacay.png">
           </div>
-          
-          <div id="planet-city">
-                <img id="planet-city-structure" src="images/start-planet-city.png">
-          </div>
-          
       </div>      
 </body>
 </html>
