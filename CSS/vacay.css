@@ -188,7 +188,7 @@ body {
     margin-top: 100px;
     margin-left: 750px;
     overflow: hidden;
-    z-index: 3;
+    z-index: 4;
 }
 
 #planet-cowboy-structure{
@@ -415,7 +415,7 @@ body {
     position: absolute;
     margin-top: 120px;
     margin-left: -5px;
-    z-index: 1;
+    z-index: 4;
     animation: palm-move 3s infinite;
 }
 
@@ -469,7 +469,7 @@ body {
 }
 
 #del1-text {
-    margin-top: 230px;
+    margin-top: 220px;
     z-index: 7;
     animation-delay: 7s;
 }
@@ -515,14 +515,14 @@ body {
 
 /* Background animations */
 #spaceship {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 100px;
     position: absolute;
     margin-top: 200px;
     margin-left: 1300px;
-    opacity: 0.4;
-    z-index: 2;
-    animation: spaceship-fly 5s 2s ease-in-out 1;
+    opacity: 0.6;
+    z-index: 3;
+    animation: spaceship-fly 5s 7s ease-in-out 1;
 }
 
 #shooting-star {

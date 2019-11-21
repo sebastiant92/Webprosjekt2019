@@ -243,6 +243,13 @@ body {
     
 }
 
+#planet-city:active{
+    transition: 1s;
+    transform: translateY(-20px);
+    background: linear-gradient(270deg, #00c5cc, #3285d3); 
+    
+}
+
 #planet-city-structure{
     width: 300px;
     height: 130px;
@@ -315,21 +322,8 @@ body {
     position: absolute;
     top: 0px;
     right: 20px;
-    
+    z-index: 1;
 
-}
-
-@keyframes hk-hovering{                                 
-    0%{
-        top: 0px;   
-    }
-    40%{
-        top: 30px;
-    }
-    100%{
-        top: 0px;
-
-    }
 }
 
 #ufo-alien{
@@ -340,8 +334,8 @@ body {
     left: -351px;
     z-index: 1;
     
-    animation: the-kidnapping 2s 5s ease-in-out forwards,
-                ufo-alien-leaving 2s 11s ease-in forwards;
+    animation: the-kidnapping 3s 7s ease-in-out forwards,
+                ufo-alien-leaving 4s 13s ease-in-out forwards;
 }
 
 @keyframes the-kidnapping{
@@ -389,7 +383,7 @@ body {
     transform: rotate(-30deg);
     opacity: 0;
     
-    animation: marge-kidnapped-visible 1s 10s linear forwards;
+    animation: marge-kidnapped-visible 1s 12.5s linear forwards;
 }
 
 @keyframes marge-kidnapped-visible{
@@ -412,7 +406,7 @@ body {
     opacity: 0.6;
     transform: rotate(-10deg);
     
-    animation: green-fog-action 3s 8s ease forwards;
+    animation: green-fog-action 3s 9.5s ease forwards;
 }
 
 @keyframes green-fog-action{
@@ -455,11 +449,12 @@ body {
     position: absolute;
     top: 422px;
     left: 295px;
+    z-index: 1;
     background: #000000;
     opacity: 0;
     
-    animation: door-open 0.75s 5s linear 1,
-        door-open 0.75s 14s linear 1;
+    animation: door-open 1.5s 5s linear 1,
+        door-open 1.25s 12.5s linear 1;
                 
 }
 
@@ -478,6 +473,7 @@ body {
     position: absolute;
     top: -116px;
     left: -151px;
+    z-index: 1;
     animation: marge-flying 4s 1s ease-out forwards;
 }
     
@@ -503,9 +499,10 @@ body {
     top: 430px;
     left: 130px;
     opacity: 0;
+    z-index: 1;
     
     animation: marge-appearing 3s 4.5s linear forwards,
-                marge-disappearing 1s 9s ease-out forwards;
+                marge-disappearing 1.5s 10s ease-out forwards;
     
 }
 
@@ -538,26 +535,17 @@ body {
     top: 440px;
     left: 290px;
     opacity: 0;
+    z-index: 2;
     
-    animation: principal-coming 3s 5s linear forwards,
+    animation: walking-door 3s 5s linear forwards,
                 principal-moving 1s 11s linear forwards;
 }
 
-@keyframes principal-coming{
-    10%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 1;
-        top: 470px;
-        left: 310px;
-        transform: scale(1.3);
-    }
-}
+
 
 @keyframes principal-moving{
     100%{
-        left: 400px;
+        left: 500px;
     }
 }
 
@@ -568,7 +556,163 @@ body {
     top: 430px;
     left: 290px;
     opacity: 0;
+    z-index: 2;
+    display: block;
+
     
-    animation: principal-coming 3s 14s linear forwards,
-        
+    animation: walking-door 1s 13s linear forwards,
+                walking-left 1.25s 14s ease-out forwards;
 }
+
+#spacecow{
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    z-index: 3;
+    top: 380px;
+    left: 700px;
+    opacity: 1;
+    
+    animation: cow-coming 1.5s ease-out paused;
+}
+
+@keyframes cow-coming{
+    1%{
+        transform: scaleX(-1);
+        opacity: 1;  
+    }
+    100%{
+        transform: scaleX(-1);
+        opacity: 1; 
+        left: -170px;
+    }
+}
+
+#spacecow-kenbeth{
+    width: 300px;
+    height: 225px;
+    position: absolute;
+    z-index: 0;
+    top: 420px;
+    left: -170px;
+    opacity: 0;
+    
+
+animation: cow-travel 2.5s 1.5s ease-in-out paused;
+}
+
+
+
+@keyframes cow-travel{
+    1%{
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+        transform: scaleX(-1);
+    }
+    100%{
+        top: 550px;
+        left: -650px;
+        z-index: 1;
+        opacity: 1;
+        transform: scaleX(-1);
+        transform: scale(0);
+    }
+}
+
+@keyframes walking-door{
+    10%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        top: 450px;
+        left: 310px;
+        transform: scale(1.3);
+    }
+}
+
+
+
+
+@keyframes walking-left{
+    100%{
+        top: 390px;
+        left: -50px;
+    }
+}
+
+.chat-bubbles{
+    width: 500px;
+    height: 370px;
+    position: absolute;
+    transform: scaleX(-1);
+    opacity: 0;
+    z-index: 1;
+    
+}
+
+#chat-bubble-principal{
+    top: 170px;
+    left: 100px;
+}
+
+#chat-bubble-kenbeth{
+    top: 110px;
+    left: -440px;
+}
+
+.texts{
+    opacity: 0;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    font-family: arial;
+    z-index: 1;
+}
+
+#text-principal{
+    top: 280px;
+    left: 260px;
+}
+
+#text-kenbeth{
+    top: 220px;
+    left: -275px;
+}
+
+#principal:hover ~ #chat-bubble-principal, #principal:hover ~ #text-principal{
+    opacity: 1;
+}
+
+#kenbeth:hover ~ #chat-bubble-kenbeth, #kenbeth:hover ~ #text-kenbeth{
+    opacity: 1;
+}
+
+#kenbeth:active ~ #spacecow, #kenbeth:active ~ #spacecow-kenbeth{
+       animation-play-state: running; 
+}
+
+
+#kenbeth:active{
+    transition: 1.5s;
+    visibility: hidden;
+
+}
+
+#kenbeth:after{
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+

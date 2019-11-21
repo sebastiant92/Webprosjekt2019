@@ -15,7 +15,7 @@ body {
     top: 50px;
     position: relative;
     margin: auto;
-    background-color: #0c0920;
+    background: linear-gradient(#000000, #1c3a08);
     overflow: hidden;
     z-index: 0;
 }
@@ -42,7 +42,7 @@ body {
     left: 230px;
     width: 500px;
     height: 300px;
-    animation: chat-bubble-kenbeth 0.3s 6s linear forwards;
+    animation: chat-bubble-slime 16.5s 6s linear forwards;
 }
 
 #chat-bubble-kenbeth {
@@ -51,7 +51,15 @@ body {
     width: 500px;
     height: 300px;
     transform: scaleX(-1);
-    animation: chat-bubble-kenbeth 0.3s 8.5s linear forwards;
+    animation: chat-bubble-kenbeth 8s 8.5s linear forwards;
+}
+
+#chat-bubble-professor {
+    top: 90px;
+    left: 550px;
+    width: 400px;
+    height: 250px;
+    animation: chat-bubble-professor 2s 15s forwards;
 }
 
 /* Script */
@@ -70,7 +78,7 @@ body {
     height: 200px;
     top: 270px;
     left: 710px;
-    animation: kenbeth-script-1 4.5s 9.2s linear;
+    animation: kenbeth-script-1 3s 9.2s linear;
 }
 
 #slime-script-2 {
@@ -79,26 +87,37 @@ body {
     height: 200px;
     top: 370px;
     left: 250px;
-    animation: kenbeth-script-1 4.5s 12.5s linear;
+    animation: kenbeth-script-1 4s 12.5s linear;
 }
 
 #professor-script-1 {
     /* Fourth talk bubble */
     width: 300px;
     height: 200px;
-    top: 170px;
-    left: 480px;
-    animation: kenbeth-script-1 4.5s 17s linear forwards;
+    top: 190px;
+    left: 570px;
+    animation: kenbeth-script-1 2s 15s linear;
+    font-size: 25px;
+}
+
+#slime-script-3 {
+    /* Fifth talk bubble */
+    width: 360px;
+    height: 200px;
+    top: 370px;
+    left: 250px;
+    animation: kenbeth-script-1 0.3s 25.5s linear forwards;
 }
 
 /* Images */
 #exclamation-mark {
     position: absolute;
     width: 0px;
-    top: 510px;
-    right: 280px;
+    bottom: 460px;
+    right: 170px;
     z-index: 6;
-    animation: exclamation-mark 1.2s 2s linear ease-out;
+    transform: rotate(-10deg);
+    animation: exclamation-mark 1.2s 15.5s ease-out;
 }
 
 #slime-wall {
@@ -224,14 +243,25 @@ body {
     -webkit-animation: clone-walk 3s 3s ease-out forwards;
 }
 
+#cow-flying {
+    position: absolute;
+    width: 400px;
+    right: 50px;
+    top: -230px;
+    z-index: 7;
+    transform: scaleX(-1);
+    animation: cow-flying 2s 23.5s ease-out, cow-hovering 2s 25.5s linear infinite;
+}
+
 /* Alien UFO with professor */
 #ufo-alien {
     width: 350px;
     height: 220px;
     position: absolute;
-    top: 70px;
+    top: 300px;
     left: 450px;
     z-index: 2;
+    animation: ufo-alien 4s 16.5s ease-out, ufo-scale 3s 20.5s ease-in forwards;
 }
 
 #ufo {
@@ -654,6 +684,54 @@ body {
     }
 }
 
+/* Characters & npc */
+@keyframes ufo-alien {
+    0% {
+        top: 300px;
+        left: 450px;
+    }
+    100% {
+        top: 70px;
+        left: 450px;
+    }
+}
+
+@keyframes ufo-scale {
+    0% {
+        transform: scale(1);
+        top: 70px;
+        left: 450px;
+    }
+    100% {
+        transform: scale(0);
+        top: 90px;
+        left: 450px;
+    }
+}
+
+@keyframes cow-flying {
+    0% {
+        top: -230px;
+        right: 100px;
+    }
+    100% {
+        top: 100px;
+        right: 50px;
+    }
+}
+
+@keyframes cow-hovering {
+    0% {
+        top: 100px;
+    }
+    50% {
+        top: 110px;
+    }
+    100% {
+        top: 100px;
+    }
+}
+
 /* Chat bubbles */
 @keyframes kenbeth-script-1 {
     /* First talk bubble appear */
@@ -669,8 +747,83 @@ body {
     0% {
         opacity: 0;
     }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes chat-bubble-slime {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    65% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 0;
+    }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes chat-bubble-professor {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes exclamation-mark {
+    0% {
+        width: 0px;
+        bottom: 460px;
+        right: 200px;
+    }
+    50% {
+        width: 100px;
+        bottom: 460px;
+        right: 150px;
+    }
+    100% {
+        width: 0px;
+        bottom: 460px;
+        right: 200px;
     }
 }
 
