@@ -271,7 +271,8 @@ body {
     height: 90px;
     bottom: 165px;
     left: 690px;
-    background-color: #52528c;
+    background-image: url("/images/ingen-adgang.png");
+    background-size: 100% 100%;
 }
 
 /* Character & npc */
