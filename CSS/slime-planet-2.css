@@ -337,20 +337,7 @@ body {
     z-index: 4;
     transform: rotate(-55deg);
     animation: hand-up 2s linear 1 forwards,
-               hand-wave 2s 2s linear infinite;
-               
-}
-
-@keyframes hand-wave {
-    0%{transform: rotate(-55deg);}
-    25%{transform: rotate(-65deg);}
-    75%{transform: rotate(-40deg);}
-    100%{transform: rotate(-55deg);}
-}
-
-@keyframes hand-up {
-    0% {transform: rotate(20deg); top: 490px; opacity: 0;}
-    100% {transform: rotate(-55deg); top: 475px; opacity: 1;}
+               hand-wave 2s 2s linear infinite;          
 }
 
 /* Background elements */
@@ -442,6 +429,7 @@ body {
     z-index: 2;
 }
 
+/* Keyframes */
 @keyframes satellite-move {
     0% {
         top: 50px;
@@ -460,7 +448,6 @@ body {
     }
 }
 
-/* Keyframes */
 @keyframes black-hole-tilt {
     0% {
         transform: rotate(0deg);
@@ -651,4 +638,16 @@ body {
     100% {
         background-position: 0% 52%;
     }
+}
+
+@keyframes hand-wave {
+    0%{transform: rotate(-55deg);}
+    25%{transform: rotate(-65deg);}
+    75%{transform: rotate(-40deg);}
+    100%{transform: rotate(-55deg);}
+}
+
+@keyframes hand-up {
+    0% {transform: rotate(20deg); top: 490px; opacity: 0;}
+    100% {transform: rotate(-55deg); top: 475px; opacity: 1;}
 }
