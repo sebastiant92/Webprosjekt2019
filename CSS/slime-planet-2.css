@@ -352,6 +352,33 @@ body {
     background-size: 1000% 1000%;
 }
 
+#satellite {
+    position: absolute;
+    top: 300px;
+    left: -100px;
+    width: 100px;
+    animation: satellite-move 5s 5s linear forwards;
+    z-index: 2;
+}
+
+@keyframes satellite-move {
+    0% {
+        top: 50px;
+        left: -100px;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        top: 200px;
+        left: 400px;
+        transform: scale(0.6) rotate(90deg);
+    }
+    100% {
+        top: 220px;
+        left: 650px;
+        transform: scale(0) rotate(360deg);
+    }
+}
+
 /* Keyframes */
 @keyframes black-hole-tilt {
     0% {
