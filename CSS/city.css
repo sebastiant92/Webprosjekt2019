@@ -407,7 +407,7 @@ body {
     bottom: 10px;
     left: 10px;
     z-index: 3;
-    animation-name: ken-fly;
+    animation-name: ken-fly, ken-hovering;
     animation-duration: 3s;
     animation-delay: 0.1s;
 }
@@ -441,9 +441,9 @@ body {
     position: absolute;
     bottom: 20px;
     left: 360px;
-    z-index: 3;
-    animation-name: towelie-pop;
-    animation-duration: 4s;
+    z-index: 4;
+    cursor: pointer;
+    animation: towlie-pop 4s linear;
 }
 
 #squanchy {
@@ -530,7 +530,6 @@ body {
     left: 380px;
     position: absolute;
     z-index: 4;
-    opacity: 1;
     animation-name: towelie-text;
     animation-duration: 10s;
     animation-delay: 20s forwards;
@@ -590,12 +589,40 @@ body {
     transform: scale(1.3);
 }
 
+#ground-texture1:hover{
+    background-color: #243241;
+}
+
+#ground-texture6:hover{
+    background-color: #243241;
+}
+
+#ground-texture8:hover{
+    background-color: #243241;
+}
+
 #antenna:hover {
     transform: scale(1.3);
 }
 
 #astrodog:hover {
     animation-play-state: running;
+}
+
+/*#towelie:active ~ #towelie-text ~ #chat-bubble3 {
+    animation-play-state: running;
+}*/
+
+@keyframes ken-hovering{
+    0%{
+        bottom: 50px;
+    }
+    50%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: 10px;
+    }
 }
 
 @keyframes planet-rotate {
