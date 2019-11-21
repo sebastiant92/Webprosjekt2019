@@ -311,7 +311,7 @@ body {
     position: absolute;
     width: 400px;
     right: 50px;
-    top: -230px;
+    top: -430px;
     z-index: 7;
     transform: scaleX(-1);
     animation: cow-flying 2s 23.5s ease-out, cow-hovering 2s 25.5s linear infinite;
@@ -777,7 +777,7 @@ body {
 
 @keyframes cow-flying {
     0% {
-        top: -230px;
+        top: -430px;
         right: 100px;
     }
     100% {
