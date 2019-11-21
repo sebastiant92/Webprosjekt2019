@@ -268,6 +268,15 @@ body {
 }
 
 /* Ground texture and main planet */
+.texture {
+    border-radius: 50%;
+    position: absolute;
+    background-color: #a9a9a9;
+    border: 5px solid #808080;
+    z-index: 2;
+    transform: scale(1);
+}
+
 #main-box {
     width: 2000px;
     height: 900px;
@@ -335,14 +344,20 @@ body {
     bottom: 500px;
     left: 1100px;
 }
+.texture:hover {
+    transform: scale(1.3);
+}
 
-.texture {
-    border-radius: 50%;
-    position: absolute;
-    background-color: #a9a9a9;
-    border: 5px solid #808080;
-    z-index: 2;
-    transform: scale(1);
+#ground-texture1:hover{
+    background-color: #243241;
+}
+
+#ground-texture6:hover{
+    background-color: #243241;
+}
+
+#ground-texture8:hover{
+    background-color: #243241;
 }
 
 /* Building */
@@ -407,9 +422,7 @@ body {
     bottom: 10px;
     left: 10px;
     z-index: 3;
-    animation-name: ken-fly;
-    animation-duration: 3s;
-    animation-delay: 0.1s;
+    animation: ken-fly, ken-hovering, ken-text 3s 0.1s;
 }
 
 #astrodog {
@@ -421,6 +434,7 @@ body {
     z-index: 3;
     animation: astrodog-dance 5s 1s infinite;
     animation-play-state: paused;
+    cursor: pointer;
 }
 
 #jetsons {
@@ -430,9 +444,7 @@ body {
     bottom: 500px;
     left: -200px;
     z-index: 1;
-    animation-name: jetson-fly;
-    animation-duration: 10s;
-    animation-delay: 8s;
+    animation: jetson-fly 10s 8s;
 }
 
 #towelie {
@@ -441,9 +453,9 @@ body {
     position: absolute;
     bottom: 20px;
     left: 360px;
-    z-index: 3;
-    animation-name: towelie-pop;
-    animation-duration: 4s;
+    z-index: 4;
+    cursor: pointer;
+    animation: towlie-pop 4s linear;
 }
 
 #squanchy {
@@ -453,8 +465,7 @@ body {
     bottom: 200px;
     left: 1020px;
     z-index: 2;
-    animation-name: squanchy-travel;
-    animation-duration: 10s;
+    animation: squanchy-travel 10s;
 }
 
 #rocket {
@@ -475,8 +486,7 @@ body {
     bottom: 560px;
     left: 860px;
     z-index: 2;
-    animation: antenna-travel 2s ease-in-out forwards;
-    animation-delay: 10s;
+    animation: antenna-travel 2s 10s ease-in-out forwards;
     overflow: hidden;
 }
 
@@ -487,6 +497,14 @@ body {
     bottom: 256px;
     left: 1000px;
     z-index: 3;
+}
+
+#antenna:hover {
+    transform: scale(1.3);
+}
+
+#astrodog:hover {
+    animation-play-state: running;
 }
 
 /* Chat bubble text */
@@ -506,9 +524,7 @@ body {
     position: absolute;
     z-index: 4;
     opacity: 1;
-    animation-name: ken-text;
-    animation-duration: 3s;
-    animation-delay: 5s forwards;
+    animation: ken-text 3s 0.1s forwards;
 }
 
 #chat-bubble2 {
@@ -529,11 +545,9 @@ body {
     bottom: 10px;
     left: 380px;
     position: absolute;
-    z-index: 4;
     opacity: 1;
-    animation-name: towelie-text;
-    animation-duration: 10s;
-    animation-delay: 20s forwards;
+    z-index: 4;
+    animation: towelie-text 10s 20s forwards;
 }
 
 #ken-text {
@@ -542,9 +556,7 @@ body {
     bottom: 540px;
     left: 340px;
     z-index: 5;
-    animation-name: ken-text;
-    animation-duration: 3s;
-    animation-delay: 5s forwards;
+    animation: ken-text 3s 0.1s forwards;
 }
 
 #dog-text {
@@ -553,7 +565,6 @@ body {
     bottom: 433px;
     left: 610px;
     z-index: 5;
-
 }
 
 #towelie-text {
@@ -562,9 +573,8 @@ body {
     bottom: 260px;
     left: 450px;
     z-index: 5;
-    animation-name: towelie-text;
-    animation-duration: 10s;
-    animation-delay: 20s forwards;
+    opacity: 1;
+    animation: towelie-text 10s 20s forwards;
 }
 
 #steak {
@@ -586,16 +596,16 @@ body {
 }
 
 /* Animation */
-.texture:hover {
-    transform: scale(1.3);
-}
-
-#antenna:hover {
-    transform: scale(1.3);
-}
-
-#astrodog:hover {
-    animation-play-state: running;
+@keyframes ken-hovering{
+    0%{
+        bottom: 50px;
+    }
+    50%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: 10px;
+    }
 }
 
 @keyframes planet-rotate {
@@ -620,61 +630,61 @@ body {
 
 @keyframes squanchy-travel {
     from {
-        transform: translateX(1020px)
+        transform: translateX(1020px);
     }
 
     to {
-        transform: translateX(0px)
+        transform: translateX(0px);
     }
 }
 
 @keyframes jetson-fly {
     from {
-        transform: translateX(+1700px)
+        transform: translateX(+1700px);
     }
 
     to {
-        transform: translateX(-600px)
+        transform: translateX(-600px);
     }
 }
 
 @keyframes towelie-pop {
     from {
-        transform: translateY(600px)
+        transform: translateY(600px);
     }
 
     to {
-        transform: translateY(0px)
+        transform: translateY(0px);
     }
 }
 
 @keyframes towelie-text {
     from {
-        transform: translateY(600px)
+        transform: translateY(600px);
     }
 
     to {
-        transform: translateY(0px)
+        transform: translateY(0px);
     }
 }
 
 @keyframes ken-fly {
     from {
-        transform: translateX(-700px)
+        transform: translateX(-700px);
     }
 
     to {
-        transform: translateX(0px)
+        transform: translateX(0px);
     }
 }
 
 @keyframes ken-text {
     from {
-        transform: translateX(-700px)
+        transform: translateX(-700px);
     }
 
     to {
-        transform: translateX(0px)
+        transform: translateX(0px);
     }
 }
 

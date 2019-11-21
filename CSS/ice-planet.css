@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+/* Installer / Legger til font */
+@font-face {
+    font-family: SpaceFont;
+    src: url("../fonts/SPACEBAR.ttf");
+}
+
 body {
     background-color: #000000;
     z-index: -1;
@@ -19,12 +25,7 @@ body {
     overflow: hidden;
 }
 
-/* Installer / Legger til font */
 
-@font-face {
-    font-family: SpaceFont;
-    src: url("../fonts/SPACEBAR.ttf");
-}
 
 /*Characters size and position*/
 #pingu {
@@ -99,7 +100,7 @@ body {
     position: absolute;
     top: 350px;
     left: 150px;
-    z-index: 2;
+    z-index: 3;
     animation: kenbeth-flying 2.5s linear;
 
 }
@@ -387,7 +388,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow1 normal 11s infinite;
+    animation: fallingsnow1 11s infinite;
 }
 
 #snowflake2 {
@@ -398,8 +399,7 @@ body {
     left: 100px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow2 normal 8s infinite;
-    animation-delay: 7s;
+    animation: fallingsnow2 8s 7s infinite;
 }
 
 #snowflake3 {
@@ -410,7 +410,7 @@ body {
     left: 200px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow3 normal 10s infinite;
+    animation: fallingsnow3 10s infinite;
 }
 
 #snowflake4 {
@@ -421,8 +421,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow4 normal 10s infinite;
-    animation-delay: 5s;
+    animation: fallingsnow4 10s 5s infinite;
 }
 
 #snowflake5 {
@@ -433,7 +432,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow5 normal 12s infinite;
+    animation: fallingsnow5 12s infinite;
 }
 
 #snowflake6 {
@@ -444,8 +443,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow6 normal 10s infinite;
-    animation-delay: 2.5s;
+    animation: fallingsnow6 10s 2.5s infinite;
 }
 
 #snowflake7 {
@@ -456,7 +454,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow7 normal 8s infinite;
+    animation: fallingsnow7 8s infinite;
 }
 
 #snowflake8 {
@@ -467,8 +465,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow8 normal 11s infinite;
-    animation-delay: 1s;
+    animation: fallingsnow8 11s 1s infinite;
 }
 
 #snowflake9 {
@@ -479,7 +476,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow9 normal 7s infinite;
+    animation: fallingsnow9 7s infinite;
 }
 
 #snowflake10 {
@@ -490,8 +487,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow10 normal 8s infinite;
-    animation-delay: 2s;
+    animation: fallingsnow10 8s 2s infinite;
 }
 
 #snowflake11 {
@@ -502,7 +498,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 1;
-    animation: fallingsnow11 normal 7s infinite;
+    animation: fallingsnow11 7s infinite;
 }
 
 #snowflake12 {
@@ -513,8 +509,7 @@ body {
     left: 700px;
     opacity: 50%;
     z-index: 2;
-    animation: fallingsnow12 normal 7s infinite;
-    animation-delay: 2s;
+    animation: fallingsnow12 7s 2s infinite;
 }
 
 @keyframes planet-rotate {
