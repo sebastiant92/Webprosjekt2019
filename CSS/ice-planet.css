@@ -25,118 +25,7 @@ body {
     overflow: hidden;
 }
 
-
-
-/*Characters size and position*/
-#pingu {
-    width: 185px;
-    height: 200px;
-    position: absolute;
-    top: 420px;
-    left: 900px;
-    z-index: 3;
-}
-
-#glow-fish {
-    width: 145px;
-    height: 170px;
-    position: absolute;
-    top: 650px;
-    left: 900px;
-    opacity: 90%;
-    z-index: 2;
-    transform: scaleX(-1);
-    animation: glowfish-movement alternate ease-in-out 5s infinite;
-}
-
-#big-fish {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 650px;
-    left: 200px;
-    opacity: 80%;
-    z-index: 2;
-    animation: big-fish-movement 8s infinite;
-}
-
-#medium-fish {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 650px;
-    left: 150px;
-    opacity: 80%;
-    z-index: 2;
-    animation: medium-fish-movement 10s infinite;
-}
-
-#small-fish {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 650px;
-    left: 150px;
-    opacity: 80%;
-    z-index: 2;
-    animation: small-fish-movement 7s infinite;
-}
-
-
-#yellow-fish {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 650px;
-    left: 180px;
-    opacity: 80%;
-    z-index: 2;
-    animation: yellow-fish-movement 10s infinite;
-}
-
-#kenbeth1 {
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    top: 350px;
-    left: 150px;
-    z-index: 3;
-    animation: kenbeth-flying 2.5s linear;
-
-}
-
-/*Speachbubles*/
-
-#speech-pingu {
-    width: 200px;
-    height: 175px;
-    position: absolute;
-    top: 300px;
-    left: 800px;
-    z-index: 2;
-    opacity: 0;
-}
-
-#pingu:active ~ #speech-kenbeth {
-    opacity: 1;
-}
-
-#speech-kenbeth {
-    width: 200px;
-    height: 175px;
-    position: absolute;
-    top: 280px;
-    left: 400px;
-    opacity: 0;
-    z-index: 1;
-}
-
-#pingu:active ~ #speech-pingu {
-    opacity: 1;
-    transition-delay: 1s;
-
-}
-
+/*Stars*/
 .stars {
     position: absolute;
     width: 1px;
@@ -147,8 +36,6 @@ body {
         0 0 1.5px 1px #ffffff,
         0 0 2.5px 1.5px #ffffff,
         0 0 3.5px 2.5px #ffffff;
-
-
 }
 
 #star-1 {
@@ -301,84 +188,6 @@ body {
     animation: planet-rotate 12s linear infinite;
 }
 
-
-/*Ice planet layout*/
-#water {
-    width: 1800px;
-    height: 800px;
-    background-color: #288FEF;
-    border: solid 100px #FFFFFF;
-    opacity: 100%;
-    position: absolute;
-    top: 500px;
-    left: -220px;
-    border-radius: 50%;
-    z-index: 2;
-}
-
-#mountain {
-    position: absolute;
-    top: 175px;
-    left: 900px;
-    z-index: 0;
-    transition: 1s;
-}
-
-#mountain:hover {
-    transform: scale(1.1);
-}
-
-#help {
-    position: absolute;
-    font-family: SpaceFont;
-    width: 100px;
-    font-size: 14px;
-    color: #000000;
-    padding: 10px;
-    top: 435px;
-    left: 725px;
-    transform: skew(4deg);
-    opacity: 1;
-    text-align: center;
-    z-index: 2;
-    opacity: 1;
-}
-
-#clue {
-    position: absolute;
-    font-family: SpaceFont;
-    width: 100px;
-    font-size: 14px;
-    color: #415a77;
-    padding: 10px;
-    top: 435px;
-    left: 725px;
-    transform: skew(4deg);
-    opacity: 1;
-    text-align: center;
-    z-index: 2;
-    opacity: 0;
-}
-
-#sign {
-    width: 150px;
-    height: 175px;
-    position: absolute;
-    top: 400px;
-    left: 700px;
-    z-index: 2;
-    cursor: pointer;
-}
-
-#sign:active ~ #help {
-    opacity: 0;
-}
-
-#sign:active ~ #clue {
-    opacity: 1;
-}
-
-
 /*Falling snow 1-12*/
 #snowflake1 {
     height: 50px;
@@ -510,6 +319,191 @@ body {
     opacity: 50%;
     z-index: 2;
     animation: fallingsnow12 7s 2s infinite;
+}
+
+/*Environment*/
+#water {
+    width: 1800px;
+    height: 800px;
+    background-color: #288FEF;
+    border: solid 100px #FFFFFF;
+    opacity: 100%;
+    position: absolute;
+    top: 500px;
+    left: -220px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#mountain {
+    position: absolute;
+    top: 175px;
+    left: 900px;
+    z-index: 0;
+    transition: 1s;
+}
+
+#mountain:hover {
+    transform: scale(1.1);
+}
+
+#help {
+    position: absolute;
+    font-family: SpaceFont;
+    width: 100px;
+    font-size: 14px;
+    color: #000000;
+    padding: 10px;
+    top: 435px;
+    left: 725px;
+    transform: skew(4deg);
+    opacity: 1;
+    text-align: center;
+    z-index: 2;
+    opacity: 1;
+}
+
+#clue {
+    position: absolute;
+    font-family: SpaceFont;
+    width: 100px;
+    font-size: 14px;
+    color: #415a77;
+    padding: 10px;
+    top: 435px;
+    left: 725px;
+    transform: skew(4deg);
+    opacity: 1;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+}
+
+#sign {
+    width: 150px;
+    height: 175px;
+    position: absolute;
+    top: 400px;
+    left: 700px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#sign:active ~ #help {
+    opacity: 0;
+}
+
+#sign:active ~ #clue {
+    opacity: 1;
+}
+
+/*Characters size and position*/
+#pingu {
+    width: 185px;
+    height: 200px;
+    position: absolute;
+    top: 420px;
+    left: 900px;
+    z-index: 3;
+}
+
+#kenbeth1 {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 350px;
+    left: 150px;
+    z-index: 3;
+    animation: kenbeth-flying 2.5s linear;
+}
+
+/*Speachbubles*/
+
+#speech-pingu {
+    width: 200px;
+    height: 175px;
+    position: absolute;
+    top: 300px;
+    left: 800px;
+    z-index: 2;
+    opacity: 0;
+}
+
+#pingu:active ~ #speech-kenbeth {
+    opacity: 1;
+}
+
+#speech-kenbeth {
+    width: 200px;
+    height: 175px;
+    position: absolute;
+    top: 280px;
+    left: 400px;
+    opacity: 0;
+    z-index: 1;
+}
+
+/*The fishes*/
+#glow-fish {
+    width: 145px;
+    height: 170px;
+    position: absolute;
+    top: 650px;
+    left: 900px;
+    opacity: 90%;
+    z-index: 2;
+    transform: scaleX(-1);
+    animation: glowfish-movement alternate ease-in-out 5s infinite;
+}
+
+#big-fish {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 650px;
+    left: 200px;
+    opacity: 80%;
+    z-index: 2;
+    animation: big-fish-movement 8s infinite;
+}
+
+#medium-fish {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 650px;
+    left: 150px;
+    opacity: 80%;
+    z-index: 2;
+    animation: medium-fish-movement 10s infinite;
+}
+
+#small-fish {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 650px;
+    left: 150px;
+    opacity: 80%;
+    z-index: 2;
+    animation: small-fish-movement 7s infinite;
+}
+
+
+#yellow-fish {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 650px;
+    left: 180px;
+    opacity: 80%;
+    z-index: 2;
+    animation: yellow-fish-movement 10s infinite;
+}
+
+#pingu:active ~ #speech-pingu {
+    opacity: 1;
+    transition-delay: 1s;
 }
 
 @keyframes planet-rotate {
