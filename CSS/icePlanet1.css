@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #0c0920;
+    background-color: #000000;
     z-index: -1;
 }
 
@@ -33,7 +33,7 @@ body {
     position: absolute;
     top: 420px;
     left: 900px;
-    z-index: 2;
+    z-index: 3;
 }
 
 #glow-fish {
@@ -981,7 +981,6 @@ body {
         transform: scaleX(1)
     }
 }
-
 
 @keyframes yellow-fish-movement {
     0% {
