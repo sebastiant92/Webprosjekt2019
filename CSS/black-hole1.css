@@ -54,9 +54,10 @@ body {
     width: 400px;
     height: 400px;
     left: 600px;
-    top: -400px;
+    top: 200px;
     z-index: 7;
-    animation: kenbeth 7s 4s forwards ease-in-out;
+    transform: scaleX(-1);
+    animation: kenbeth 8s forwards;
     
 }
 
@@ -104,8 +105,8 @@ body {
     left: 225px;
     position: absolute;
     transform: rotate(-30deg);
-
-    animation: marge-bungee 7s 3s linear forwards;
+    z-index: 8;
+    animation: marge-bungee 3s 1.5s linear forwards;
 }
 
 @keyframes marge-bungee{
@@ -117,7 +118,7 @@ body {
     50%{
         top: 35px;
         left: 225px;
-        height: 250px;
+        height: 230px;
     }
     100%{
         top: 35px;
@@ -193,57 +194,54 @@ body {
 }
 
 
-/* animation for the satelite's rotation and trajectory through the screen */
-@keyframes satelite {
-    
-    0% {
-        transform: scale(0) rotate(60deg);
-        left:150px;
-        top:40px;
-    }
-    25% {
-        transform: scale(0.3) rotate(90deg);
-        left: 100px;
-        top: 200px;
-    }
-    
-    50% {
-        transform: scale(0.5) rotate(180deg)  ;
-        left: 100px;
-        top: 400px;
-    }
-
-    75% {
-        transform: scale(0.6) rotate(270deg)  ;
-        left: 100px;
-        top: 600px;
-    }
-
-    100% {
-        transform: scale(0.8) rotate(360deg)  ;
-        left: 100px;
-        top: 800px;
-    }
-}
-
 /* Animation for Kenbeth(the man flying on a cow) */
 @keyframes kenbeth {
     0% {
-        transform: scale(0) scaleX(-1) rotate(180deg);
-        left: 450px;
-        top: 40px;
+        left: 600px;
+        top: 200px;
+        transform: scaleX(-1)
+        
+    }
+    20%{
+        left: 230px;
+        top: 34px;
+        transform: scaleX(-1);
+
     }
 
-    50% {
-        transform: scale(0.6) scaleX(-1);
-        left: 550px;
-        top: 250px;
+    30% {
+        left: 230px;
+        top: 70px;
+        transform: scaleX(-1)
+        
+    }
+    50%{
+        left: 230px;
+        top: 32px;
+        transform: scaleX(-1);
+    }
+    75%{
+        left: 230px;
+        top: 34px;
+        transform: scale(1)
+        
+    }
+    82.5%{
+        left: 230px;
+        top: 34px;
+
+    }
+    90%{
+        left: 400px;
+        top: 60px;
+        transform: scale(0.5)
     }
     
     100% {
-        transform: scale(0.9) scaleX(-1) rotate(360deg)  ;
-        left: 700px;
-        top: 300px
+        left: 580px;
+        top: 90px;
+        transform: scale(0);
+        
     }
     
     
