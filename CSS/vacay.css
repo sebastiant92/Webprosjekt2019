@@ -19,11 +19,26 @@ body {
     margin-top: 50px;
 }
 
-/* Stars */
-#stars-container{
-    animation: zoomStarContainer 5s ease-out forwards;
+/* Links */
+.link {
+    width: 200px;
+    height: 200px;
     position: absolute;
-    top: 0px;
+    z-index: 4;
+}
+
+/* Stars */
+.stars{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    box-shadow:
+        0 0 5px 1px #ffffff, 
+        0 0 5px 1px #ffffff, 
+        0 0 3px 1px #ffffff; 
+    z-index: 0;
 }
 
 #star-1{
@@ -162,20 +177,12 @@ body {
     left: 700px;
 }
 
-.stars{
+/* Planetene */
+.planet{
     position: absolute;
-    width: 1px;
-    height: 1px;
     border-radius: 100%;
-    background-color: #ffffff;
-    box-shadow:
-        0 0 5px 1px #ffffff, 
-        0 0 5px 1px #ffffff, 
-        0 0 3px 1px #ffffff; 
-    z-index: 0;
 }
 
-/* Planetene */
 #planet-cowboy{
     width: 300px;
     height: 300px;
@@ -214,18 +221,6 @@ body {
     animation: planet-rotate 20s linear infinite;
 }
 
-.planet{
-    position: absolute;
-    border-radius: 100%;
-}
-
-.link {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    z-index: 4;
-}
-
 /* Sand */
 #main-land {
     width: 1450px;
@@ -240,6 +235,14 @@ body {
 }
 
 /* Waves 1-3 */
+.waves {
+    width: 1500px;
+    height: 300px;
+    position: absolute;
+    overflow: hidden;
+    animation: wave-move 4s ease-in-out infinite alternate-reverse;
+}
+
 #wave-0 {
     margin-top: 590px;
     margin-left: -36px;
@@ -261,14 +264,6 @@ body {
     opacity: 0.2;
     z-index: 5;
     animation-delay: 1.5s;
-}
-
-.waves {
-    width: 1500px;
-    height: 300px;
-    position: absolute;
-    overflow: hidden;
-    animation: wave-move 4s ease-in-out infinite alternate-reverse;
 }
 
 /* Beach Elements */
@@ -334,6 +329,10 @@ body {
 }
 
 /* Fish related*/
+.animation-swim {
+    animation: fish-swim 8s ease-in-out infinite alternate;
+}
+
 #fish {
     width: 100px;
     height: 100px;
@@ -359,13 +358,18 @@ body {
     opacity: 1;
 }
 
-.animation-swim {
-    animation: fish-swim 8s ease-in-out infinite alternate;
-}
-
 /* Sea decorations*/
 
 /* Sea plants */
+.sea-plants {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    z-index: 3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
 #sea-plant {
     margin-top: 670px;
     margin-left: -25px;
@@ -388,15 +392,6 @@ body {
     margin-top: 685px;
     margin-left: 75px;
     animation-name: seaplant-move2;
-}
-
-.sea-plants {
-    width: 100px;
-    height: 200px;
-    position: absolute;
-    z-index: 3;
-    animation-duration: 6s;
-    animation-iteration-count: infinite;
 }
 
 /* Palm tree */
