@@ -537,11 +537,11 @@ body {
     0% {
         transform: scale(1);
         transform: rotate(2deg);
-        content: url("../images/rocket_bi.png");
+        content: url("../images/rocket-bi.png");
     }
     100% {
         transform: scale(1.1);
-        content: url("../images/rocket_bi.png");
+        content: url("../images/rocket-bi.png");
     }
 }
 
@@ -679,7 +679,7 @@ body {
         left: 250px;
     }
     100% {
-        content: url("../images/kenbeth_2_2.png");
+        content: url("../images/kenbeth-2-2.png");
         visibility: visible;
         top: 350px;
         left: 250px;
