@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #000000;
 }
 
 /* Main Container */
@@ -18,7 +18,7 @@ body {
     top: 50px;
     position: relative;
     margin: auto;
-    background-color: #0c0920;
+    background-image: linear-gradient(#000000, #1c3a08);
     overflow: hidden;
     z-index: 0;
 }
@@ -195,7 +195,7 @@ body {
     border: 2px solid #ddf45b;
     background-color: #32bc35;
     border-radius: 50%;
-    z-index: 4;
+    z-index: 5;
 }
 
 #slime-bubble-1 {
@@ -258,6 +258,62 @@ body {
     left: 700px;
 }
 
+/* Triggers */
+#slime-bubble-1:hover {
+    width: 140px;
+    height: 50px;
+    bottom: 95px;
+    left: 23px;
+    background-color: #EAEAEA;
+}
+
+#slime-bubble-2:hover {
+    width: 170px;
+    height: 40px;
+    bottom: 195px;
+    left: 170px;
+    background-color: #CBC5EA;
+}
+
+#slime-bubble-3:hover {
+    width: 240px;
+    height: 100px;
+    bottom: 45px;
+    left: 193px;
+    background-color: #52528c;
+}
+
+#slime-bubble-4:hover {
+    width: 140px;
+    height: 60px;
+    bottom: 145px;
+    left: 443px;
+    background-color: #CBC5EA;
+}
+
+#slime-bubble-5:hover {
+    width: 200px;
+    height: 40px;
+    bottom: 245px;
+    left: 443px;
+    background-color: #52528c;
+}
+
+#slime-bubble-6:hover {
+    width: 280px;
+    height: 160px;
+    bottom: -85px;
+    left: 690px;
+    background-color: #52528c;
+}
+
+#slime-bubble-7:hover {
+    width: 420px;
+    height: 90px;
+    bottom: 165px;
+    left: 690px;
+}
+
 /* Character & Npc elements */
 .characters {
     position: absolute;
@@ -270,6 +326,18 @@ body {
     left: 330px;
     z-index: 2;
     animation: kenbeth-flying 5s linear forwards, kenbeth-hovering 2s 2s linear infinite;
+}
+
+#hand {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 475px;
+    left: 720px;
+    z-index: 4;
+    transform: rotate(-55deg);
+    animation: hand-up 2s linear 1 forwards,
+               hand-wave 2s 2s linear infinite;          
 }
 
 /* Background elements */
@@ -361,6 +429,7 @@ body {
     z-index: 2;
 }
 
+/* Keyframes */
 @keyframes satellite-move {
     0% {
         top: 50px;
@@ -379,7 +448,6 @@ body {
     }
 }
 
-/* Keyframes */
 @keyframes black-hole-tilt {
     0% {
         transform: rotate(0deg);
@@ -572,52 +640,14 @@ body {
     }
 }
 
-/* Triggers */
-#slime-bubble-1:hover {
-    width: 140px;
-    height: 50px;
-    bottom: 95px;
-    left: 23px;
+@keyframes hand-wave {
+    0%{transform: rotate(-55deg);}
+    25%{transform: rotate(-65deg);}
+    75%{transform: rotate(-40deg);}
+    100%{transform: rotate(-55deg);}
 }
 
-#slime-bubble-2:hover {
-    width: 170px;
-    height: 40px;
-    bottom: 195px;
-    left: 170px;
-}
-
-#slime-bubble-3:hover {
-    width: 240px;
-    height: 100px;
-    bottom: 45px;
-    left: 193px;
-}
-
-#slime-bubble-4:hover {
-    width: 140px;
-    height: 60px;
-    bottom: 145px;
-    left: 443px;
-}
-
-#slime-bubble-5:hover {
-    width: 200px;
-    height: 40px;
-    bottom: 245px;
-    left: 443px;
-}
-
-#slime-bubble-6:hover {
-    width: 280px;
-    height: 160px;
-    bottom: -85px;
-    left: 690px;
-}
-
-#slime-bubble-7:hover {
-    width: 420px;
-    height: 90px;
-    bottom: 165px;
-    left: 690px;
+@keyframes hand-up {
+    0% {transform: rotate(20deg); top: 490px; opacity: 0;}
+    100% {transform: rotate(-55deg); top: 475px; opacity: 1;}
 }
