@@ -264,7 +264,7 @@ body {
     height: 50px;
     bottom: 95px;
     left: 23px;
-    background-color: #EAEAEA;
+    background-color: #eaeaea;
 }
 
 #slime-bubble-2:hover {
@@ -272,7 +272,7 @@ body {
     height: 40px;
     bottom: 195px;
     left: 170px;
-    background-color: #CBC5EA;
+    background-color: #cbc5ea;
 }
 
 #slime-bubble-3:hover {
@@ -288,7 +288,7 @@ body {
     height: 60px;
     bottom: 145px;
     left: 443px;
-    background-color: #CBC5EA;
+    background-color: #cbc5ea;
 }
 
 #slime-bubble-5:hover {
@@ -336,8 +336,7 @@ body {
     left: 720px;
     z-index: 4;
     transform: rotate(-55deg);
-    animation: hand-up 2s linear 1 forwards,
-               hand-wave 2s 2s linear infinite;          
+    animation: hand-up 2s linear 1 forwards, hand-wave 2s 2s linear infinite;
 }
 
 /* Background elements */
@@ -474,11 +473,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 200px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(50deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -487,11 +488,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 340px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(30deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -500,11 +503,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 500px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(23deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -513,11 +518,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 700px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(1deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -526,11 +533,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 800px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(-12deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -539,11 +548,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 900px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(-22deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -552,11 +563,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 1100px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(-32deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -565,11 +578,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 900px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(-28deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -578,11 +593,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 1300px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(-50deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -591,11 +608,13 @@ body {
         transform: scale(1) rotate(0deg);
         left: 1020px;
         bottom: 150px;
+        opacity: 1;
     }
     100% {
         transform: scale(0) rotate(-44deg);
         left: 697px;
         bottom: 500px;
+        opacity: 0;
     }
 }
 
@@ -641,13 +660,29 @@ body {
 }
 
 @keyframes hand-wave {
-    0%{transform: rotate(-55deg);}
-    25%{transform: rotate(-65deg);}
-    75%{transform: rotate(-40deg);}
-    100%{transform: rotate(-55deg);}
+    0% {
+        transform: rotate(-55deg);
+    }
+    25% {
+        transform: rotate(-65deg);
+    }
+    75% {
+        transform: rotate(-40deg);
+    }
+    100% {
+        transform: rotate(-55deg);
+    }
 }
 
 @keyframes hand-up {
-    0% {transform: rotate(20deg); top: 490px; opacity: 0;}
-    100% {transform: rotate(-55deg); top: 475px; opacity: 1;}
+    0% {
+        transform: rotate(20deg);
+        top: 490px;
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(-55deg);
+        top: 475px;
+        opacity: 1;
+    }
 }
