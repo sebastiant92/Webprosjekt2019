@@ -1,210 +1,211 @@
 /* standard styling */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: #000000;
+    background-color: #000000;
     z-index: 0;
 }
 
 /* Main container */
 #container {
-  width: 1278px;
-  height: 800px;
-  top: 50px;
-  position: relative;
-  margin: auto;
-  background-image: linear-gradient(#0F0A28, #9d69a3 100%);
-  overflow: hidden;
-  z-index: 1;
+    width: 1278px;
+    height: 800px;
+    top: 50px;
+    position: relative;
+    margin: auto;
+    background-image: linear-gradient(#0F0A28, #9d69a3 100%);
+    overflow: hidden;
+    z-index: 1;
 }
 
 /* Stars */
-.stars{
+.stars {
     position: absolute;
     width: 1px;
     height: 1px;
     border-radius: 100%;
     background: #ffffff;
     box-shadow:
-        0 0 1.5px 1px #ffffff, 
-        0 0 2.5px 1.5px #ffffff, 
-        0 0 3.5px 2.5px #ffffff; 
-    
+        0 0 1.5px 1px #ffffff,
+        0 0 2.5px 1.5px #ffffff,
+        0 0 3.5px 2.5px #ffffff;
+
     animation: zoom-stars 5s 3s ease-in forwards;
 }
 
-@keyframes zoom-stars{
-    100%{
-    width: 2px;
-    height: 2px;
+@keyframes zoom-stars {
+    100% {
+        width: 2px;
+        height: 2px;
     }
 }
 
-#star-1{
+#star-1 {
     top: 50px;
     left: 50px;
 }
 
-#star-2{
+#star-2 {
     top: 150px;
     left: 120px;
 }
 
-#star-3{
+#star-3 {
     top: 70px;
     left: 250px;
 }
 
-#star-4{
+#star-4 {
     top: 180px;
     left: 380px;
     animation: star-blinking 10s 4s ease-in infinite;
 }
 
-#star-5{
+#star-5 {
     top: 40px;
     left: 510px;
 }
 
-#star-6{
+#star-6 {
     top: 130px;
     left: 680px;
 }
 
-#star-7{
+#star-7 {
     top: 20px;
     left: 790px;
 }
 
-#star-8{
+#star-8 {
     top: 160px;
     left: 930px;
 }
 
-#star-9{
+#star-9 {
     top: 50px;
     left: 1100px;
     animation: star-blinking 10s 7s ease-in infinite;
 }
 
-#star-10{
+#star-10 {
     top: 200px;
     left: 1200px;
 }
 
-#star-11{
+#star-11 {
     top: 420px;
     left: 80px;
 }
 
-#star-12{
+#star-12 {
     top: 300px;
     left: 220px;
     animation: star-blinking 10s 12s ease-in infinite;
 }
 
-#star-13{
+#star-13 {
     top: 375px;
     left: 450px;
 }
 
-#star-14{
+#star-14 {
     top: 280px;
     left: 600px;
 }
 
-#star-15{
+#star-15 {
     top: 350px;
     left: 850px;
     animation: star-blinking 10s 10s ease-in infinite;
 }
 
-#star-16{
+#star-16 {
     top: 300px;
     left: 1050px;
 }
 
-#star-17{
+#star-17 {
     top: 450px;
     left: 1200px;
 }
 
-#star-18{
+#star-18 {
     top: 650px;
     left: 40px;
 }
 
-#star-19{
+#star-19 {
     top: 500px;
     left: 300px;
 }
 
-#star-20{
+#star-20 {
     top: 625px;
     left: 500px;
     animation: star-blinking 10s 6s ease-in infinite;
 }
 
-#star-21{
+#star-21 {
     top: 475px;
     left: 700px;
 }
 
-#star-22{
+#star-22 {
     top: 650px;
     left: 900px;
 }
 
-#star-23{
+#star-23 {
     top: 570px;
     left: 1100px;
     animation: star-blinking 10s 13s ease-in infinite;
 }
 
-#star-24{
+#star-24 {
     top: 700px;
     left: 1250px;
 }
 
-#star-25{
+#star-25 {
     top: 720px;
     left: 270px;
 }
 
-#star-26{
+#star-26 {
     top: 720px;
     left: 700px;
 }
 
-@keyframes star-blinking{
-    2.5%{
+@keyframes star-blinking {
+    2.5% {
         box-shadow:
-        0 0 4.5px 3px #ffffff, 
-        0 0 15px 3px #ffffff, 
-        0 0 30px 3px #ffffff; 
+            0 0 4.5px 3px #ffffff,
+            0 0 15px 3px #ffffff,
+            0 0 30px 3px #ffffff;
     }
-    5%{    
+
+    5% {
         width: 2px;
         height: 2px;
         box-shadow:
-        0 0 1.5px 1px #ffffff, 
-        0 0 2.5px 1.5px #ffffff, 
-        0 0 3.5px 2.5px #ffffff;  
+            0 0 1.5px 1px #ffffff,
+            0 0 2.5px 1.5px #ffffff,
+            0 0 3.5px 2.5px #ffffff;
     }
 }
 
 /* Planets */
-.planet{
+.planet {
     position: absolute;
-    border-radius: 100%; 
+    border-radius: 100%;
 }
 
 /* Planet Vacay */
-#planet-vacay{
+#planet-vacay {
     width: 270px;
     height: 270px;
     background-image: radial-gradient(#f6d2da, #fcc9d1);
@@ -213,7 +214,7 @@ body {
     overflow: hidden;
 }
 
-#planet-vacay-structure{
+#planet-vacay-structure {
     width: 300px;
     height: 80px;
     position: absolute;
@@ -225,7 +226,7 @@ body {
 }
 
 /* Planet Cowboy */
-#planet-cowboy{
+#planet-cowboy {
     width: 150px;
     height: 150px;
     background-image: radial-gradient(#faff81, #ffc53a);
@@ -234,7 +235,7 @@ body {
     overflow: hidden;
 }
 
-#planet-cowboy-structure{
+#planet-cowboy-structure {
     width: 280px;
     height: 40px;
     position: absolute;
@@ -246,7 +247,7 @@ body {
 }
 
 /* Planet Slime */
-#planet-slime{
+#planet-slime {
     width: 130px;
     height: 130px;
     background-image: radial-gradient(#ddf45b, #32bc35);
@@ -255,7 +256,7 @@ body {
     overflow: hidden;
 }
 
-#planet-slime-structure{
+#planet-slime-structure {
     width: 250px;
     height: 50px;
     position: absolute;
@@ -267,7 +268,7 @@ body {
 }
 
 /* Ground texture and main planet */
-#main-box{
+#main-box {
     width: 2000px;
     height: 900px;
     top: 500px;
@@ -279,63 +280,63 @@ body {
     z-index: 1;
 }
 
-#ground-texture1{
+#ground-texture1 {
     width: 250px;
     height: 60px;
     bottom: 650px;
     left: 200px;
 }
 
-#ground-texture2{
+#ground-texture2 {
     width: 200px;
     height: 60px;
     bottom: 750px;
     left: 600px;
 }
 
-#ground-texture3{
+#ground-texture3 {
     width: 200px;
     height: 40px;
     bottom: 800px;
     left: 1200px;
 }
 
-#ground-texture4{
+#ground-texture4 {
     width: 240px;
     height: 80px;
     bottom: 590px;
     left: 600px;
 }
 
-#ground-texture5{
+#ground-texture5 {
     width: 200px;
     height: 30px;
     bottom: 850px;
     left: 900px;
 }
 
-#ground-texture6{
+#ground-texture6 {
     width: 150px;
     height: 50px;
     bottom: 700px;
     left: 1400px;
 }
 
-#ground-texture7{
+#ground-texture7 {
     width: 200px;
     height: 50px;
     bottom: 750px;
     left: 960px;
 }
 
-#ground-texture8{
+#ground-texture8 {
     width: 200px;
     height: 150px;
     bottom: 500px;
     left: 1100px;
 }
 
-.texture{
+.texture {
     border-radius: 50%;
     position: absolute;
     background-color: #a9a9a9;
@@ -345,7 +346,7 @@ body {
 }
 
 /* Building */
-#Citybuilding{
+#Citybuilding {
     width: 300px;
     height: 400px;
     left: 800px;
@@ -354,8 +355,9 @@ body {
     background-color: #7c7c7c;
     z-index: 3;
 }
+
 /* windows */
-.window{
+.window {
     width: 43px;
     height: 49px;
     position: relative;
@@ -363,41 +365,42 @@ body {
     display: inline-block;
     z-index: 3;
 }
+
 /* colors windows */
-#window33{
+#window33 {
     background-color: #000000;
 }
 
-#window34{
+#window34 {
     background-color: #000000;
 }
 
-#window39{
+#window39 {
     background-color: #000000;
 }
 
-#window40{
+#window40 {
     background-color: #000000;
 }
 
-.purple{
+.purple {
     background-color: #444444;
 }
 
-.purple:hover{
-    background-color:  #9d69a3;
+.purple:hover {
+    background-color: #9d69a3;
 }
 
-.green{
+.green {
     background-color: #40f99b;
 }
 
-.green:hover{
+.green:hover {
     background-color: #9d69a3;
 }
 
 /* Characters */
-#kenbeth-landing{
+#kenbeth-landing {
     height: 500px;
     width: 500px;
     position: absolute;
@@ -409,7 +412,7 @@ body {
     animation-delay: 0.1s;
 }
 
-#astrodog{
+#astrodog {
     height: 240px;
     width: 200px;
     position: absolute;
@@ -420,7 +423,7 @@ body {
     animation-play-state: paused;
 }
 
-#jetsons{
+#jetsons {
     height: 200px;
     width: 200px;
     position: absolute;
@@ -432,7 +435,7 @@ body {
     animation-delay: 8s;
 }
 
-#towelie{
+#towelie {
     height: 100px;
     width: 100px;
     position: absolute;
@@ -443,7 +446,7 @@ body {
     animation-duration: 4s;
 }
 
-#squanchy{
+#squanchy {
     height: 250px;
     width: 150px;
     position: absolute;
@@ -454,7 +457,7 @@ body {
     animation-duration: 10s;
 }
 
-#rocket{
+#rocket {
     height: 100px;
     width: 100px;
     position: absolute;
@@ -465,7 +468,7 @@ body {
     overflow: hidden;
 }
 
-#antenna{
+#antenna {
     height: 150px;
     width: 100px;
     position: absolute;
@@ -477,7 +480,7 @@ body {
     overflow: hidden;
 }
 
-#enter{
+#enter {
     height: 50px;
     width: 110px;
     position: absolute;
@@ -487,7 +490,7 @@ body {
 }
 
 /* Chat bubble text */
-.text{
+.text {
     position: absolute;
     opacity: 1;
     text-align: center;
@@ -495,7 +498,7 @@ body {
     font-size: 20px;
 }
 
-#chat-bubble1{
+#chat-bubble1 {
     height: 400px;
     width: 400px;
     bottom: 300px;
@@ -508,7 +511,7 @@ body {
     animation-delay: 5s forwards;
 }
 
-#chat-bubble2{
+#chat-bubble2 {
     height: 200px;
     width: 200px;
     bottom: 300px;
@@ -520,7 +523,7 @@ body {
     transform: rotate(deg)
 }
 
-#chat-bubble3{
+#chat-bubble3 {
     height: 400px;
     width: 400px;
     bottom: 10px;
@@ -533,7 +536,7 @@ body {
     animation-delay: 20s forwards;
 }
 
-#ken-text{
+#ken-text {
     height: 20px;
     width: 200px;
     bottom: 540px;
@@ -544,16 +547,16 @@ body {
     animation-delay: 5s forwards;
 }
 
-#dog-text{
+#dog-text {
     height: 10px;
     width: 200px;
     bottom: 433px;
     left: 610px;
     z-index: 5;
-    
+
 }
 
-#towelie-text{
+#towelie-text {
     height: 10px;
     width: 200px;
     bottom: 260px;
@@ -561,11 +564,19 @@ body {
     z-index: 5;
     animation-name: towelie-text;
     animation-duration: 10s;
-    animation-delay: 20s forwards ;
+    animation-delay: 20s forwards;
+}
+
+#steak {
+    height: 60px;
+    width: 60px;
+    bottom: 260px;
+    left: 450px;
+    z-index: 5;
 }
 
 /* Link */
-.link{
+.link {
     width: 200px;
     height: 200px;
     position: absolute;
@@ -575,73 +586,148 @@ body {
 }
 
 /* Animation */
-.texture:hover{
+.texture:hover {
     transform: scale(1.3);
 }
 
-#antenna:hover{
+#antenna:hover {
     transform: scale(1.3);
 }
 
-#astrodog:hover{
+#astrodog:hover {
     animation-play-state: running;
 }
 
-@keyframes planet-rotate{
-    100%{transform: translateX(350px);}
-}
-@keyframes antenna-travel{
-    0%{left: 800px;}
-    50%{left: 500px;}
-    100%{bottom: 800px;}
+@keyframes planet-rotate {
+    100% {
+        transform: translateX(350px);
+    }
 }
 
-@keyframes squanchy-travel{
-    from{transform: translateX(1020px)}
-    to{transform: translateX(0px)}
+@keyframes antenna-travel {
+    0% {
+        left: 800px;
+    }
+
+    50% {
+        left: 500px;
+    }
+
+    100% {
+        bottom: 800px;
+    }
 }
 
-@keyframes jetson-fly{
-    from{transform: translateX(+1700px)}
-    to{transform: translateX(-600px)}
+@keyframes squanchy-travel {
+    from {
+        transform: translateX(1020px)
+    }
+
+    to {
+        transform: translateX(0px)
+    }
 }
 
-@keyframes towelie-pop{
-    from{transform: translateY(600px)}
-    to{transform: translateY(0px)}
+@keyframes jetson-fly {
+    from {
+        transform: translateX(+1700px)
+    }
+
+    to {
+        transform: translateX(-600px)
+    }
 }
 
-@keyframes towelie-text{
-    from{transform: translateY(600px)}
-    to{transform: translateY(0px)}
+@keyframes towelie-pop {
+    from {
+        transform: translateY(600px)
+    }
+
+    to {
+        transform: translateY(0px)
+    }
 }
 
-@keyframes ken-fly{
-    from{transform: translateX(-700px)}
-    to{transform: translateX(0px)} 
+@keyframes towelie-text {
+    from {
+        transform: translateY(600px)
+    }
+
+    to {
+        transform: translateY(0px)
+    }
 }
 
-@keyframes ken-text{
-    from{transform: translateX(-700px)}
-    to{transform: translateX(0px)}
+@keyframes ken-fly {
+    from {
+        transform: translateX(-700px)
+    }
+
+    to {
+        transform: translateX(0px)
+    }
 }
 
-@keyframes rocket-fly{
-    100%{top: -100px;
+@keyframes ken-text {
+    from {
+        transform: translateX(-700px)
+    }
+
+    to {
+        transform: translateX(0px)
+    }
+}
+
+@keyframes rocket-fly {
+    100% {
+        top: -100px;
         right: 1100px;
-        left: 1200px;}
+        left: 1200px;
+    }
 }
 
-@keyframes astrodog-dance{
-   0% {transform: translate(1px, 1px) rotate(0deg);}
-  10% {transform: translate(-1px, -2px) rotate(-1deg);}
-  20% {transform: translate(-3px, 0px) rotate(1deg);}
-  30% {transform: translate(3px, 2px) rotate(0deg);}
-  40% {transform: translate(1px, -1px) rotate(1deg);}
-  50% {transform: translate(-1px, 2px) rotate(-1deg);}
-  60% {transform: translate(-3px, 1px) rotate(0deg);}
-  70% {transform: translate(3px, 1px) rotate(-1deg);}
-  80% {transform: translate(-1px, -1px) rotate(1deg);}
-  90% {transform: translate(1px, 2px) rotate(0deg);}
-  100% {transform: translate(1px, -2px) rotate(-1deg);}
+@keyframes astrodog-dance {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }

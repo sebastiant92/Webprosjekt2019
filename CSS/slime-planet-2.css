@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #000000;
 }
 
 /* Main Container */
@@ -18,7 +18,7 @@ body {
     top: 50px;
     position: relative;
     margin: auto;
-    background-color: #0c0920;
+    background-image: linear-gradient(#000000, #1c3a08);
     overflow: hidden;
     z-index: 0;
 }
@@ -270,6 +270,16 @@ body {
     left: 330px;
     z-index: 2;
     animation: kenbeth-flying 5s linear forwards, kenbeth-hovering 2s 2s linear infinite;
+}
+
+#hand {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 500px;
+    left: 710px;
+    z-index: 5;
+    transform: rotate(-7deg);
 }
 
 /* Background elements */
@@ -578,6 +588,7 @@ body {
     height: 50px;
     bottom: 95px;
     left: 23px;
+    background-color: #EAEAEA;
 }
 
 #slime-bubble-2:hover {
@@ -585,6 +596,7 @@ body {
     height: 40px;
     bottom: 195px;
     left: 170px;
+    background-color: #CBC5EA;
 }
 
 #slime-bubble-3:hover {
@@ -592,6 +604,7 @@ body {
     height: 100px;
     bottom: 45px;
     left: 193px;
+    background-color: #52528c;
 }
 
 #slime-bubble-4:hover {
@@ -599,6 +612,7 @@ body {
     height: 60px;
     bottom: 145px;
     left: 443px;
+    background-color: #CBC5EA;
 }
 
 #slime-bubble-5:hover {
@@ -606,6 +620,7 @@ body {
     height: 40px;
     bottom: 245px;
     left: 443px;
+    background-color: #52528c;
 }
 
 #slime-bubble-6:hover {
@@ -613,6 +628,7 @@ body {
     height: 160px;
     bottom: -85px;
     left: 690px;
+    background-color: #52528c;
 }
 
 #slime-bubble-7:hover {
