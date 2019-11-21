@@ -558,6 +558,7 @@ body {
     opacity: 0;
     z-index: 2;
     display: block;
+    cursor: pointer;
 
     
     animation: walking-door 1s 13s linear forwards,

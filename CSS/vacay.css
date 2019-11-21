@@ -14,7 +14,7 @@ body {
     height: 800px;
     position: relative;
     margin: auto;
-    background-image: linear-gradient(#0c0920, #2e2857);
+    background-image: linear-gradient(#0c0920, #ffa987);
     overflow: hidden;
     margin-top: 50px;
 }
@@ -24,19 +24,6 @@ body {
     animation: zoomStarContainer 5s ease-out forwards;
     position: absolute;
     top: 0px;
-}
-
-.stars{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    border-radius: 100%;
-    background-color: #ffffff;
-    box-shadow:
-        0 0 5px 1px #ffffff, 
-        0 0 5px 1px #ffffff, 
-        0 0 3px 1px #ffffff; 
-    z-index: 0;
 }
 
 #star-1{
@@ -173,6 +160,19 @@ body {
 #star-26{
     top: 720px;
     left: 700px;
+}
+
+.stars{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background-color: #ffffff;
+    box-shadow:
+        0 0 5px 1px #ffffff, 
+        0 0 5px 1px #ffffff, 
+        0 0 3px 1px #ffffff; 
+    z-index: 0;
 }
 
 /* Planetene */
