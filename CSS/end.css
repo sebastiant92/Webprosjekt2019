@@ -18,18 +18,11 @@ body {
     margin-top: 50px;
 }
 
-#marge{
-    opacity: 0;
-}
-
-
 /* Stars */
-
-
 .stars{
-    position: absolute;
     width: 1px;
     height: 1px;
+        position: absolute;
     border-radius: 100%;
     background: #ffffff;
     box-shadow:
@@ -174,6 +167,176 @@ body {
     left: 700px;
 }
 
+/* Planets */
+.planet{
+    position: absolute;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+/* Planet Cowboy */
+#planet-cowboy{
+    width: 160px;
+    height: 160px;
+    top: 100px;
+    left: -50px;
+    background-image: radial-gradient(#faff81, #ffc53a);
+}
+
+#planet-cowboy-structure{
+    width: 280px;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+    left: -280px;
+    opacity: 0.8;
+    transform: rotate(-15deg);
+    animation: planet-rotate 10s linear infinite;
+}
+
+
+/* Planet Slime */
+#planet-slime{
+    width: 400px;
+    height: 400px;
+    top: 150px;
+    left: 700px;
+    background-image: radial-gradient(#ddf45b, #32bc35);
+
+}
+
+#planet-slime-structure{
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    left: -300px;
+    bottom: 50px;
+        opacity: 0.8;
+    transform: rotate(40deg);
+    animation: planet-rotate 13s linear infinite;
+}
+
+/*University UK Container with elements */
+#uk-container{
+    width: 625px;
+    height: 1000px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+
+#uk{
+    width: 625px;
+    height: 1000px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    z-index: 1;
+}
+
+#hk-welcome{
+    width: 220px;
+    height: 80px;
+    position: absolute;
+    right: 185px;
+    top: 180px;
+    z-index: 1;
+}
+
+/* Charachters */
+#marge{
+    opacity: 0;
+    width: 88px;
+    height: 180px;
+    position: absolute;
+    top: 430px;
+    z-index: 3;
+    left: 370px;
+    
+    animation: appearing 1s 11s linear forwards;
+}
+
+#marge:hover ~ #chat-bubble-marge, #marge:hover ~ #text-marge{
+    opacity: 1;
+}
+
+#kenbeth{
+    width: 130px;
+    height: 200px;
+    position: absolute;
+    top: 430px;
+    left: 290px;
+    z-index: 3;
+    opacity: 0;
+    animation: appearing 1s 11s linear forwards;             
+}
+
+#kenbeth:hover ~ #chat-bubble-kenbeth, #kenbeth:hover ~ #text-kenbeth{
+    opacity: 1;
+}
+
+/* Chat bubbles */
+.chat-bubbles{
+    width: 500px;
+    height: 370px;
+    position: absolute;
+    z-index: 1;
+        opacity: 0;
+}
+
+#chat-bubble-marge{
+    top: 200px;
+    left: 350px;
+}
+
+#chat-bubble-kenbeth{
+    top: 170px;
+    left: -70px;
+    transform: scaleX(-1);
+}
+
+.texts{
+    opacity: 0;
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    font-family: arial;
+    z-index: 1;
+}
+
+#text-marge{
+    top: 340px;
+    left: 440px;
+}
+
+#text-kenbeth{
+    top: 280px;
+    left: 90px;
+}
+
+/* The black hole */
+#black-hole {
+    position: absolute;
+    width: 200px;
+    top: 20px;
+    left: 1000px;
+    animation: black-hole-tilt 30s linear infinite both;
+}
+
+/* The space cow */
+#spacecow{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 120px;
+    left: 1300px;
+    z-index: 1;
+    animation: returning-home 10s 1s ease-in forwards,
+                spacecow-disappearing 1s 11s linear forwards;
+}
+
+/* Keyframes */
 @keyframes star-blinking{
     2.5%{
         box-shadow:
@@ -191,37 +354,15 @@ body {
     }
 }
 
+@keyframes black-hole-tilt {
+    0% {
+        transform: rotate(0deg);
 
-/* Planets */
+    }
+    100% {
+        transform: rotate(360deg);
 
-.planet{
-    position: absolute;
-    border-radius: 100%;
-    overflow: hidden;
-}
-
-/* Planet Slime */
-
-#planet-slime{
-    width: 400px;
-    height: 400px;
-    background-image: radial-gradient(#ddf45b, #32bc35);
-    top: 150px;
-    left: 700px;
-
-}
-
-#planet-slime-structure{
-    width: 500px;
-    height: 250px;
-    position: absolute;
-    opacity: 0.8;
-    left: -300px;
-    bottom: 50px;
-    transform: rotate(40deg);
-    
-
-    animation: planet-rotate 13s linear infinite;
+    }
 }
 
 @keyframes planet-rotate{
@@ -229,86 +370,6 @@ body {
         transform: translateX(780px);
     }
     
-}
-
-#uk{
-    width: 625px;
-    height: 1000px;
-    position: absolute;
-    top: 0px;
-    left: 20px;
-    z-index: 1;
-
-}
-
-
-
-
-#uk-container{
-    width: 625px;
-    height: 1000px;
-    position: absolute;
-    top: 0px;
-    left: 20px;
-    animation: 
-
-}
-
-#hk-welcome{
-    width: 220px;
-    height: 80px;
-    position: absolute;
-    right: 185px;
-    top: 180px;
-    z-index: 1;
-}
-
-
-#principal{
-    width: 69px;
-    height: 110px;
-    position: absolute;
-    top: 440px;
-    left: 290px;
-    opacity: 0;
-    z-index: 2;
-    
-    animation: 
-                principal-moving 1s 11s linear forwards;
-}
-
-
-
-@keyframes principal-moving{
-    100%{
-        left: 500px;
-    }
-}
-
-#kenbeth{
-    width: 110px;
-    height: 150px;
-    position: absolute;
-    top: 430px;
-    left: 290px;
-    opacity: 0;
-    z-index: 2;
-    display: block;
-
-    
-    animation: 
-                walking-left 1.25s 14s ease-out forwards;
-}
-
-#spacecow{
-    width: 400px;
-    height: 500px;
-    position: absolute;
-    top: 120px;
-    left: 1300px;
-    z-index: 10;
-    
-    animation: returning-home 10s 1s ease-in infinite;
 }
 
 @keyframes returning-home{
@@ -327,82 +388,28 @@ body {
         transform: rotate(0deg) scale(0.75);
     }
     100%{
-        top: 320px;
+        top: 350px;
         left: 180px;
         transform: rotate(0deg) scale(1); 
+        opacity: 1;
     }
 }
 
-.chat-bubbles{
-    width: 500px;
-    height: 370px;
-    position: absolute;
-    transform: scaleX(-1);
-    opacity: 0;
-    z-index: 1;
-    
-}
-
-#chat-bubble-principal{
-    top: 170px;
-    left: 100px;
-}
-
-#chat-bubble-kenbeth{
-    top: 110px;
-    left: -440px;
-}
-
-.texts{
-    opacity: 0;
-    width: 250px;
-    height: 100px;
-    position: absolute;
-    text-align: center;
-    font-family: arial;
-    z-index: 1;
-}
-
-#text-principal{
-    top: 280px;
-    left: 260px;
-}
-
-#text-kenbeth{
-    top: 220px;
-    left: -275px;
-}
-
-#principal:hover ~ #chat-bubble-principal, #principal:hover ~ #text-principal{
-    opacity: 1;
-}
-
-#kenbeth:hover ~ #chat-bubble-kenbeth, #kenbeth:hover ~ #text-kenbeth{
-    opacity: 1;
-}
-
-
-#black-hole {
-    position: absolute;
-    width: 200px;
-    top: 20px;
-    left: 1000px;
-    animation: black-hole-tilt 30s linear infinite both;
-}
-
-
-@keyframes black-hole-tilt {
-    0% {
-        transform: rotate(0deg);
-
+@keyframes spacecow-disappearing{
+    0%{
+        opacity: 1;
     }
-    100% {
-        transform: rotate(360deg);
-
+    100%{
+        opacity: 0;
     }
 }
 
-
-
-
-
+/* Makes Kenbeth and marge land on the University */
+@keyframes appearing{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

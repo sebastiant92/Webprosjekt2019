@@ -18,16 +18,12 @@ body {
     margin-top: 50px;
 }
 
-
-
 /* Stars */
-
 #stars-container{
     animation: zoom-star-container 8s ease-out forwards;
     position: absolute;
     top: 0px;
 }
-
 
 .stars{
     position: absolute;
@@ -177,72 +173,43 @@ body {
     left: 700px;
 }
 
-@keyframes star-blinking{
-    2.5%{
-        box-shadow:
-        0 0 4.5px 3px #ffffff, 
-        0 0 15px 3px #ffffff, 
-        0 0 30px 3px #ffffff; 
-    }
-    5%{    
-        width: 2px;
-        height: 2px;
-        box-shadow:
-        0 0 1.5px 1px #ffffff, 
-        0 0 2.5px 1.5px #ffffff, 
-        0 0 3.5px 2.5px #ffffff;  
-    }
-}
-
-
 /* Planets */
-
 .planet{
     position: absolute;
     border-radius: 100%;
     overflow: hidden;
 }
 
-
 /* Planet Ice */
-
-
 #planet-ice{
     width: 700px;
     height: 700px;
     top: 600px;
     left: -300px;
     background: linear-gradient(270deg, #00c5cc, #3285d3);
-    
-    animation: zoom-planet-ice 8s ease-in forwards;
 }
 
 #planet-ice-structure{
     width: 700px;
     height: 350px;
     position: absolute;
-    opacity: 0.6;
     top: 0px;
     left: 0px;
-    
+    opacity: 0.6;
     animation: planet-rotate 30s linear infinite;
 }
     
-
-
-
 /* Planet city */
-
 #planet-city{
     width: 300px;
     height: 300px;
-    background-image: linear-gradient(to right, #415a77, #415a77);
     top: 380px;
     left: 300px;
-    overflow: hidden;
+    background-image: linear-gradient(to right, #415a77, #415a77);
     
 }
 
+/* Gives hint that we are going to the blue planet */
 #planet-city:active{
     transition: 1s;
     transform: translateY(-20px);
@@ -257,63 +224,59 @@ body {
     top: 30px;
     left: -160px;
     transform: rotate(15deg);
-    
     animation: planet-rotate 13s linear infinite;
 }
 
 
 /* Planet Vacay */
-
 #planet-vacay{
     width: 200px;
     height: 200px;
-    background-image: radial-gradient(#f6d2da, #fcc9d1);
     top: 240px;
     left: 620px;
+    background-image: radial-gradient(#f6d2da, #fcc9d1);
 }
 
 #planet-vacay-structure{
     width: 300px;
     height: 80px;
     position: absolute;
-    opacity: 0.7;
     left: -200px;
     top: 20px;
+        opacity: 0.7;
     transform: rotate(-40deg);
-    
     animation: planet-rotate 15s linear infinite;
 }
 
 
 
 /* Planet cowboy */
-
 #planet-cowboy{
     width: 160px;
     height: 160px;
-    background-image: radial-gradient(#faff81, #ffc53a);
     top: 170px;
     left: 1050px;
-    overflow: hidden;
+    background-image: radial-gradient(#faff81, #ffc53a);
 }
 
 #planet-cowboy-structure{
     width: 280px;
     height: 40px;
     position: absolute;
-    opacity: 0.8;
     bottom: 50px;
     left: -280px;
+        opacity: 0.8;
     transform: rotate(-15deg);
-    
     animation: planet-rotate 10s linear infinite;
 }
 
-@keyframes planet-rotate{
-    100%{
-        transform: translateX(350px);
-    }
-    
+/* Høyskolen Kristiania and its elements */
+#hk-container{
+    width: 625px;
+    height: 1000px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
 }
 
 #hk{
@@ -323,115 +286,6 @@ body {
     top: 0px;
     right: 20px;
     z-index: 1;
-
-}
-
-#ufo-alien{
-    width: 350px;
-    height: 420px;
-    position: absolute;
-    top: 0px;
-    left: -351px;
-    z-index: 1;
-    
-    animation: the-kidnapping 3s 7s ease-in-out forwards,
-                ufo-alien-leaving 4s 13s ease-in-out forwards;
-}
-
-@keyframes the-kidnapping{
-    100%{
-        top: 160px;
-        left: 730px;
-        transform: scale(1.2);
-    }
-}
-
-@keyframes ufo-alien-leaving{
-    0%{
-       top: 160px;
-        left: 730px; 
-    }
-    100%{
-    top: 0px;
-    left: -375px;
-    }
-}
-
-#ufo{
-    width: 200px;
-    height: 142px;
-    top: 50px;
-    left: 0px;
-    position: absolute;
-    transform: rotate(-20deg);
-}
-
-#alien{
-    width: 90px;
-    height: 150px;
-    top: 0px;
-    left: 135px;
-    position: absolute;
-}
-
-#marge-kidnapped{
-    width: 87px;
-    height: 180px;
-    top: 35px;
-    left: 225px;
-    position: absolute;
-    transform: rotate(-30deg);
-    opacity: 0;
-    
-    animation: marge-kidnapped-visible 1s 12.5s linear forwards;
-}
-
-@keyframes marge-kidnapped-visible{
-        0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
-#green-fog{
-    width: 95px;
-    height: 0px; 
-    position: absolute;
-    top: 172px;
-    left: 90px;
-    background: #76f91f;
-    opacity: 0.6;
-    transform: rotate(-10deg);
-    
-    animation: green-fog-action 3s 9.5s ease forwards;
-}
-
-@keyframes green-fog-action{
-    0%{
-        height: 0px;
-    }
-    33%{
-        height: 250px;
-    }
-    66%{
-        height: 250px;
-    }
-    100%{
-        height: 0px;
-    }
-}
-
-#hk-container{
-    width: 625px;
-    height: 1000px;
-    position: absolute;
-    top: 0px;
-    right: 20px;
-    animation: 
-
 }
 
 #hk-welcome{
@@ -449,48 +303,12 @@ body {
     position: absolute;
     top: 422px;
     left: 295px;
-    z-index: 1;
     background: #000000;
-    opacity: 0;
-    
-    animation: door-open 1.5s 5s linear 1,
-        door-open 1.25s 12.5s linear 1;
-                
-}
-
-@keyframes door-open{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-#marge-ufo{
-    width: 150px;
-    height: 115;
-    position: absolute;
-    top: -116px;
-    left: -151px;
     z-index: 1;
-    animation: marge-flying 4s 1s ease-out forwards;
+    opacity: 0;
+    animation: door-open 1.5s 5s linear 1,
+        door-open 1.25s 12.5s linear 1;        
 }
-    
-    @keyframes marge-flying{
-        90%{
-            top: 500px;
-            left: 700px;
-            transform: scale(2);
-            opacity: 1;
-        }
-        100%{
-            top: 500px;
-            left: 700px;
-            transform: scale(2);
-            opacity: 0;
-        }
-    }
 
 #marge{
     width: 88px;
@@ -500,10 +318,227 @@ body {
     left: 130px;
     opacity: 0;
     z-index: 1;
-    
     animation: marge-appearing 3s 4.5s linear forwards,
                 marge-disappearing 1.5s 10s ease-out forwards;
+}
+
+#principal{
+    width: 69px;
+    height: 110px;
+    position: absolute;
+    top: 440px;
+    left: 290px;
+    z-index: 2;
+    opacity: 0;
+    animation: walking-door 3s 5s linear forwards,
+                principal-moving 1s 11s linear forwards;
+}
+
+#principal:hover ~ #chat-bubble-principal, #principal:hover ~ #text-principal{
+    opacity: 1;
+}
+
+#kenbeth{
+    width: 110px;
+    height: 150px;
+    position: absolute;
+    top: 430px;
+    left: 290px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    animation: walking-door 1s 13s linear forwards,
+                walking-left 1.25s 14s ease-out forwards;
+}
+
+/* Chat bubble appears */
+#kenbeth:hover ~ #chat-bubble-kenbeth, #kenbeth:hover ~ #text-kenbeth{
+    opacity: 1;
+}
+
+/* The cow comes and picks Kenbeth up and travels to ice planet */
+#kenbeth:active ~ #spacecow, #kenbeth:active ~ #spacecow-kenbeth{
+       animation-play-state: running; 
+}
+
+/* Kenbeth leaves on the cow when active */
+#kenbeth:active{
+    transition: 1.5s;
+    visibility: hidden;
+}
+
+#kenbeth:after{
+    visibility: hidden;
+}
+
+#spacecow{
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    z-index: 3;
+    top: 380px;
+    left: 700px;
+    opacity: 1;
     
+    animation: cow-coming 1.5s ease-out paused;
+}
+
+#spacecow-kenbeth{
+    width: 300px;
+    height: 225px;
+    position: absolute;
+    top: 420px;
+    left: -170px;
+    z-index: 0;
+    opacity: 0;
+animation: cow-travel 2.5s 1.5s ease-in-out paused;
+}
+
+/* Chat bubbles */
+.chat-bubbles{
+    width: 500px;
+    height: 370px;
+    position: absolute;
+    transform: scaleX(-1);
+    z-index: 1;
+    opacity: 0;
+}
+
+#chat-bubble-principal{
+    top: 170px;
+    left: 100px;
+}
+
+#chat-bubble-kenbeth{
+    top: 110px;
+    left: -440px;
+}
+
+.texts{
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    font-family: arial;
+    z-index: 1;
+    opacity: 0;
+}
+
+#text-principal{
+    top: 280px;
+    left: 260px;
+}
+
+#text-kenbeth{
+    top: 220px;
+    left: -275px;
+}
+
+/* UFO container */
+#ufo-alien{
+    width: 350px;
+    height: 420px;
+    position: absolute;
+    top: 0px;
+    left: -351px;
+    z-index: 1;
+    animation: the-kidnapping 3s 7s ease-in-out forwards,
+                ufo-alien-leaving 4s 13s ease-in-out forwards;
+}
+
+#green-fog{
+    width: 95px;
+    height: 0px; 
+    position: absolute;
+    top: 172px;
+    left: 90px;
+    background: #76f91f;
+    opacity: 0.6;
+    transform: rotate(-10deg);
+    
+    animation: green-fog-action 3s 9.5s ease forwards;
+}
+
+#ufo{
+    width: 200px;
+    height: 142px;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    transform: rotate(-20deg);
+}
+
+#alien{
+    width: 90px;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    left: 135px;
+}
+
+#marge-kidnapped{
+    width: 87px;
+    height: 180px;
+    position: absolute;
+    top: 35px;
+    left: 225px;
+    transform: rotate(-30deg);
+    opacity: 0;
+    animation: marge-kidnapped-visible 1s 12.5s linear forwards;
+}
+
+/* S.Lim Shady's */
+#marge-ufo{
+    width: 150px;
+    height: 115;
+    position: absolute;
+    top: -116px;
+    left: -151px;
+    z-index: 1;
+    animation: marge-flying 4s 1s ease-out forwards;
+}
+
+/* Keyframes */
+
+@keyframes star-blinking{
+    2.5%{
+        box-shadow:
+        0 0 4.5px 3px #ffffff, 
+        0 0 15px 3px #ffffff, 
+        0 0 30px 3px #ffffff; 
+    }
+    5%{    
+        width: 2px;
+        height: 2px;
+        box-shadow:
+        0 0 1.5px 1px #ffffff, 
+        0 0 2.5px 1.5px #ffffff, 
+        0 0 3.5px 2.5px #ffffff;  
+    }
+}
+
+@keyframes planet-rotate{
+    100%{
+        transform: translateX(350px);
+    }
+    
+}
+
+@keyframes the-kidnapping{
+    100%{
+        top: 160px;
+        left: 730px;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes door-open{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 @keyframes marge-appearing{
@@ -526,55 +561,31 @@ body {
     }
 }
 
-
-
-#principal{
-    width: 69px;
-    height: 110px;
-    position: absolute;
-    top: 440px;
-    left: 290px;
-    opacity: 0;
-    z-index: 2;
-    
-    animation: walking-door 3s 5s linear forwards,
-                principal-moving 1s 11s linear forwards;
-}
-
-
-
 @keyframes principal-moving{
     100%{
         left: 500px;
     }
 }
 
-#kenbeth{
-    width: 110px;
-    height: 150px;
-    position: absolute;
-    top: 430px;
-    left: 290px;
-    opacity: 0;
-    z-index: 2;
-    display: block;
-    cursor: pointer;
-
-    
-    animation: walking-door 1s 13s linear forwards,
-                walking-left 1.25s 14s ease-out forwards;
+/*Kenbeth and principal walking through the door */
+@keyframes walking-door{
+    10%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        top: 450px;
+        left: 310px;
+        transform: scale(1.3);
+    }
 }
 
-#spacecow{
-    width: 300px;
-    height: 350px;
-    position: absolute;
-    z-index: 3;
-    top: 380px;
-    left: 700px;
-    opacity: 1;
-    
-    animation: cow-coming 1.5s ease-out paused;
+/* Kenbeth walking left */
+@keyframes walking-left{
+    100%{
+        top: 390px;
+        left: -50px;
+    }
 }
 
 @keyframes cow-coming{
@@ -588,21 +599,6 @@ body {
         left: -170px;
     }
 }
-
-#spacecow-kenbeth{
-    width: 300px;
-    height: 225px;
-    position: absolute;
-    z-index: 0;
-    top: 420px;
-    left: -170px;
-    opacity: 0;
-    
-
-animation: cow-travel 2.5s 1.5s ease-in-out paused;
-}
-
-
 
 @keyframes cow-travel{
     1%{
@@ -621,99 +617,52 @@ animation: cow-travel 2.5s 1.5s ease-in-out paused;
     }
 }
 
-@keyframes walking-door{
-    10%{
-        opacity: 1;
+@keyframes green-fog-action{
+    0%{
+        height: 0px;
+    }
+    33%{
+        height: 250px;
+    }
+    66%{
+        height: 250px;
+    }
+    100%{
+        height: 0px;
+    }
+}
+
+@keyframes ufo-alien-leaving{
+    0%{
+       top: 160px;
+        left: 730px; 
+    }
+    100%{
+    top: 0px;
+    left: -375px;
+    }
+}
+
+@keyframes marge-kidnapped-visible{
+        0%{
+        opacity: 0;
     }
     100%{
         opacity: 1;
-        top: 450px;
-        left: 310px;
-        transform: scale(1.3);
     }
 }
 
-
-
-
-@keyframes walking-left{
-    100%{
-        top: 390px;
-        left: -50px;
+@keyframes marge-flying{
+        90%{
+            top: 500px;
+            left: 700px;
+            transform: scale(2);
+            opacity: 1;
+        }
+        100%{
+            top: 500px;
+            left: 700px;
+            transform: scale(2);
+            opacity: 0;
+        }
     }
-}
-
-.chat-bubbles{
-    width: 500px;
-    height: 370px;
-    position: absolute;
-    transform: scaleX(-1);
-    opacity: 0;
-    z-index: 1;
-    
-}
-
-#chat-bubble-principal{
-    top: 170px;
-    left: 100px;
-}
-
-#chat-bubble-kenbeth{
-    top: 110px;
-    left: -440px;
-}
-
-.texts{
-    opacity: 0;
-    width: 250px;
-    height: 100px;
-    position: absolute;
-    text-align: center;
-    font-family: arial;
-    z-index: 1;
-}
-
-#text-principal{
-    top: 280px;
-    left: 260px;
-}
-
-#text-kenbeth{
-    top: 220px;
-    left: -275px;
-}
-
-#principal:hover ~ #chat-bubble-principal, #principal:hover ~ #text-principal{
-    opacity: 1;
-}
-
-#kenbeth:hover ~ #chat-bubble-kenbeth, #kenbeth:hover ~ #text-kenbeth{
-    opacity: 1;
-}
-
-#kenbeth:active ~ #spacecow, #kenbeth:active ~ #spacecow-kenbeth{
-       animation-play-state: running; 
-}
-
-
-#kenbeth:active{
-    transition: 1.5s;
-    visibility: hidden;
-
-}
-
-#kenbeth:after{
-    visibility: hidden;
-}
-
-
-
-
-
-
-
-
-
-
-
-
