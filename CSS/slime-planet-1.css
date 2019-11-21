@@ -1,6 +1,3 @@
-/* General Rules: Z-index: background: 1, backgroundceffetcs 2, Ground: 3, Details: 4
-   NPC: 5, Main character: 5. */
-
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #000000;
 }
 
 /* Main Container */
@@ -18,75 +15,117 @@ body {
     top: 50px;
     position: relative;
     margin: auto;
-    background-color: #0c0920;
+    background: linear-gradient(#000000, #1c3a08);
     overflow: hidden;
     z-index: 0;
 }
 
-/* Chat bubbles */
-.chat-bubbles {
-    position: absolute;
-    border: 5px solid #32bc35;
-    border-radius: 50%;
-    background-color: #ddf45b;
-}
-
-#chat-bubble-kenbeth {
-    top: 70px;
-    left: 600px;
-    width: 200px;
-    height: 130px;
-    opacity: 0%;
-    z-index: 5;
-    transition-property: opacity;
-    transition-delay: 1s;
-    transition-timing-function: ease-out;
-    transition-duration: 0.5s;
-}
-
-#chat-pointer-kenbeth {
-    top: 180px;
-    left: 600px;
-    width: 100px;
-    height: 10px;
-    transform: rotate(-20deg);
-    opacity: 0;
-    z-index: 4;
-    transition-property: opacity;
-    transition-delay: 1s;
-    transition-timing-function: ease-out;
-    transition-duration: 0.5s;
-}
-
-/* Text */
+/* Chat bubbles & Text*/
 .text {
-    color: #000000;
     position: absolute;
     z-index: 6;
     opacity: 0;
-    transition-property: opacity;
-    transition-delay: 1s;
-    transition-timing-function: ease-out; /* HUSK -webkit- */
-    transition-duration: 0.5s;
+    text-align: center;
+    font-family: Arial;
+    font-size: 15px;
+    animation: chat-bubble-kenbeth 1s 1.5s linear forwards, chat-bubble-hovering 2s 1s infinite;
+}
+
+.chat-bubbles {
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+}
+
+#chat-bubble-slime {
+    top: 260px;
+    left: 230px;
+    width: 500px;
+    height: 300px;
+    animation: chat-bubble-slime 16.5s 6s linear forwards;
+}
+
+#chat-bubble-kenbeth {
+    top: 150px;
+    left: 590px;
+    width: 500px;
+    height: 300px;
+    transform: scaleX(-1);
+    animation: chat-bubble-kenbeth 8s 8.5s linear forwards;
+}
+
+#chat-bubble-professor {
+    top: 90px;
+    left: 550px;
+    width: 400px;
+    height: 250px;
+    animation: chat-bubble-professor 2s 15s forwards;
+}
+
+/* Script */
+#slime-script-1 {
+    /* First talk bubble */
+    width: 360px;
+    height: 200px;
+    top: 370px;
+    left: 250px;
+    animation: kenbeth-script-1 2.5s 6.7s linear;
 }
 
 #kenbeth-script-1 {
-    top: 110px;
-    right: 500px;
+    /* Second talk bubble */
+    width: 300px;
+    height: 200px;
+    top: 270px;
+    left: 710px;
+    animation: kenbeth-script-1 3s 9.2s linear;
+}
+
+#slime-script-2 {
+    /* Third talk bubble */
+    width: 360px;
+    height: 200px;
+    top: 370px;
+    left: 250px;
+    animation: kenbeth-script-1 4s 12.5s linear;
+}
+
+#professor-script-1 {
+    /* Fourth talk bubble */
+    width: 300px;
+    height: 200px;
+    top: 190px;
+    left: 570px;
+    animation: kenbeth-script-1 2s 15s linear;
+    font-size: 25px;
+}
+
+#slime-script-3 {
+    /* Fifth talk bubble */
+    width: 360px;
+    height: 200px;
+    top: 370px;
+    left: 250px;
+    animation: kenbeth-script-1 0.3s 25.5s linear forwards;
 }
 
 /* Images */
 #exclamation-mark {
     position: absolute;
     width: 0px;
-    top: 510px;
-    right: 280px;
-    animation: exclamation-mark 1.2s linear;
-    -webkit-animation: exclamation-mark 1.2s linear;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out;
-    animation-delay: 2s;
-    -webkit-animation-delay: exclamation-mark 2s;
+    bottom: 460px;
+    right: 170px;
+    z-index: 6;
+    transform: rotate(-10deg);
+    animation: exclamation-mark 1.2s 15.5s ease-out;
+}
+
+#slime-wall {
+    width: 1278px;
+    height: 800px;
+    position: absolute;
+    margin-left: 0px;
+    z-index: 2;
 }
 
 /* Ground */
@@ -95,7 +134,6 @@ body {
     height: 600px;
     position: absolute;
     margin: auto;
-    overflow: hidden;
     background: linear-gradient(#76f91f, #ddf45b);
     border: 5px solid #ddf45b;
     border-radius: 50%;
@@ -173,47 +211,280 @@ body {
     left: 700px;
 }
 
-/* Character & Npc elements */
-.characters {
-    position: absolute;
-    z-index: 5;
-}
-
-#kenbeth-flying {
+/* Character & npc */
+#kenbeth-landing {
     width: 400px;
-    top: 120px;
-    left: 330px;
+    top: -400px;
+    position: absolute;
+    left: 950px;
+    transform: scaleX(-1);
     z-index: 5;
-    animation: kenbeth-flying 1.5s linear;
-    -webkit-animation: kenbeth-flying 1.5s linear;
-    animation-timing-function: ease-out;
+    -webkit-animation: kenbeth-landing 3s ease-out 1;
 }
 
-/* Monsters */
-#slime-monster-angry {
-    width: 20px;
-    right: 300px;
-    bottom: 265px;
-    z-index: 4;
-    transform: rotate(18deg);
+#kenbeth-walking {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 920px;
+    top: 350px;
+    visibility: hidden;
+    z-index: 6;
+    -webkit-animation: kenbeth-walk 3s 3s linear forwards;
 }
 
-/* gifs */
-#slime-monster-gif {
-    width: 120px;
+#slime-clone {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: -200px;
     bottom: 150px;
-    left: 0px;
-    transform: rotate(-23deg);
-    animation: slime-monster-gif 5s linear;
-    -webkit-animation: slime-monster-gif 5s linear;
-    animation-timing-function: ease-out;
+    z-index: 6;
+    -webkit-animation: clone-walk 3s 3s ease-out forwards;
 }
 
-/* Background elements */
-.planet-imgs {
+#cow-flying {
+    position: absolute;
+    width: 400px;
+    right: 50px;
+    top: -230px;
+    z-index: 7;
+    transform: scaleX(-1);
+    animation: cow-flying 2s 23.5s ease-out, cow-hovering 2s 25.5s linear infinite;
+}
+
+/* Alien UFO with professor */
+#ufo-alien {
+    width: 350px;
+    height: 220px;
+    position: absolute;
+    top: 300px;
+    left: 450px;
+    z-index: 2;
+    animation: ufo-alien 4s 16.5s ease-out, ufo-scale 3s 20.5s ease-in forwards;
+}
+
+#ufo {
+    width: 200px;
+    height: 142px;
+    top: 50px;
+    left: 0px;
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+#alien {
+    width: 90px;
+    height: 150px;
+    top: 0px;
+    left: 135px;
     position: absolute;
 }
 
+#marge {
+    width: 87px;
+    height: 180px;
+    top: 35px;
+    left: 225px;
+    position: absolute;
+    transform: rotate(-30deg);
+}
+
+@keyframes kenbeth-landing {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+        top: 320px;
+        left: 850px;
+    }
+}
+
+@keyframes kenbeth-walk {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes clone-walk {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 120px;
+    }
+}
+
+/* Stars */
+#stars-container {
+    animation: zoom-star-container 8s ease-out forwards;
+    position: absolute;
+    top: -90px;
+}
+
+.stars {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
+
+    animation: zoom-stars 5s 3s ease-in forwards;
+}
+
+#star-1 {
+    top: 50px;
+    left: 50px;
+}
+
+#star-2 {
+    top: 150px;
+    left: 120px;
+}
+
+#star-3 {
+    top: 70px;
+    left: 250px;
+}
+
+#star-4 {
+    top: 180px;
+    left: 380px;
+    animation: star-blinking 10s 4s ease-in infinite;
+}
+
+#star-5 {
+    top: 40px;
+    left: 510px;
+}
+
+#star-6 {
+    top: 130px;
+    left: 680px;
+}
+
+#star-7 {
+    top: 20px;
+    left: 790px;
+}
+
+#star-8 {
+    top: 160px;
+    left: 930px;
+}
+
+#star-9 {
+    top: 50px;
+    left: 1100px;
+    animation: star-blinking 10s 7s ease-in infinite;
+}
+
+#star-10 {
+    top: 200px;
+    left: 1200px;
+}
+
+#star-11 {
+    top: 420px;
+    left: 80px;
+}
+
+#star-12 {
+    top: 300px;
+    left: 220px;
+    animation: star-blinking 10s 12s ease-in infinite;
+}
+
+#star-13 {
+    top: 375px;
+    left: 450px;
+}
+
+#star-14 {
+    top: 280px;
+    left: 600px;
+}
+
+#star-15 {
+    top: 350px;
+    left: 850px;
+    animation: star-blinking 10s 10s ease-in infinite;
+}
+
+#star-16 {
+    top: 300px;
+    left: 1050px;
+}
+
+#star-17 {
+    top: 450px;
+    left: 1200px;
+}
+
+#star-18 {
+    top: 650px;
+    left: 40px;
+}
+
+#star-19 {
+    top: 500px;
+    left: 300px;
+}
+
+#star-20 {
+    top: 625px;
+    left: 500px;
+    animation: star-blinking 10s 6s ease-in infinite;
+}
+
+#star-21 {
+    top: 475px;
+    left: 700px;
+}
+
+#star-22 {
+    top: 650px;
+    left: 900px;
+}
+
+#star-23 {
+    top: 570px;
+    left: 1100px;
+    animation: star-blinking 10s 13s ease-in infinite;
+}
+
+#star-24 {
+    top: 700px;
+    left: 1250px;
+}
+
+#star-25 {
+    top: 720px;
+    left: 270px;
+}
+
+#star-26 {
+    top: 720px;
+    left: 700px;
+}
+
+@keyframes star-blinking {
+    2.5% {
+        box-shadow: 0 0 4.5px 3px #ffffff, 0 0 15px 3px #ffffff, 0 0 30px 3px #ffffff;
+    }
+    5% {
+        width: 2px;
+        height: 2px;
+        box-shadow: 0 0 1.5px 1px #ffffff, 0 0 2.5px 1.5px #ffffff, 0 0 3.5px 2.5px #ffffff;
+    }
+}
+
+/* Background Slime */
 .background-slime {
     position: absolute;
     width: 10px;
@@ -221,278 +492,342 @@ body {
     border-radius: 40%;
     border: 1px solid #ddf45b;
     background-color: #32bc35;
-    z-index: 2;
+    z-index: 1;
 }
 
 #background-slime-1 {
     animation: bubble-1 5s infinite both;
-    -webkit-animation: bubble-1 5s infinite both;
 }
 
 #background-slime-2 {
-    animation: bubble-2 5s infinite both;
-    -webkit-animation: bubble-2 5s infinite both;
-    animation-delay: 7s;
+    animation: bubble-2 5s 7s infinite both;
 }
 
 #background-slime-3 {
-    animation: bubble-3 5s infinite both;
-    -webkit-animation: bubble-3 5s infinite both;
-    animation-delay: 5s;
+    animation: bubble-3 5s 5s infinite both;
 }
 
 #background-slime-4 {
-    animation: bubble-4 5s infinite both;
-    -webkit-animation: bubble-4 5s infinite both;
-    animation-delay: 3s;
+    animation: bubble-4 5s 3s infinite both;
 }
 
 #background-slime-5 {
-    animation: bubble-5 5s infinite both;
-    -webkit-animation: bubble-5 5s infinite both;
-    animation-delay: 6s;
+    animation: bubble-5 5s 6s infinite both;
 }
 
 #background-slime-6 {
-    animation: bubble-6 5s infinite both;
-    -webkit-animation: bubble-6 5s infinite both;
-    animation-delay: 0.5s;
+    animation: bubble-6 5s 0.5s infinite both;
 }
 
 #background-slime-7 {
-    animation: bubble-7 5s infinite both;
-    -webkit-animation: bubble-7 5s infinite both;
-    animation-delay: 2.7s;
+    animation: bubble-7 5s 2.7s infinite both;
 }
 
 #background-slime-8 {
-    animation: bubble-8 5s infinite both;
-    -webkit-animation: bubble-8 5s infinite both;
-    animation-delay: 4s;
+    animation: bubble-8 5s 4s infinite both;
 }
 
 #background-slime-9 {
-    animation: bubble-9 5s infinite both;
-    -webkit-animation: bubble-9 5s infinite both;
-    animation-delay: 7.5s;
+    animation: bubble-9 5s 7.5s infinite both;
 }
 
 #background-slime-10 {
-    animation: bubble-10 5s infinite both;
-    -webkit-animation: bubble-10 5s infinite both;
-    animation-delay: 1.5s;
+    animation: bubble-10 5s 1.5s infinite both;
 }
 
-#black-hole {
-    width: 600px;
-    top: 20px;
-    left: 400px;
-    z-index: 1;
-    animation: black-hole-tilt 30s linear infinite both;
-    -webkit-animation: black-hole-tilt 30s linear infinite both;
-}
-
-/* Keyframes */
-@keyframes black-hole-tilt {
-    0% {
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-/* Background Bubbles */
 @keyframes bubble-1 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 200px;
-        bottom: 150px;
+        transform: scale(1) rotate(110deg);
+        left: -100px;
+        top: 0px;
     }
     100% {
-        transform: scale(0) rotate(50deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-2 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 340px;
-        bottom: 150px;
+        transform: scale(1) rotate(90deg);
+        left: -100px;
+        top: 150px;
     }
     100% {
-        transform: scale(0) rotate(30deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-3 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 500px;
-        bottom: 150px;
+        transform: scale(1) rotate(78deg);
+        left: -100px;
+        top: 280px;
     }
     100% {
-        transform: scale(0) rotate(23deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-4 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 700px;
-        bottom: 150px;
+        transform: scale(1) rotate(72deg);
+        left: -100px;
+        top: 380px;
     }
     100% {
-        transform: scale(0) rotate(1deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(80deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-5 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 800px;
-        bottom: 150px;
+        transform: scale(1) rotate(-20deg);
+        left: 550px;
+        top: 0px;
     }
     100% {
         transform: scale(0) rotate(-12deg);
-        left: 697px;
-        bottom: 500px;
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-6 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 900px;
-        bottom: 150px;
+        transform: scale(1) rotate(-8deg);
+        left: 680px;
+        top: 350px;
     }
     100% {
-        transform: scale(0) rotate(-22deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(-18deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-7 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 1100px;
-        bottom: 150px;
+        transform: scale(1) rotate(55deg);
+        left: 900px;
+        top: 0px;
     }
     100% {
-        transform: scale(0) rotate(-32deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(50deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-8 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 900px;
-        bottom: 150px;
+        transform: scale(1) rotate(90deg);
+        left: 1300px;
+        top: 150px;
     }
     100% {
-        transform: scale(0) rotate(-28deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-9 {
     0% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(102deg);
         left: 1300px;
-        bottom: 150px;
+        top: 280px;
     }
     100% {
-        transform: scale(0) rotate(-50deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
 @keyframes bubble-10 {
     0% {
-        transform: scale(1) rotate(0deg);
-        left: 1020px;
-        bottom: 150px;
+        transform: scale(1) rotate(110deg);
+        left: 1300px;
+        top: 380px;
     }
     100% {
-        transform: scale(0) rotate(-44deg);
-        left: 697px;
-        bottom: 500px;
+        transform: scale(0) rotate(90deg);
+        left: 620px;
+        top: 180px;
     }
 }
 
-/* Kenbeth flying */
-@keyframes kenbeth-flying {
+/* Black hole */
+#black-hole {
+    width: 600px;
+    margin-top: -65px;
+    margin-left: 325px;
+    z-index: 1;
+    animation: black-hole-tilt 30s linear infinite both;
+    -webkit-animation: black-hole-tilt 30s linear infinite both;
+}
+
+@keyframes black-hole-tilt {
     0% {
-        transform: rotate(0deg);
-        left: -400px;
+        -webkit-transform: rotate(0deg);
     }
-    25% {
-        transform: rotate(-44deg);
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/* Characters & npc */
+@keyframes ufo-alien {
+    0% {
+        top: 300px;
+        left: 450px;
+    }
+    100% {
+        top: 70px;
+        left: 450px;
+    }
+}
+
+@keyframes ufo-scale {
+    0% {
+        transform: scale(1);
+        top: 70px;
+        left: 450px;
+    }
+    100% {
+        transform: scale(0);
+        top: 90px;
+        left: 450px;
+    }
+}
+
+@keyframes cow-flying {
+    0% {
+        top: -230px;
+        right: 100px;
+    }
+    100% {
+        top: 100px;
+        right: 50px;
+    }
+}
+
+@keyframes cow-hovering {
+    0% {
+        top: 100px;
     }
     50% {
-        transform: rotate(0deg);
-        left: 350px;
-        delay: 5s;
-    }
-    75% {
-        top: 230px;
+        top: 110px;
     }
     100% {
-        top: 120px;
+        top: 100px;
     }
 }
 
-@keyframes slime-monster-gif {
+/* Chat bubbles */
+@keyframes kenbeth-script-1 {
+    /* First talk bubble appear */
     0% {
-        transform: rotate(-40deg);
-        left: -120px;
-        bottom: 80px;
+        opacity: 1;
     }
     100% {
-        transform: rotate(-23deg);
+        opacity: 1;
+    }
+}
+
+@keyframes chat-bubble-kenbeth {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes chat-bubble-slime {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    65% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes chat-bubble-professor {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
 @keyframes exclamation-mark {
     0% {
         width: 0px;
-        top: 510px;
-        right: 305px;
+        bottom: 460px;
+        right: 200px;
     }
     50% {
-        width: 20px;
-        top: 480px;
-        right: 280px;
+        width: 100px;
+        bottom: 460px;
+        right: 150px;
     }
     100% {
         width: 0px;
-        top: 510px;
-        right: 305px;
+        bottom: 460px;
+        right: 200px;
     }
 }
 
 /* Triggers */
-#kenbeth-flying:hover {
-    width: 420px;
-    top: 113px;
-    left: 320px;
-}
-
 #slime-bubble-1:hover {
     width: 140px;
     height: 50px;
@@ -542,21 +877,7 @@ body {
     left: 690px;
 }
 
-#slime-bubble-7:hover {
-    width: 420px;
-    height: 90px;
-    bottom: 165px;
-    left: 690px;
-}
+/* Opacity 0 på bubble som flyr inn i hullet */
+/* Farger på boblene på bakken. */
 
-.container:hover #chat-bubble-kenbeth {
-    opacity: 100%;
-}
-
-.container:hover #chat-pointer-kenbeth {
-    opacity: 100%;
-}
-
-.container:hover #kenbeth-script-1 {
-    opacity: 100%;
-}
+/* Animer slime rick som sier hade */
